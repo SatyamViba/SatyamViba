@@ -101,7 +101,7 @@ public class VibaTextField: UITextField {
         }
     }
 
-    public var floatPlaceholderFont = UIFont(name: "Poppins Medium", size: 10){
+    public var floatPlaceholderFont = UIFont(name: "Poppins Medium", size: 10) {
         didSet {
             lblFloatPlaceholder.font = floatPlaceholderFont
             invalidateIntrinsicContentSize()

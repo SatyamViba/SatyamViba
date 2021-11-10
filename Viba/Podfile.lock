@@ -1,16 +1,24 @@
 PODS:
+  - FontAwesome.swift (1.9.1)
+  - OTPFieldView (1.0.1)
   - SwiftLint (0.45.0)
 
 DEPENDENCIES:
+  - FontAwesome.swift
+  - OTPFieldView
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - FontAwesome.swift
+    - OTPFieldView
     - SwiftLint
 
 SPEC CHECKSUMS:
+  FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
 
-PODFILE CHECKSUM: 5c83af79f72044f87b0636b0dd2bed2987c86242
+PODFILE CHECKSUM: f0bf63272fb9e3ef5be38f37524ac51d7150a490
 
 COCOAPODS: 1.11.2

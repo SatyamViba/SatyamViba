@@ -3,4 +3,6 @@ use_frameworks!
 
 target 'Viba' do
   pod 'SwiftLint'
+  pod 'FontAwesome.swift'
+  pod 'OTPFieldView'
 end

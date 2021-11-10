@@ -1,5 +1,9 @@
 disabled_rules: 
   - trailing_whitespace
+
+excluded:
+  - Pods
+
 file_length:
   warning: 600
 
