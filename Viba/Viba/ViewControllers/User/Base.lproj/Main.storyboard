@@ -450,47 +450,141 @@
         <!--Employee Details View Controller-->
         <scene sceneID="hM0-7N-0Gd">
             <objects>
-                <viewController storyboardIdentifier="EmplooyeeDetailsView" id="iZL-cZ-81b" customClass="EmployeeDetailsViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeDetailsView" id="iZL-cZ-81b" customClass="EmployeeDetailsViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7G4-re-ULJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yu-o1-dMm" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="605" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="JUV-FY-igz"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="validateAndSendData:" destination="iZL-cZ-81b" eventType="touchUpInside" id="nV9-11-S8T"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sij-g0-iev">
+                                <rect key="frame" x="20" y="592" width="374" height="1"/>
+                                <color key="backgroundColor" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="sEB-Wn-60c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3uh-ik-kOQ"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="4yu-o1-dMm" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="2w1-5i-8hC"/>
+                            <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="4yu-o1-dMm" secondAttribute="trailing" constant="20" id="7Dy-zE-V2Q"/>
+                            <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="sij-g0-iev" secondAttribute="trailing" constant="20" id="WdM-rz-qAI"/>
+                            <constraint firstItem="4yu-o1-dMm" firstAttribute="top" secondItem="sij-g0-iev" secondAttribute="bottom" constant="12" id="Y83-mr-3Em"/>
+                            <constraint firstItem="sij-g0-iev" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="fBT-lo-S11"/>
+                            <constraint firstItem="3uh-ik-kOQ" firstAttribute="bottom" secondItem="4yu-o1-dMm" secondAttribute="bottom" constant="10" id="nZz-iI-myM"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="670"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKQ-AY-05x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3921" y="599"/>
+            <point key="canvasLocation" x="3920.289855072464" y="598.66071428571422"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="cBN-ra-v4j">
             <objects>
                 <viewController storyboardIdentifier="VerifyView" id="n2l-Gg-4bQ" customClass="VerifyViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hBW-8h-kF9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIV-Zq-INv" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="605" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="FSW-BF-xmP"/>
+                                    <constraint firstAttribute="height" constant="55" id="sl6-cf-WmY"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="validateAndSendData:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="HeM-xK-WQa"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpp-kv-jAJ">
+                                <rect key="frame" x="20" y="592" width="374" height="1"/>
+                                <color key="backgroundColor" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="lPK-Oz-Li1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2t2-wM-Afy"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="cIV-Zq-INv" secondAttribute="trailing" constant="20" id="DdR-3E-ISW"/>
+                            <constraint firstItem="cIV-Zq-INv" firstAttribute="top" secondItem="Mpp-kv-jAJ" secondAttribute="bottom" constant="12" id="FfZ-Wf-9NT"/>
+                            <constraint firstItem="cIV-Zq-INv" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="JKX-Fv-7wx"/>
+                            <constraint firstItem="Mpp-kv-jAJ" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="g30-HG-txx"/>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="Mpp-kv-jAJ" secondAttribute="trailing" constant="20" id="s3y-Yp-cL7"/>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="bottom" secondItem="cIV-Zq-INv" secondAttribute="bottom" constant="10" id="uDa-DL-18L"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="670"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6i-Fy-GgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4897" y="625"/>
+            <point key="canvasLocation" x="4732" y="599"/>
         </scene>
         <!--Face Capture View Controller-->
         <scene sceneID="Ohs-D1-0Is">
             <objects>
                 <viewController storyboardIdentifier="FreeCaptureView" id="JW4-Mc-bcK" customClass="FaceCaptureViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qc8-9P-rOk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVL-f4-JZF" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="605" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="3tI-nh-7Lp"/>
+                                    <constraint firstAttribute="height" constant="55" id="tZF-aS-tz4"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="validateAndSendData:" destination="JW4-Mc-bcK" eventType="touchUpInside" id="Qhb-MW-Tc5"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXt-r8-6Yk">
+                                <rect key="frame" x="20" y="592" width="374" height="1"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iag-hv-R1B"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jKX-Dk-AuF"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="KXt-r8-6Yk" firstAttribute="leading" secondItem="qc8-9P-rOk" secondAttribute="leading" constant="20" id="3gy-ld-svX"/>
+                            <constraint firstAttribute="trailing" secondItem="KXt-r8-6Yk" secondAttribute="trailing" constant="20" id="M4W-Ts-Dc7"/>
+                            <constraint firstItem="jKX-Dk-AuF" firstAttribute="bottom" secondItem="JVL-f4-JZF" secondAttribute="bottom" constant="10" id="XU1-Hd-pbR"/>
+                            <constraint firstItem="jKX-Dk-AuF" firstAttribute="trailing" secondItem="JVL-f4-JZF" secondAttribute="trailing" constant="20" id="d4u-Le-RIm"/>
+                            <constraint firstItem="JVL-f4-JZF" firstAttribute="top" secondItem="KXt-r8-6Yk" secondAttribute="bottom" constant="12" id="eHS-2r-nNU"/>
+                            <constraint firstItem="JVL-f4-JZF" firstAttribute="leading" secondItem="jKX-Dk-AuF" secondAttribute="leading" constant="20" id="thq-TF-gJF"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="670"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-LQ-cFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5853" y="618"/>
+            <point key="canvasLocation" x="5607" y="599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zea-GQ-9CF">
@@ -517,6 +611,12 @@
         <designable name="1fT-35-lPB">
             <size key="intrinsicContentSize" width="166" height="33"/>
         </designable>
+        <designable name="4yu-o1-dMm">
+            <size key="intrinsicContentSize" width="70" height="33"/>
+        </designable>
+        <designable name="JVL-f4-JZF">
+            <size key="intrinsicContentSize" width="70" height="33"/>
+        </designable>
         <designable name="R9X-N3-Jbg">
             <size key="intrinsicContentSize" width="231.5" height="20.5"/>
         </designable>
@@ -531,6 +631,9 @@
         </designable>
         <designable name="bGd-4v-Bc7">
             <size key="intrinsicContentSize" width="52" height="30"/>
+        </designable>
+        <designable name="cIV-Zq-INv">
+            <size key="intrinsicContentSize" width="70" height="33"/>
         </designable>
         <designable name="sAw-fx-crL">
             <size key="intrinsicContentSize" width="184.5" height="45.5"/>

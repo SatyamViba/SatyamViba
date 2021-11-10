@@ -8,10 +8,19 @@
 import UIKit
 
 class EmployeeDetailsViewController: UIViewController {
-
+    weak var delegate: SignupProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func validateAndSendData(_ sender: Any) {
+        guard let dlgt = delegate else {
+            return
+        }
+
+        dlgt.didFinish(screen: .employeeDetails)
     }
 }

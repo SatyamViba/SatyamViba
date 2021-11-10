@@ -20,6 +20,7 @@
 		4A21A19E273B9B600002D052 /* SignupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A19D273B9B600002D052 /* SignupPageViewController.swift */; };
 		4A21A1A0273B9C010002D052 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A19F273B9C010002D052 /* VerifyViewController.swift */; };
 		4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */; };
+		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
 		4AB5F00E2739122E007DB9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5F00D2739122E007DB9FF /* AppDelegate.swift */; };
 		4AB5F0102739122E007DB9FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5F00F2739122E007DB9FF /* SceneDelegate.swift */; };
 		4AB5F0122739122E007DB9FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5F0112739122E007DB9FF /* LoginViewController.swift */; };
@@ -50,6 +51,7 @@
 		4A21A19D273B9B600002D052 /* SignupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageViewController.swift; sourceTree = "<group>"; };
 		4A21A19F273B9C010002D052 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
+		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
 		4AB5F00A2739122D007DB9FF /* VIBA-EMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIBA-EMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB5F00D2739122E007DB9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AB5F00F2739122E007DB9FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */,
 				4A21A199273B89F30002D052 /* SignupViewController.swift */,
 				4A21A19D273B9B600002D052 /* SignupPageViewController.swift */,
+				4A4A8683273BF1E000811EBC /* SignupProtocol.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */,
 				4AFC563E2739483100E064E9 /* VibaButton.swift in Sources */,
 				4AB5F0122739122E007DB9FF /* LoginViewController.swift in Sources */,
+				4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */,
 				4A21A195273B67290002D052 /* VibaMediumLabel.swift in Sources */,
 				4AB5F00E2739122E007DB9FF /* AppDelegate.swift in Sources */,
 				4A1617BB273A40D700640236 /* VibaLabel.swift in Sources */,

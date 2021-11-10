@@ -8,22 +8,19 @@
 import UIKit
 
 class FaceCaptureViewController: UIViewController {
-
+    weak var delegate: SignupProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    @IBAction func validateAndSendData(_ sender: Any) {
+        guard let dlgt = delegate else {
+            return
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        dlgt.didFinish(screen: .faceCapture)
     }
-    */
-
 }

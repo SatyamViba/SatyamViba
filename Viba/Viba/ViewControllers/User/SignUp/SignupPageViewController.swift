@@ -9,16 +9,18 @@ import UIKit
 
 class SignupPageViewController: UIPageViewController {
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.createViewController(storyboardId: "EmplooyeeDetailsView"),
-                self.createViewController(storyboardId: "VerifyView"),
-                self.createViewController(storyboardId: "FreeCaptureView")]
+        return [
+            createEmployeeDetailsViewController(),
+            createVerifyViewController(),
+            createFaceCaptureViewController()
+        ]
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        dataSource = self
+//        dataSource = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,
@@ -27,8 +29,30 @@ class SignupPageViewController: UIPageViewController {
         }
     }
 
-    private func createViewController(storyboardId: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: storyboardId)
+    private func createEmployeeDetailsViewController() -> UIViewController {
+        guard let empVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EmployeeDetailsView") as? EmployeeDetailsViewController else {
+            return UIViewController()
+        }
+        empVC.delegate = self
+        return empVC
+    }
+
+    private func createVerifyViewController() -> UIViewController {
+        guard let verifyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VerifyView") as? VerifyViewController else {
+            return UIViewController()
+        }
+
+        verifyVC.delegate = self
+        return verifyVC
+    }
+
+    private func createFaceCaptureViewController() -> UIViewController {
+        guard let fcVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FreeCaptureView") as? FaceCaptureViewController else {
+            return UIViewController()
+        }
+
+        fcVC.delegate = self
+        return fcVC
     }
 }
 
@@ -74,4 +98,23 @@ extension SignupPageViewController: UIPageViewControllerDataSource {
 
 extension SignupPageViewController: UIPageViewControllerDelegate {
     
+}
+
+extension SignupPageViewController: SignupProtocol {
+    func didFinish(screen: SignupScreens) {
+        switch screen {
+        case .employeeDetails:
+            setViewControllers([orderedViewControllers[1]],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        case .verify:
+            setViewControllers([orderedViewControllers[2]],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        case .faceCapture:
+            print("show dashboard")
+        }
+    }
 }
