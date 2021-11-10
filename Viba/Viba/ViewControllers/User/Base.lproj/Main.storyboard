@@ -355,10 +355,10 @@
                                 <rect key="frame" x="20" y="166.5" width="374" height="4"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCK-RZ-cXo" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="4"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="4"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="vpR-Yc-SJw"/>
+                                            <constraint firstAttribute="width" constant="30" id="vpR-Yc-SJw"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -367,10 +367,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ikw-Rj-YQh" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="0.0" width="50" height="4"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <rect key="frame" x="50" y="0.0" width="30" height="4"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="KqJ-5Z-c1t"/>
+                                            <constraint firstAttribute="width" constant="30" id="KqJ-5Z-c1t"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -379,10 +379,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uep-KV-Nld" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="0.0" width="50" height="4"/>
-                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                        <rect key="frame" x="100" y="0.0" width="30" height="4"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="MeD-r4-sxL"/>
+                                            <constraint firstAttribute="width" constant="30" id="MeD-r4-sxL"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -408,7 +408,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbv-SE-dTs">
                                 <rect key="frame" x="0.0" y="190.5" width="414" height="671.5"/>
                                 <connections>
-                                    <segue destination="eZa-8I-4Dq" kind="embed" id="u8f-oD-x55"/>
+                                    <segue destination="eZa-8I-4Dq" kind="embed" identifier="PageContrroller" id="u8f-oD-x55"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -431,8 +431,11 @@
                     <navigationItem key="navigationItem" id="fWi-P7-f3M"/>
                     <connections>
                         <outlet property="firstIndicatorWidth" destination="vpR-Yc-SJw" id="nAD-S2-rC1"/>
+                        <outlet property="firstView" destination="PCK-RZ-cXo" id="T3f-yl-1Je"/>
                         <outlet property="secondIndicatorWidth" destination="KqJ-5Z-c1t" id="oi0-9t-7X5"/>
+                        <outlet property="secondView" destination="Ikw-Rj-YQh" id="8pl-CR-fnS"/>
                         <outlet property="thirdIndicatorWidth" destination="MeD-r4-sxL" id="Fnp-5Y-wF5"/>
+                        <outlet property="thirdView" destination="uep-KV-Nld" id="v8T-Mw-ALA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOf-Km-lgW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -651,17 +654,11 @@
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

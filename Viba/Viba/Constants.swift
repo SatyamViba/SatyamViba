@@ -8,7 +8,8 @@
 import UIKit
 
 enum Colors {
-    case gradientRed
+    case vibaRed
+    case vibaGreen
     case gradientBlue
     case btnBackground
     case floatPlaceholderColor
@@ -20,8 +21,10 @@ enum Colors {
 extension Colors {
     var value: UIColor {
         switch self {
-        case .gradientRed:
+        case .vibaRed:
             return UIColor("#FF0968")
+        case .vibaGreen:
+            return UIColor("#598941")
         case .gradientBlue:
             return UIColor("#8000FF")
         case .btnBackground:

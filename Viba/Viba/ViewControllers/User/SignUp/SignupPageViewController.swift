@@ -8,6 +8,8 @@
 import UIKit
 
 class SignupPageViewController: UIPageViewController {
+    weak var signupDelegate: SignupPageViewProtocol?
+
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [
             createEmployeeDetailsViewController(),
@@ -116,5 +118,10 @@ extension SignupPageViewController: SignupProtocol {
         case .faceCapture:
             print("show dashboard")
         }
+
+        guard let dlgt = signupDelegate else {
+            return
+        }
+        dlgt.updatePageIndicator(screen: screen)
     }
 }

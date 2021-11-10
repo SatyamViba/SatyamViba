@@ -21,7 +21,7 @@ class OTPViewController: UIViewController {
         self.otpField.otpInputType = .numeric
         self.otpField.fieldBorderWidth = 2
         self.otpField.defaultBorderColor = .black
-        self.otpField.filledBorderColor = Colors.gradientRed.value
+        self.otpField.filledBorderColor = Colors.vibaRed.value
         self.otpField.cursorColor = UIColor.red
         self.otpField.displayType = .roundedCorner
         self.otpField.fieldSize = 50
