@@ -246,9 +246,6 @@ public class VibaTextField: UITextField {
     }
 
     fileprivate func commonInit() {
-//        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 20))
-//        leftViewMode = .always
-    
         dtborderStyle               = .rounded
         dtLayer.backgroundColor     = UIColor.white.cgColor
         floatPlaceholderColor       = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
@@ -267,6 +264,7 @@ public class VibaTextField: UITextField {
         addTarget(self, action: #selector(textFieldTextChanged), for: .editingChanged)
         addSubview(lblError)
 
+        font = UIFont(name: "Poppins", size: 15)
         layer.insertSublayer(dtLayer, at: 0)
     }
 
