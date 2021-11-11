@@ -15,15 +15,19 @@ class EmployeeDetailsViewController: UIViewController {
     @IBOutlet weak var dob: VibaTextField!
     @IBOutlet weak var email: VibaTextField!
     @IBOutlet weak var phone: VibaTextField!
+    @IBOutlet weak var calendar: UIButton!
 
+    var selectedDate = Date()
     var activeTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+
+        let img = UIImage.fontAwesomeIcon(name: .calendarAlt, style: .regular, textColor: .black, size: CGSize(width: 40, height: 40))
+        calendar.setImage(img, for: .normal)
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -61,6 +65,19 @@ class EmployeeDetailsViewController: UIViewController {
     }
 
     @IBAction func handleTapOnFemale(_ sender: Any) {
+    }
+
+    @IBAction func selectDateofBirth(_ sender: Any) {
+        guard let dlgt = delegate else {
+            return
+        }
+
+        dlgt.selectDate { selDate in
+            self.selectedDate = selDate
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/yyyy"
+            self.dob.text = formatter.string(from: selDate)
+        }
     }
 }
 

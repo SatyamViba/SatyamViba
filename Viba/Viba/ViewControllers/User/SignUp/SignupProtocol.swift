@@ -15,4 +15,5 @@ enum SignupScreens {
 
 protocol SignupProtocol: AnyObject {
     func didFinish(screen: SignupScreens)
+    func selectDate(onCompletion: @escaping ((Date) -> Void))
 }

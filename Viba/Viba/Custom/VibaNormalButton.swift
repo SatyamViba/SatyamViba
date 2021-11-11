@@ -9,6 +9,13 @@ import UIKit
 
 @IBDesignable
 class VibaNormalButton: UIButton {
+    @IBInspectable
+    var fontSize: CGFloat = 15 {
+        didSet {
+            titleLabel?.font = UIFont(name: "Poppins Medium", size: fontSize)
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -21,7 +28,7 @@ class VibaNormalButton: UIButton {
 
     private func commonInit() {
         backgroundColor = .white
-        titleLabel?.font = UIFont(name: "Poppins Medium", size: 15)
+        titleLabel?.font = UIFont(name: "Poppins Medium", size: fontSize)
         setTitleColor(Colors.transparentBtnColor.value, for: .normal)
     }
 }

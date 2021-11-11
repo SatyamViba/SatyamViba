@@ -98,6 +98,13 @@ extension SignupPageViewController: UIPageViewControllerDataSource {
 }
 
 extension SignupPageViewController: SignupProtocol {
+    func selectDate(onCompletion handler: @escaping ((Date) -> Void)) {
+        guard let dlgt = signupDelegate else {
+            return
+        }
+        dlgt.selectDate(onCompletion: handler)
+    }
+
     func didFinish(screen: SignupScreens) {
         switch screen {
         case .employeeDetails:

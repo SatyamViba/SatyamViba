@@ -1,10 +1,14 @@
 PODS:
+  - DatePicker (1.3.1):
+    - Extended
   - DLRadioButton (1.4.12)
+  - Extended (1.0.5)
   - FontAwesome.swift (1.9.1)
   - OTPFieldView (1.0.1)
   - SwiftLint (0.45.0)
 
 DEPENDENCIES:
+  - DatePicker (~> 1.3.0)
   - DLRadioButton (~> 1.4)
   - FontAwesome.swift
   - OTPFieldView
@@ -12,17 +16,21 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - DatePicker
     - DLRadioButton
+    - Extended
     - FontAwesome.swift
     - OTPFieldView
     - SwiftLint
 
 SPEC CHECKSUMS:
+  DatePicker: 05ddbd2b57d00ce6f44c1f0611ced32f948d33a6
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  Extended: c463225e0c29b2823847866c1b106827772ac678
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
 
-PODFILE CHECKSUM: 5fab8bc3fabfa4edf303c75d73b51edab222d45d
+PODFILE CHECKSUM: c04f29d6bcff0cc07134ec249679c1ae19d914ad
 
 COCOAPODS: 1.11.2

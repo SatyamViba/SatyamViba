@@ -18,15 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="6Tz-tL-jfT">
-                                <rect key="frame" x="40" y="392.5" width="334" height="111"/>
+                                <rect key="frame" x="39" y="392.5" width="336" height="111"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tz-tL-jfT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="JfQ-u5-dMs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Tz-tL-jfT" secondAttribute="trailing" constant="40" id="sXC-U5-7cm"/>
-                            <constraint firstItem="6Tz-tL-jfT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="xb1-mO-z8b"/>
+                            <constraint firstItem="6Tz-tL-jfT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9lo-Bl-HYk"/>
+                            <constraint firstItem="6Tz-tL-jfT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vTf-hw-72n"/>
                         </constraints>
                     </view>
                 </viewController>

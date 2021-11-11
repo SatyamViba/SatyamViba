@@ -583,6 +583,17 @@
                                     <constraint firstAttribute="height" constant="31" id="v2e-Ny-iTn"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-UX-wrj">
+                                <rect key="frame" x="348" y="174.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Aqo-3I-L9E"/>
+                                    <constraint firstAttribute="width" constant="40" id="knl-9n-6En"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="selectDateofBirth:" destination="iZL-cZ-81b" eventType="touchUpInside" id="BS2-tp-t9y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3uh-ik-kOQ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -611,7 +622,9 @@
                             <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="UFf-6S-CG6" secondAttribute="trailing" constant="20" id="fBP-oB-EoR"/>
                             <constraint firstItem="sij-g0-iev" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="fBT-lo-S11"/>
                             <constraint firstItem="BWT-B7-1GP" firstAttribute="top" secondItem="7G4-re-ULJ" secondAttribute="top" id="gB3-aG-zAP"/>
+                            <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="iWT-UX-wrj" secondAttribute="trailing" constant="26" id="itX-sT-HSj"/>
                             <constraint firstItem="3uh-ik-kOQ" firstAttribute="bottom" secondItem="4yu-o1-dMm" secondAttribute="bottom" constant="10" id="nZz-iI-myM"/>
+                            <constraint firstItem="iWT-UX-wrj" firstAttribute="top" secondItem="QVo-n1-tJH" secondAttribute="bottom" constant="20" id="p8e-Wv-s3G"/>
                             <constraint firstItem="gcw-L1-HnQ" firstAttribute="top" secondItem="BWT-B7-1GP" secondAttribute="bottom" constant="20" id="wfS-PT-2ys"/>
                         </constraints>
                     </view>
@@ -620,6 +633,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="520"/>
                     <connections>
+                        <outlet property="calendar" destination="iWT-UX-wrj" id="amf-8Y-pMy"/>
                         <outlet property="dob" destination="8JS-KX-Uhd" id="6a7-Za-JiJ"/>
                         <outlet property="email" destination="UFf-6S-CG6" id="nNI-P4-rPH"/>
                         <outlet property="firstName" destination="gcw-L1-HnQ" id="dKN-U1-jzT"/>
@@ -636,46 +650,179 @@
             <objects>
                 <viewController storyboardIdentifier="VerifyView" id="n2l-Gg-4bQ" customClass="VerifyViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hBW-8h-kF9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="520"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIV-Zq-INv" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="605" width="374" height="55"/>
+                                <rect key="frame" x="20" y="455" width="374" height="55"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="FSW-BF-xmP"/>
                                     <constraint firstAttribute="height" constant="55" id="sl6-cf-WmY"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Continue"/>
+                                <state key="normal" title="Verify &amp; Continue"/>
                                 <connections>
                                     <action selector="validateAndSendData:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="HeM-xK-WQa"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpp-kv-jAJ">
-                                <rect key="frame" x="20" y="592" width="374" height="1"/>
+                                <rect key="frame" x="20" y="442" width="374" height="1"/>
                                 <color key="backgroundColor" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="lPK-Oz-Li1"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Verify Company Email &amp; Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-WG-Rrd" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="414" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="FOR-xm-f5e"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="O2v-yR-Yce"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geq-29-o6z" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="50.5" width="374" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aon-QS-77i">
+                                        <rect key="frame" x="16" y="25" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="U2R-Tv-dmt"/>
+                                            <constraint firstAttribute="width" constant="20" id="Ygu-Nv-hJU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your company Email &amp; provided mobile for OTP, and provide OTPs here." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0w-Hn-epa">
+                                        <rect key="frame" x="56" y="0.0" width="298" height="70"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.94587541437473421" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="c0w-Hn-epa" firstAttribute="leading" secondItem="aon-QS-77i" secondAttribute="trailing" constant="20" id="KrI-aD-UzW"/>
+                                    <constraint firstItem="aon-QS-77i" firstAttribute="leading" secondItem="geq-29-o6z" secondAttribute="leading" constant="16" id="MNQ-Tn-JkF"/>
+                                    <constraint firstItem="c0w-Hn-epa" firstAttribute="top" secondItem="geq-29-o6z" secondAttribute="top" id="NUZ-9g-S1U"/>
+                                    <constraint firstAttribute="trailing" secondItem="c0w-Hn-epa" secondAttribute="trailing" constant="20" id="UsB-Cs-lMe"/>
+                                    <constraint firstAttribute="height" constant="70" id="bmz-eL-oKx"/>
+                                    <constraint firstItem="aon-QS-77i" firstAttribute="centerY" secondItem="geq-29-o6z" secondAttribute="centerY" id="oML-13-GbK"/>
+                                    <constraint firstAttribute="bottom" secondItem="c0w-Hn-epa" secondAttribute="bottom" id="yZR-AZ-oew"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c6v-kT-PSc">
+                                <rect key="frame" x="20" y="150.5" width="374" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Olo-D5-Oyn">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcw-ba-95k" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-t0-xqA" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="111" y="8" width="61" height="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Resend">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="resendEmailOtp:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="GNa-73-e9o"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qcw-ba-95k" firstAttribute="top" secondItem="Olo-D5-Oyn" secondAttribute="top" id="01x-vC-n8l"/>
+                                            <constraint firstAttribute="trailing" secondItem="8SE-t0-xqA" secondAttribute="trailing" constant="5" id="76S-Fl-YUR"/>
+                                            <constraint firstItem="8SE-t0-xqA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Olo-D5-Oyn" secondAttribute="leading" constant="20" symbolic="YES" id="Bj7-7O-myF"/>
+                                            <constraint firstItem="qcw-ba-95k" firstAttribute="leading" secondItem="Olo-D5-Oyn" secondAttribute="leading" id="YZN-81-9Oe"/>
+                                            <constraint firstAttribute="bottom" secondItem="qcw-ba-95k" secondAttribute="bottom" id="ifO-fA-UyQ"/>
+                                            <constraint firstItem="8SE-t0-xqA" firstAttribute="centerY" secondItem="Olo-D5-Oyn" secondAttribute="centerY" id="kto-NL-c5u"/>
+                                            <constraint firstAttribute="trailing" secondItem="qcw-ba-95k" secondAttribute="trailing" id="kww-BK-hl6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-Fp-IFp">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-KY-k3U" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-h2-NsO" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="111" y="8" width="61" height="34"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Resend">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="resendMobileOtp:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="k54-Cc-6vD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="AVU-KY-k3U" firstAttribute="top" secondItem="9Fv-Fp-IFp" secondAttribute="top" id="2Zk-eL-71c"/>
+                                            <constraint firstAttribute="bottom" secondItem="AVU-KY-k3U" secondAttribute="bottom" id="6Z2-cf-nr7"/>
+                                            <constraint firstItem="AVU-KY-k3U" firstAttribute="leading" secondItem="9Fv-Fp-IFp" secondAttribute="leading" id="I7I-Sv-kkv"/>
+                                            <constraint firstItem="gWD-h2-NsO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Fv-Fp-IFp" secondAttribute="leading" constant="20" symbolic="YES" id="XHz-H7-yWo"/>
+                                            <constraint firstItem="gWD-h2-NsO" firstAttribute="centerY" secondItem="9Fv-Fp-IFp" secondAttribute="centerY" id="cZm-VF-Pg3"/>
+                                            <constraint firstAttribute="trailing" secondItem="gWD-h2-NsO" secondAttribute="trailing" constant="5" id="qOh-hS-Ict"/>
+                                            <constraint firstAttribute="trailing" secondItem="AVU-KY-k3U" secondAttribute="trailing" id="ul0-sw-3Jt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nnR-6w-XTw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2t2-wM-Afy"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ryj-WG-Rrd" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="44t-vt-QqA"/>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="geq-29-o6z" secondAttribute="trailing" constant="20" id="5jG-gr-Drs"/>
+                            <constraint firstItem="geq-29-o6z" firstAttribute="top" secondItem="ryj-WG-Rrd" secondAttribute="bottom" constant="30" id="7vz-z6-lRu"/>
+                            <constraint firstItem="geq-29-o6z" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="9e7-yN-Gyb"/>
+                            <constraint firstItem="c6v-kT-PSc" firstAttribute="top" secondItem="geq-29-o6z" secondAttribute="bottom" constant="30" id="BKi-Mo-gHB"/>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="c6v-kT-PSc" secondAttribute="trailing" constant="20" id="CAR-nJ-Nv2"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="cIV-Zq-INv" secondAttribute="trailing" constant="20" id="DdR-3E-ISW"/>
                             <constraint firstItem="cIV-Zq-INv" firstAttribute="top" secondItem="Mpp-kv-jAJ" secondAttribute="bottom" constant="12" id="FfZ-Wf-9NT"/>
+                            <constraint firstItem="ryj-WG-Rrd" firstAttribute="trailing" secondItem="2t2-wM-Afy" secondAttribute="trailing" constant="20" id="Hyi-mG-1L6"/>
                             <constraint firstItem="cIV-Zq-INv" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="JKX-Fv-7wx"/>
                             <constraint firstItem="Mpp-kv-jAJ" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="g30-HG-txx"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="Mpp-kv-jAJ" secondAttribute="trailing" constant="20" id="s3y-Yp-cL7"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="bottom" secondItem="cIV-Zq-INv" secondAttribute="bottom" constant="10" id="uDa-DL-18L"/>
+                            <constraint firstItem="c6v-kT-PSc" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="vf2-24-Ivh"/>
+                            <constraint firstItem="ryj-WG-Rrd" firstAttribute="top" secondItem="2t2-wM-Afy" secondAttribute="top" id="xmU-nX-AAU"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="670"/>
+                    <size key="freeformSize" width="414" height="520"/>
+                    <connections>
+                        <outlet property="boxView" destination="geq-29-o6z" id="DCY-n9-0gb"/>
+                        <outlet property="infoBtn" destination="aon-QS-77i" id="B5d-Ii-c68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6i-Fy-GgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4732" y="599"/>
+            <point key="canvasLocation" x="4731.1999999999998" y="598.2008995502249"/>
         </scene>
         <!--Face Capture View Controller-->
         <scene sceneID="Ohs-D1-0Is">
@@ -757,6 +904,9 @@
         <designable name="8vn-Fw-TI6">
             <size key="intrinsicContentSize" width="51" height="21"/>
         </designable>
+        <designable name="AVU-KY-k3U">
+            <size key="intrinsicContentSize" width="105" height="45.5"/>
+        </designable>
         <designable name="BWT-B7-1GP">
             <size key="intrinsicContentSize" width="147" height="20.5"/>
         </designable>
@@ -791,10 +941,16 @@
             <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
         <designable name="cIV-Zq-INv">
-            <size key="intrinsicContentSize" width="70" height="33"/>
+            <size key="intrinsicContentSize" width="132" height="33"/>
         </designable>
         <designable name="gcw-L1-HnQ">
             <size key="intrinsicContentSize" width="100" height="45.5"/>
+        </designable>
+        <designable name="qcw-ba-95k">
+            <size key="intrinsicContentSize" width="96" height="45.5"/>
+        </designable>
+        <designable name="ryj-WG-Rrd">
+            <size key="intrinsicContentSize" width="253" height="20.5"/>
         </designable>
         <designable name="sAw-fx-crL">
             <size key="intrinsicContentSize" width="184.5" height="45.5"/>
@@ -809,11 +965,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
