@@ -24,6 +24,13 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         firstIndicatorWidth.constant = 50
         firstView.backgroundColor = Colors.vibaRed.value
+
+        let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
+        view.addGestureRecognizer(gestrue)
+    }
+
+    @objc private func stopEditing() {
+        view.endEditing(true)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

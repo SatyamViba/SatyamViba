@@ -22,7 +22,6 @@ class SignupPageViewController: UIPageViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        dataSource = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,
@@ -96,10 +95,6 @@ extension SignupPageViewController: UIPageViewControllerDataSource {
 
         return orderedViewControllers[nextIndex]
     }
-}
-
-extension SignupPageViewController: UIPageViewControllerDelegate {
-    
 }
 
 extension SignupPageViewController: SignupProtocol {
