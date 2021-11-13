@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class LoginViewController: UIViewController {
 
@@ -15,6 +16,9 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        #if DEBUG
+        companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
+        #endif
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
         view.addGestureRecognizer(gestrue)
 
@@ -52,20 +56,42 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
-//        guard let text = userId.text, text.count > 0 else {
-//            userId.showError()
-//            return
-//        }
+        guard let text = userId.text, text.count > 0 else {
+            userId.showError()
+            return
+        }
 
         performSegue(withIdentifier: "OTPView", sender: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SignupView" {
+
+        }
+    }
+
     @IBAction func signupUser(_ sender: Any) {
-//        guard let text = companyCode.text, text.count > 0 else {
-//            companyCode.showError()
-//            return
-//        }
-        performSegue(withIdentifier: "SignupView", sender: nil)
+        guard let code = companyCode.text, code.count > 0 else {
+            companyCode.showError()
+            return
+        }
+
+        showLoadingIndicator()
+        UserRequests.validateCompany(code: code) { result in
+            DispatchQueue.main.async {
+                self.hideLoadingIndicator()
+                switch result {
+                case .success(let companyDetails):
+                    print("company details: \(companyDetails)")
+                    UserDefaults.standard.set(companyDetails.id, forKey: "CompanyId")
+
+                        self.performSegue(withIdentifier: "SignupView", sender: nil)
+                case .failure(let err):
+                    print(err.localizedDescription)
+                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to validate company")
+                }
+            }
+        }
     }
 }
 

@@ -1,0 +1,12 @@
+//
+//  EmailAuthentication.swift
+//  Viba
+//
+//  Created by Satyam Sutapalli on 12/11/21.
+//
+
+import Foundation
+
+struct EmailAuthentication: Encodable {
+    let email: String
+}

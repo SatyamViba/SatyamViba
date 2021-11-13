@@ -236,7 +236,7 @@ public class VibaTextField: UITextField {
         commonInit()
     }
 
-    public func showError(message: String? = nil) {
+    public func showError(_ message: String? = nil) {
         if let msg = message { errorMessage = msg }
         showErrorLabel = true
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class EmployeeDetailsViewController: UIViewController {
     weak var delegate: SignupProtocol?
@@ -16,9 +17,11 @@ class EmployeeDetailsViewController: UIViewController {
     @IBOutlet weak var email: VibaTextField!
     @IBOutlet weak var phone: VibaTextField!
     @IBOutlet weak var calendar: UIButton!
+    @IBOutlet weak var genderError: UILabel!
 
     var selectedDate = Date()
     var activeTextField: UITextField?
+    var gender = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,19 +55,76 @@ class EmployeeDetailsViewController: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
          self.view.frame.origin.y = 0 // Move view to original position
     }
-    
+
     @IBAction func validateAndSendData(_ sender: Any) {
-        guard let dlgt = delegate else {
+        guard let fName = firstName.text, fName.count > 0 else {
+            firstName.showError()
             return
         }
 
-        dlgt.didFinish(screen: .employeeDetails)
+        guard let lName = lastName.text, lName.count > 0 else {
+            lastName.showError()
+            return
+        }
+
+        guard let birthDay = dob.text, birthDay.count > 0 else {
+            dob.showError()
+            return
+        }
+
+        guard let eml = email.text, eml.count > 0 else {
+            email.showError()
+            return
+        }
+
+        guard let phn = phone.text, phn.count == 12 else {
+            phone.showError()
+            return
+        }
+
+        if gender.count == 0 {
+            genderError.isHidden = false
+            return
+        }
+
+        guard let companyID = UserDefaults.standard.string(forKey: "CompanyId") else {
+            return
+        }
+
+        showLoadingIndicator()
+        UserRequests.registerUser(params: RegisterUserStep1(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: phn)) { result in
+            DispatchQueue.main.async {
+                self.hideLoadingIndicator()
+                switch result {
+                case .success(let success):
+                    print("Status of registering: \(success)")
+                    guard let dlgt = self.delegate else {
+                        return
+                    }
+
+                    dlgt.didFinish(screen: .employeeDetails)
+                case .failure(let error):
+                    print("Error in Registering User: \(error.localizedDescription)")
+                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to register user")
+                }
+            }
+        }
+    }
+
+    private func formatDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: self.selectedDate)
     }
 
     @IBAction func handleTapOnMale(_ sender: Any) {
+        gender = "m"
+        genderError.isHidden = true
     }
 
     @IBAction func handleTapOnFemale(_ sender: Any) {
+        gender = "f"
+        genderError.isHidden = true
     }
 
     @IBAction func selectDateofBirth(_ sender: Any) {

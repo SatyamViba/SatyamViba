@@ -1,10 +1,27 @@
 platform :ios, '14.0'
 use_frameworks!
 
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 target 'Viba' do
   pod 'SwiftLint'
   pod 'FontAwesome.swift'
   pod 'OTPFieldView'
   pod 'DLRadioButton', '~> 1.4'
   pod 'DatePicker', '~> 1.3.0'
+  pod 'SCLAlertView'
+  pod 'lottie-ios'
+end
+
+post_install do |installer|
+ installer.pods_project.root_object.attributes['LastSwiftMigration'] = 9999
+ installer.pods_project.root_object.attributes['LastSwiftUpdateCheck'] = 9999
+ installer.pods_project.root_object.attributes['LastUpgradeCheck'] = 9999
+
+ installer.pods_project.targets.each do |target|
+  target.build_configurations.each do |config|
+   config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+  end
+ end
 end

@@ -40,3 +40,39 @@ extension Colors {
         }
     }
 }
+
+enum NetworkPath: String {
+    // Login
+    case loginWithEmail = "auth/send-email-otp/emp-mobile"
+    case loginWithSms = "auth/send-otp/emp-mobile"
+    case validateEmailOtp = "auth/validate-email-otp"
+    case validateSmsOtp = "auth/validate-otp"
+    // Registration
+    case validateCompanyCode = "auth/validate-account-code"
+    case registerStep1 = "users/create-s1"
+    case registerImageUpload = "users/create-s2/"    // append account_id
+    case validateRegistrationOtps = "auth/validate-otp-values"
+    case resendRegistrationSmsOtp = "auth/resend-sms-otp"
+    case resentRegisrtrationEmailOtp = "auth/resend-email-otp"
+}
+
+enum API: String {
+    case baseUrl = "http://3.144.103.250:3000/api/v1/"
+}
+
+enum RequestMethod: String {
+    case post
+    case get
+    case put
+    case delete
+    case head
+}
+
+enum ErrorCode: Int {
+    case noNetwork = 1001
+    case userAuthFailed = 1002
+    case searverFailuer = 1003
+    case badRequest = 1004
+    case tokenInvalid = 1005
+    case parsingIssue = 1006
+}
