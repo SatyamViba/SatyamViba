@@ -56,12 +56,12 @@ class NetworkManager {
 
             if method == .post {
                 apiRequest.setValue(kApplicationJson, forHTTPHeaderField: kContentType)
-
                 if let requestInfo = params {
                     do {
                         let postData = try encoder.encode(requestInfo)
                         apiRequest.setValue("\(UInt(postData.count))", forHTTPHeaderField: kContentLength)
                         apiRequest.httpBody = postData
+                        print("### Placing request with data: \(String(decoding: postData, as: UTF8.self))")
                     } catch {
                         let userInfo = self.createUserInfo("No Network availale", failureReason: "No Network")
                         let err = NSError(domain: self.kDomain, code: ErrorCode.noNetwork.rawValue, userInfo: userInfo)
@@ -70,15 +70,18 @@ class NetworkManager {
                 }
             }
 
+            print("### Placing request with url: \(String(describing: apiRequest.url?.absoluteString))")
+
             session.dataTask(with: apiRequest as URLRequest, completionHandler: {(data, response, error) -> Void in
-                guard let httpResponse = response as? HTTPURLResponse else {
+                guard let httpResponse = response as? HTTPURLResponse, let rcvdData = data else {
                     let userInfo: [String: Any] = self.createUserInfo("Connectivity issue", failureReason: "No Network")
                     let err = NSError(domain: self.kDomain, code: ErrorCode.noNetwork.rawValue, userInfo: userInfo)
                     connectionCompletion(.failure(err))
                     return
                 }
 
-                if httpResponse.statusCode == 200, let rcvdData = data {
+                print("### Received Response: \(String(decoding: rcvdData, as: UTF8.self))")
+                if httpResponse.statusCode == 200 {
                     do {
                         let obj = try self.decoder.decode(Resp.self, from: rcvdData)
                         connectionCompletion(.success(obj))
@@ -89,7 +92,7 @@ class NetworkManager {
                         connectionCompletion(.failure(error))
                     }
                 } else {
-                    connectionCompletion(.failure(self.handleError(statusCode: httpResponse.statusCode)))
+                    connectionCompletion(.failure(self.handleError(statusCode: httpResponse.statusCode, errorData: rcvdData)))
                 }
             }).resume()
 
@@ -100,27 +103,39 @@ class NetworkManager {
         }
     }
 
-    private func handleError(statusCode: Int) -> Error {
-        var error: Error?
-        switch statusCode {
-        case 401:
-            let userInfo: [String: Any] = self.createUserInfo("User Authentication failed", failureReason: "User Authentication failed")
-            error = NSError(domain: self.kDomain, code: ErrorCode.userAuthFailed.rawValue, userInfo: userInfo)
+    private func handleError(statusCode: Int, errorData: Data) -> Error {
+        print("### Status Code Received: \(statusCode)")
+        var returnErr: Error?
 
-        case 412:
-            let userInfo = self.createUserInfo("Token expired", failureReason: "Token expired")
-            error = NSError(domain: self.kDomain, code: ErrorCode.tokenInvalid.rawValue, userInfo: userInfo)
+        do {
+            let obj = try self.decoder.decode(ErrorResponse.self, from: errorData)
+            switch statusCode {
+            case 401:
+                let userInfo: [String: Any] = self.createUserInfo(obj.error, failureReason: "User Authentication failed")
+                returnErr = NSError(domain: self.kDomain, code: ErrorCode.userAuthFailed.rawValue, userInfo: userInfo)
 
-        case 500:
-            let userInfo: [String: Any] = self.createUserInfo("Server failed", failureReason: "Server failed")
-            error = NSError(domain: self.kDomain, code: ErrorCode.searverFailuer.rawValue, userInfo: userInfo)
+            case 412:
+                let userInfo = self.createUserInfo(obj.error, failureReason: "Token expired")
+                returnErr = NSError(domain: self.kDomain, code: ErrorCode.tokenInvalid.rawValue, userInfo: userInfo)
 
-        default:
+            case 500:
+                let userInfo: [String: Any] = self.createUserInfo(obj.error, failureReason: "Server failed")
+                returnErr = NSError(domain: self.kDomain, code: ErrorCode.searverFailuer.rawValue, userInfo: userInfo)
+
+            case 400:
+                let userInfo: [String: Any] = self.createUserInfo(obj.error, failureReason: "Bad Request")
+                returnErr = NSError(domain: self.kDomain, code: ErrorCode.searverFailuer.rawValue, userInfo: userInfo)
+
+            default:
+                let userInfo: [String: Any] = self.createUserInfo(obj.error, failureReason: "Invalid Request")
+                returnErr = NSError(domain: self.kDomain, code: ErrorCode.badRequest.rawValue, userInfo: userInfo)
+            }
+        } catch {
             let userInfo: [String: Any] = self.createUserInfo("Bad Request", failureReason: "Bad Request")
-            error = NSError(domain: self.kDomain, code: ErrorCode.badRequest.rawValue, userInfo: userInfo)
+            returnErr = NSError(domain: self.kDomain, code: ErrorCode.badRequest.rawValue, userInfo: userInfo)
         }
 
-        return error!
+        return returnErr!
     }
 
     private func createUserInfo(_ descriptionKey: String!, failureReason: String!) -> [String: Any] {

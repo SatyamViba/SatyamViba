@@ -11,7 +11,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        #if DEBUG
+        UserDefaults.standard.register(defaults: [
+            UserDefaultsKeys.companyId.value: "615c95bffa612356f5f09267",
+            UserDefaultsKeys.userId.value: "6190d96f7f1f181b93eab0da"
+        ])
+        #endif
         return true
     }
 

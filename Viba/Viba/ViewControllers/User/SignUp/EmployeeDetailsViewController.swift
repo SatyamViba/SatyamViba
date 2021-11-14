@@ -57,6 +57,11 @@ class EmployeeDetailsViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
+//        guard let dlgt = self.delegate else {
+//            return
+//        }
+//
+//        dlgt.didFinish(screen: .employeeDetails)
         guard let fName = firstName.text, fName.count > 0 else {
             firstName.showError()
             return
@@ -77,7 +82,7 @@ class EmployeeDetailsViewController: UIViewController {
             return
         }
 
-        guard let phn = phone.text, phn.count == 12 else {
+        guard let phn = phone.text, phn.isValidPhone else {
             phone.showError()
             return
         }
@@ -87,17 +92,18 @@ class EmployeeDetailsViewController: UIViewController {
             return
         }
 
-        guard let companyID = UserDefaults.standard.string(forKey: "CompanyId") else {
+        guard let companyID = UserDefaults.standard.string(forKey: UserDefaultsKeys.companyId.value) else {
             return
         }
 
         showLoadingIndicator()
-        UserRequests.registerUser(params: RegisterUserStep1(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: phn)) { result in
-            DispatchQueue.main.async {
+        UserRequests.registerUser(params: RegisterUserStep1(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: "91" + phn)) { result in
+            DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {
-                case .success(let success):
-                    print("Status of registering: \(success)")
+                case .success(let user):
+                    print("Status of registering: \(user)")
+                    UserDefaults.standard.set(user.id, forKey: UserDefaultsKeys.userId.value)
                     guard let dlgt = self.delegate else {
                         return
                     }
@@ -105,7 +111,7 @@ class EmployeeDetailsViewController: UIViewController {
                     dlgt.didFinish(screen: .employeeDetails)
                 case .failure(let error):
                     print("Error in Registering User: \(error.localizedDescription)")
-                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to register user")
+                    SCLAlertView().showWarning("Warning!", subTitle: error.localizedDescription)
                 }
             }
         }

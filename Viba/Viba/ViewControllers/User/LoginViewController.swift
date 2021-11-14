@@ -9,6 +9,7 @@ import UIKit
 import SCLAlertView
 
 class LoginViewController: UIViewController {
+    var authType = AuthType.email
 
     @IBOutlet weak var userId: VibaTextField!
     @IBOutlet weak var companyCode: VibaTextField!
@@ -55,22 +56,50 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OTPView" {
+            guard let destVc = segue.destination as? OTPViewController, let text = userId.text else {
+                return
+            }
+
+            destVc.authType = self.authType
+            destVc.userEnteredId = "91" + text
+        }
+    }
+
     @IBAction func requestOTP(_ sender: Any) {
         guard let text = userId.text, text.count > 0 else {
             userId.showError()
             return
         }
 
-        performSegue(withIdentifier: "OTPView", sender: nil)
-    }
+        if text.isValidEmail {
+            authType = .email
+        } else if text.isValidPhone {
+            authType = .mobile
+        } else {
+            userId.showError()
+            return
+        }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SignupView" {
-
+        showLoadingIndicator()
+        UserRequests.authenticate(type: authType, id: authType == .email ? text : "91" + text) { response in
+            DispatchQueue.main.async { [self] in
+                self.hideLoadingIndicator()
+                switch response {
+                case .success(let status):
+                    print(status)
+                    self.performSegue(withIdentifier: "OTPView", sender: nil)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to validate input")
+                }
+            }
         }
     }
 
     @IBAction func signupUser(_ sender: Any) {
+        // self.performSegue(withIdentifier: "SignupView", sender: nil)
         guard let code = companyCode.text, code.count > 0 else {
             companyCode.showError()
             return
@@ -78,17 +107,17 @@ class LoginViewController: UIViewController {
 
         showLoadingIndicator()
         UserRequests.validateCompany(code: code) { result in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {
                 case .success(let companyDetails):
                     print("company details: \(companyDetails)")
-                    UserDefaults.standard.set(companyDetails.id, forKey: "CompanyId")
+                    UserDefaults.standard.set(companyDetails.id, forKey: UserDefaultsKeys.companyId.value)
 
-                        self.performSegue(withIdentifier: "SignupView", sender: nil)
+                    self.performSegue(withIdentifier: "SignupView", sender: nil)
                 case .failure(let err):
                     print(err.localizedDescription)
-                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to validate company")
+                    SCLAlertView().showWarning("Warning!", subTitle: err.localizedDescription)
                 }
             }
         }

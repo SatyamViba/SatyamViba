@@ -53,7 +53,7 @@ enum NetworkPath: String {
     case registerImageUpload = "users/create-s2/"    // append account_id
     case validateRegistrationOtps = "auth/validate-otp-values"
     case resendRegistrationSmsOtp = "auth/resend-sms-otp"
-    case resentRegisrtrationEmailOtp = "auth/resend-email-otp"
+    case resendRegisrtrationEmailOtp = "auth/resend-email-otp"
 }
 
 enum API: String {
@@ -75,4 +75,18 @@ enum ErrorCode: Int {
     case badRequest = 1004
     case tokenInvalid = 1005
     case parsingIssue = 1006
+}
+
+enum UserDefaultsKeys {
+    case companyId
+    case userId
+
+    var value: String {
+        switch self {
+        case .companyId:
+            return "CompanyId"
+        case .userId:
+            return "UserId"
+        }
+    }
 }

@@ -8,9 +8,20 @@
 import UIKit
 import FontAwesome_swift
 import OTPFieldView
+import SCLAlertView
+
+enum AuthType {
+    case email
+    case mobile
+}
 
 class OTPViewController: UIViewController {
+    var authType = AuthType.email
+    var userEnteredId: String?
+    var enteredOtp = ""
 
+    @IBOutlet weak var errMessage: UILabel!
+    var hasEnteredOtp = false
     @IBOutlet weak var otpField: OTPFieldView!
     @IBOutlet weak var backBtn: UIButton!
 
@@ -41,6 +52,27 @@ class OTPViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 
+    @IBAction func validedOtp(_ sender: Any) {
+        guard hasEnteredOtp == true, let id = userEnteredId else {
+            SCLAlertView().showWarning("Warning!", subTitle: "Please enter valid OTP")
+            return
+        }
+
+        showLoadingIndicator()
+        UserRequests.validateOtp(type: authType, id: id, otp: enteredOtp) { response in
+            DispatchQueue.main.async { [self] in
+                self.hideLoadingIndicator()
+                switch response {
+                case .success(let status):
+                    print(status)
+                   
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to validate input")
+                }
+            }
+        }
+    }
 }
 
 extension OTPViewController: OTPFieldViewDelegate {
@@ -49,11 +81,12 @@ extension OTPViewController: OTPFieldViewDelegate {
     }
 
     func enteredOTP(otp: String) {
-        print(otp)
+        enteredOtp = otp
     }
 
     func hasEnteredAllOTP(hasEnteredAll: Bool) -> Bool {
         print("Has entered all OTP? \(hasEnteredAll)")
-        return false
+        hasEnteredOtp = hasEnteredAll
+        return true
     }
 }

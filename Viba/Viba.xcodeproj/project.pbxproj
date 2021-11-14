@@ -21,6 +21,7 @@
 		4A21A1A0273B9C010002D052 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A19F273B9C010002D052 /* VerifyViewController.swift */; };
 		4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */; };
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
+		4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F7194274179F800D4A29E /* AuthResponse.swift */; };
 		4A72CCAF273DA481008AA853 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCAE273DA481008AA853 /* Reach.swift */; };
 		4A72CCB1273DAAF4008AA853 /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB0273DAAF4008AA853 /* UserRequests.swift */; };
 		4A72CCB4273E3504008AA853 /* SmsAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */; };
@@ -51,6 +52,11 @@
 		4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0162739122F007DB9FF /* Assets.xcassets */; };
 		4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0182739122F007DB9FF /* LaunchScreen.storyboard */; };
 		4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */; };
+		4ADB3A552740F3F900A0D750 /* UserRegistrrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */; };
+		4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */; };
+		4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A58274118E300A0D750 /* GeneralResponse.swift */; };
+		4ADB3A5B2741198F00A0D750 /* ResendRegistrationOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A5A2741198F00A0D750 /* ResendRegistrationOtp.swift */; };
+		4ADB3A5D274166F300A0D750 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A5C274166F300A0D750 /* Date+Extension.swift */; };
 		4AFC562E27391E7100E064E9 /* Android.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC562D27391E7100E064E9 /* Android.ttf */; };
 		4AFC5634273926AD00E064E9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC5633273926AD00E064E9 /* UIView+Extension.swift */; };
 		4AFC56382739285500E064E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC56372739285500E064E9 /* Constants.swift */; };
@@ -75,6 +81,7 @@
 		4A21A19F273B9C010002D052 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
+		4A5F7194274179F800D4A29E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		4A72CCAE273DA481008AA853 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		4A72CCB0273DAAF4008AA853 /* UserRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
 		4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsAuthentication.swift; sourceTree = "<group>"; };
@@ -107,6 +114,11 @@
 		4AB5F0192739122F007DB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB5F01B2739122F007DB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrrationDetails.swift; sourceTree = "<group>"; };
+		4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateRegistraionOTP.swift; sourceTree = "<group>"; };
+		4ADB3A58274118E300A0D750 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		4ADB3A5A2741198F00A0D750 /* ResendRegistrationOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResendRegistrationOtp.swift; sourceTree = "<group>"; };
+		4ADB3A5C274166F300A0D750 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		4AFC562D27391E7100E064E9 /* Android.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Android.ttf; sourceTree = "<group>"; };
 		4AFC5633273926AD00E064E9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4AFC56372739285500E064E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -187,8 +199,10 @@
 				4A72CCBC273EBB2A008AA853 /* RegisterUserStep1.swift */,
 				4A72CCB5273E350E008AA853 /* EmailAuthentication.swift */,
 				4A72CCBE273EE1B6008AA853 /* Company.swift */,
+				4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */,
 				4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */,
 				4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */,
+				4ADB3A5A2741198F00A0D750 /* ResendRegistrationOtp.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -198,6 +212,9 @@
 			children = (
 				4A72CCBA273E3786008AA853 /* ErrorResponse.swift */,
 				4A72CCC0273EE1F6008AA853 /* CompanyDetails.swift */,
+				4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */,
+				4ADB3A58274118E300A0D750 /* GeneralResponse.swift */,
+				4A5F7194274179F800D4A29E /* AuthResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -298,6 +315,7 @@
 				4AFC563B2739305E00E064E9 /* UIColor+Extension.swift */,
 				4A72CCD3274025CC008AA853 /* UIViewController+Extension.swift */,
 				4A72CCDE27402E78008AA853 /* String+Extension.swift */,
+				4ADB3A5C274166F300A0D750 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -478,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */,
 				4A8A6898273D8ABA00491060 /* NetworkManager.swift in Sources */,
 				4A72CCAF273DA481008AA853 /* Reach.swift in Sources */,
 				4A72CCC5273FCFBA008AA853 /* ValidateEmailOtp.swift in Sources */,
@@ -487,6 +506,8 @@
 				4A7784DD273CEE0600E9E168 /* VibaRadioButton.swift in Sources */,
 				4AFC563A27392FF800E064E9 /* Utility.swift in Sources */,
 				4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */,
+				4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */,
+				4ADB3A5D274166F300A0D750 /* Date+Extension.swift in Sources */,
 				4AFC563E2739483100E064E9 /* VibaButton.swift in Sources */,
 				4AB5F0122739122E007DB9FF /* LoginViewController.swift in Sources */,
 				4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */,
@@ -500,15 +521,18 @@
 				4A72CCB6273E350E008AA853 /* EmailAuthentication.swift in Sources */,
 				4A21A19E273B9B600002D052 /* SignupPageViewController.swift in Sources */,
 				4A21A19A273B89F30002D052 /* SignupViewController.swift in Sources */,
+				4ADB3A5B2741198F00A0D750 /* ResendRegistrationOtp.swift in Sources */,
 				4A1617AF2739512C00640236 /* VibaTextField.swift in Sources */,
 				4A1617BD273A42CF00640236 /* VibaBorderButton.swift in Sources */,
 				4A21A198273B89E50002D052 /* EmployeeDetailsViewController.swift in Sources */,
+				4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */,
 				4A72CCBD273EBB2A008AA853 /* RegisterUserStep1.swift in Sources */,
 				4A72CCBF273EE1B6008AA853 /* Company.swift in Sources */,
 				4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */,
 				4A21A1A0273B9C010002D052 /* VerifyViewController.swift in Sources */,
 				4A72CCB4273E3504008AA853 /* SmsAuthentication.swift in Sources */,
 				4AFC56382739285500E064E9 /* Constants.swift in Sources */,
+				4ADB3A552740F3F900A0D750 /* UserRegistrrationDetails.swift in Sources */,
 				4AFC563C2739305E00E064E9 /* UIColor+Extension.swift in Sources */,
 				4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */,
 				4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */,

@@ -44,19 +44,19 @@ class SignupViewController: UIViewController {
 
 extension SignupViewController: SignupPageViewProtocol {
     func selectDate(onCompletion handler: @escaping ((Date) -> Void)) {
-        let minDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 1950)!
-                let maxDate = Date()
-                let today = Date()
-                // Create picker object
-                let datePicker = DatePicker()
-                // Setup
-                datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
-                    if selected, let selectedDate = date {
-                        handler(selectedDate)
-                    }
-                }
-                // Display
-                datePicker.show(in: self, on: nil)
+        let minDate = DatePickerHelper.shared.dateFrom(day: 01, month: 01, year: 1950)!
+        let maxDate = Date().removing(years: 18)
+        let today = Date()
+        // Create picker object
+        let datePicker = DatePicker()
+        // Setup
+        datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
+            if selected, let selectedDate = date {
+                handler(selectedDate)
+            }
+        }
+        // Display
+        datePicker.show(in: self, on: nil)
     }
 
     func updatePageIndicator(screen: SignupScreens) {

@@ -336,7 +336,7 @@ public class VibaTextField: UITextField {
                            delay: 0.0,
                            options: [.beginFromCurrentState, .curveEaseOut],
                            animations: animations) { _ in
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.layoutIfNeeded()
                 }
             }
@@ -359,7 +359,7 @@ public class VibaTextField: UITextField {
                            delay: 0.0,
                            options: [.beginFromCurrentState, .curveEaseOut],
                            animations: animations) { _ in
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.layoutIfNeeded()
                 }
             }

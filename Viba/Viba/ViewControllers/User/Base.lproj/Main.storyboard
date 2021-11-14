@@ -73,14 +73,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide Email or Mobile Number"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide valid Email or Mobile Number"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zGN-EZ-MIO"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By VIBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoU-Pm-5MZ">
-                                <rect key="frame" x="132" y="643.5" width="111" height="16.5"/>
+                                <rect key="frame" x="128.5" y="640" width="118.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -257,44 +257,54 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have sent you 5 digit OTP to your registered email or phone number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEh-XL-Z4D">
-                                <rect key="frame" x="70" y="173.5" width="235" height="30.5"/>
+                                <rect key="frame" x="30" y="173.5" width="315" height="36.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rl1-Fb-uLU" customClass="OTPFieldView" customModule="OTPFieldView">
-                                <rect key="frame" x="20" y="226" width="335" height="65"/>
+                                <rect key="frame" x="20" y="232" width="335" height="65"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="AnB-wg-Z9E"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-35-lPB" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="311" width="335" height="55"/>
+                                <rect key="frame" x="20" y="358" width="335" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="dFE-sq-Ui7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Request OTP to Signin"/>
+                                <state key="normal" title="Confirm OTP"/>
                                 <connections>
                                     <action selector="requestOTP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VU-ch-Nsm"/>
+                                    <action selector="validedOtp:" destination="gnC-5A-FnD" eventType="touchUpInside" id="HLa-Q0-zO4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't get OTP?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0th-79-OtY" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="127" y="411" width="121" height="21"/>
+                                <rect key="frame" x="127" y="443" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-8m-h3u" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="157" y="440" width="61" height="34"/>
+                                <rect key="frame" x="159.5" y="472" width="56" height="33"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Resend">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter OTP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coc-d9-EFr">
+                                <rect key="frame" x="20" y="312" width="335" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="zgb-ba-FQf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NrL-5d-AHZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -302,16 +312,17 @@
                             <constraint firstItem="1fT-35-lPB" firstAttribute="leading" secondItem="NrL-5d-AHZ" secondAttribute="leading" constant="20" id="0qX-xH-skF"/>
                             <constraint firstItem="PQB-hu-24g" firstAttribute="leading" secondItem="CR6-Wm-Y4L" secondAttribute="leadingMargin" id="1tb-Gt-uIQ"/>
                             <constraint firstItem="Rl1-Fb-uLU" firstAttribute="leading" secondItem="NrL-5d-AHZ" secondAttribute="leading" constant="20" id="3GM-wy-fox"/>
-                            <constraint firstItem="1fT-35-lPB" firstAttribute="top" secondItem="Rl1-Fb-uLU" secondAttribute="bottom" constant="20" id="4h0-7n-8Wh"/>
                             <constraint firstItem="QEh-XL-Z4D" firstAttribute="top" secondItem="rDX-YD-Xkm" secondAttribute="bottom" constant="30" id="7TB-pQ-f0k"/>
                             <constraint firstItem="PQB-hu-24g" firstAttribute="top" secondItem="dR5-T6-i7V" secondAttribute="bottom" id="7eK-cS-dVl"/>
-                            <constraint firstItem="NrL-5d-AHZ" firstAttribute="trailing" secondItem="QEh-XL-Z4D" secondAttribute="trailing" constant="70" id="CPY-0G-iO5"/>
-                            <constraint firstItem="QEh-XL-Z4D" firstAttribute="leading" secondItem="NrL-5d-AHZ" secondAttribute="leading" constant="70" id="D9D-sB-vEu"/>
+                            <constraint firstItem="NrL-5d-AHZ" firstAttribute="trailing" secondItem="QEh-XL-Z4D" secondAttribute="trailing" constant="30" id="CPY-0G-iO5"/>
+                            <constraint firstItem="QEh-XL-Z4D" firstAttribute="leading" secondItem="NrL-5d-AHZ" secondAttribute="leading" constant="30" id="D9D-sB-vEu"/>
+                            <constraint firstItem="coc-d9-EFr" firstAttribute="top" secondItem="Rl1-Fb-uLU" secondAttribute="bottom" constant="15" id="ErV-Hw-8dp"/>
+                            <constraint firstItem="NrL-5d-AHZ" firstAttribute="trailing" secondItem="coc-d9-EFr" secondAttribute="trailing" constant="20" id="GCL-Rh-TkF"/>
                             <constraint firstItem="Odv-gz-4CW" firstAttribute="top" secondItem="NrL-5d-AHZ" secondAttribute="top" constant="55" id="GkM-Md-GPn"/>
                             <constraint firstItem="Odv-gz-4CW" firstAttribute="centerX" secondItem="CR6-Wm-Y4L" secondAttribute="centerX" id="Hoa-WA-r7z"/>
                             <constraint firstItem="rDX-YD-Xkm" firstAttribute="top" secondItem="Odv-gz-4CW" secondAttribute="bottom" constant="11" id="LHu-Og-Mqv"/>
                             <constraint firstItem="rDX-YD-Xkm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dR5-T6-i7V" secondAttribute="trailing" constant="8" symbolic="YES" id="LMX-ha-o0x"/>
-                            <constraint firstItem="0th-79-OtY" firstAttribute="top" secondItem="1fT-35-lPB" secondAttribute="bottom" constant="45" id="Q1a-rg-wLS"/>
+                            <constraint firstItem="0th-79-OtY" firstAttribute="top" secondItem="1fT-35-lPB" secondAttribute="bottom" constant="30" id="Q1a-rg-wLS"/>
                             <constraint firstItem="0th-79-OtY" firstAttribute="centerX" secondItem="CR6-Wm-Y4L" secondAttribute="centerX" id="Qlr-f5-qhG"/>
                             <constraint firstItem="rDX-YD-Xkm" firstAttribute="leading" secondItem="PQB-hu-24g" secondAttribute="trailing" constant="15" id="bRJ-KD-tWu"/>
                             <constraint firstItem="rDX-YD-Xkm" firstAttribute="centerX" secondItem="CR6-Wm-Y4L" secondAttribute="centerX" id="e5v-6Q-W7N"/>
@@ -319,20 +330,23 @@
                             <constraint firstItem="Rl1-Fb-uLU" firstAttribute="top" secondItem="QEh-XL-Z4D" secondAttribute="bottom" constant="22" id="kCj-VK-DvM"/>
                             <constraint firstItem="dR5-T6-i7V" firstAttribute="leading" secondItem="NrL-5d-AHZ" secondAttribute="leading" constant="10" id="kZl-aA-DNn"/>
                             <constraint firstItem="b9E-8m-h3u" firstAttribute="top" secondItem="0th-79-OtY" secondAttribute="bottom" constant="8" id="li2-FT-7CE"/>
+                            <constraint firstItem="1fT-35-lPB" firstAttribute="top" secondItem="coc-d9-EFr" secondAttribute="bottom" constant="30" id="nHZ-5O-qjc"/>
                             <constraint firstItem="rDX-YD-Xkm" firstAttribute="centerY" secondItem="PQB-hu-24g" secondAttribute="centerY" id="nds-6C-U3s"/>
                             <constraint firstItem="NrL-5d-AHZ" firstAttribute="trailing" secondItem="1fT-35-lPB" secondAttribute="trailing" constant="20" id="nlL-dT-Ncg"/>
                             <constraint firstItem="b9E-8m-h3u" firstAttribute="centerX" secondItem="CR6-Wm-Y4L" secondAttribute="centerX" id="wgm-an-FHp"/>
+                            <constraint firstItem="coc-d9-EFr" firstAttribute="leading" secondItem="NrL-5d-AHZ" secondAttribute="leading" constant="20" id="xS9-Bj-mQ1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b6o-sg-A4g"/>
                     <connections>
                         <outlet property="backBtn" destination="dR5-T6-i7V" id="ZZG-o6-3JU"/>
+                        <outlet property="errMessage" destination="coc-d9-EFr" id="i50-zd-rb4"/>
                         <outlet property="otpField" destination="Rl1-Fb-uLU" id="VgY-lU-K0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cib-BK-efR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2066.666666666667" y="-75"/>
+            <point key="canvasLocation" x="2066.4000000000001" y="-75.112443778110944"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="iZ2-9c-rJb">
@@ -515,7 +529,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-KX-Uhd" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="170.5" width="335" height="49"/>
+                                <rect key="frame" x="20" y="170.5" width="281" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="B75-05-ws2"/>
                                 </constraints>
@@ -557,7 +571,7 @@
                                 <rect key="frame" x="20" y="365.5" width="200" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-Fw-TI6" customClass="VibaRadioButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="31"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Male">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -568,7 +582,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0h-Xd-XWL" customClass="VibaRadioButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="80.5" y="0.0" width="119.5" height="31"/>
+                                        <rect key="frame" x="86" y="0.0" width="114" height="31"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Female">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -608,9 +622,9 @@
                             <constraint firstItem="8JS-KX-Uhd" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="2Hj-U1-4Qg"/>
                             <constraint firstItem="4yu-o1-dMm" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="2w1-5i-8hC"/>
                             <constraint firstItem="sJD-oJ-9BG" firstAttribute="leading" secondItem="gpT-bn-CRq" secondAttribute="trailing" constant="20" id="34l-U8-s3D"/>
+                            <constraint firstItem="iWT-UX-wrj" firstAttribute="leading" secondItem="8JS-KX-Uhd" secondAttribute="trailing" constant="8" symbolic="YES" id="5fI-x2-Jnt"/>
                             <constraint firstItem="sJD-oJ-9BG" firstAttribute="bottom" secondItem="gpT-bn-CRq" secondAttribute="bottom" id="6oz-70-g4c"/>
                             <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="4yu-o1-dMm" secondAttribute="trailing" constant="20" id="7Dy-zE-V2Q"/>
-                            <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="8JS-KX-Uhd" secondAttribute="trailing" constant="20" id="8SE-Qh-cf2"/>
                             <constraint firstItem="gpT-bn-CRq" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="94S-uq-xDS"/>
                             <constraint firstItem="U8M-Mh-ZFt" firstAttribute="top" secondItem="UFf-6S-CG6" secondAttribute="bottom" constant="16" id="ALO-Nn-pU0"/>
                             <constraint firstItem="UFf-6S-CG6" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="Bsy-fp-G1e"/>
@@ -654,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKQ-AY-05x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3920" y="598.2008995502249"/>
+            <point key="canvasLocation" x="3919.1999999999998" y="598.2008995502249"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="cBN-ra-v4j">
@@ -735,9 +749,15 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide Email OTP"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="n2l-Gg-4bQ" id="fKb-sw-M5v"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-t0-xqA" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="91.5" y="8" width="61" height="34"/>
+                                                <rect key="frame" x="103.5" y="9.5" width="49" height="31"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Resend">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -770,9 +790,15 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide Mobile OTP"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="n2l-Gg-4bQ" id="KoA-dU-YPX"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-h2-NsO" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="91.5" y="8" width="61" height="34"/>
+                                                <rect key="frame" x="103.5" y="9.5" width="49" height="31"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Resend">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -828,7 +854,9 @@
                     <size key="freeformSize" width="375" height="520"/>
                     <connections>
                         <outlet property="boxView" destination="geq-29-o6z" id="DCY-n9-0gb"/>
+                        <outlet property="emailOtp" destination="qcw-ba-95k" id="SYe-ca-Jg8"/>
                         <outlet property="infoBtn" destination="aon-QS-77i" id="B5d-Ii-c68"/>
+                        <outlet property="smsOtp" destination="AVU-KY-k3U" id="UOm-jt-m1U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6i-Fy-GgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -904,73 +932,73 @@
             <size key="intrinsicContentSize" width="120.5" height="20.5"/>
         </designable>
         <designable name="1fT-35-lPB">
-            <size key="intrinsicContentSize" width="154" height="30"/>
+            <size key="intrinsicContentSize" width="95" height="33"/>
         </designable>
         <designable name="4yu-o1-dMm">
-            <size key="intrinsicContentSize" width="73" height="34"/>
+            <size key="intrinsicContentSize" width="70" height="33"/>
         </designable>
         <designable name="8JS-KX-Uhd">
-            <size key="intrinsicContentSize" width="112.5" height="34"/>
+            <size key="intrinsicContentSize" width="114.5" height="45.5"/>
         </designable>
         <designable name="8SE-t0-xqA">
-            <size key="intrinsicContentSize" width="61" height="34"/>
+            <size key="intrinsicContentSize" width="49" height="31"/>
         </designable>
         <designable name="8vn-Fw-TI6">
-            <size key="intrinsicContentSize" width="39" height="34"/>
+            <size key="intrinsicContentSize" width="51" height="21"/>
         </designable>
         <designable name="AVU-KY-k3U">
-            <size key="intrinsicContentSize" width="103" height="34"/>
+            <size key="intrinsicContentSize" width="105" height="45.5"/>
         </designable>
         <designable name="BWT-B7-1GP">
             <size key="intrinsicContentSize" width="147" height="20.5"/>
         </designable>
         <designable name="JVL-f4-JZF">
-            <size key="intrinsicContentSize" width="73" height="34"/>
+            <size key="intrinsicContentSize" width="70" height="33"/>
         </designable>
         <designable name="P0h-Xd-XWL">
-            <size key="intrinsicContentSize" width="59" height="34"/>
+            <size key="intrinsicContentSize" width="70" height="21"/>
         </designable>
         <designable name="QVo-n1-tJH">
-            <size key="intrinsicContentSize" width="97" height="34"/>
+            <size key="intrinsicContentSize" width="99" height="45.5"/>
         </designable>
         <designable name="R9X-N3-Jbg">
             <size key="intrinsicContentSize" width="231.5" height="20.5"/>
         </designable>
         <designable name="SDs-e6-Gv3">
-            <size key="intrinsicContentSize" width="154" height="30"/>
+            <size key="intrinsicContentSize" width="166" height="33"/>
         </designable>
         <designable name="U8M-Mh-ZFt">
-            <size key="intrinsicContentSize" width="69" height="34"/>
+            <size key="intrinsicContentSize" width="71" height="45.5"/>
         </designable>
         <designable name="UFf-6S-CG6">
-            <size key="intrinsicContentSize" width="62.5" height="34"/>
+            <size key="intrinsicContentSize" width="64.5" height="45.5"/>
         </designable>
         <designable name="Xpb-1O-yuR">
-            <size key="intrinsicContentSize" width="127.5" height="34"/>
+            <size key="intrinsicContentSize" width="129.5" height="45.5"/>
         </designable>
         <designable name="b9E-8m-h3u">
-            <size key="intrinsicContentSize" width="61" height="34"/>
+            <size key="intrinsicContentSize" width="56" height="33"/>
         </designable>
         <designable name="bGd-4v-Bc7">
             <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
         <designable name="cIV-Zq-INv">
-            <size key="intrinsicContentSize" width="141" height="34"/>
+            <size key="intrinsicContentSize" width="132" height="33"/>
         </designable>
         <designable name="gWD-h2-NsO">
-            <size key="intrinsicContentSize" width="61" height="34"/>
+            <size key="intrinsicContentSize" width="49" height="31"/>
         </designable>
         <designable name="gcw-L1-HnQ">
-            <size key="intrinsicContentSize" width="98" height="34"/>
+            <size key="intrinsicContentSize" width="100" height="45.5"/>
         </designable>
         <designable name="qcw-ba-95k">
-            <size key="intrinsicContentSize" width="94" height="34"/>
+            <size key="intrinsicContentSize" width="96" height="45.5"/>
         </designable>
         <designable name="ryj-WG-Rrd">
             <size key="intrinsicContentSize" width="253" height="20.5"/>
         </designable>
         <designable name="sAw-fx-crL">
-            <size key="intrinsicContentSize" width="182.5" height="34"/>
+            <size key="intrinsicContentSize" width="184.5" height="45.5"/>
         </designable>
     </designables>
     <resources>
