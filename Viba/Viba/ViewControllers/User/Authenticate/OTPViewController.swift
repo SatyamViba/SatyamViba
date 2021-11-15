@@ -65,7 +65,7 @@ class OTPViewController: UIViewController {
                 switch response {
                 case .success(let status):
                     print(status)
-                   
+
                 case .failure(let error):
                     print(error.localizedDescription)
                     SCLAlertView().showWarning("Warning!", subTitle: "Failed to validate input")

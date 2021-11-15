@@ -44,6 +44,7 @@
 		4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCDA2740284C008AA853 /* IGProgress.swift */; };
 		4A72CCDF27402E78008AA853 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCDE27402E78008AA853 /* String+Extension.swift */; };
 		4A7784DD273CEE0600E9E168 /* VibaRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7784DC273CEE0600E9E168 /* VibaRadioButton.swift */; };
+		4A78FB5427417F36000BFCFF /* PicCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78FB5327417F36000BFCFF /* PicCaptureViewController.swift */; };
 		4A8A6898273D8ABA00491060 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A6897273D8ABA00491060 /* NetworkManager.swift */; };
 		4AB5F00E2739122E007DB9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5F00D2739122E007DB9FF /* AppDelegate.swift */; };
 		4AB5F0102739122E007DB9FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5F00F2739122E007DB9FF /* SceneDelegate.swift */; };
@@ -104,6 +105,7 @@
 		4A72CCDA2740284C008AA853 /* IGProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGProgress.swift; sourceTree = "<group>"; };
 		4A72CCDE27402E78008AA853 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4A7784DC273CEE0600E9E168 /* VibaRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRadioButton.swift; sourceTree = "<group>"; };
+		4A78FB5327417F36000BFCFF /* PicCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCaptureViewController.swift; sourceTree = "<group>"; };
 		4A8A6897273D8ABA00491060 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4AB5F00A2739122D007DB9FF /* VIBA-EMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIBA-EMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB5F00D2739122E007DB9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,8 +157,7 @@
 			children = (
 				4A21A196273B87E90002D052 /* SignUp */,
 				4AB5F0132739122E007DB9FF /* Main.storyboard */,
-				4AB5F0112739122E007DB9FF /* LoginViewController.swift */,
-				4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */,
+				4A78FB5227417F0B000BFCFF /* Authenticate */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -240,6 +241,16 @@
 				4A72CCDA2740284C008AA853 /* IGProgress.swift */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		4A78FB5227417F0B000BFCFF /* Authenticate */ = {
+			isa = PBXGroup;
+			children = (
+				4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */,
+				4AB5F0112739122E007DB9FF /* LoginViewController.swift */,
+				4A78FB5327417F36000BFCFF /* PicCaptureViewController.swift */,
+			);
+			path = Authenticate;
 			sourceTree = "<group>";
 		};
 		4A8A6896273D8AAC00491060 /* WebServices */ = {
@@ -504,6 +515,7 @@
 				4A72CCD4274025CC008AA853 /* UIViewController+Extension.swift in Sources */,
 				4A1617C5273A5FAD00640236 /* VibaNormalButton.swift in Sources */,
 				4A7784DD273CEE0600E9E168 /* VibaRadioButton.swift in Sources */,
+				4A78FB5427417F36000BFCFF /* PicCaptureViewController.swift in Sources */,
 				4AFC563A27392FF800E064E9 /* Utility.swift in Sources */,
 				4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */,
 				4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */,
