@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDs-e6-Gv3" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="246.5" width="335" height="55"/>
+                                <rect key="frame" x="20" y="243" width="335" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="LNq-Ar-qlK"/>
@@ -66,10 +66,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMail or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAw-fx-crL" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="166.5" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="oEr-HS-VbP"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="166.5" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -86,7 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-lW-3wp">
-                                <rect key="frame" x="20" y="325.5" width="335" height="22"/>
+                                <rect key="frame" x="20" y="322" width="335" height="22"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVO-UH-UgO">
                                         <rect key="frame" x="0.0" y="10.5" width="40" height="1"/>
@@ -126,16 +123,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Employee?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-j9-Rkv">
-                                <rect key="frame" x="20" y="370.5" width="335" height="21"/>
+                                <rect key="frame" x="20" y="367" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-1O-yuR" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="404.5" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="bqy-mj-V9B"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="401" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -146,7 +140,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGd-4v-Bc7" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="470.5" width="335" height="49"/>
+                                <rect key="frame" x="20" y="463.5" width="335" height="49"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="h3h-yv-wEy"/>
@@ -342,7 +336,7 @@
                         <outlet property="backBtn" destination="dR5-T6-i7V" id="ZZG-o6-3JU"/>
                         <outlet property="errMessage" destination="coc-d9-EFr" id="i50-zd-rb4"/>
                         <outlet property="otpField" destination="Rl1-Fb-uLU" id="VgY-lU-K0c"/>
-                        <segue destination="yja-zb-HXF" kind="show" id="umw-OF-fgA"/>
+                        <segue destination="yja-zb-HXF" kind="show" identifier="PicView" id="umw-OF-fgA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cib-BK-efR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -542,10 +536,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-L1-HnQ" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40.5" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="FL8-LT-Osj"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="40.5" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -556,10 +547,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVo-n1-tJH" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="105.5" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="eho-ar-7SL"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="102" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -570,10 +558,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-KX-Uhd" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="170.5" width="281" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="B75-05-ws2"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="163.5" width="281" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -581,10 +566,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8M-Mh-ZFt" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="300.5" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="5en-o5-pXd"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="286.5" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
                                 <userDefinedRuntimeAttributes>
@@ -595,10 +577,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UFf-6S-CG6" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="235.5" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="gMj-fE-FqO"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="225" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -609,7 +588,7 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-bn-CRq">
-                                <rect key="frame" x="20" y="365.5" width="200" height="31"/>
+                                <rect key="frame" x="20" y="348" width="200" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-Fw-TI6" customClass="VibaRadioButton" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="31"/>
@@ -639,7 +618,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-UX-wrj">
-                                <rect key="frame" x="309" y="174.5" width="40" height="40"/>
+                                <rect key="frame" x="309" y="167.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Aqo-3I-L9E"/>
                                     <constraint firstAttribute="width" constant="40" id="knl-9n-6En"/>
@@ -650,7 +629,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select gender" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJD-oJ-9BG">
-                                <rect key="frame" x="240" y="365.5" width="115" height="31"/>
+                                <rect key="frame" x="240" y="348" width="115" height="31"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
