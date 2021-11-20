@@ -68,6 +68,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
+        performSegue(withIdentifier: "Dashboard", sender: nil)
+        /*
         guard let text = userId.text, text.count > 0 else {
             userId.showError()
             return
@@ -96,6 +98,7 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+        */
     }
 
     @IBAction func signupUser(_ sender: Any) {

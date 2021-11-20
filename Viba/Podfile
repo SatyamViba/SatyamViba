@@ -12,6 +12,7 @@ target 'Viba' do
   pod 'DatePicker', '~> 1.3.0'
   pod 'SCLAlertView'
   pod 'lottie-ios'
+  pod 'ESTabBarController-swift'
 end
 
 post_install do |installer|
