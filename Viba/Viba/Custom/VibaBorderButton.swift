@@ -9,6 +9,20 @@ import UIKit
 
 @IBDesignable
 class VibaBorderButton: UIButton {
+    @IBInspectable
+    var borderColor: UIColor = Colors.transparentBtnColor.value {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+
+    @IBInspectable
+    var textColor: UIColor = Colors.transparentBtnColor.value {
+        didSet {
+            setTitleColor(textColor, for: .normal)
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

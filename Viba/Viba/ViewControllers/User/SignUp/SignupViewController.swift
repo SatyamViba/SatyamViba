@@ -45,7 +45,7 @@ class SignupViewController: UIViewController {
 extension SignupViewController: SignupPageViewProtocol {
     func selectDate(onCompletion handler: @escaping ((Date) -> Void)) {
         let minDate = DatePickerHelper.shared.dateFrom(day: 01, month: 01, year: 1950)!
-        let maxDate = Date().removing(years: 18)
+        let maxDate = Date().subtract(years: 18)
         let today = Date()
         // Create picker object
         let datePicker = DatePicker()

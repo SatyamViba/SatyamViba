@@ -16,6 +16,8 @@ enum Colors {
     case lightLabelColor
     case transparentBtnColor
     case textFieldBorderColor
+    case btnSelected
+    case btnUnselected
 }
 
 extension Colors {
@@ -37,7 +39,12 @@ extension Colors {
             return UIColor("#FF0062")
         case .textFieldBorderColor:
             return UIColor("#747474")
+        case .btnSelected:
+            return UIColor("#8000FF")
+        case .btnUnselected:
+            return UIColor("#F2F2F2")
         }
+
     }
 }
 

@@ -1,20 +1,13 @@
 //
-//  VibaRoundCornerView.swift
+//  VibaRoundButton.swift
 //  Viba
 //
-//  Created by Satyam Sutapalli on 10/11/21.
+//  Created by Satyam Sutapalli on 20/11/21.
 //
 
 import UIKit
 
-@IBDesignable
-class VibaRoundCornerView: UIView {
-    @IBInspectable
-    var cornerRadius: CGFloat = 3.0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-        }
-    }
+class VibaRoundImageButton: UIButton {
 
     @IBInspectable
     var borderWidth: CGFloat = 0.0 {
@@ -29,7 +22,7 @@ class VibaRoundCornerView: UIView {
             layer.borderColor = borderColor.cgColor
         }
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -41,6 +34,21 @@ class VibaRoundCornerView: UIView {
     }
 
     private func commonInit() {
-        layer.cornerRadius = cornerRadius
+        makeRound()
+    }
+
+    override internal var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set {
+            super.frame = newValue
+            makeRound()
+        }
+    }
+
+    private func makeRound() {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = (self.frame.width + self.frame.height) / 4
     }
 }

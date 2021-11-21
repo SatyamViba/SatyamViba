@@ -21,6 +21,8 @@
 		4A21A1A0273B9C010002D052 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A19F273B9C010002D052 /* VerifyViewController.swift */; };
 		4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */; };
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
+		4A5AA7AB274934E800084866 /* VibaCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AA274934E800084866 /* VibaCircularImage.swift */; };
+		4A5AA7AD2749541500084866 /* VibaRoundImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */; };
 		4A5E47742748E03D00239676 /* DashboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47732748E03D00239676 /* DashboardTabViewController.swift */; };
 		4A5E47772748E59F00239676 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47762748E59F00239676 /* DashboardViewController.swift */; };
 		4A5E47792748E5AB00239676 /* TimesheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47782748E5AB00239676 /* TimesheetViewController.swift */; };
@@ -89,6 +91,8 @@
 		4A21A19F273B9C010002D052 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
+		4A5AA7AA274934E800084866 /* VibaCircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaCircularImage.swift; sourceTree = "<group>"; };
+		4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRoundImageButton.swift; sourceTree = "<group>"; };
 		4A5E47732748E03D00239676 /* DashboardTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabViewController.swift; sourceTree = "<group>"; };
 		4A5E47762748E59F00239676 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4A5E47782748E5AB00239676 /* TimesheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetViewController.swift; sourceTree = "<group>"; };
@@ -373,6 +377,7 @@
 			children = (
 				4A72CCD72740284C008AA853 /* Lottie */,
 				4AFC563D2739483100E064E9 /* VibaButton.swift */,
+				4A5AA7AA274934E800084866 /* VibaCircularImage.swift */,
 				4A7784DC273CEE0600E9E168 /* VibaRadioButton.swift */,
 				4A1617BC273A42CF00640236 /* VibaBorderButton.swift */,
 				4A1617C4273A5FAD00640236 /* VibaNormalButton.swift */,
@@ -380,6 +385,7 @@
 				4A1617BA273A40D700640236 /* VibaLabel.swift */,
 				4A21A194273B67290002D052 /* VibaMediumLabel.swift */,
 				4A21A19B273B913F0002D052 /* VibaRoundCornerView.swift */,
+				4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -563,10 +569,12 @@
 				4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */,
 				4ADB3A5D274166F300A0D750 /* Date+Extension.swift in Sources */,
 				4AFC563E2739483100E064E9 /* VibaButton.swift in Sources */,
+				4A5AA7AD2749541500084866 /* VibaRoundImageButton.swift in Sources */,
 				4AB5F0122739122E007DB9FF /* LoginViewController.swift in Sources */,
 				4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */,
 				4A21A195273B67290002D052 /* VibaMediumLabel.swift in Sources */,
 				4AB5F00E2739122E007DB9FF /* AppDelegate.swift in Sources */,
+				4A5AA7AB274934E800084866 /* VibaCircularImage.swift in Sources */,
 				4A1617BB273A40D700640236 /* VibaLabel.swift in Sources */,
 				4AFC5634273926AD00E064E9 /* UIView+Extension.swift in Sources */,
 				4A5E477D2748E5C600239676 /* ClockInOutViewController.swift in Sources */,
