@@ -10,6 +10,7 @@ import FontAwesome_swift
 
 class ClockInOutViewController: UIViewController {
 
+    @IBOutlet weak var eventList: UITableView!
     @IBOutlet weak var leadingSpace: NSLayoutConstraint!
     @IBOutlet weak var trailingSpace: NSLayoutConstraint!
 
@@ -32,6 +33,7 @@ class ClockInOutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        eventList.register(UINib(nibName: "ClockInOutTableViewCell", bundle: nil), forCellReuseIdentifier: "ClockInOut")
         // Do any additional setup after loading the view.
         wishes.text = Utility.getWish()
         dateAndTime.text = Date().formatToDateTime()
@@ -113,10 +115,14 @@ class ClockInOutViewController: UIViewController {
 
 extension ClockInOutViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClockInOut", for: indexPath) as? ClockInOutTableViewCell else {
+            return UITableViewCell()
+        }
+
+        return cell
     }
 }

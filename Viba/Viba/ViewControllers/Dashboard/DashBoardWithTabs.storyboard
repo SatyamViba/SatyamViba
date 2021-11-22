@@ -270,33 +270,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" estimatedRowHeight="82" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-Gg-8ve">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" estimatedRowHeight="82" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-Gg-8ve">
                                 <rect key="frame" x="20" y="320" width="374" height="556"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="877-Yo-7Jc">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="82"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="877-Yo-7Jc" id="7Fy-Ug-rQU">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="82"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Saf-Xh-q5G" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="24" id="BMm-Zs-MUy"/>
-                                                        <constraint firstAttribute="height" constant="24" id="YeN-ZV-b8I"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Saf-Xh-q5G" firstAttribute="top" secondItem="7Fy-Ug-rQU" secondAttribute="top" id="T6T-5L-Odk"/>
-                                                <constraint firstItem="Saf-Xh-q5G" firstAttribute="leading" secondItem="7Fy-Ug-rQU" secondAttribute="leading" id="fi1-7c-vDz"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="zah-ba-6ac" id="8Aa-cH-Xyu"/>
                                     <outlet property="delegate" destination="zah-ba-6ac" id="ub3-Yd-Zir"/>
@@ -328,6 +304,7 @@
                         <outlet property="confirmationMessage" destination="uGr-nz-ZFH" id="Sbz-qv-yvj"/>
                         <outlet property="confirmationView" destination="43Y-Ui-CoU" id="tzh-fC-ai8"/>
                         <outlet property="dateAndTime" destination="TYa-8K-feo" id="Lqw-Jr-peT"/>
+                        <outlet property="eventList" destination="Bmi-Gg-8ve" id="6Sq-7w-QRO"/>
                         <outlet property="home" destination="90B-a8-DRH" id="7Cp-Rs-qTd"/>
                         <outlet property="leadingSpace" destination="lhg-NE-xVz" id="hMT-Yq-TO5"/>
                         <outlet property="message" destination="3ZS-Fp-dPk" id="cwy-BR-34c"/>
@@ -340,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1e2-Pk-dkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="-307"/>
+            <point key="canvasLocation" x="1489.8550724637682" y="-307.36607142857139"/>
         </scene>
         <!--Timesheet View Controller-->
         <scene sceneID="hvk-qt-iVQ">

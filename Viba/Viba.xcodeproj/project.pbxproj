@@ -20,6 +20,8 @@
 		4A21A19E273B9B600002D052 /* SignupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A19D273B9B600002D052 /* SignupPageViewController.swift */; };
 		4A21A1A0273B9C010002D052 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A19F273B9C010002D052 /* VerifyViewController.swift */; };
 		4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */; };
+		4A3DDA71274B6A1A002FF884 /* ClockInOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */; };
+		4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */; };
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
 		4A5AA7AB274934E800084866 /* VibaCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AA274934E800084866 /* VibaCircularImage.swift */; };
 		4A5AA7AD2749541500084866 /* VibaRoundImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */; };
@@ -90,6 +92,8 @@
 		4A21A19D273B9B600002D052 /* SignupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageViewController.swift; sourceTree = "<group>"; };
 		4A21A19F273B9C010002D052 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
+		4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutTableViewCell.swift; sourceTree = "<group>"; };
+		4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockInOutTableViewCell.xib; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
 		4A5AA7AA274934E800084866 /* VibaCircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaCircularImage.swift; sourceTree = "<group>"; };
 		4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRoundImageButton.swift; sourceTree = "<group>"; };
@@ -194,6 +198,16 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		4A3DDA6F274B69F6002FF884 /* CheckInOut */ = {
+			isa = PBXGroup;
+			children = (
+				4A5E47762748E59F00239676 /* ClockInOutViewController.swift */,
+				4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */,
+				4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */,
+			);
+			path = CheckInOut;
+			sourceTree = "<group>";
+		};
 		4A5E47702748DBE900239676 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,9 +221,9 @@
 		4A5E47752748E58D00239676 /* TabControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A5E47762748E59F00239676 /* ClockInOutViewController.swift */,
-				4A5E47782748E5AB00239676 /* TimesheetViewController.swift */,
 				4A5E477C2748E5C600239676 /* DashboardViewController.swift */,
+				4A5E47782748E5AB00239676 /* TimesheetViewController.swift */,
+				4A3DDA6F274B69F6002FF884 /* CheckInOut */,
 				4A5E477A2748E5B700239676 /* ProfileViewController.swift */,
 				4A5E477E2748E5CE00239676 /* MoreViewController.swift */,
 			);
@@ -473,6 +487,7 @@
 				4A72CCCE274024DB008AA853 /* cerebro.json in Resources */,
 				4A72CCCF274024DB008AA853 /* planter.json in Resources */,
 				4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */,
+				4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */,
 				4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */,
 				4A72CCCC274024DB008AA853 /* everyting.json in Resources */,
 				4A1617BF273A45C300640236 /* Poppins-Medium.ttf in Resources */,
@@ -600,6 +615,7 @@
 				4A5E47742748E03D00239676 /* DashboardTabViewController.swift in Sources */,
 				4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */,
 				4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */,
+				4A3DDA71274B6A1A002FF884 /* ClockInOutTableViewCell.swift in Sources */,
 				4A72CCDF27402E78008AA853 /* String+Extension.swift in Sources */,
 				4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */,
 				4A72CCDC2740284C008AA853 /* AlertLottieViewController.swift in Sources */,
