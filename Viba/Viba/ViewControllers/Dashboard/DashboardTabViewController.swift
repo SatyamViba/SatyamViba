@@ -58,6 +58,7 @@ class DashboardTabViewController: UITabBarController, UITabBarControllerDelegate
         UITabBarItem.appearance().setTitleTextAttributes(attributes as [NSAttributedString.Key: Any], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes as [NSAttributedString.Key: Any], for: .selected)
 
+        selectedIndex = 2
         renderTabs()
     }
 

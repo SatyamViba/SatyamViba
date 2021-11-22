@@ -20,10 +20,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Dashboard View Controller-->
+        <!--Clock In Out View Controller-->
         <scene sceneID="ozI-DA-Ao3">
             <objects>
-                <viewController id="zah-ba-6ac" customClass="DashboardViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zah-ba-6ac" customClass="ClockInOutViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HSd-R6-dMn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1e2-Pk-dkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1489.8550724637682" y="-1842.1875"/>
+            <point key="canvasLocation" x="1490" y="-307"/>
         </scene>
         <!--Timesheet View Controller-->
         <scene sceneID="hvk-qt-iVQ">
@@ -358,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="1490" y="-1069"/>
         </scene>
-        <!--Clock In Out View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="cQt-T6-bVE">
             <objects>
-                <viewController id="vbi-Y2-QML" customClass="ClockInOutViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vbi-Y2-QML" customClass="DashboardViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S59-Bi-8EJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKt-FE-Doc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="-307"/>
+            <point key="canvasLocation" x="1491" y="-1833"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="5Nb-FW-orE">
@@ -400,11 +400,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tcx-H3-ysW" kind="relationship" relationship="viewControllers" id="dBL-VR-iBz"/>
-                        <segue destination="COF-5p-iEy" kind="relationship" relationship="viewControllers" id="Z05-BE-fAV"/>
-                        <segue destination="Uho-cm-Awc" kind="relationship" relationship="viewControllers" id="pSl-se-mhc"/>
-                        <segue destination="ofH-TB-BoW" kind="relationship" relationship="viewControllers" id="SXM-j5-XAv"/>
-                        <segue destination="AAn-UU-wol" kind="relationship" relationship="viewControllers" id="FEu-Hq-WuE"/>
+                        <segue destination="Uho-cm-Awc" kind="relationship" relationship="viewControllers" id="Sv3-Ai-q3o"/>
+                        <segue destination="COF-5p-iEy" kind="relationship" relationship="viewControllers" id="bH8-W1-k8O"/>
+                        <segue destination="tcx-H3-ysW" kind="relationship" relationship="viewControllers" id="CMv-Df-cyE"/>
+                        <segue destination="ofH-TB-BoW" kind="relationship" relationship="viewControllers" id="SPz-bW-3fM"/>
+                        <segue destination="AAn-UU-wol" kind="relationship" relationship="viewControllers" id="0g3-fS-ZDp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8H8-D5-9Mz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -445,7 +445,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5V-UX-v5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="-1841"/>
+            <point key="canvasLocation" x="457" y="-307"/>
         </scene>
         <!--Item-->
         <scene sceneID="CP8-nS-Knr">
@@ -453,6 +453,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="COF-5p-iEy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rKH-K0-byj"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ylv-5w-xRy"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h3g-oS-kJr">
                         <autoresizingMask key="autoresizingMask"/>
@@ -483,7 +484,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ss-Rd-aBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="-307"/>
+            <point key="canvasLocation" x="457" y="-1833"/>
         </scene>
         <!--Item-->
         <scene sceneID="QJa-ec-Cxa">
