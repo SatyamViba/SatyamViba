@@ -53,246 +53,252 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-Ui-CoU" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="104.5" width="314" height="180"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to Clockin?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGr-nz-ZFH">
-                                                <rect key="frame" x="20" y="57" width="274" height="18.5"/>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="USo-E2-gmz">
-                                                <rect key="frame" x="67" y="87.5" width="180" height="34"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-ji-LGT" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="J88-iV-4My"/>
-                                                            <constraint firstAttribute="height" constant="34" id="lIP-5Q-YeS"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Yes"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnO-tO-3Hi" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                        <rect key="frame" x="100" y="0.0" width="80" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="34" id="UWp-vl-4u4"/>
-                                                            <constraint firstAttribute="width" constant="80" id="dLb-RO-LgX"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="No"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                                <color key="value" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="uGr-nz-ZFH" secondAttribute="trailing" constant="20" id="4Zi-gr-Fbm"/>
-                                            <constraint firstItem="uGr-nz-ZFH" firstAttribute="leading" secondItem="43Y-Ui-CoU" secondAttribute="leading" constant="20" id="4zi-oa-8Yj"/>
-                                            <constraint firstItem="USo-E2-gmz" firstAttribute="centerX" secondItem="43Y-Ui-CoU" secondAttribute="centerX" id="5ge-vB-yyz"/>
-                                            <constraint firstItem="uGr-nz-ZFH" firstAttribute="centerX" secondItem="43Y-Ui-CoU" secondAttribute="centerX" id="CXE-b9-b2z"/>
-                                            <constraint firstItem="USo-E2-gmz" firstAttribute="top" secondItem="uGr-nz-ZFH" secondAttribute="bottom" constant="12" id="QSq-LV-Vcq"/>
-                                            <constraint firstItem="uGr-nz-ZFH" firstAttribute="top" secondItem="43Y-Ui-CoU" secondAttribute="top" constant="57" id="abN-1o-lTt"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-za-WeB" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="116.5" width="314" height="180"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-D9-ano" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="254" y="10" width="50" height="50"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="4LW-Gu-xfc"/>
-                                                    <constraint firstAttribute="height" constant="50" id="mP2-wU-fF6"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYa-8K-feo">
-                                                <rect key="frame" x="20" y="10" width="214" height="19"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="19" id="UfA-WD-t6B"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RHS-es-Q21">
-                                                <rect key="frame" x="30" y="49" width="100" height="40"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-ex-PVK" customClass="VibaRoundImageButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                        <color key="backgroundColor" white="0.89831885509999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="40" id="hDc-pb-yCD"/>
-                                                            <constraint firstAttribute="height" constant="40" id="rZW-LN-v48"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="handleOfficeSelection:" destination="zah-ba-6ac" eventType="touchUpInside" id="vkH-E9-lw4"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90B-a8-DRH" customClass="VibaRoundImageButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                        <rect key="frame" x="60" y="0.0" width="40" height="40"/>
-                                                        <color key="backgroundColor" white="0.89831885509999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="Nch-dA-TJY"/>
-                                                            <constraint firstAttribute="width" constant="40" id="jfU-Q6-yiU"/>
-                                                        </constraints>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="handleHomeSelection:" destination="zah-ba-6ac" eventType="touchUpInside" id="Pbt-HE-0a8"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="4lH-DW-8Hy"/>
-                                                    <constraint firstAttribute="width" constant="100" id="7Vg-6b-z6k"/>
-                                                </constraints>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZS-Fp-dPk">
-                                                <rect key="frame" x="30" y="95" width="264" height="15.5"/>
-                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock In at Office" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-1z-cdW">
-                                                <rect key="frame" x="20" y="124" width="274" height="44"/>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4Y-C2-q69" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="124" width="274" height="44"/>
-                                                <color key="backgroundColor" systemColor="tintColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="nI7-jj-c6m"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Clock In"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="handleClockInOut:" destination="zah-ba-6ac" eventType="touchUpInside" id="69Z-sN-V5M"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="3ZS-Fp-dPk" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="30" id="28p-bt-WUy"/>
-                                            <constraint firstItem="M4Y-C2-q69" firstAttribute="top" secondItem="CeF-1z-cdW" secondAttribute="top" id="3Ea-3G-8S3"/>
-                                            <constraint firstItem="RHS-es-Q21" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="30" id="BHm-O6-igW"/>
-                                            <constraint firstAttribute="trailing" secondItem="XIW-D9-ano" secondAttribute="trailing" constant="10" id="Dbx-Zk-NPK"/>
-                                            <constraint firstItem="M4Y-C2-q69" firstAttribute="trailing" secondItem="CeF-1z-cdW" secondAttribute="trailing" id="EaK-r1-v5f"/>
-                                            <constraint firstItem="3ZS-Fp-dPk" firstAttribute="top" secondItem="RHS-es-Q21" secondAttribute="bottom" constant="6" id="EzH-Wk-5Xt"/>
-                                            <constraint firstItem="RHS-es-Q21" firstAttribute="top" secondItem="TYa-8K-feo" secondAttribute="bottom" constant="20" id="F5i-SP-n3v"/>
-                                            <constraint firstAttribute="trailing" secondItem="M4Y-C2-q69" secondAttribute="trailing" constant="20" id="GS5-Uv-1Sx"/>
-                                            <constraint firstItem="XIW-D9-ano" firstAttribute="top" secondItem="G1Y-za-WeB" secondAttribute="top" constant="10" id="Tmm-hB-WAx"/>
-                                            <constraint firstAttribute="height" constant="180" id="XDs-s7-vl7"/>
-                                            <constraint firstItem="M4Y-C2-q69" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="YJy-WW-h4X"/>
-                                            <constraint firstAttribute="bottom" secondItem="M4Y-C2-q69" secondAttribute="bottom" constant="12" id="j3j-Un-mSY"/>
-                                            <constraint firstItem="M4Y-C2-q69" firstAttribute="leading" secondItem="CeF-1z-cdW" secondAttribute="leading" id="kXo-2J-YTI"/>
-                                            <constraint firstItem="TYa-8K-feo" firstAttribute="top" secondItem="G1Y-za-WeB" secondAttribute="top" constant="10" id="mCu-tF-GXu"/>
-                                            <constraint firstItem="XIW-D9-ano" firstAttribute="leading" secondItem="TYa-8K-feo" secondAttribute="trailing" constant="20" id="nrV-uw-UD8"/>
-                                            <constraint firstItem="TYa-8K-feo" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="tzf-Ql-nb8"/>
-                                            <constraint firstItem="M4Y-C2-q69" firstAttribute="bottom" secondItem="CeF-1z-cdW" secondAttribute="bottom" id="uLA-PO-EFW"/>
-                                            <constraint firstAttribute="trailing" secondItem="3ZS-Fp-dPk" secondAttribute="trailing" constant="20" id="z0t-5c-mcu"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="QbV-mZ-0V8" secondAttribute="trailing" constant="20" id="0Zg-Sv-o5A"/>
-                                    <constraint firstItem="43Y-Ui-CoU" firstAttribute="top" secondItem="wH5-dp-E5e" secondAttribute="bottom" constant="8" id="7DL-XI-Obb"/>
-                                    <constraint firstItem="43Y-Ui-CoU" firstAttribute="width" secondItem="G1Y-za-WeB" secondAttribute="width" id="CrU-ux-fXQ"/>
                                     <constraint firstItem="wH5-dp-E5e" firstAttribute="top" secondItem="n0N-RY-4Vh" secondAttribute="bottom" constant="6" id="E4U-ut-9ZP"/>
                                     <constraint firstItem="wH5-dp-E5e" firstAttribute="leading" secondItem="foH-XY-cqW" secondAttribute="leading" constant="20" id="M16-XM-INP"/>
-                                    <constraint firstItem="43Y-Ui-CoU" firstAttribute="leading" secondItem="foH-XY-cqW" secondAttribute="leading" constant="40" id="Ob4-ZT-Y4l"/>
                                     <constraint firstAttribute="height" constant="200" id="Ptd-9Y-675"/>
-                                    <constraint firstAttribute="trailing" secondItem="G1Y-za-WeB" secondAttribute="trailing" constant="50" id="QR6-Px-e5l"/>
                                     <constraint firstItem="QbV-mZ-0V8" firstAttribute="leading" secondItem="n0N-RY-4Vh" secondAttribute="trailing" constant="20" id="Qmg-H2-dnV"/>
-                                    <constraint firstItem="43Y-Ui-CoU" firstAttribute="height" secondItem="G1Y-za-WeB" secondAttribute="height" id="VQM-i3-rco"/>
                                     <constraint firstItem="n0N-RY-4Vh" firstAttribute="top" secondItem="foH-XY-cqW" secondAttribute="top" constant="40" id="e6U-bm-rdp"/>
-                                    <constraint firstItem="G1Y-za-WeB" firstAttribute="top" secondItem="wH5-dp-E5e" secondAttribute="bottom" constant="20" id="eci-ni-CUj"/>
                                     <constraint firstAttribute="trailing" secondItem="wH5-dp-E5e" secondAttribute="trailing" constant="20" id="kzu-ha-3c7"/>
-                                    <constraint firstItem="G1Y-za-WeB" firstAttribute="leading" secondItem="foH-XY-cqW" secondAttribute="leading" constant="50" id="lki-rs-ppE"/>
                                     <constraint firstItem="QbV-mZ-0V8" firstAttribute="top" secondItem="foH-XY-cqW" secondAttribute="top" constant="36" id="r4w-ac-wZa"/>
                                     <constraint firstItem="n0N-RY-4Vh" firstAttribute="leading" secondItem="foH-XY-cqW" secondAttribute="leading" constant="20" id="rb1-Tb-a1l"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-Ui-CoU" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="50" y="106.5" width="314" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to Clockin?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGr-nz-ZFH">
+                                        <rect key="frame" x="20" y="57" width="274" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="USo-E2-gmz">
+                                        <rect key="frame" x="67" y="87.5" width="180" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-ji-LGT" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="J88-iV-4My"/>
+                                                    <constraint firstAttribute="height" constant="34" id="lIP-5Q-YeS"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Yes"/>
+                                                <connections>
+                                                    <action selector="handleConfirmation:" destination="zah-ba-6ac" eventType="touchUpInside" id="KWU-Bt-AQO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnO-tO-3Hi" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="80" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="UWp-vl-4u4"/>
+                                                    <constraint firstAttribute="width" constant="80" id="dLb-RO-LgX"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="No"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="handleCancellation:" destination="zah-ba-6ac" eventType="touchUpInside" id="kag-Ib-xNb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="FRV-QZ-adu"/>
+                                    <constraint firstAttribute="trailing" secondItem="uGr-nz-ZFH" secondAttribute="trailing" constant="20" id="L0x-be-l4W"/>
+                                    <constraint firstItem="USo-E2-gmz" firstAttribute="top" secondItem="uGr-nz-ZFH" secondAttribute="bottom" constant="12" id="QSq-LV-Vcq"/>
+                                    <constraint firstItem="uGr-nz-ZFH" firstAttribute="top" secondItem="43Y-Ui-CoU" secondAttribute="top" constant="57" id="SRr-tk-slB"/>
+                                    <constraint firstItem="USo-E2-gmz" firstAttribute="centerX" secondItem="43Y-Ui-CoU" secondAttribute="centerX" id="lTC-fs-fBb"/>
+                                    <constraint firstItem="uGr-nz-ZFH" firstAttribute="leading" secondItem="43Y-Ui-CoU" secondAttribute="leading" constant="20" symbolic="YES" id="nWL-E3-v8i"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-za-WeB" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="60" y="120" width="314" height="180"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-D9-ano" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="254" y="10" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="4LW-Gu-xfc"/>
+                                            <constraint firstAttribute="height" constant="50" id="mP2-wU-fF6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYa-8K-feo">
+                                        <rect key="frame" x="20" y="10" width="214" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RHS-es-Q21">
+                                        <rect key="frame" x="20" y="40.5" width="100" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-ex-PVK" customClass="VibaRoundImageButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" white="0.89831885509999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="hDc-pb-yCD"/>
+                                                    <constraint firstAttribute="height" constant="40" id="rZW-LN-v48"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="handleOfficeSelection:" destination="zah-ba-6ac" eventType="touchUpInside" id="vkH-E9-lw4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90B-a8-DRH" customClass="VibaRoundImageButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" white="0.89831885509999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Nch-dA-TJY"/>
+                                                    <constraint firstAttribute="width" constant="40" id="jfU-Q6-yiU"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="handleHomeSelection:" destination="zah-ba-6ac" eventType="touchUpInside" id="Pbt-HE-0a8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4lH-DW-8Hy"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZS-Fp-dPk">
+                                        <rect key="frame" x="20" y="86.5" width="274" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock In at Office" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-1z-cdW">
+                                        <rect key="frame" x="20" y="124" width="274" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Bbs-4R-VYL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4Y-C2-q69" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="124" width="274" height="44"/>
+                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="nI7-jj-c6m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Clock In"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="handleClockInOut:" destination="zah-ba-6ac" eventType="touchUpInside" id="69Z-sN-V5M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="M4Y-C2-q69" secondAttribute="trailing" constant="20" id="2tn-Ut-g4K"/>
+                                    <constraint firstItem="M4Y-C2-q69" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="5Hp-az-zAl"/>
+                                    <constraint firstItem="XIW-D9-ano" firstAttribute="top" secondItem="G1Y-za-WeB" secondAttribute="top" constant="10" id="Bsx-4T-Os4"/>
+                                    <constraint firstItem="TYa-8K-feo" firstAttribute="top" secondItem="G1Y-za-WeB" secondAttribute="top" constant="10" id="EU0-Ac-Epu"/>
+                                    <constraint firstItem="3ZS-Fp-dPk" firstAttribute="top" secondItem="RHS-es-Q21" secondAttribute="bottom" constant="6" id="EzH-Wk-5Xt"/>
+                                    <constraint firstItem="RHS-es-Q21" firstAttribute="top" secondItem="TYa-8K-feo" secondAttribute="bottom" constant="12" id="F5i-SP-n3v"/>
+                                    <constraint firstItem="CeF-1z-cdW" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="H3T-Lm-ovu"/>
+                                    <constraint firstItem="TYa-8K-feo" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" symbolic="YES" id="J0c-kG-Skb"/>
+                                    <constraint firstAttribute="height" constant="180" id="LvI-DH-bog"/>
+                                    <constraint firstItem="RHS-es-Q21" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="dNF-ST-xdH"/>
+                                    <constraint firstAttribute="trailing" secondItem="CeF-1z-cdW" secondAttribute="trailing" constant="20" id="l8o-hF-4D7"/>
+                                    <constraint firstAttribute="trailing" secondItem="XIW-D9-ano" secondAttribute="trailing" constant="10" id="nFy-qD-crJ"/>
+                                    <constraint firstItem="XIW-D9-ano" firstAttribute="leading" secondItem="TYa-8K-feo" secondAttribute="trailing" constant="20" id="nrV-uw-UD8"/>
+                                    <constraint firstAttribute="bottom" secondItem="M4Y-C2-q69" secondAttribute="bottom" constant="12" id="oE1-z4-JPa"/>
+                                    <constraint firstAttribute="bottom" secondItem="CeF-1z-cdW" secondAttribute="bottom" constant="12" id="qRr-8G-Bh0"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ZS-Fp-dPk" secondAttribute="trailing" constant="20" id="u2p-Vv-PLn"/>
+                                    <constraint firstItem="3ZS-Fp-dPk" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" symbolic="YES" id="uLz-Z8-sxR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HLo-Ty-O4J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HLo-Ty-O4J" firstAttribute="trailing" secondItem="43Y-Ui-CoU" secondAttribute="trailing" constant="50" id="0I4-S4-k00"/>
                             <constraint firstItem="foH-XY-cqW" firstAttribute="trailing" secondItem="HLo-Ty-O4J" secondAttribute="trailing" id="3yO-ME-hrU"/>
+                            <constraint firstItem="43Y-Ui-CoU" firstAttribute="top" secondItem="wH5-dp-E5e" secondAttribute="bottom" constant="10" id="68t-jS-F88"/>
+                            <constraint firstItem="G1Y-za-WeB" firstAttribute="top" secondItem="43Y-Ui-CoU" secondAttribute="bottom" constant="-166.5" id="F4M-gn-L82"/>
+                            <constraint firstItem="43Y-Ui-CoU" firstAttribute="leading" secondItem="HLo-Ty-O4J" secondAttribute="leading" constant="50" id="aJl-hH-18r"/>
                             <constraint firstItem="foH-XY-cqW" firstAttribute="top" secondItem="HSd-R6-dMn" secondAttribute="top" id="hfO-E0-Icd"/>
+                            <constraint firstItem="G1Y-za-WeB" firstAttribute="leading" secondItem="HLo-Ty-O4J" secondAttribute="leading" constant="60" id="lhg-NE-xVz"/>
                             <constraint firstItem="foH-XY-cqW" firstAttribute="leading" secondItem="HLo-Ty-O4J" secondAttribute="leading" id="rPy-vB-2V9"/>
+                            <constraint firstItem="HLo-Ty-O4J" firstAttribute="trailing" secondItem="G1Y-za-WeB" secondAttribute="trailing" constant="40" id="rwe-ew-APe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="duW-Sy-Icr"/>
                     <connections>
                         <outlet property="clockInAtOffice" destination="CeF-1z-cdW" id="jHa-Rw-NV2"/>
                         <outlet property="clockInOutBtn" destination="M4Y-C2-q69" id="zfX-pK-Dfi"/>
+                        <outlet property="confirmationMessage" destination="uGr-nz-ZFH" id="Sbz-qv-yvj"/>
                         <outlet property="confirmationView" destination="43Y-Ui-CoU" id="tzh-fC-ai8"/>
                         <outlet property="dateAndTime" destination="TYa-8K-feo" id="Lqw-Jr-peT"/>
                         <outlet property="home" destination="90B-a8-DRH" id="7Cp-Rs-qTd"/>
+                        <outlet property="leadingSpace" destination="lhg-NE-xVz" id="hMT-Yq-TO5"/>
                         <outlet property="message" destination="3ZS-Fp-dPk" id="cwy-BR-34c"/>
                         <outlet property="name" destination="wH5-dp-E5e" id="VxL-cO-rDs"/>
                         <outlet property="office" destination="h7g-ex-PVK" id="7ed-FB-VU2"/>
                         <outlet property="selectionView" destination="G1Y-za-WeB" id="Tvm-Wd-sLo"/>
+                        <outlet property="trailingSpace" destination="rwe-ew-APe" id="koh-H7-H6T"/>
                         <outlet property="wishes" destination="n0N-RY-4Vh" id="MeM-We-cGy"/>
                     </connections>
                 </viewController>
@@ -464,6 +470,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="M4Y-C2-q69">
+            <size key="intrinsicContentSize" width="46" height="27"/>
+        </designable>
         <designable name="XIW-D9-ano">
             <size key="intrinsicContentSize" width="40" height="40"/>
         </designable>

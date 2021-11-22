@@ -10,20 +10,24 @@ import FontAwesome_swift
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var leadingSpace: NSLayoutConstraint!
+    @IBOutlet weak var trailingSpace: NSLayoutConstraint!
+
     @IBOutlet weak var wishes: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dateAndTime: UILabel!
-
     @IBOutlet weak var message: UILabel!
-
     @IBOutlet weak var office: VibaRoundImageButton!
     @IBOutlet weak var home: VibaRoundImageButton!
+    @IBOutlet weak var confirmationView: VibaRoundCornerView!
+    @IBOutlet weak var selectionView: VibaRoundCornerView!
 
     @IBOutlet weak var clockInAtOffice: UILabel!
     @IBOutlet weak var clockInOutBtn: VibaButton!
 
-    @IBOutlet weak var confirmationView: VibaRoundCornerView!
-    @IBOutlet weak var selectionView: VibaRoundCornerView!
+    @IBOutlet weak var confirmationMessage: UILabel!
+
+    private var isClockIn = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +86,27 @@ class DashboardViewController: UIViewController {
     }
 
     @IBAction func handleClockInOut(_ sender: Any) {
+        UIView.animate(withDuration: 1.0) { [self] in
+            let xpos = view.frame.width - 60
+            leadingSpace.constant = -(xpos)
+            trailingSpace.constant = xpos
+            selectionView.isUserInteractionEnabled = false
+        }
     }
-    
+
+    @IBAction func handleConfirmation(_ sender: Any) {
+        bringBackSelectionView()
+    }
+
+    @IBAction func handleCancellation(_ sender: Any) {
+        bringBackSelectionView()
+    }
+
+    private func bringBackSelectionView() {
+        UIView.animate(withDuration: 1.0) { [self] in
+            leadingSpace.constant = 60
+            trailingSpace.constant = 40
+            selectionView.isUserInteractionEnabled = true
+        }
+    }
 }
