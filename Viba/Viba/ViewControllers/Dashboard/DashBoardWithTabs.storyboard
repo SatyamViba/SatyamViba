@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orp-Tn-mjW">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -11,6 +11,9 @@
     <customFonts key="customFonts">
         <array key="Android.ttf">
             <string>android</string>
+        </array>
+        <array key="Poppins-Italic.ttf">
+            <string>Poppins-Italic</string>
         </array>
         <array key="Poppins-Medium.ttf">
             <string>Poppins-Medium</string>
@@ -25,27 +28,27 @@
             <objects>
                 <viewController id="zah-ba-6ac" customClass="ClockInOutViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HSd-R6-dMn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foH-XY-cqW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QbV-mZ-0V8">
-                                        <rect key="frame" x="354" y="36" width="40" height="40"/>
+                                        <rect key="frame" x="315" y="36" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="A22-Gt-cI2"/>
                                             <constraint firstAttribute="width" constant="40" id="ZYb-a8-ba4"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0N-RY-4Vh">
-                                        <rect key="frame" x="20" y="40" width="314" height="27.5"/>
+                                        <rect key="frame" x="20" y="40" width="275" height="27.5"/>
                                         <fontDescription key="fontDescription" name="android" family="android" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH5-dp-E5e">
-                                        <rect key="frame" x="20" y="73.5" width="374" height="23"/>
+                                        <rect key="frame" x="20" y="73.5" width="335" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="ecS-ik-5Eg"/>
                                         </constraints>
@@ -68,16 +71,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-Ui-CoU" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="50" y="106.5" width="314" height="180"/>
+                                <rect key="frame" x="50" y="106.5" width="275" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to Clockin?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGr-nz-ZFH">
-                                        <rect key="frame" x="20" y="57" width="274" height="18.5"/>
+                                        <rect key="frame" x="20" y="57" width="235" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="USo-E2-gmz">
-                                        <rect key="frame" x="67" y="87.5" width="180" height="34"/>
+                                        <rect key="frame" x="47.5" y="87.5" width="180" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-ji-LGT" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
@@ -136,10 +139,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-za-WeB" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="120" width="314" height="180"/>
+                                <rect key="frame" x="60" y="120" width="275" height="180"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-D9-ano" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="254" y="10" width="50" height="50"/>
+                                        <rect key="frame" x="215" y="10" width="50" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="4LW-Gu-xfc"/>
@@ -152,7 +155,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYa-8K-feo">
-                                        <rect key="frame" x="20" y="10" width="214" height="18.5"/>
+                                        <rect key="frame" x="20" y="10" width="175" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -206,13 +209,13 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZS-Fp-dPk">
-                                        <rect key="frame" x="20" y="86.5" width="274" height="15.5"/>
+                                        <rect key="frame" x="20" y="86.5" width="235" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock In at Office" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-1z-cdW">
-                                        <rect key="frame" x="20" y="124" width="274" height="44"/>
+                                        <rect key="frame" x="20" y="124" width="235" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Bbs-4R-VYL"/>
                                         </constraints>
@@ -220,28 +223,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4Y-C2-q69" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="124" width="274" height="44"/>
-                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RW-xk-qf9" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="124" width="235" height="44"/>
+                                        <color key="backgroundColor" red="0.37254901959999998" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="nI7-jj-c6m"/>
+                                            <constraint firstAttribute="height" constant="44" id="GF3-np-TYf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Clock In"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                <real key="value" value="13"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Check In"/>
                                         <connections>
-                                            <action selector="handleClockInOut:" destination="zah-ba-6ac" eventType="touchUpInside" id="69Z-sN-V5M"/>
+                                            <action selector="handleClockInOut:" destination="zah-ba-6ac" eventType="touchUpInside" id="aaS-sv-1yy"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="M4Y-C2-q69" secondAttribute="trailing" constant="20" id="2tn-Ut-g4K"/>
-                                    <constraint firstItem="M4Y-C2-q69" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="5Hp-az-zAl"/>
+                                    <constraint firstAttribute="bottom" secondItem="0RW-xk-qf9" secondAttribute="bottom" constant="12" id="B9h-MW-f9K"/>
                                     <constraint firstItem="XIW-D9-ano" firstAttribute="top" secondItem="G1Y-za-WeB" secondAttribute="top" constant="10" id="Bsx-4T-Os4"/>
                                     <constraint firstItem="TYa-8K-feo" firstAttribute="top" secondItem="G1Y-za-WeB" secondAttribute="top" constant="10" id="EU0-Ac-Epu"/>
                                     <constraint firstItem="3ZS-Fp-dPk" firstAttribute="top" secondItem="RHS-es-Q21" secondAttribute="bottom" constant="6" id="EzH-Wk-5Xt"/>
@@ -249,11 +246,12 @@
                                     <constraint firstItem="CeF-1z-cdW" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="H3T-Lm-ovu"/>
                                     <constraint firstItem="TYa-8K-feo" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" symbolic="YES" id="J0c-kG-Skb"/>
                                     <constraint firstAttribute="height" constant="180" id="LvI-DH-bog"/>
+                                    <constraint firstItem="0RW-xk-qf9" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" symbolic="YES" id="NNR-ah-Ngk"/>
                                     <constraint firstItem="RHS-es-Q21" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" id="dNF-ST-xdH"/>
                                     <constraint firstAttribute="trailing" secondItem="CeF-1z-cdW" secondAttribute="trailing" constant="20" id="l8o-hF-4D7"/>
                                     <constraint firstAttribute="trailing" secondItem="XIW-D9-ano" secondAttribute="trailing" constant="10" id="nFy-qD-crJ"/>
                                     <constraint firstItem="XIW-D9-ano" firstAttribute="leading" secondItem="TYa-8K-feo" secondAttribute="trailing" constant="20" id="nrV-uw-UD8"/>
-                                    <constraint firstAttribute="bottom" secondItem="M4Y-C2-q69" secondAttribute="bottom" constant="12" id="oE1-z4-JPa"/>
+                                    <constraint firstAttribute="trailing" secondItem="0RW-xk-qf9" secondAttribute="trailing" constant="20" symbolic="YES" id="oIs-AV-ssu"/>
                                     <constraint firstAttribute="bottom" secondItem="CeF-1z-cdW" secondAttribute="bottom" constant="12" id="qRr-8G-Bh0"/>
                                     <constraint firstAttribute="trailing" secondItem="3ZS-Fp-dPk" secondAttribute="trailing" constant="20" id="u2p-Vv-PLn"/>
                                     <constraint firstItem="3ZS-Fp-dPk" firstAttribute="leading" secondItem="G1Y-za-WeB" secondAttribute="leading" constant="20" symbolic="YES" id="uLz-Z8-sxR"/>
@@ -271,7 +269,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" estimatedRowHeight="82" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-Gg-8ve">
-                                <rect key="frame" x="20" y="320" width="374" height="473"/>
+                                <rect key="frame" x="20" y="320" width="335" height="278"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="zah-ba-6ac" id="8Aa-cH-Xyu"/>
@@ -300,7 +298,7 @@
                     <navigationItem key="navigationItem" id="duW-Sy-Icr"/>
                     <connections>
                         <outlet property="clockInAtOffice" destination="CeF-1z-cdW" id="jHa-Rw-NV2"/>
-                        <outlet property="clockInOutBtn" destination="M4Y-C2-q69" id="zfX-pK-Dfi"/>
+                        <outlet property="clockInOutBtn" destination="0RW-xk-qf9" id="3nm-eZ-sQf"/>
                         <outlet property="confirmationMessage" destination="uGr-nz-ZFH" id="Sbz-qv-yvj"/>
                         <outlet property="confirmationView" destination="43Y-Ui-CoU" id="tzh-fC-ai8"/>
                         <outlet property="dateAndTime" destination="TYa-8K-feo" id="Lqw-Jr-peT"/>
@@ -324,14 +322,14 @@
             <objects>
                 <viewController id="Dlo-lP-Zyg" customClass="TimesheetViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KC5-oO-E3C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQ8-fu-tHg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xak-AJ-fue">
-                                        <rect key="frame" x="354" y="36" width="40" height="40"/>
+                                        <rect key="frame" x="315" y="36" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="1xg-gq-zMK"/>
                                             <constraint firstAttribute="width" constant="40" id="2YB-Hf-YSz"/>
@@ -345,8 +343,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Timesheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20t-Me-Hb7">
-                                        <rect key="frame" x="46" y="40" width="288" height="18.5"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <rect key="frame" x="46" y="38.5" width="249" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -364,10 +362,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cwp-yu-HhT" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="80" width="334" height="70"/>
+                                <rect key="frame" x="40" y="80" width="295" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bFy-IW-eK3">
-                                        <rect key="frame" x="60.5" y="20" width="213" height="30"/>
+                                        <rect key="frame" x="41" y="20" width="213" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjb-ao-wPr">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -437,7 +435,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Cg-OB-JbW">
-                                <rect key="frame" x="20" y="170" width="374" height="28"/>
+                                <rect key="frame" x="20" y="170" width="335" height="28"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmW-Sy-xrd">
                                         <rect key="frame" x="0.0" y="0.0" width="86" height="28"/>
@@ -487,7 +485,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yd-pp-RjQ">
-                                        <rect key="frame" x="144" y="0.0" width="86" height="28"/>
+                                        <rect key="frame" x="124.5" y="0.0" width="86" height="28"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbo-Sh-CKe" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
@@ -534,7 +532,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djv-E9-ecc">
-                                        <rect key="frame" x="288" y="0.0" width="86" height="28"/>
+                                        <rect key="frame" x="249" y="0.0" width="86" height="28"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OAh-KT-YNn" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
@@ -576,27 +574,27 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHX-Qb-DUm">
-                                <rect key="frame" x="168" y="223" width="78" height="18.5"/>
+                                <rect key="frame" x="148.5" y="223" width="78" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNL-6p-7Pl">
-                                <rect key="frame" x="256" y="232" width="138" height="1"/>
+                                <rect key="frame" x="236.5" y="232" width="122.5" height="1"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="wQm-bH-txO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOn-n3-KjZ">
-                                <rect key="frame" x="20" y="232" width="138" height="1"/>
+                                <rect key="frame" x="16" y="232" width="122.5" height="1"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="yOW-E9-bb0"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" estimatedRowHeight="82" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JTu-dW-hCt">
-                                <rect key="frame" x="20" y="261.5" width="374" height="531.5"/>
+                                <rect key="frame" x="20" y="261.5" width="335" height="336.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dlo-lP-Zyg" id="bK4-yI-Wya"/>
@@ -655,7 +653,7 @@
             <objects>
                 <viewController id="vbi-Y2-QML" customClass="DashboardViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S59-Bi-8EJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Grg-d9-2YR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -671,16 +669,301 @@
             <objects>
                 <viewController id="RcE-6H-Wty" customClass="ProfileViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kEv-W2-vIy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MS5-s5-LVD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zjk-CJ-HUt">
+                                        <rect key="frame" x="315" y="36" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DCR-OM-Ifh"/>
+                                            <constraint firstAttribute="width" constant="40" id="G94-mR-c1a"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k6U-S6-6Ms">
+                                        <rect key="frame" x="20" y="40" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="KN3-1K-E1g"/>
+                                            <constraint firstAttribute="height" constant="18" id="vOF-in-hlV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wla-2K-0tD">
+                                        <rect key="frame" x="46" y="38.5" width="249" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="CYa-5n-8a2"/>
+                                    <constraint firstItem="k6U-S6-6Ms" firstAttribute="leading" secondItem="MS5-s5-LVD" secondAttribute="leading" constant="20" id="Rbc-OZ-Ncl"/>
+                                    <constraint firstItem="Zjk-CJ-HUt" firstAttribute="top" secondItem="MS5-s5-LVD" secondAttribute="top" constant="36" id="TwM-2j-xM9"/>
+                                    <constraint firstItem="k6U-S6-6Ms" firstAttribute="top" secondItem="MS5-s5-LVD" secondAttribute="top" constant="40" id="cDU-2V-vfa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjk-CJ-HUt" secondAttribute="trailing" constant="20" symbolic="YES" id="ijj-22-YcJ"/>
+                                    <constraint firstItem="Wla-2K-0tD" firstAttribute="centerY" secondItem="k6U-S6-6Ms" secondAttribute="centerY" id="mWG-4W-ECr"/>
+                                    <constraint firstItem="Zjk-CJ-HUt" firstAttribute="leading" secondItem="Wla-2K-0tD" secondAttribute="trailing" constant="20" id="upA-wR-Kiy"/>
+                                    <constraint firstItem="Wla-2K-0tD" firstAttribute="leading" secondItem="k6U-S6-6Ms" secondAttribute="trailing" constant="8" symbolic="YES" id="wD6-v8-AY0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvr-9a-ML4" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="88" width="295" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="suB-kI-jBB">
+                                        <rect key="frame" x="110" y="39.5" width="167" height="49.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHD-jc-uOO">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="31"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFW-jW-GG5">
+                                                <rect key="frame" x="0.0" y="31" width="34.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Italic" family="Poppins" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="amo-rx-EFC" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="27" width="74" height="74"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="Aiv-TV-UnC"/>
+                                            <constraint firstAttribute="height" constant="74" id="a3b-cp-BY0"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="amo-rx-EFC" firstAttribute="centerY" secondItem="Pvr-9a-ML4" secondAttribute="centerY" id="6xM-tM-xoY"/>
+                                    <constraint firstItem="suB-kI-jBB" firstAttribute="leading" secondItem="amo-rx-EFC" secondAttribute="trailing" constant="18" id="HJq-2B-Xge"/>
+                                    <constraint firstItem="suB-kI-jBB" firstAttribute="centerY" secondItem="Pvr-9a-ML4" secondAttribute="centerY" id="NJA-uC-Lfg"/>
+                                    <constraint firstAttribute="height" constant="128" id="hr8-QP-r9X"/>
+                                    <constraint firstItem="amo-rx-EFC" firstAttribute="leading" secondItem="Pvr-9a-ML4" secondAttribute="leading" constant="18" id="jIE-wO-ZpV"/>
+                                    <constraint firstAttribute="trailing" secondItem="suB-kI-jBB" secondAttribute="trailing" constant="18" id="tf1-dP-xXi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXJ-MU-yMX" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="562" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7a2-0N-D47"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SIGN OUT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-iH-bf5">
+                                <rect key="frame" x="20" y="236" width="335" height="36"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYZ-X1-5jA" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="2Tp-Rw-ObK"/>
+                                            <constraint firstAttribute="width" constant="36" id="pbD-Aa-kKH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="343-Gq-KUU" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="8" width="263" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="343-Gq-KUU" firstAttribute="centerY" secondItem="Mmh-iH-bf5" secondAttribute="centerY" id="0oG-4T-sXR"/>
+                                    <constraint firstItem="343-Gq-KUU" firstAttribute="leading" secondItem="VYZ-X1-5jA" secondAttribute="trailing" constant="8" symbolic="YES" id="5VK-GU-ST4"/>
+                                    <constraint firstAttribute="trailing" secondItem="343-Gq-KUU" secondAttribute="trailing" constant="20" id="F2G-ED-tli"/>
+                                    <constraint firstItem="VYZ-X1-5jA" firstAttribute="centerY" secondItem="Mmh-iH-bf5" secondAttribute="centerY" id="IIe-8w-gl7"/>
+                                    <constraint firstAttribute="height" constant="36" id="hkH-pX-MCy"/>
+                                    <constraint firstItem="VYZ-X1-5jA" firstAttribute="leading" secondItem="Mmh-iH-bf5" secondAttribute="leading" constant="8" id="qks-YE-NpO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJA-Fw-3Tc">
+                                <rect key="frame" x="20" y="300" width="335" height="36"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-6D-xy2" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="Z8P-lN-sia"/>
+                                            <constraint firstAttribute="height" constant="36" id="uNa-Mn-F7a"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De8-Nx-tI4" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="8" width="263" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vLE-6D-xy2" firstAttribute="centerY" secondItem="gJA-Fw-3Tc" secondAttribute="centerY" id="bXu-cN-uHR"/>
+                                    <constraint firstItem="De8-Nx-tI4" firstAttribute="centerY" secondItem="gJA-Fw-3Tc" secondAttribute="centerY" id="hDP-x2-vba"/>
+                                    <constraint firstAttribute="height" constant="36" id="jFy-NM-u0W"/>
+                                    <constraint firstAttribute="trailing" secondItem="De8-Nx-tI4" secondAttribute="trailing" constant="20" id="l4R-ai-UTN"/>
+                                    <constraint firstItem="De8-Nx-tI4" firstAttribute="leading" secondItem="vLE-6D-xy2" secondAttribute="trailing" constant="8" symbolic="YES" id="wu7-2B-8zu"/>
+                                    <constraint firstItem="vLE-6D-xy2" firstAttribute="leading" secondItem="gJA-Fw-3Tc" secondAttribute="leading" constant="8" id="ymt-oN-GQh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-AZ-e8y">
+                                <rect key="frame" x="20" y="364" width="335" height="36"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-so-ixm" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="Te9-aT-o82"/>
+                                            <constraint firstAttribute="height" constant="36" id="diq-II-5DP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JY-Y1-xEH" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="8" width="263" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6JY-Y1-xEH" secondAttribute="trailing" constant="20" id="K4U-HP-4Vb"/>
+                                    <constraint firstItem="6JY-Y1-xEH" firstAttribute="leading" secondItem="rtJ-so-ixm" secondAttribute="trailing" constant="8" symbolic="YES" id="gVB-gs-pfj"/>
+                                    <constraint firstAttribute="height" constant="36" id="h4m-Ft-I7K"/>
+                                    <constraint firstItem="6JY-Y1-xEH" firstAttribute="centerY" secondItem="JaU-AZ-e8y" secondAttribute="centerY" id="qSW-pj-8Y9"/>
+                                    <constraint firstItem="rtJ-so-ixm" firstAttribute="leading" secondItem="JaU-AZ-e8y" secondAttribute="leading" constant="8" id="vrQ-R9-axH"/>
+                                    <constraint firstItem="rtJ-so-ixm" firstAttribute="centerY" secondItem="JaU-AZ-e8y" secondAttribute="centerY" id="zKX-vD-xIw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-H4-HKd">
+                                <rect key="frame" x="20" y="428" width="335" height="36"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-lm-uu4" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="I7E-7u-KCj"/>
+                                            <constraint firstAttribute="width" constant="36" id="uqF-1d-MQj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APt-Wf-TGl" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="8" width="263" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="APt-Wf-TGl" secondAttribute="trailing" constant="20" id="3XY-eg-ZxD"/>
+                                    <constraint firstItem="APt-Wf-TGl" firstAttribute="leading" secondItem="nmJ-lm-uu4" secondAttribute="trailing" constant="8" symbolic="YES" id="457-04-57T"/>
+                                    <constraint firstItem="APt-Wf-TGl" firstAttribute="centerY" secondItem="N6D-H4-HKd" secondAttribute="centerY" id="9cA-wI-2mc"/>
+                                    <constraint firstAttribute="height" constant="36" id="dbY-dd-bnW"/>
+                                    <constraint firstItem="nmJ-lm-uu4" firstAttribute="leading" secondItem="N6D-H4-HKd" secondAttribute="leading" constant="8" id="qbN-Sl-8FX"/>
+                                    <constraint firstItem="nmJ-lm-uu4" firstAttribute="centerY" secondItem="N6D-H4-HKd" secondAttribute="centerY" id="slU-bp-QZT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64w-5Y-ulK">
+                                <rect key="frame" x="20" y="508.5" width="335" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8c-Ce-pmU" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="2" width="36" height="36"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="7SJ-ub-v9r"/>
+                                            <constraint firstAttribute="height" constant="36" id="rgh-uJ-wnu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-v1-hpP" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="0.0" width="263" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vat-OO-LTr">
+                                        <rect key="frame" x="52" y="23" width="263" height="17"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                        <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8ia-v1-hpP" firstAttribute="top" secondItem="64w-5Y-ulK" secondAttribute="top" id="7sP-iS-sf6"/>
+                                    <constraint firstAttribute="height" constant="40" id="DiG-Ia-ioN"/>
+                                    <constraint firstItem="i8c-Ce-pmU" firstAttribute="leading" secondItem="64w-5Y-ulK" secondAttribute="leading" constant="8" id="Guw-1V-1Oi"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ia-v1-hpP" secondAttribute="trailing" constant="20" symbolic="YES" id="TfZ-M5-jbE"/>
+                                    <constraint firstItem="8ia-v1-hpP" firstAttribute="leading" secondItem="i8c-Ce-pmU" secondAttribute="trailing" constant="8" symbolic="YES" id="Uhf-Yp-gA6"/>
+                                    <constraint firstItem="vat-OO-LTr" firstAttribute="top" secondItem="8ia-v1-hpP" secondAttribute="bottom" constant="2.5" id="V9K-yU-3NW"/>
+                                    <constraint firstAttribute="bottom" secondItem="vat-OO-LTr" secondAttribute="bottom" id="bjd-ho-MUK"/>
+                                    <constraint firstItem="vat-OO-LTr" firstAttribute="leading" secondItem="i8c-Ce-pmU" secondAttribute="trailing" constant="8" symbolic="YES" id="grq-Ot-k3V"/>
+                                    <constraint firstAttribute="trailing" secondItem="vat-OO-LTr" secondAttribute="trailing" constant="20" id="mzZ-Yf-zl8"/>
+                                    <constraint firstItem="i8c-Ce-pmU" firstAttribute="centerY" secondItem="64w-5Y-ulK" secondAttribute="centerY" id="o21-JZ-uRd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv2-By-B6H">
+                                <rect key="frame" x="28" y="484" width="327" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ROL-85-12I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="JaU-AZ-e8y" secondAttribute="trailing" constant="20" id="0Gw-nh-9pl"/>
+                            <constraint firstItem="N6D-H4-HKd" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="1U6-Tc-hoM"/>
+                            <constraint firstItem="64w-5Y-ulK" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="2Ew-ND-sOf"/>
+                            <constraint firstItem="MS5-s5-LVD" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" id="3Tt-EK-IMk"/>
+                            <constraint firstItem="gJA-Fw-3Tc" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="8i4-zz-A0t"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="64w-5Y-ulK" secondAttribute="trailing" constant="20" id="BC6-DE-DET"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="bottom" secondItem="JXJ-MU-yMX" secondAttribute="bottom" constant="12" id="BCf-DL-TZp"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="N6D-H4-HKd" secondAttribute="trailing" constant="20" id="E6k-x0-pYs"/>
+                            <constraint firstItem="Mmh-iH-bf5" firstAttribute="top" secondItem="Pvr-9a-ML4" secondAttribute="bottom" constant="20" id="Fab-rh-aFH"/>
+                            <constraint firstItem="JaU-AZ-e8y" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="Oj7-zE-3e3"/>
+                            <constraint firstItem="Cv2-By-B6H" firstAttribute="top" secondItem="N6D-H4-HKd" secondAttribute="bottom" constant="20" id="UPL-Lc-5xr"/>
+                            <constraint firstItem="N6D-H4-HKd" firstAttribute="top" secondItem="JaU-AZ-e8y" secondAttribute="bottom" constant="28" id="Vo4-DI-J7V"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="Pvr-9a-ML4" secondAttribute="trailing" constant="40" id="Wih-rK-ATN"/>
+                            <constraint firstItem="gJA-Fw-3Tc" firstAttribute="top" secondItem="Mmh-iH-bf5" secondAttribute="bottom" constant="28" id="ZfN-xQ-jNL"/>
+                            <constraint firstItem="Cv2-By-B6H" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="28" id="aU0-03-RoB"/>
+                            <constraint firstItem="Pvr-9a-ML4" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="40" id="aqg-uZ-dBw"/>
+                            <constraint firstItem="JXJ-MU-yMX" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="axz-g7-4us"/>
+                            <constraint firstItem="MS5-s5-LVD" firstAttribute="trailing" secondItem="ROL-85-12I" secondAttribute="trailing" id="bTQ-yU-P7n"/>
+                            <constraint firstItem="JaU-AZ-e8y" firstAttribute="top" secondItem="gJA-Fw-3Tc" secondAttribute="bottom" constant="28" id="c6J-N0-hOV"/>
+                            <constraint firstItem="Pvr-9a-ML4" firstAttribute="top" secondItem="Zjk-CJ-HUt" secondAttribute="bottom" constant="12" id="duQ-vC-Bfn"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="gJA-Fw-3Tc" secondAttribute="trailing" constant="20" id="foc-U0-5LA"/>
+                            <constraint firstItem="Mmh-iH-bf5" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="rTc-3m-Ycd"/>
+                            <constraint firstItem="64w-5Y-ulK" firstAttribute="top" secondItem="Cv2-By-B6H" secondAttribute="bottom" constant="6" id="sQ7-Po-XAI"/>
+                            <constraint firstItem="MS5-s5-LVD" firstAttribute="top" secondItem="kEv-W2-vIy" secondAttribute="top" id="vn8-S3-uK7"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="JXJ-MU-yMX" secondAttribute="trailing" constant="20" id="wA3-QF-WXe"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="Cv2-By-B6H" secondAttribute="trailing" constant="20" id="xTV-9d-o6Q"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="Mmh-iH-bf5" secondAttribute="trailing" constant="20" id="yTj-Ls-eLM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YXi-8G-BQb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilM-z0-nde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="477"/>
+            <point key="canvasLocation" x="1488.8" y="476.31184407796104"/>
         </scene>
         <!--Dashboard Tab View Controller-->
         <scene sceneID="xcq-jf-HVy">
@@ -708,7 +991,7 @@
             <objects>
                 <viewController id="AAn-UU-wol" customClass="MoreViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ApW-D2-f5k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="XQS-vK-S2f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -799,10 +1082,22 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="M4Y-C2-q69">
-            <size key="intrinsicContentSize" width="46" height="27"/>
+        <designable name="6JY-Y1-xEH">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="8ia-v1-hpP">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="APt-Wf-TGl">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="De8-Nx-tI4">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="XIW-D9-ano">
+            <size key="intrinsicContentSize" width="40" height="40"/>
+        </designable>
+        <designable name="amo-rx-EFC">
             <size key="intrinsicContentSize" width="40" height="40"/>
         </designable>
         <designable name="cmR-ji-LGT">
@@ -811,15 +1106,15 @@
         <designable name="gnO-tO-3Hi">
             <size key="intrinsicContentSize" width="30" height="33"/>
         </designable>
+        <designable name="vat-OO-LTr">
+            <size key="intrinsicContentSize" width="31.5" height="17"/>
+        </designable>
     </designables>
     <resources>
         <image name="TopLogo" width="55" height="55"/>
         <image name="pic_holder" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

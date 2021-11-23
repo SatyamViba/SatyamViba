@@ -7,6 +7,7 @@
 		<string>Android.ttf</string>
 		<string>Poppins-Regular</string>
 		<string>Poppins-Medium</string>
+		<string>Poppins-Italic</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

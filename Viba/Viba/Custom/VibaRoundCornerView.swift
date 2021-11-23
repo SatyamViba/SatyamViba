@@ -24,7 +24,7 @@ class VibaRoundCornerView: UIView {
     }
 
     @IBInspectable
-    var borderColor: UIColor = .lightGray {
+    var borderColor: UIColor = Colors.lightLabelColor.value {
         didSet {
             layer.borderColor = borderColor.cgColor
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A109DF8274D4991009D2002 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A109DF7274D4991009D2002 /* Poppins-Italic.ttf */; };
 		4A1617AF2739512C00640236 /* VibaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1617AE2739512C00640236 /* VibaTextField.swift */; };
 		4A1617B9273A40B700640236 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A1617B8273A40B700640236 /* Poppins-Regular.ttf */; };
 		4A1617BB273A40D700640236 /* VibaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1617BA273A40D700640236 /* VibaLabel.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A109DF7274D4991009D2002 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		4A1617AE2739512C00640236 /* VibaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibaTextField.swift; sourceTree = "<group>"; };
 		4A1617B8273A40B700640236 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		4A1617BA273A40D700640236 /* VibaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaLabel.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				4AFC562D27391E7100E064E9 /* Android.ttf */,
 				4A1617B8273A40B700640236 /* Poppins-Regular.ttf */,
 				4A1617BE273A45C300640236 /* Poppins-Medium.ttf */,
+				4A109DF7274D4991009D2002 /* Poppins-Italic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				4A72CCCC274024DB008AA853 /* everyting.json in Resources */,
 				4A1617BF273A45C300640236 /* Poppins-Medium.ttf in Resources */,
 				4A72CCDB2740284C008AA853 /* AlertLottie.storyboard in Resources */,
+				4A109DF8274D4991009D2002 /* Poppins-Italic.ttf in Resources */,
 				4A72CCCD274024DB008AA853 /* meditation.json in Resources */,
 				4AB5F0152739122E007DB9FF /* Main.storyboard in Resources */,
 				4A8482E527492B62002463D5 /* DashBoardWithTabs.storyboard in Resources */,
