@@ -769,11 +769,14 @@
                                 <state key="normal" title="SIGN OUT">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signOut:" destination="RcE-6H-Wty" eventType="touchUpInside" id="0vG-hc-bzT"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-iH-bf5">
                                 <rect key="frame" x="20" y="236" width="335" height="36"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYZ-X1-5jA" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYZ-X1-5jA" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -801,7 +804,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJA-Fw-3Tc">
                                 <rect key="frame" x="20" y="300" width="335" height="36"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-6D-xy2" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-6D-xy2" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -829,7 +832,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-AZ-e8y">
                                 <rect key="frame" x="20" y="364" width="335" height="36"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-so-ixm" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-so-ixm" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -857,7 +860,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-H4-HKd">
                                 <rect key="frame" x="20" y="428" width="335" height="36"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-lm-uu4" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-lm-uu4" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -885,7 +888,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64w-5Y-ulK">
                                 <rect key="frame" x="20" y="508.5" width="335" height="40"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8c-Ce-pmU" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8c-Ce-pmU" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="2" width="36" height="36"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -960,6 +963,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YXi-8G-BQb"/>
+                    <connections>
+                        <outlet property="cakeDate" destination="De8-Nx-tI4" id="gn7-Kt-lvF"/>
+                        <outlet property="cakeImage" destination="vLE-6D-xy2" id="xb8-CV-Ohw"/>
+                        <outlet property="calDate" destination="343-Gq-KUU" id="xhR-7H-V6Z"/>
+                        <outlet property="calImage" destination="VYZ-X1-5jA" id="RVL-rR-oBo"/>
+                        <outlet property="company" destination="8ia-v1-hpP" id="3fr-q7-jKD"/>
+                        <outlet property="companyId" destination="vat-OO-LTr" id="Plf-q5-Hfo"/>
+                        <outlet property="companyImage" destination="i8c-Ce-pmU" id="i3t-DF-Keh"/>
+                        <outlet property="email" destination="APt-Wf-TGl" id="OpY-wj-pW3"/>
+                        <outlet property="emailImage" destination="nmJ-lm-uu4" id="vE8-Dd-lFu"/>
+                        <outlet property="phoneImage" destination="rtJ-so-ixm" id="OE3-Fc-NZr"/>
+                        <outlet property="phoneNumber" destination="6JY-Y1-xEH" id="wZr-ny-PXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilM-z0-nde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1082,6 +1098,12 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="0RW-xk-qf9">
+            <size key="intrinsicContentSize" width="67" height="33"/>
+        </designable>
+        <designable name="343-Gq-KUU">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
         <designable name="6JY-Y1-xEH">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
@@ -1094,6 +1116,9 @@
         <designable name="De8-Nx-tI4">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
+        <designable name="JXJ-MU-yMX">
+            <size key="intrinsicContentSize" width="71" height="33"/>
+        </designable>
         <designable name="XIW-D9-ano">
             <size key="intrinsicContentSize" width="40" height="40"/>
         </designable>
@@ -1105,9 +1130,6 @@
         </designable>
         <designable name="gnO-tO-3Hi">
             <size key="intrinsicContentSize" width="30" height="33"/>
-        </designable>
-        <designable name="vat-OO-LTr">
-            <size key="intrinsicContentSize" width="31.5" height="17"/>
         </designable>
     </designables>
     <resources>
