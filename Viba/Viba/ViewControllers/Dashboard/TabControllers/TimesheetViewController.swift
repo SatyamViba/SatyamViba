@@ -36,17 +36,17 @@ class TimesheetViewController: UIViewController {
         // Do any additional setup after loading the view.
         eventList.register(UINib(nibName: "ClockInOutTableViewCell", bundle: nil), forCellReuseIdentifier: "ClockInOut")
 
-        let leftImg = UIImage.fontAwesomeIcon(code: FontAwesome.angleLeft.rawValue, style: .solid, textColor: .black, size: CGSize(width: 26, height: 26))
+        let leftImg = UIImage.fontAwesomeIcon(name: .angleLeft, style: .solid, textColor: .black, size: CGSize(width: 26, height: 26))
         left.setImage(leftImg, for: .normal)
-        let leftDiabledImg = UIImage.fontAwesomeIcon(code: FontAwesome.angleLeft.rawValue, style: .solid, textColor: .lightGray, size: CGSize(width: 26, height: 26))
+        let leftDiabledImg = UIImage.fontAwesomeIcon(name: .angleLeft, style: .solid, textColor: .lightGray, size: CGSize(width: 26, height: 26))
         left.setImage(leftDiabledImg, for: .disabled)
 
-        let rightImg = UIImage.fontAwesomeIcon(code: FontAwesome.angleRight.rawValue, style: .solid, textColor: .black, size: CGSize(width: 26, height: 26))
+        let rightImg = UIImage.fontAwesomeIcon(name: .angleRight, style: .solid, textColor: .black, size: CGSize(width: 26, height: 26))
         right.setImage(rightImg, for: .normal)
-        let rightDisabledImg = UIImage.fontAwesomeIcon(code: FontAwesome.angleRight.rawValue, style: .solid, textColor: .lightGray, size: CGSize(width: 26, height: 26))
+        let rightDisabledImg = UIImage.fontAwesomeIcon(name: .angleRight, style: .solid, textColor: .lightGray, size: CGSize(width: 26, height: 26))
         right.setImage(rightDisabledImg, for: .normal)
 
-        let calImg = UIImage.fontAwesomeIcon(code: FontAwesome.calendarAlt.rawValue, style: .regular, textColor: .black, size: CGSize(width: 26, height: 26))
+        let calImg = UIImage.fontAwesomeIcon(name: .calendarAlt, style: .regular, textColor: .black, size: CGSize(width: 26, height: 26))
         calendar.setImage(calImg, for: .normal)
 
         timesheetImage.image = UIImage.fontAwesomeIcon(name: .userClock, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))

@@ -33,6 +33,9 @@
 		4A5E477D2748E5C600239676 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E477C2748E5C600239676 /* DashboardViewController.swift */; };
 		4A5E477F2748E5CE00239676 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E477E2748E5CE00239676 /* MoreViewController.swift */; };
 		4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F7194274179F800D4A29E /* AuthResponse.swift */; };
+		4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D64D4274E386000022CBE /* MenuViewController.swift */; };
+		4A6D64D7274E61D800022CBE /* VibaMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */; };
+		4A6D64DA274E671F00022CBE /* VibaMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D64D9274E671F00022CBE /* VibaMenuButton.xib */; };
 		4A72CCAF273DA481008AA853 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCAE273DA481008AA853 /* Reach.swift */; };
 		4A72CCB1273DAAF4008AA853 /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB0273DAAF4008AA853 /* UserRequests.swift */; };
 		4A72CCB4273E3504008AA853 /* SmsAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */; };
@@ -65,6 +68,7 @@
 		4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0162739122F007DB9FF /* Assets.xcassets */; };
 		4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0182739122F007DB9FF /* LaunchScreen.storyboard */; };
 		4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */; };
+		4AD78E84274F3EA000A27401 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */; };
 		4ADB3A552740F3F900A0D750 /* UserRegistrrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */; };
 		4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */; };
 		4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A58274118E300A0D750 /* GeneralResponse.swift */; };
@@ -106,6 +110,9 @@
 		4A5E477C2748E5C600239676 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4A5E477E2748E5CE00239676 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		4A5F7194274179F800D4A29E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		4A6D64D4274E386000022CBE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaMenuButton.swift; sourceTree = "<group>"; };
+		4A6D64D9274E671F00022CBE /* VibaMenuButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibaMenuButton.xib; sourceTree = "<group>"; };
 		4A72CCAE273DA481008AA853 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		4A72CCB0273DAAF4008AA853 /* UserRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
 		4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsAuthentication.swift; sourceTree = "<group>"; };
@@ -140,6 +147,7 @@
 		4AB5F0192739122F007DB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB5F01B2739122F007DB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrrationDetails.swift; sourceTree = "<group>"; };
 		4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateRegistraionOTP.swift; sourceTree = "<group>"; };
 		4ADB3A58274118E300A0D750 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
@@ -216,6 +224,8 @@
 				4A5E47752748E58D00239676 /* TabControllers */,
 				4A8482E427492B62002463D5 /* DashBoardWithTabs.storyboard */,
 				4A5E47732748E03D00239676 /* DashboardTabViewController.swift */,
+				4A6D64D4274E386000022CBE /* MenuViewController.swift */,
+				4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -230,6 +240,15 @@
 				4A5E477E2748E5CE00239676 /* MoreViewController.swift */,
 			);
 			path = TabControllers;
+			sourceTree = "<group>";
+		};
+		4A6D64D8274E670F00022CBE /* VibaMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */,
+				4A6D64D9274E671F00022CBE /* VibaMenuButton.xib */,
+			);
+			path = VibaMenuButton;
 			sourceTree = "<group>";
 		};
 		4A72CCAD273DA46E008AA853 /* Utility */ = {
@@ -403,6 +422,7 @@
 				4A21A194273B67290002D052 /* VibaMediumLabel.swift */,
 				4A21A19B273B913F0002D052 /* VibaRoundCornerView.swift */,
 				4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */,
+				4A6D64D8274E670F00022CBE /* VibaMenuButton */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -490,6 +510,7 @@
 				4A72CCCE274024DB008AA853 /* cerebro.json in Resources */,
 				4A72CCCF274024DB008AA853 /* planter.json in Resources */,
 				4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */,
+				4A6D64DA274E671F00022CBE /* VibaMenuButton.xib in Resources */,
 				4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */,
 				4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */,
 				4A72CCCC274024DB008AA853 /* everyting.json in Resources */,
@@ -572,6 +593,7 @@
 			files = (
 				4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */,
 				4A5E47772748E59F00239676 /* ClockInOutViewController.swift in Sources */,
+				4AD78E84274F3EA000A27401 /* MenuTableViewCell.swift in Sources */,
 				4A8A6898273D8ABA00491060 /* NetworkManager.swift in Sources */,
 				4A72CCAF273DA481008AA853 /* Reach.swift in Sources */,
 				4A72CCC5273FCFBA008AA853 /* ValidateEmailOtp.swift in Sources */,
@@ -619,7 +641,9 @@
 				4A5E47742748E03D00239676 /* DashboardTabViewController.swift in Sources */,
 				4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */,
 				4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */,
+				4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */,
 				4A3DDA71274B6A1A002FF884 /* ClockInOutTableViewCell.swift in Sources */,
+				4A6D64D7274E61D800022CBE /* VibaMenuButton.swift in Sources */,
 				4A72CCDF27402E78008AA853 /* String+Extension.swift in Sources */,
 				4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */,
 				4A72CCDC2740284C008AA853 /* AlertLottieViewController.swift in Sources */,
