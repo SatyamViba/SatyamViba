@@ -1188,11 +1188,10 @@
         <!--Item-->
         <scene sceneID="c8r-cK-jHG">
             <objects>
-                <navigationController storyboardIdentifier="NotificationView" automaticallyAdjustsScrollViewInsets="NO" id="gEl-Yo-v4R" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NotificationView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gEl-Yo-v4R" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="huM-K1-MHR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QH6-Gf-N3U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1207,11 +1206,10 @@
         <!--Item-->
         <scene sceneID="meg-Yo-TfB">
             <objects>
-                <navigationController storyboardIdentifier="PreInvitationView" automaticallyAdjustsScrollViewInsets="NO" id="Jns-Hg-txd" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PreInvitationView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Jns-Hg-txd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="4xw-Uz-WzL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dys-y9-GVK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1226,7 +1224,7 @@
     </scenes>
     <designables>
         <designable name="0RW-xk-qf9">
-            <size key="intrinsicContentSize" width="67" height="33"/>
+            <size key="intrinsicContentSize" width="71" height="34"/>
         </designable>
         <designable name="343-Gq-KUU">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
@@ -1244,7 +1242,7 @@
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="JXJ-MU-yMX">
-            <size key="intrinsicContentSize" width="71" height="33"/>
+            <size key="intrinsicContentSize" width="83" height="34"/>
         </designable>
         <designable name="XIW-D9-ano">
             <size key="intrinsicContentSize" width="40" height="40"/>
@@ -1253,10 +1251,10 @@
             <size key="intrinsicContentSize" width="40" height="40"/>
         </designable>
         <designable name="cmR-ji-LGT">
-            <size key="intrinsicContentSize" width="30" height="33"/>
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
         <designable name="gnO-tO-3Hi">
-            <size key="intrinsicContentSize" width="30" height="33"/>
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
     </designables>
     <resources>
