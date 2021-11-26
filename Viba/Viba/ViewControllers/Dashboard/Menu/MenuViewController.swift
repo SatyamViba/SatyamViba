@@ -11,13 +11,14 @@ import FontAwesome_swift
 class MenuViewController: UIViewController {
     var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
 
-    var menuItemsList = [
+    var menuItems = [
         ["image": FontAwesome.bell, "title": "Notifications"],
         ["image": FontAwesome.invision, "title": "Pre-Invitations"],
         ["image": FontAwesome.signOutAlt, "title": "Signout"]
     ]
 
     @IBOutlet weak var version: UILabel!
+    @IBOutlet weak var menuItemsList: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,15 @@ class MenuViewController: UIViewController {
     func gotoTabView() {
         dismiss(animated: true, completion: nil)
     }
+
+    func reloadMenu() {
+        menuItemsList.reloadData()
+    }
 }
 
 extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuItemsList.count
+        return menuItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,14 +47,28 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        let item = menuItemsList[indexPath.row]
-        if let img = item["image"] as? FontAwesome, let str = item["title"] as? String {
-            cell.menuItem.configure(image: img, title: str)
+        var selected = false
+        let currentMenu = UserDefaults.standard.integer(forKey: UserDefaultsKeys.selectedMenu.value) as Int
+        if currentMenu == indexPath.row {
+            selected = true
         }
+
+        let item = menuItems[indexPath.row]
+        if let img = item["image"] as? FontAwesome, let str = item["title"] as? String {
+            cell.menuItem.configure(image: img, title: str, selected: selected)
+        }
+
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == menuItems.count - 1 {
+            NotificationCenter.default.post(name: .signOut, object: nil)
+            return
+        }
+
         tableView.deselectRow(at: indexPath, animated: true)
+        UserDefaults.standard.set(indexPath.row, forKey: UserDefaultsKeys.selectedMenu.value)
+        reloadMenu()
     }
 }

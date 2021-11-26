@@ -84,9 +84,16 @@ enum ErrorCode: Int {
     case parsingIssue = 1006
 }
 
+extension Notification.Name {
+    static let signOut = Notification.Name("SignOut")
+//    static let userLoggedIn = Notification.Name("userLoggedIn")
+//    static let notification3 = Notification.Name("notification3")
+}
+
 enum UserDefaultsKeys {
     case companyId
     case userId
+    case selectedMenu
 
     var value: String {
         switch self {
@@ -94,6 +101,8 @@ enum UserDefaultsKeys {
             return "CompanyId"
         case .userId:
             return "UserId"
+        case .selectedMenu:
+            return "SelectedRow"
         }
     }
 }

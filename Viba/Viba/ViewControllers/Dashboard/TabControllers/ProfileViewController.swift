@@ -37,5 +37,6 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func signOut(_ sender: Any) {
+        NotificationCenter.default.post(name: .signOut, object: nil)
     }
 }

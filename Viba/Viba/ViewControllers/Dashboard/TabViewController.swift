@@ -68,6 +68,8 @@ class TabViewController: UIViewController {
         let dashboardStoryboard = UIStoryboard(name: "DashBoardWithTabs", bundle: nil)
         menuViewController = dashboardStoryboard.instantiateViewController(withIdentifier: Tab.menu.viewId) as? MenuViewController
 
+        NotificationCenter.default.addObserver(self, selector: #selector(goHome), name: .signOut, object: nil)
+
         addChild(to: Tab.dashboard)
     }
 
@@ -78,7 +80,8 @@ class TabViewController: UIViewController {
         clockInOutBtn.isSelected = (clockInOutBtn.tag == selectedTab)
         profileBtn.isSelected = (profileBtn.tag == selectedTab)
         moreBtn.isSelected = (moreBtn.tag == selectedTab)
-
+        UserDefaults.standard.set(sender.tag, forKey: UserDefaultsKeys.selectedMenu.value)
+        
         guard let tab = Tab(rawValue: sender.tag) else {
             return
         }
@@ -123,6 +126,13 @@ class TabViewController: UIViewController {
             present(menuVc, animated: true, completion: { [weak self] in
                 self?.presentTransition = nil
             })
+        }
+    }
+
+    @objc
+    private func goHome() {
+        if let navController = navigationController {
+            navController.popToRootViewController(animated: true)
         }
     }
 }

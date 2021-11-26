@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         UserDefaults.standard.register(defaults: [
             UserDefaultsKeys.companyId.value: "615c95bffa612356f5f09267",
-            UserDefaultsKeys.userId.value: "6190d96f7f1f181b93eab0da"
+            UserDefaultsKeys.userId.value: "6190d96f7f1f181b93eab0da",
+            UserDefaultsKeys.selectedMenu.value: -1
         ])
         #endif
         return true

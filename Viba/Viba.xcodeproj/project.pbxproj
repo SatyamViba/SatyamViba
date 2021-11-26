@@ -181,7 +181,6 @@
 		4A1617C0273A5A2200640236 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4AD78E85274F63C800A27401 /* Temp */,
 				4A5E47702748DBE900239676 /* Dashboard */,
 				4A1617C1273A5B1500640236 /* User */,
 			);
@@ -226,8 +225,9 @@
 			children = (
 				4A5E47752748E58D00239676 /* TabControllers */,
 				4A8482E427492B62002463D5 /* DashBoardWithTabs.storyboard */,
-				4A6D64D4274E386000022CBE /* MenuViewController.swift */,
-				4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */,
+				4AD78ECC274F6C9D00A27401 /* TabController.storyboard */,
+				4AD78ECA274F6C8900A27401 /* TabViewController.swift */,
+				4AD78ED22750C6AD00A27401 /* Menu */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -377,13 +377,13 @@
 			path = Viba;
 			sourceTree = "<group>";
 		};
-		4AD78E85274F63C800A27401 /* Temp */ = {
+		4AD78ED22750C6AD00A27401 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				4AD78ECA274F6C8900A27401 /* TabViewController.swift */,
-				4AD78ECC274F6C9D00A27401 /* TabController.storyboard */,
+				4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */,
+				4A6D64D4274E386000022CBE /* MenuViewController.swift */,
 			);
-			path = Temp;
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		4AFC562B27391E1C00E064E9 /* Resources */ = {

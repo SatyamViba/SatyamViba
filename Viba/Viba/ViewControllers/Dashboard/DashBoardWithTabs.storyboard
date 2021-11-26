@@ -1062,12 +1062,13 @@
                         <viewLayoutGuide key="safeArea" id="sbb-le-Fnc"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.22048778407621067" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Rig-ME-Of7" firstAttribute="top" secondItem="sbb-le-Fnc" secondAttribute="top" id="NKd-hM-iSG"/>
+                            <constraint firstAttribute="bottom" secondItem="Rig-ME-Of7" secondAttribute="bottom" id="8zj-Q8-zYU"/>
                             <constraint firstItem="Rig-ME-Of7" firstAttribute="trailing" secondItem="sbb-le-Fnc" secondAttribute="trailing" id="WWs-um-BiQ"/>
-                            <constraint firstItem="sbb-le-Fnc" firstAttribute="bottom" secondItem="Rig-ME-Of7" secondAttribute="bottom" id="fQi-Y8-pMb"/>
+                            <constraint firstItem="Rig-ME-Of7" firstAttribute="top" secondItem="bAS-eQ-Crz" secondAttribute="top" id="y4I-G3-bep"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="menuItemsList" destination="5YF-Kd-dou" id="SBc-OY-Fmd"/>
                         <outlet property="version" destination="Lt9-gb-LAc" id="FJj-ja-vv3"/>
                     </connections>
                 </viewController>
