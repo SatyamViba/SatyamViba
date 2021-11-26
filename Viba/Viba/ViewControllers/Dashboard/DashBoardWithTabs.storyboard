@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orp-Tn-mjW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -269,7 +269,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" estimatedRowHeight="82" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-Gg-8ve">
-                                <rect key="frame" x="20" y="320" width="335" height="278"/>
+                                <rect key="frame" x="20" y="320" width="335" height="327"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="zah-ba-6ac" id="8Aa-cH-Xyu"/>
@@ -594,7 +594,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" estimatedRowHeight="82" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JTu-dW-hCt">
-                                <rect key="frame" x="20" y="261.5" width="335" height="336.5"/>
+                                <rect key="frame" x="20" y="261.5" width="335" height="385.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dlo-lP-Zyg" id="bK4-yI-Wya"/>
@@ -656,7 +656,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Grg-d9-2YR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="NAx-La-7za"/>
                 </viewController>
@@ -709,10 +709,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvr-9a-ML4" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="88" width="295" height="128"/>
+                                <rect key="frame" x="40" y="88" width="295" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="suB-kI-jBB">
-                                        <rect key="frame" x="110" y="39.5" width="167" height="49.5"/>
+                                        <rect key="frame" x="110" y="25.5" width="167" height="49.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHD-jc-uOO">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="31"/>
@@ -729,7 +729,7 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="amo-rx-EFC" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="27" width="74" height="74"/>
+                                        <rect key="frame" x="18" y="13" width="74" height="74"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="74" id="Aiv-TV-UnC"/>
@@ -747,7 +747,7 @@
                                     <constraint firstItem="amo-rx-EFC" firstAttribute="centerY" secondItem="Pvr-9a-ML4" secondAttribute="centerY" id="6xM-tM-xoY"/>
                                     <constraint firstItem="suB-kI-jBB" firstAttribute="leading" secondItem="amo-rx-EFC" secondAttribute="trailing" constant="18" id="HJq-2B-Xge"/>
                                     <constraint firstItem="suB-kI-jBB" firstAttribute="centerY" secondItem="Pvr-9a-ML4" secondAttribute="centerY" id="NJA-uC-Lfg"/>
-                                    <constraint firstAttribute="height" constant="128" id="hr8-QP-r9X"/>
+                                    <constraint firstAttribute="height" constant="100" id="hr8-QP-r9X"/>
                                     <constraint firstItem="amo-rx-EFC" firstAttribute="leading" secondItem="Pvr-9a-ML4" secondAttribute="leading" constant="18" id="jIE-wO-ZpV"/>
                                     <constraint firstAttribute="trailing" secondItem="suB-kI-jBB" secondAttribute="trailing" constant="18" id="tf1-dP-xXi"/>
                                 </constraints>
@@ -761,7 +761,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXJ-MU-yMX" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="562" width="335" height="44"/>
+                                <rect key="frame" x="20" y="593" width="335" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7a2-0N-D47"/>
                                 </constraints>
@@ -774,7 +774,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-iH-bf5">
-                                <rect key="frame" x="20" y="236" width="335" height="36"/>
+                                <rect key="frame" x="20" y="208" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYZ-X1-5jA" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -802,7 +802,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJA-Fw-3Tc">
-                                <rect key="frame" x="20" y="300" width="335" height="36"/>
+                                <rect key="frame" x="20" y="272" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-6D-xy2" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -830,7 +830,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-AZ-e8y">
-                                <rect key="frame" x="20" y="364" width="335" height="36"/>
+                                <rect key="frame" x="20" y="336" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-so-ixm" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -858,7 +858,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-H4-HKd">
-                                <rect key="frame" x="20" y="428" width="335" height="36"/>
+                                <rect key="frame" x="20" y="400" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-lm-uu4" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -886,7 +886,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64w-5Y-ulK">
-                                <rect key="frame" x="20" y="508.5" width="335" height="40"/>
+                                <rect key="frame" x="20" y="480.5" width="335" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8c-Ce-pmU" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="2" width="36" height="36"/>
@@ -924,7 +924,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv2-By-B6H">
-                                <rect key="frame" x="28" y="484" width="327" height="18.5"/>
+                                <rect key="frame" x="28" y="456" width="327" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -939,7 +939,7 @@
                             <constraint firstItem="MS5-s5-LVD" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" id="3Tt-EK-IMk"/>
                             <constraint firstItem="gJA-Fw-3Tc" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="8i4-zz-A0t"/>
                             <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="64w-5Y-ulK" secondAttribute="trailing" constant="20" id="BC6-DE-DET"/>
-                            <constraint firstItem="ROL-85-12I" firstAttribute="bottom" secondItem="JXJ-MU-yMX" secondAttribute="bottom" constant="12" id="BCf-DL-TZp"/>
+                            <constraint firstItem="ROL-85-12I" firstAttribute="bottom" secondItem="JXJ-MU-yMX" secondAttribute="bottom" constant="30" id="BCf-DL-TZp"/>
                             <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="N6D-H4-HKd" secondAttribute="trailing" constant="20" id="E6k-x0-pYs"/>
                             <constraint firstItem="Mmh-iH-bf5" firstAttribute="top" secondItem="Pvr-9a-ML4" secondAttribute="bottom" constant="20" id="Fab-rh-aFH"/>
                             <constraint firstItem="JaU-AZ-e8y" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="Oj7-zE-3e3"/>
@@ -1073,50 +1073,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGb-FW-loh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1034.4000000000001" y="505.99700149925042"/>
+            <point key="canvasLocation" x="-799" y="-308"/>
         </scene>
-        <!--Dashboard Tab View Controller-->
-        <scene sceneID="xcq-jf-HVy">
+        <!--View Controller-->
+        <scene sceneID="Ypp-8P-uL9">
             <objects>
-                <tabBarController id="orp-Tn-mjW" customClass="DashboardTabViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xfg-7L-flL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Uho-cm-Awc" kind="relationship" relationship="viewControllers" id="Sv3-Ai-q3o"/>
-                        <segue destination="COF-5p-iEy" kind="relationship" relationship="viewControllers" id="bH8-W1-k8O"/>
-                        <segue destination="tcx-H3-ysW" kind="relationship" relationship="viewControllers" id="CMv-Df-cyE"/>
-                        <segue destination="ofH-TB-BoW" kind="relationship" relationship="viewControllers" id="SPz-bW-3fM"/>
-                        <segue destination="AAn-UU-wol" kind="relationship" relationship="viewControllers" id="0g3-fS-ZDp"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8H8-D5-9Mz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-670" y="-307"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="5M5-Er-upQ">
-            <objects>
-                <viewController id="AAn-UU-wol" customClass="MoreViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ApW-D2-f5k">
+                <viewController id="LPY-7x-Z84" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8mw-iY-gcr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XQS-vK-S2f"/>
+                        <viewLayoutGuide key="safeArea" id="Jbl-IB-sOw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cen-cG-wsj"/>
-                    <navigationItem key="navigationItem" id="pDu-jN-Y6a"/>
+                    <navigationItem key="navigationItem" id="Nk4-mA-Ept"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lxt-Ww-mgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ca-3I-QWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="1216"/>
+            <point key="canvasLocation" x="1490" y="1314"/>
         </scene>
         <!--Item-->
         <scene sceneID="ag6-Kf-Fsc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tcx-H3-ysW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ClockInView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tcx-H3-ysW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="C4d-Th-Ese"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -1135,7 +1113,7 @@
         <!--Item-->
         <scene sceneID="CP8-nS-Knr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="COF-5p-iEy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TimesheetView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="COF-5p-iEy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rKH-K0-byj"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ylv-5w-xRy"/>
@@ -1155,7 +1133,7 @@
         <!--Item-->
         <scene sceneID="iM5-0B-hxw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Uho-cm-Awc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DashboardView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Uho-cm-Awc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ljv-6V-1Ru"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -1174,7 +1152,7 @@
         <!--Item-->
         <scene sceneID="QJa-ec-Cxa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ofH-TB-BoW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ofH-TB-BoW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vL8-rj-sNQ"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -1189,6 +1167,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlO-15-uVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="457" y="478"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dqr-DO-FL4">
+            <objects>
+                <viewController id="6CM-21-wao" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hCe-OS-TPW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FIn-t7-57M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jzW-eY-sd5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bai-b2-UDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="2197"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="c8r-cK-jHG">
+            <objects>
+                <navigationController storyboardIdentifier="NotificationView" automaticallyAdjustsScrollViewInsets="NO" id="gEl-Yo-v4R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="huM-K1-MHR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QH6-Gf-N3U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LPY-7x-Z84" kind="relationship" relationship="rootViewController" id="48x-Zy-QaQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acj-oN-Ok7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="1314"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="meg-Yo-TfB">
+            <objects>
+                <navigationController storyboardIdentifier="PreInvitationView" automaticallyAdjustsScrollViewInsets="NO" id="Jns-Hg-txd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="4xw-Uz-WzL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dys-y9-GVK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6CM-21-wao" kind="relationship" relationship="rootViewController" id="hKc-FE-Qey"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MA7-LZ-ZdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="2196"/>
         </scene>
     </scenes>
     <designables>

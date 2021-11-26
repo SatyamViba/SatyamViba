@@ -26,12 +26,10 @@
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
 		4A5AA7AB274934E800084866 /* VibaCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AA274934E800084866 /* VibaCircularImage.swift */; };
 		4A5AA7AD2749541500084866 /* VibaRoundImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */; };
-		4A5E47742748E03D00239676 /* DashboardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47732748E03D00239676 /* DashboardTabViewController.swift */; };
 		4A5E47772748E59F00239676 /* ClockInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47762748E59F00239676 /* ClockInOutViewController.swift */; };
 		4A5E47792748E5AB00239676 /* TimesheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47782748E5AB00239676 /* TimesheetViewController.swift */; };
 		4A5E477B2748E5B700239676 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E477A2748E5B700239676 /* ProfileViewController.swift */; };
 		4A5E477D2748E5C600239676 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E477C2748E5C600239676 /* DashboardViewController.swift */; };
-		4A5E477F2748E5CE00239676 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E477E2748E5CE00239676 /* MoreViewController.swift */; };
 		4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F7194274179F800D4A29E /* AuthResponse.swift */; };
 		4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D64D4274E386000022CBE /* MenuViewController.swift */; };
 		4A6D64D7274E61D800022CBE /* VibaMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */; };
@@ -69,6 +67,9 @@
 		4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0182739122F007DB9FF /* LaunchScreen.storyboard */; };
 		4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */; };
 		4AD78E84274F3EA000A27401 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */; };
+		4AD78ECB274F6C8900A27401 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78ECA274F6C8900A27401 /* TabViewController.swift */; };
+		4AD78ECD274F6C9D00A27401 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD78ECC274F6C9D00A27401 /* TabController.storyboard */; };
+		4AD78ECF2750951000A27401 /* VibaTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78ECE2750951000A27401 /* VibaTabButton.swift */; };
 		4ADB3A552740F3F900A0D750 /* UserRegistrrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */; };
 		4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */; };
 		4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A58274118E300A0D750 /* GeneralResponse.swift */; };
@@ -103,12 +104,10 @@
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
 		4A5AA7AA274934E800084866 /* VibaCircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaCircularImage.swift; sourceTree = "<group>"; };
 		4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRoundImageButton.swift; sourceTree = "<group>"; };
-		4A5E47732748E03D00239676 /* DashboardTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabViewController.swift; sourceTree = "<group>"; };
 		4A5E47762748E59F00239676 /* ClockInOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutViewController.swift; sourceTree = "<group>"; };
 		4A5E47782748E5AB00239676 /* TimesheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetViewController.swift; sourceTree = "<group>"; };
 		4A5E477A2748E5B700239676 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A5E477C2748E5C600239676 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		4A5E477E2748E5CE00239676 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		4A5F7194274179F800D4A29E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		4A6D64D4274E386000022CBE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaMenuButton.swift; sourceTree = "<group>"; };
@@ -148,6 +147,9 @@
 		4AB5F01B2739122F007DB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		4AD78ECA274F6C8900A27401 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		4AD78ECC274F6C9D00A27401 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
+		4AD78ECE2750951000A27401 /* VibaTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaTabButton.swift; sourceTree = "<group>"; };
 		4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrrationDetails.swift; sourceTree = "<group>"; };
 		4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateRegistraionOTP.swift; sourceTree = "<group>"; };
 		4ADB3A58274118E300A0D750 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		4A1617C0273A5A2200640236 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AD78E85274F63C800A27401 /* Temp */,
 				4A5E47702748DBE900239676 /* Dashboard */,
 				4A1617C1273A5B1500640236 /* User */,
 			);
@@ -223,7 +226,6 @@
 			children = (
 				4A5E47752748E58D00239676 /* TabControllers */,
 				4A8482E427492B62002463D5 /* DashBoardWithTabs.storyboard */,
-				4A5E47732748E03D00239676 /* DashboardTabViewController.swift */,
 				4A6D64D4274E386000022CBE /* MenuViewController.swift */,
 				4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */,
 			);
@@ -237,7 +239,6 @@
 				4A5E47782748E5AB00239676 /* TimesheetViewController.swift */,
 				4A3DDA6F274B69F6002FF884 /* CheckInOut */,
 				4A5E477A2748E5B700239676 /* ProfileViewController.swift */,
-				4A5E477E2748E5CE00239676 /* MoreViewController.swift */,
 			);
 			path = TabControllers;
 			sourceTree = "<group>";
@@ -376,6 +377,15 @@
 			path = Viba;
 			sourceTree = "<group>";
 		};
+		4AD78E85274F63C800A27401 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				4AD78ECA274F6C8900A27401 /* TabViewController.swift */,
+				4AD78ECC274F6C9D00A27401 /* TabController.storyboard */,
+			);
+			path = Temp;
+			sourceTree = "<group>";
+		};
 		4AFC562B27391E1C00E064E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +432,7 @@
 				4A21A194273B67290002D052 /* VibaMediumLabel.swift */,
 				4A21A19B273B913F0002D052 /* VibaRoundCornerView.swift */,
 				4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */,
+				4AD78ECE2750951000A27401 /* VibaTabButton.swift */,
 				4A6D64D8274E670F00022CBE /* VibaMenuButton */,
 			);
 			path = Custom;
@@ -519,6 +530,7 @@
 				4A109DF8274D4991009D2002 /* Poppins-Italic.ttf in Resources */,
 				4A72CCCD274024DB008AA853 /* meditation.json in Resources */,
 				4AB5F0152739122E007DB9FF /* Main.storyboard in Resources */,
+				4AD78ECD274F6C9D00A27401 /* TabController.storyboard in Resources */,
 				4A8482E527492B62002463D5 /* DashBoardWithTabs.storyboard in Resources */,
 				4A72CCD0274024DB008AA853 /* ball-spinner.json in Resources */,
 				4A1617B9273A40B700640236 /* Poppins-Regular.ttf in Resources */,
@@ -592,12 +604,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */,
+				4AD78ECF2750951000A27401 /* VibaTabButton.swift in Sources */,
 				4A5E47772748E59F00239676 /* ClockInOutViewController.swift in Sources */,
 				4AD78E84274F3EA000A27401 /* MenuTableViewCell.swift in Sources */,
 				4A8A6898273D8ABA00491060 /* NetworkManager.swift in Sources */,
 				4A72CCAF273DA481008AA853 /* Reach.swift in Sources */,
 				4A72CCC5273FCFBA008AA853 /* ValidateEmailOtp.swift in Sources */,
-				4A5E477F2748E5CE00239676 /* MoreViewController.swift in Sources */,
 				4A72CCC1273EE1F6008AA853 /* CompanyDetails.swift in Sources */,
 				4A5E477B2748E5B700239676 /* ProfileViewController.swift in Sources */,
 				4A72CCD4274025CC008AA853 /* UIViewController+Extension.swift in Sources */,
@@ -630,6 +642,7 @@
 				4A1617BD273A42CF00640236 /* VibaBorderButton.swift in Sources */,
 				4A21A198273B89E50002D052 /* EmployeeDetailsViewController.swift in Sources */,
 				4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */,
+				4AD78ECB274F6C8900A27401 /* TabViewController.swift in Sources */,
 				4A72CCBD273EBB2A008AA853 /* RegisterUserStep1.swift in Sources */,
 				4A72CCBF273EE1B6008AA853 /* Company.swift in Sources */,
 				4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */,
@@ -638,7 +651,6 @@
 				4AFC56382739285500E064E9 /* Constants.swift in Sources */,
 				4ADB3A552740F3F900A0D750 /* UserRegistrrationDetails.swift in Sources */,
 				4AFC563C2739305E00E064E9 /* UIColor+Extension.swift in Sources */,
-				4A5E47742748E03D00239676 /* DashboardTabViewController.swift in Sources */,
 				4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */,
 				4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */,
 				4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */,
@@ -797,6 +809,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2ZZLRMVP7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Viba/ViewControllers/Temp/Content/Lottie",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Viba/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -828,6 +844,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2ZZLRMVP7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Viba/ViewControllers/Temp/Content/Lottie",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Viba/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

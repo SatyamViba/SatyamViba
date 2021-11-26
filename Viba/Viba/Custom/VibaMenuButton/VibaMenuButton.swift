@@ -18,14 +18,17 @@ class VibaMenuButton: UIView {
         }
     }
 
+    var defaultColor = UIColor.black
+    var selectedColor = Colors.vibaRed.value
+
     private var _selected = false {
         didSet {
             if _selected {
-                menuImage.backgroundColor = Colors.vibaRed.value
-                menuTitle.textColor = Colors.vibaRed.value
+                menuImage.backgroundColor = selectedColor
+                menuTitle.textColor = selectedColor
             } else {
-                menuImage.backgroundColor = .black
-                menuTitle.textColor = .black
+                menuImage.backgroundColor = defaultColor
+                menuTitle.textColor = defaultColor
             }
         }
     }

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TabViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTU-jl-C5W">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="VNj-WR-fQZ">
+                                <rect key="frame" x="0.0" y="800" width="414" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imj-Jf-PN2" customClass="VibaTabButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="62"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Dashboard" image="pic_holder">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleTapOnTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6uo-8s-p0B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaD-Q7-czY" customClass="VibaTabButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="83" y="0.0" width="82" height="62"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Timesheet" image="pic_holder">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleTapOnTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hFQ-Vu-6U9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtX-yA-izg" customClass="VibaTabButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="166" y="0.0" width="82" height="62"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Clock In" image="pic_holder">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleTapOnTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IkR-Hz-CVw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0p-Kk-cy5" customClass="VibaTabButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="249" y="0.0" width="82" height="62"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Profile" image="pic_holder">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleTapOnTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tHV-HZ-sAM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMv-ic-vtF" customClass="VibaTabButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="332" y="0.0" width="82" height="62"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="More" image="pic_holder">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleTapOnTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3pd-my-zuK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="cdN-Pn-e4k"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LTU-jl-C5W" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6iy-XS-1Q9"/>
+                            <constraint firstItem="VNj-WR-fQZ" firstAttribute="top" secondItem="LTU-jl-C5W" secondAttribute="bottom" id="6pO-Hl-vN5"/>
+                            <constraint firstItem="VNj-WR-fQZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EI8-ML-aP8"/>
+                            <constraint firstItem="LTU-jl-C5W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FUv-P8-o9H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LTU-jl-C5W" secondAttribute="trailing" id="G6n-4y-dkv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VNj-WR-fQZ" secondAttribute="trailing" id="KUa-xb-EAJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="VNj-WR-fQZ" secondAttribute="bottom" id="pFG-4c-dF1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clockInOutBtn" destination="GtX-yA-izg" id="aWZ-dJ-x3R"/>
+                        <outlet property="container" destination="LTU-jl-C5W" id="RiU-6l-haK"/>
+                        <outlet property="dashboardBtn" destination="Imj-Jf-PN2" id="OxI-Bd-Qpf"/>
+                        <outlet property="moreBtn" destination="LMv-ic-vtF" id="BIl-JS-jbs"/>
+                        <outlet property="profileBtn" destination="i0p-Kk-cy5" id="SKA-Li-lut"/>
+                        <outlet property="timesheetBtn" destination="jaD-Q7-czY" id="11K-Ml-kWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="GtX-yA-izg">
+            <size key="intrinsicContentSize" width="79" height="57"/>
+        </designable>
+        <designable name="Imj-Jf-PN2">
+            <size key="intrinsicContentSize" width="93" height="57"/>
+        </designable>
+        <designable name="LMv-ic-vtF">
+            <size key="intrinsicContentSize" width="65" height="57"/>
+        </designable>
+        <designable name="i0p-Kk-cy5">
+            <size key="intrinsicContentSize" width="72" height="57"/>
+        </designable>
+        <designable name="jaD-Q7-czY">
+            <size key="intrinsicContentSize" width="91" height="57"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="pic_holder" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

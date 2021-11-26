@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="989.85507246376824" y="75.669642857142847"/>
         </scene>
-        <!--DashBoardWithTabs-->
+        <!--TabController-->
         <scene sceneID="6zR-Px-lB4">
             <objects>
-                <viewControllerPlaceholder storyboardName="DashBoardWithTabs" id="0Sz-8o-sTg" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TabController" id="0Sz-8o-sTg" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="w3u-iK-Mm5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jah-Gt-dJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
