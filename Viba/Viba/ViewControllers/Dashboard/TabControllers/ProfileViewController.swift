@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var calImage: VibaCircularImage!
     @IBOutlet weak var calDate: VibaLabel!
 
@@ -29,6 +30,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        profileImage.image = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: .white, size: CGSize(width: 16, height: 16))
+
         calImage.image = UIImage.fontAwesomeIcon(name: .calendarAlt, style: .solid, textColor: .black, size: CGSize(width: 20, height: 20))
         cakeImage.image = UIImage.fontAwesomeIcon(name: .birthdayCake, style: .solid, textColor: .black, size: CGSize(width: 20, height: 20))
         phoneImage.image = UIImage.fontAwesomeIcon(name: .phone, style: .solid, textColor: .black, size: CGSize(width: 20, height: 20))

@@ -13,6 +13,8 @@ enum Tab: Int {
     case clockInOut = 300
     case profile = 400
     case menu = 500
+    case notifications = 600
+    case preInvitations = 700
 
     var viewId: String {
         switch self {
@@ -27,6 +29,10 @@ enum Tab: Int {
             return "ProfileView"
         case .menu:
             return "MenuView"
+        case .notifications:
+            return "NotificationView"
+        case .preInvitations:
+            return "PreInvitationView"
         }
     }
 }
@@ -67,6 +73,7 @@ class TabViewController: UIViewController {
 
         let dashboardStoryboard = UIStoryboard(name: "DashBoardWithTabs", bundle: nil)
         menuViewController = dashboardStoryboard.instantiateViewController(withIdentifier: Tab.menu.viewId) as? MenuViewController
+        menuViewController?.delegate = self
 
         NotificationCenter.default.addObserver(self, selector: #selector(goHome), name: .signOut, object: nil)
 
@@ -144,6 +151,12 @@ extension TabViewController: UIViewControllerTransitioningDelegate {
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return dismissTransition
+    }
+}
+
+extension TabViewController: MenuViewDelegate {
+    func showView(view: Tab) {
+        addChild(to: view)
     }
 }
 

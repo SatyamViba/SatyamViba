@@ -49,7 +49,7 @@ class TimesheetViewController: UIViewController {
         let calImg = UIImage.fontAwesomeIcon(name: .calendarAlt, style: .regular, textColor: .black, size: CGSize(width: 26, height: 26))
         calendar.setImage(calImg, for: .normal)
 
-        timesheetImage.image = UIImage.fontAwesomeIcon(name: .userClock, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
+        timesheetImage.image = UIImage.fontAwesomeIcon(name: .userClock, style: .solid, textColor: .white, size: CGSize(width: 16, height: 16))
         wfoImg.image = UIImage.fontAwesomeIcon(name: .arrowUp, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
         wfhImg.image = UIImage.fontAwesomeIcon(name: .arrowUp, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
         durationImg.image = UIImage.fontAwesomeIcon(name: .clock, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))

@@ -8,14 +8,13 @@
 import UIKit
 import FontAwesome_swift
 
-protocol MenuViewDelegate {
-    func showNotificationsView()
-    func showPreInvitationsView()
+protocol MenuViewDelegate: AnyObject {
+    func showView(view: Tab)
 }
 
 class MenuViewController: UIViewController {
     var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
-    var delegate: MenuViewDelegate?
+    weak var delegate: MenuViewDelegate?
 
     var menuItems = [
         ["image": FontAwesome.bell, "title": "Notifications"],
@@ -77,5 +76,16 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         UserDefaults.standard.set(indexPath.row, forKey: UserDefaultsKeys.selectedMenu.value)
         reloadMenu()
+
+        if let dlgt = delegate {
+            switch indexPath.row {
+            case 0:
+                dlgt.showView(view: .notifications)
+            case 1:
+                dlgt.showView(view: .preInvitations)
+            default:
+                print("Handle it!!")
+            }
+        }
     }
 }

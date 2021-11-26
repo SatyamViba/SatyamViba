@@ -709,7 +709,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvr-9a-ML4" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="88" width="295" height="100"/>
+                                <rect key="frame" x="40" y="80" width="295" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="suB-kI-jBB">
                                         <rect key="frame" x="110" y="25.5" width="167" height="49.5"/>
@@ -774,7 +774,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-iH-bf5">
-                                <rect key="frame" x="20" y="208" width="335" height="36"/>
+                                <rect key="frame" x="20" y="200" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYZ-X1-5jA" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -802,7 +802,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJA-Fw-3Tc">
-                                <rect key="frame" x="20" y="272" width="335" height="36"/>
+                                <rect key="frame" x="20" y="264" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-6D-xy2" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -830,7 +830,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-AZ-e8y">
-                                <rect key="frame" x="20" y="336" width="335" height="36"/>
+                                <rect key="frame" x="20" y="328" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-so-ixm" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -858,7 +858,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6D-H4-HKd">
-                                <rect key="frame" x="20" y="400" width="335" height="36"/>
+                                <rect key="frame" x="20" y="392" width="335" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-lm-uu4" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="36" height="36"/>
@@ -886,7 +886,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64w-5Y-ulK">
-                                <rect key="frame" x="20" y="480.5" width="335" height="40"/>
+                                <rect key="frame" x="20" y="472.5" width="335" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8c-Ce-pmU" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="2" width="36" height="36"/>
@@ -924,7 +924,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv2-By-B6H">
-                                <rect key="frame" x="28" y="456" width="327" height="18.5"/>
+                                <rect key="frame" x="28" y="448" width="327" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -952,7 +952,7 @@
                             <constraint firstItem="JXJ-MU-yMX" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="axz-g7-4us"/>
                             <constraint firstItem="MS5-s5-LVD" firstAttribute="trailing" secondItem="ROL-85-12I" secondAttribute="trailing" id="bTQ-yU-P7n"/>
                             <constraint firstItem="JaU-AZ-e8y" firstAttribute="top" secondItem="gJA-Fw-3Tc" secondAttribute="bottom" constant="28" id="c6J-N0-hOV"/>
-                            <constraint firstItem="Pvr-9a-ML4" firstAttribute="top" secondItem="Zjk-CJ-HUt" secondAttribute="bottom" constant="12" id="duQ-vC-Bfn"/>
+                            <constraint firstItem="Pvr-9a-ML4" firstAttribute="top" secondItem="Zjk-CJ-HUt" secondAttribute="bottom" constant="4" id="duQ-vC-Bfn"/>
                             <constraint firstItem="ROL-85-12I" firstAttribute="trailing" secondItem="gJA-Fw-3Tc" secondAttribute="trailing" constant="20" id="foc-U0-5LA"/>
                             <constraint firstItem="Mmh-iH-bf5" firstAttribute="leading" secondItem="ROL-85-12I" secondAttribute="leading" constant="20" id="rTc-3m-Ycd"/>
                             <constraint firstItem="64w-5Y-ulK" firstAttribute="top" secondItem="Cv2-By-B6H" secondAttribute="bottom" constant="6" id="sQ7-Po-XAI"/>
@@ -975,6 +975,7 @@
                         <outlet property="emailImage" destination="nmJ-lm-uu4" id="vE8-Dd-lFu"/>
                         <outlet property="phoneImage" destination="rtJ-so-ixm" id="OE3-Fc-NZr"/>
                         <outlet property="phoneNumber" destination="6JY-Y1-xEH" id="wZr-ny-PXn"/>
+                        <outlet property="profileImage" destination="k6U-S6-6Ms" id="c2H-it-707"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilM-z0-nde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1084,7 +1085,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Jbl-IB-sOw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nk4-mA-Ept"/>
                 </viewController>
@@ -1177,7 +1178,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FIn-t7-57M"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tintColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jzW-eY-sd5"/>
                 </viewController>
@@ -1263,8 +1264,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
