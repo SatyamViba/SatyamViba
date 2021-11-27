@@ -32,6 +32,11 @@ class MenuViewController: UIViewController {
         view.addGestureRecognizer(tapGestureRecognizer)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadMenu()
+    }
+    
     @objc
     func gotoTabView() {
         dismiss(animated: true, completion: nil)

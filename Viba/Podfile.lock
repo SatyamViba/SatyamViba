@@ -5,6 +5,7 @@ PODS:
   - Extended (1.0.5)
   - FontAwesome.swift (1.9.1)
   - lottie-ios (3.2.3)
+  - MASegmentedControl (0.0.5)
   - OTPFieldView (1.0.1)
   - SCLAlertView (0.8)
   - SwiftLint (0.45.0)
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - DLRadioButton (~> 1.4)
   - FontAwesome.swift
   - lottie-ios
+  - MASegmentedControl
   - OTPFieldView
   - SCLAlertView
   - SwiftLint
@@ -25,6 +27,7 @@ SPEC REPOS:
     - Extended
     - FontAwesome.swift
     - lottie-ios
+    - MASegmentedControl
     - OTPFieldView
     - SCLAlertView
     - SwiftLint
@@ -35,10 +38,11 @@ SPEC CHECKSUMS:
   Extended: c463225e0c29b2823847866c1b106827772ac678
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  MASegmentedControl: 9b58f9ba3a562a739b63b29e4ca2b9dc4d9c62cb
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
 
-PODFILE CHECKSUM: eb9978598550c1dca64c3c0fce5dd3df02428a96
+PODFILE CHECKSUM: 360d1cf54b812bd42e47bfe691425a178ad5468a
 
 COCOAPODS: 1.11.2
