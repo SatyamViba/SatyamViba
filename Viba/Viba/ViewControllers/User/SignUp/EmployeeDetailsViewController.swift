@@ -77,7 +77,7 @@ class EmployeeDetailsViewController: UIViewController {
             return
         }
 
-        guard let eml = email.text, eml.count > 0 else {
+        guard let eml = email.text, eml.isValidEmail else {
             email.showError()
             return
         }

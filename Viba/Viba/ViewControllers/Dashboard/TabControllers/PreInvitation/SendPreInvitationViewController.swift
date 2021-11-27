@@ -32,7 +32,7 @@ class SendPreInvitationViewController: UIViewController {
         // Do any additional setup after loading the view.
         invitationImage.image = UIImage.fontAwesomeIcon(name: .envelope, style: .solid, textColor: .white, size: CGSize(width: 16, height: 16))
 
-        let calImg = UIImage.fontAwesomeIcon(name: .calendarAlt, style: .regular, textColor: .black, size: CGSize(width: 40, height: 40))
+        let calImg = UIImage.fontAwesomeIcon(name: .calendarAlt, style: .regular, textColor: Colors.vibaRed.value, size: CGSize(width: 40, height: 40))
         calendar.setImage(calImg, for: .normal)
 
         let img = UIImage.fontAwesomeIcon(name: .angleLeft, style: .solid, textColor: .black, size: CGSize(width: 20, height: 20))
@@ -45,22 +45,7 @@ class SendPreInvitationViewController: UIViewController {
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         }
-
-//        let customView = UIView(frame: CGRect(x: 0, y: 100, width: 320, height: 160))
-//        customView.backgroundColor = .brown
-//        timePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 320, height: 160))
-//        customView .addSubview(timePicker)
-//        startTime.inputView = customView
-//        let doneButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 44))
-//        doneButton.setTitle("Done", for: .normal)
-//        doneButton.addTarget(self, action: #selector(datePickerSelected), for: .touchUpInside)
-//        doneButton.backgroundColor = .blue
-//        startTime.inputAccessoryView = doneButton
     }
-
-//    @objc func datePickerSelected() {
-//           startTime.text =  timePicker.date.description
-//       }
 
     @objc func keyboardWillShow(notification: NSNotification) {
         //         self.view.frame.origin.y = -150 // Move view 150 points upward
@@ -97,6 +82,37 @@ class SendPreInvitationViewController: UIViewController {
 
     @IBAction func submitInvitatioon(_ sender: Any) {
         view.endEditing(true)
+
+        guard let fName = fullName.text, fName.count > 0 else {
+            fullName.showError()
+            return
+        }
+
+        guard let eml = email.text, eml.isValidEmail else {
+            email.showError()
+            return
+        }
+
+        guard let phn = phoneNumber.text, phn.isValidPhone else {
+            phoneNumber.showError()
+            return
+        }
+
+        guard let appntDate = appointmentDate.text, appntDate.count > 0 else {
+            appointmentDate.showError()
+            return
+        }
+
+        guard let strTime = startTime.text, strTime.count > 0 else {
+            startTime.showError()
+            return
+        }
+
+        guard let eTime = endTime.text, eTime.count > 0 else {
+            endTime.showError()
+            return
+        }
+
         if let navController = navigationController {
             navController.popViewController(animated: true)
         }

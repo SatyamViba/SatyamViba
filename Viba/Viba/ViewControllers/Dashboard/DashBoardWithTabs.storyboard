@@ -690,7 +690,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wla-2K-0tD">
-                                        <rect key="frame" x="46" y="40.5" width="249" height="17.5"/>
+                                        <rect key="frame" x="46" y="38.5" width="249" height="21"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -712,16 +712,16 @@
                                 <rect key="frame" x="40" y="80" width="295" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="suB-kI-jBB">
-                                        <rect key="frame" x="110" y="29.5" width="167" height="41.5"/>
+                                        <rect key="frame" x="110" y="25.5" width="167" height="49.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHD-jc-uOO">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="31"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFW-jW-GG5">
-                                                <rect key="frame" x="0.0" y="26" width="32" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="31" width="34.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Italic" family="Poppins" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -886,7 +886,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64w-5Y-ulK">
-                                <rect key="frame" x="20" y="469.5" width="335" height="40"/>
+                                <rect key="frame" x="20" y="472.5" width="335" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8c-Ce-pmU" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="8" y="2" width="36" height="36"/>
@@ -897,13 +897,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-v1-hpP" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="52" y="0.0" width="263" height="23.5"/>
+                                        <rect key="frame" x="52" y="0.0" width="263" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vat-OO-LTr">
-                                        <rect key="frame" x="52" y="26" width="263" height="14"/>
+                                        <rect key="frame" x="52" y="23" width="263" height="17"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                         <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -924,7 +924,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv2-By-B6H">
-                                <rect key="frame" x="28" y="448" width="327" height="15.5"/>
+                                <rect key="frame" x="28" y="448" width="327" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1751,7 +1751,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Pre Invitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-Rp-BK6">
-                                        <rect key="frame" x="46" y="40.5" width="249" height="17.5"/>
+                                        <rect key="frame" x="46" y="38.5" width="249" height="21"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1773,7 +1773,7 @@
                                 <rect key="frame" x="40" y="80" width="295" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buY-YC-p2f">
-                                        <rect key="frame" x="10" y="20" width="265" height="30"/>
+                                        <rect key="frame" x="10" y="18.5" width="265" height="33"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Pre Invitations">
@@ -1801,7 +1801,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJ3-yU-sJQ" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="166" width="335" height="52"/>
+                                <rect key="frame" x="20" y="166" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -1812,7 +1812,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJG-xl-O7N" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="234" width="335" height="52"/>
+                                <rect key="frame" x="20" y="227.5" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -1823,7 +1823,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nre-3U-FpN" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="302" width="335" height="52"/>
+                                <rect key="frame" x="20" y="289" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -1834,7 +1834,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Appointment Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8st-rH-nbe" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="417" width="275" height="52"/>
+                                <rect key="frame" x="20" y="397.5" width="269.5" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -1844,35 +1844,8 @@
                                     <outlet property="delegate" destination="kQq-uW-79W" id="JWs-la-REQ"/>
                                 </connections>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uyv-vJ-YYy">
-                                <rect key="frame" x="20" y="485" width="335" height="52"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-8Q-V7T" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="52"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide start time"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="delegate" destination="kQq-uW-79W" id="hGt-QO-x4u"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7d-qW-peL" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="52"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide end time"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="delegate" destination="kQq-uW-79W" id="Upz-4l-27U"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-Wt-uHR">
-                                <rect key="frame" x="20" y="370" width="335" height="32"/>
+                                <rect key="frame" x="20" y="350.5" width="335" height="32"/>
                                 <segments>
                                     <segment title="Official"/>
                                     <segment title="Interview"/>
@@ -1880,7 +1853,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3d-2J-gK6" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="557" width="335" height="46"/>
+                                <rect key="frame" x="20" y="520.5" width="335" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="xiB-Ne-lSg"/>
                                 </constraints>
@@ -1891,49 +1864,74 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugY-7U-6Ek">
-                                <rect key="frame" x="315" y="423" width="40" height="40"/>
+                                <rect key="frame" x="309.5" y="397.5" width="45.5" height="45.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Yf3-lM-k49"/>
-                                    <constraint firstAttribute="width" constant="40" id="eWl-eE-4b4"/>
+                                    <constraint firstAttribute="width" secondItem="ugY-7U-6Ek" secondAttribute="height" multiplier="1:1" id="aC9-0T-cUc"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="selectAppointmentDate:" destination="kQq-uW-79W" eventType="touchUpInside" id="RVY-WU-hsC"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-8Q-V7T" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="459" width="162.5" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide start time"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="kQq-uW-79W" id="hGt-QO-x4u"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7d-qW-peL" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="192.5" y="459" width="162.5" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide end time"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="kQq-uW-79W" id="Upz-4l-27U"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8bX-If-40H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="W7d-qW-peL" firstAttribute="leading" secondItem="nIi-8Q-V7T" secondAttribute="trailing" constant="10" id="2Pj-tg-pp2"/>
                             <constraint firstItem="B3d-2J-gK6" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="541-NQ-mqC"/>
                             <constraint firstItem="Kpy-eI-gU2" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="40" id="7bW-zx-nGQ"/>
+                            <constraint firstItem="nIi-8Q-V7T" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="7mJ-4a-oBv"/>
                             <constraint firstItem="Nre-3U-FpN" firstAttribute="top" secondItem="WJG-xl-O7N" secondAttribute="bottom" constant="16" id="9sb-D1-iNs"/>
                             <constraint firstItem="8st-rH-nbe" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="CML-Qg-L3W"/>
                             <constraint firstItem="ugY-7U-6Ek" firstAttribute="leading" secondItem="8st-rH-nbe" secondAttribute="trailing" constant="20" id="F2h-MY-ZMW"/>
                             <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="B3d-2J-gK6" secondAttribute="trailing" constant="20" id="F6u-n7-Azt"/>
-                            <constraint firstItem="uyv-vJ-YYy" firstAttribute="top" secondItem="8st-rH-nbe" secondAttribute="bottom" constant="16" id="Kxh-ZO-aWv"/>
+                            <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="W7d-qW-peL" secondAttribute="trailing" constant="20" id="KNF-qd-3CH"/>
+                            <constraint firstItem="W7d-qW-peL" firstAttribute="width" secondItem="nIi-8Q-V7T" secondAttribute="width" id="MTb-xh-ESg"/>
                             <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="vJ3-yU-sJQ" secondAttribute="trailing" constant="20" id="MYB-1Z-ECu"/>
                             <constraint firstItem="8st-rH-nbe" firstAttribute="top" secondItem="ch2-Wt-uHR" secondAttribute="bottom" constant="16" id="MZy-uV-2GE"/>
                             <constraint firstItem="OoW-iJ-TI5" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" id="OGN-qs-rcs"/>
                             <constraint firstItem="vJ3-yU-sJQ" firstAttribute="top" secondItem="Kpy-eI-gU2" secondAttribute="bottom" constant="16" id="Ru7-1q-j2K"/>
+                            <constraint firstItem="W7d-qW-peL" firstAttribute="top" secondItem="8st-rH-nbe" secondAttribute="bottom" constant="16" id="S2V-CR-LeP"/>
                             <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="Kpy-eI-gU2" secondAttribute="trailing" constant="40" id="UTe-V2-duq"/>
                             <constraint firstItem="Nre-3U-FpN" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="X0n-hd-RBG"/>
-                            <constraint firstItem="uyv-vJ-YYy" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="YQz-Eq-E7a"/>
                             <constraint firstItem="OoW-iJ-TI5" firstAttribute="top" secondItem="WrY-Np-LGV" secondAttribute="top" id="a8R-H2-ddm"/>
                             <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="WJG-xl-O7N" secondAttribute="trailing" constant="20" id="aLq-Ie-SAk"/>
                             <constraint firstItem="OoW-iJ-TI5" firstAttribute="trailing" secondItem="8bX-If-40H" secondAttribute="trailing" id="cZg-7R-bcX"/>
-                            <constraint firstItem="ugY-7U-6Ek" firstAttribute="centerY" secondItem="8st-rH-nbe" secondAttribute="centerY" id="ebr-pm-xxf"/>
+                            <constraint firstItem="B3d-2J-gK6" firstAttribute="top" secondItem="nIi-8Q-V7T" secondAttribute="bottom" constant="16" id="gf7-56-gNd"/>
                             <constraint firstItem="vJ3-yU-sJQ" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="hGA-to-VPu"/>
                             <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="Nre-3U-FpN" secondAttribute="trailing" constant="20" id="hnb-Yx-aI9"/>
+                            <constraint firstItem="nIi-8Q-V7T" firstAttribute="top" secondItem="8st-rH-nbe" secondAttribute="bottom" constant="16" id="kP4-7l-i8B"/>
                             <constraint firstItem="WJG-xl-O7N" firstAttribute="top" secondItem="vJ3-yU-sJQ" secondAttribute="bottom" constant="16" id="mHh-k7-cPj"/>
+                            <constraint firstItem="ugY-7U-6Ek" firstAttribute="bottom" secondItem="8st-rH-nbe" secondAttribute="bottom" id="okD-GE-KJe"/>
                             <constraint firstItem="ch2-Wt-uHR" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="pdO-bq-myb"/>
+                            <constraint firstItem="ugY-7U-6Ek" firstAttribute="top" secondItem="8st-rH-nbe" secondAttribute="top" id="qHb-Oy-gdO"/>
                             <constraint firstItem="WJG-xl-O7N" firstAttribute="leading" secondItem="8bX-If-40H" secondAttribute="leading" constant="20" id="r2x-x4-2rF"/>
                             <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="ugY-7U-6Ek" secondAttribute="trailing" constant="20" id="tQL-SL-UlF"/>
-                            <constraint firstItem="B3d-2J-gK6" firstAttribute="top" secondItem="uyv-vJ-YYy" secondAttribute="bottom" constant="20" id="v9p-yF-vJL"/>
                             <constraint firstItem="Kpy-eI-gU2" firstAttribute="top" secondItem="Y2m-2S-WM1" secondAttribute="bottom" constant="4" id="vWm-0Z-MDx"/>
                             <constraint firstItem="ch2-Wt-uHR" firstAttribute="top" secondItem="Nre-3U-FpN" secondAttribute="bottom" constant="16" id="xZ3-BB-ryA"/>
                             <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="ch2-Wt-uHR" secondAttribute="trailing" constant="20" id="y50-u7-Bge"/>
-                            <constraint firstItem="8bX-If-40H" firstAttribute="trailing" secondItem="uyv-vJ-YYy" secondAttribute="trailing" constant="20" id="zoi-SB-4IY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bgH-FS-7Tf"/>
@@ -2011,28 +2009,28 @@
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="8st-rH-nbe">
-            <size key="intrinsicContentSize" width="147.5" height="52"/>
+            <size key="intrinsicContentSize" width="147.5" height="45.5"/>
         </designable>
         <designable name="APt-Wf-TGl">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="B3d-2J-gK6">
-            <size key="intrinsicContentSize" width="54" height="33"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="De8-Nx-tI4">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="JXJ-MU-yMX">
-            <size key="intrinsicContentSize" width="79" height="33"/>
+            <size key="intrinsicContentSize" width="71" height="33"/>
         </designable>
         <designable name="Nre-3U-FpN">
-            <size key="intrinsicContentSize" width="71" height="52"/>
+            <size key="intrinsicContentSize" width="71" height="45.5"/>
         </designable>
         <designable name="W7d-qW-peL">
-            <size key="intrinsicContentSize" width="90.5" height="52"/>
+            <size key="intrinsicContentSize" width="90.5" height="45.5"/>
         </designable>
         <designable name="WJG-xl-O7N">
-            <size key="intrinsicContentSize" width="65" height="52"/>
+            <size key="intrinsicContentSize" width="65" height="45.5"/>
         </designable>
         <designable name="XIW-D9-ano">
             <size key="intrinsicContentSize" width="40" height="40"/>
@@ -2053,10 +2051,10 @@
             <size key="intrinsicContentSize" width="30" height="33"/>
         </designable>
         <designable name="nIi-8Q-V7T">
-            <size key="intrinsicContentSize" width="94" height="52"/>
+            <size key="intrinsicContentSize" width="94" height="45.5"/>
         </designable>
         <designable name="vJ3-yU-sJQ">
-            <size key="intrinsicContentSize" width="94.5" height="52"/>
+            <size key="intrinsicContentSize" width="94.5" height="45.5"/>
         </designable>
     </designables>
     <resources>
