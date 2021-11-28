@@ -72,7 +72,7 @@ extension SignupViewController: SignupPageViewProtocol {
             thirdIndicatorWidth.constant = 50
             thirdView.backgroundColor = Colors.vibaRed.value
         case .faceCapture:
-            print("yet to handle")
+            performSegue(withIdentifier: "Dashboard", sender: nil)
         }
     }
 }

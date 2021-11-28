@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SCLAlertView
+import AVFoundation
 
 class LoginViewController: UIViewController {
     var authType = AuthType.email
@@ -26,6 +26,13 @@ class LoginViewController: UIViewController {
         if view.frame.size.height <= 667 {
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if !Location.manager.isLocationServicesEnabled || AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
+            performSegue(withIdentifier: "PermissionsView", sender: nil)
         }
     }
 
@@ -94,7 +101,7 @@ class LoginViewController: UIViewController {
                     self.performSegue(withIdentifier: "OTPView", sender: nil)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to validate input")
+                    showWarning(message: "Failed to validate input")
                 }
             }
         }
@@ -102,7 +109,9 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func signupUser(_ sender: Any) {
-        // self.performSegue(withIdentifier: "SignupView", sender: nil)
+        self.performSegue(withIdentifier: "SignupView", sender: nil)
+        return
+        
         guard let code = companyCode.text, code.count > 0 else {
             companyCode.showError()
             return
@@ -120,7 +129,7 @@ class LoginViewController: UIViewController {
                     self.performSegue(withIdentifier: "SignupView", sender: nil)
                 case .failure(let err):
                     print(err.localizedDescription)
-                    SCLAlertView().showWarning("Warning!", subTitle: err.localizedDescription)
+                    showWarning(message: err.localizedDescription)
                 }
             }
         }

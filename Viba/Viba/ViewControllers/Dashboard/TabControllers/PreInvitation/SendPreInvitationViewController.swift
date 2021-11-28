@@ -113,6 +113,7 @@ class SendPreInvitationViewController: UIViewController {
             return
         }
 
+        let correctedPhone = "91" + phn
         if let navController = navigationController {
             navController.popViewController(animated: true)
         }

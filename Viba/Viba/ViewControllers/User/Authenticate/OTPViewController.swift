@@ -8,7 +8,6 @@
 import UIKit
 import FontAwesome_swift
 import OTPFieldView
-import SCLAlertView
 
 enum AuthType {
     case email
@@ -54,7 +53,7 @@ class OTPViewController: UIViewController {
 
     @IBAction func validedOtp(_ sender: Any) {
         guard hasEnteredOtp == true, let id = userEnteredId else {
-            SCLAlertView().showWarning("Warning!", subTitle: "Please enter valid OTP")
+            showWarning(message: "Please enter valid OTP")
             return
         }
 
@@ -68,7 +67,7 @@ class OTPViewController: UIViewController {
 
                 case .failure(let error):
                     print(error.localizedDescription)
-                    SCLAlertView().showWarning("Warning!", subTitle: "Failed to validate input")
+                    showWarning(message: "Failed to validate input")
                 }
             }
         }

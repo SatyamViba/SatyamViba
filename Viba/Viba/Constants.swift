@@ -86,6 +86,7 @@ enum ErrorCode: Int {
 
 extension Notification.Name {
     static let signOut = Notification.Name("SignOut")
+    static let locationPermissionStatus = Notification.Name("LocationPermissionStatus")
 //    static let userLoggedIn = Notification.Name("userLoggedIn")
 //    static let notification3 = Notification.Name("notification3")
 }

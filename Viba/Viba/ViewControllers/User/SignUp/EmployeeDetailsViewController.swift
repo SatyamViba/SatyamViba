@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SCLAlertView
 
 class EmployeeDetailsViewController: UIViewController {
     weak var delegate: SignupProtocol?
@@ -57,11 +56,13 @@ class EmployeeDetailsViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
-//        guard let dlgt = self.delegate else {
-//            return
-//        }
-//
-//        dlgt.didFinish(screen: .employeeDetails)
+        guard let dlgt = self.delegate else {
+            return
+        }
+
+        dlgt.didFinish(screen: .employeeDetails)
+        return
+
         guard let fName = firstName.text, fName.count > 0 else {
             firstName.showError()
             return
@@ -96,8 +97,9 @@ class EmployeeDetailsViewController: UIViewController {
             return
         }
 
+        let correctedPhone = "91" + phn
         showLoadingIndicator()
-        UserRequests.registerUser(params: RegisterUserStep1(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: "91" + phn)) { result in
+        UserRequests.registerUser(params: RegisterUserStep1(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: correctedPhone)) { result in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {
@@ -111,7 +113,7 @@ class EmployeeDetailsViewController: UIViewController {
                     dlgt.didFinish(screen: .employeeDetails)
                 case .failure(let error):
                     print("Error in Registering User: \(error.localizedDescription)")
-                    SCLAlertView().showWarning("Warning!", subTitle: error.localizedDescription)
+                    showWarning(message: error.localizedDescription)
                 }
             }
         }

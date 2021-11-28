@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SCLAlertView
 
 class VerifyViewController: UIViewController {
     weak var delegate: SignupProtocol?
@@ -32,6 +31,13 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
+        guard let dlgt = delegate else {
+            return
+        }
+
+        dlgt.didFinish(screen: .verify)
+        return
+
         guard let eOtp = emailOtp.text, eOtp.count == charLimit else {
             emailOtp.showError()
             return
@@ -43,7 +49,7 @@ class VerifyViewController: UIViewController {
         }
 
         guard let usrId = UserDefaults.standard.string(forKey: UserDefaultsKeys.userId.value) else {
-            SCLAlertView().showWarning("Warning!", subTitle: "User ID is invalid")
+            showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }
 
@@ -61,7 +67,7 @@ class VerifyViewController: UIViewController {
                     dlgt.didFinish(screen: .verify)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    SCLAlertView().showWarning("Warning!", subTitle: error.localizedDescription)
+                    showWarning(title: "Warning!", message: error.localizedDescription)
                 }
             }
         }
@@ -69,7 +75,7 @@ class VerifyViewController: UIViewController {
 
     @IBAction func resendEmailOtp(_ sender: Any) {
         guard let usrId = UserDefaults.standard.string(forKey: UserDefaultsKeys.userId.value) else {
-            SCLAlertView().showWarning("Warning!", subTitle: "User ID is invalid")
+            showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }
 
@@ -80,10 +86,10 @@ class VerifyViewController: UIViewController {
                 switch result {
                 case .success(let response):
                     print("### Resend Email OTP Status: \(response.msg)")
-                    SCLAlertView().showInfo("Succssful", subTitle: "You will receive an email")
+                    showWarning(title: "Successful", message: "You will receive an email")
                 case .failure(let error):
                     print(error.localizedDescription)
-                    SCLAlertView().showWarning("Warning!", subTitle: error.localizedDescription)
+                    showWarning(message: error.localizedDescription)
                 }
             }
         }
@@ -91,7 +97,7 @@ class VerifyViewController: UIViewController {
 
     @IBAction func resendMobileOtp(_ sender: Any) {
         guard let usrId = UserDefaults.standard.string(forKey: UserDefaultsKeys.userId.value) else {
-            SCLAlertView().showWarning("Warning!", subTitle: "User ID is invalid")
+            showWarning(message: "User ID is invalid")
             return
         }
         
@@ -102,10 +108,10 @@ class VerifyViewController: UIViewController {
                 switch result {
                 case .success(let response):
                     print("### Resend SMS OTP Status: \(response.msg)")
-                    SCLAlertView().showInfo("Succssful", subTitle: "You will receive a message")
+                    showSuccessAlert(message: "You will receive a message")
                 case .failure(let error):
                     print(error.localizedDescription)
-                    SCLAlertView().showWarning("Warning!", subTitle: error.localizedDescription)
+                    showWarning(message: error.localizedDescription)
                 }
             }
         }
