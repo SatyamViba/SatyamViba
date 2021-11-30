@@ -57,7 +57,7 @@ enum NetworkPath: String {
     // Registration
     case validateCompanyCode = "auth/validate-account-code"
     case registerStep1 = "users/create-s1"
-    case registerImageUpload = "users/create-s2/"    // append account_id
+    case uploadUserImage = "users/create-s2/"    // append account_id
     case validateRegistrationOtps = "auth/validate-otp-values"
     case resendRegistrationSmsOtp = "auth/resend-sms-otp"
     case resendRegisrtrationEmailOtp = "auth/resend-email-otp"
@@ -94,7 +94,9 @@ extension Notification.Name {
 enum UserDefaultsKeys {
     case companyId
     case userId
+    case userImage
     case selectedMenu
+    case token
 
     var value: String {
         switch self {
@@ -102,8 +104,12 @@ enum UserDefaultsKeys {
             return "CompanyId"
         case .userId:
             return "UserId"
+        case .userImage:
+            return "UserImage"
         case .selectedMenu:
             return "SelectedRow"
+        case .token:
+            return "Token"
         }
     }
 }

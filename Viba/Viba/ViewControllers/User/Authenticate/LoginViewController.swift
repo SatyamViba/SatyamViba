@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
+        userId.text = "1111111110"
         companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
         #endif
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
@@ -75,8 +76,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
-        performSegue(withIdentifier: "Dashboard", sender: nil)
-        /*
+        // performSegue(withIdentifier: "Dashboard", sender: nil)
+        // return
         guard let text = userId.text, text.count > 0 else {
             userId.showError()
             return
@@ -105,12 +106,11 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        */
     }
 
     @IBAction func signupUser(_ sender: Any) {
-        self.performSegue(withIdentifier: "SignupView", sender: nil)
-        return
+//        self.performSegue(withIdentifier: "SignupView", sender: nil)
+//        return
         
         guard let code = companyCode.text, code.count > 0 else {
             companyCode.showError()

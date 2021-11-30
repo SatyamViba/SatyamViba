@@ -21,8 +21,6 @@ class NetworkManager {
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
 
-    public var authToken: String?
-
     // Create shared instance
     public static let shared = NetworkManager()
 
@@ -48,7 +46,7 @@ class NetworkManager {
             var apiRequest = URLRequest(url: URL(string: API.baseUrl.rawValue + urlString)!)
             apiRequest.setValue(kApplicationJson, forHTTPHeaderField: kAccept)
 
-            if let token = authToken {
+            if let token = UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) {
                 apiRequest.setValue(token, forHTTPHeaderField: kToken)
             }
 
@@ -150,7 +148,7 @@ class NetworkManager {
         if Reach().isNetworkReachable() == true {
             var apiRequest = URLRequest(url: URL(string: urlString)!)
 
-            if let token = authToken {
+            if let token = UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) {
                 apiRequest.setValue(token, forHTTPHeaderField: kToken)
             }
 

@@ -63,7 +63,8 @@ class TabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.hidesBackButton = true
+        
         // Do any additional setup after loading the view.
         dashboardBtn.tabImage = .table
         timesheetBtn.tabImage = .userClock
@@ -77,7 +78,13 @@ class TabViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(goHome), name: .signOut, object: nil)
 
-        addChild(to: Tab.dashboard)
+//        addChild(to: Tab.dashboard)
+        perform(#selector(showInitialTab), with: nil, afterDelay: 0.25)
+    }
+
+    @objc
+    private func showInitialTab() {
+        addChild(to: Tab.clockInOut)
     }
 
     @IBAction func handleTapOnTab(_ sender: UIButton) {

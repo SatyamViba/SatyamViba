@@ -14,4 +14,8 @@ class PicCaptureViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func showDashboarrd(_ sender: Any) {
+        performSegue(withIdentifier: "Dashboard", sender: nil)
+    }
 }

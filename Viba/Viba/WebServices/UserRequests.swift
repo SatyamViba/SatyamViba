@@ -65,4 +65,8 @@ class UserRequests {
     static func resendEmailOtp(userId: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.resendRegisrtrationEmailOtp.rawValue, params: ResendRegistrationOtp(userID: userId), methodType: .post, completion: handler)
     }
+
+    static func uploadPic(userId: String, image: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
+        NetworkManager.shared.fetchResponse(urlString: NetworkPath.uploadUserImage.rawValue + userId, params: UploadUserImage(image: image), methodType: .put, completion: handler)
+    }
 }

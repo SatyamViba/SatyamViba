@@ -62,9 +62,13 @@ class OTPViewController: UIViewController {
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch response {
-                case .success(let status):
-                    print(status)
-
+                case .success(let authResponse):
+                    print(authResponse)
+                    UserDefaults.standard.set(authResponse.token, forKey: UserDefaultsKeys.token.value)
+                    UserDefaults.standard.set(authResponse.data.image, forKey: UserDefaultsKeys.userImage.value)
+                    DispatchQueue.main.async { [self] in
+                        performSegue(withIdentifier: "PicView", sender: nil)
+                    }
                 case .failure(let error):
                     print(error.localizedDescription)
                     showWarning(message: "Failed to validate input")

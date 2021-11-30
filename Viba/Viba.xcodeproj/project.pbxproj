@@ -37,6 +37,10 @@
 		4A68CB65275345A9000BA368 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB64275345A9000BA368 /* PermissionViewController.swift */; };
 		4A68CB6827534794000BA368 /* LoocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB6727534794000BA368 /* LoocationManager.swift */; };
 		4A68CB6A2753DBD7000BA368 /* Permissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A68CB692753D644000BA368 /* Permissions.storyboard */; };
+		4A68CB6D2753E7E9000BA368 /* UploadUserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB6C2753E7E9000BA368 /* UploadUserImage.swift */; };
+		4A68CB6F2753E8E9000BA368 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB6E2753E8E9000BA368 /* UIImage+Extension.swift */; };
+		4A68CB712754F93F000BA368 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB702754F93F000BA368 /* CoreGraphicsExtensions.swift */; };
+		4A68CB7327550390000BA368 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB7227550390000BA368 /* FaceView.swift */; };
 		4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D64D4274E386000022CBE /* MenuViewController.swift */; };
 		4A6D64D7274E61D800022CBE /* VibaMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */; };
 		4A6D64DA274E671F00022CBE /* VibaMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D64D9274E671F00022CBE /* VibaMenuButton.xib */; };
@@ -127,6 +131,10 @@
 		4A68CB64275345A9000BA368 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		4A68CB6727534794000BA368 /* LoocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoocationManager.swift; sourceTree = "<group>"; };
 		4A68CB692753D644000BA368 /* Permissions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Permissions.storyboard; path = /Users/satyam/temp/viba/Viba/Viba/ViewControllers/User/Permissions.storyboard; sourceTree = "<absolute>"; };
+		4A68CB6C2753E7E9000BA368 /* UploadUserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadUserImage.swift; sourceTree = "<group>"; };
+		4A68CB6E2753E8E9000BA368 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		4A68CB702754F93F000BA368 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		4A68CB7227550390000BA368 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceView.swift; path = ../../../../../../Downloads/FaceLasers/final/FaceLasers/FaceView.swift; sourceTree = "<group>"; };
 		4A6D64D4274E386000022CBE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaMenuButton.swift; sourceTree = "<group>"; };
 		4A6D64D9274E671F00022CBE /* VibaMenuButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibaMenuButton.xib; sourceTree = "<group>"; };
@@ -217,8 +225,7 @@
 				4AB5F0132739122E007DB9FF /* Main.storyboard */,
 				4A21A196273B87E90002D052 /* SignUp */,
 				4A78FB5227417F0B000BFCFF /* Authenticate */,
-				4A68CB64275345A9000BA368 /* PermissionViewController.swift */,
-				4A68CB692753D644000BA368 /* Permissions.storyboard */,
+				4A68CB6B2753E5ED000BA368 /* Permissions */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -249,10 +256,10 @@
 		4A5E47702748DBE900239676 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				4A5E47752748E58D00239676 /* TabControllers */,
 				4A8482E427492B62002463D5 /* DashBoardWithTabs.storyboard */,
 				4AD78ECC274F6C9D00A27401 /* TabController.storyboard */,
 				4AD78ECA274F6C8900A27401 /* TabViewController.swift */,
+				4A5E47752748E58D00239676 /* TabControllers */,
 				4AD78ED22750C6AD00A27401 /* Menu */,
 			);
 			path = Dashboard;
@@ -276,6 +283,7 @@
 			children = (
 				4A68CB5E27529B23000BA368 /* FaceTrackingView.xib */,
 				4A68CB5F27529B23000BA368 /* FaceTrackingView.swift */,
+				4A68CB7227550390000BA368 /* FaceView.swift */,
 			);
 			path = FaceDetection;
 			sourceTree = "<group>";
@@ -286,6 +294,15 @@
 				4A68CB6727534794000BA368 /* LoocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		4A68CB6B2753E5ED000BA368 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				4A68CB64275345A9000BA368 /* PermissionViewController.swift */,
+				4A68CB692753D644000BA368 /* Permissions.storyboard */,
+			);
+			path = Permissions;
 			sourceTree = "<group>";
 		};
 		4A6D64D8274E670F00022CBE /* VibaMenuButton */ = {
@@ -326,6 +343,7 @@
 				4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */,
 				4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */,
 				4ADB3A5A2741198F00A0D750 /* ResendRegistrationOtp.swift */,
+				4A68CB6C2753E7E9000BA368 /* UploadUserImage.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -475,11 +493,13 @@
 		4AFC56312739267C00E064E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4A68CB702754F93F000BA368 /* CoreGraphicsExtensions.swift */,
 				4AFC5633273926AD00E064E9 /* UIView+Extension.swift */,
 				4AFC563B2739305E00E064E9 /* UIColor+Extension.swift */,
 				4A72CCD3274025CC008AA853 /* UIViewController+Extension.swift */,
 				4A72CCDE27402E78008AA853 /* String+Extension.swift */,
 				4ADB3A5C274166F300A0D750 /* Date+Extension.swift */,
+				4A68CB6E2753E8E9000BA368 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -682,6 +702,7 @@
 				4A72CCAF273DA481008AA853 /* Reach.swift in Sources */,
 				4A72CCC5273FCFBA008AA853 /* ValidateEmailOtp.swift in Sources */,
 				4A72CCC1273EE1F6008AA853 /* CompanyDetails.swift in Sources */,
+				4A68CB7327550390000BA368 /* FaceView.swift in Sources */,
 				4A5E477B2748E5B700239676 /* ProfileViewController.swift in Sources */,
 				4A72CCD4274025CC008AA853 /* UIViewController+Extension.swift in Sources */,
 				4A1617C5273A5FAD00640236 /* VibaNormalButton.swift in Sources */,
@@ -708,6 +729,7 @@
 				4A68CB6327533F39000BA368 /* VibaSwitch.swift in Sources */,
 				4A5E477D2748E5C600239676 /* DashboardViewController.swift in Sources */,
 				4AD78ED62750F4E300A27401 /* PreInvitationViewController.swift in Sources */,
+				4A68CB712754F93F000BA368 /* CoreGraphicsExtensions.swift in Sources */,
 				4A68CB65275345A9000BA368 /* PermissionViewController.swift in Sources */,
 				4A21A19C273B913F0002D052 /* VibaRoundCornerView.swift in Sources */,
 				4A72CCB1273DAAF4008AA853 /* UserRequests.swift in Sources */,
@@ -730,11 +752,13 @@
 				4AFC56382739285500E064E9 /* Constants.swift in Sources */,
 				4ADB3A552740F3F900A0D750 /* UserRegistrrationDetails.swift in Sources */,
 				4AFC563C2739305E00E064E9 /* UIColor+Extension.swift in Sources */,
+				4A68CB6D2753E7E9000BA368 /* UploadUserImage.swift in Sources */,
 				4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */,
 				4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */,
 				4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */,
 				4A3DDA71274B6A1A002FF884 /* ClockInOutTableViewCell.swift in Sources */,
 				4A6D64D7274E61D800022CBE /* VibaMenuButton.swift in Sources */,
+				4A68CB6F2753E8E9000BA368 /* UIImage+Extension.swift in Sources */,
 				4AD78EDB27514C5B00A27401 /* PreInvitationTableViewCell.swift in Sources */,
 				4A72CCDF27402E78008AA853 /* String+Extension.swift in Sources */,
 				4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */,

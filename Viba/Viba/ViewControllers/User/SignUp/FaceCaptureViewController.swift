@@ -18,7 +18,7 @@ class FaceCaptureViewController: UIViewController {
         if AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
             showWarning(message: "You have to enable camera permission")
         }
-
+        mlView.initializeFaceTracking()
         view.setNeedsLayout()
     }
 
