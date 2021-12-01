@@ -12,7 +12,7 @@ struct ProfileResponse: Decodable {
     let firstName, lastName, email, phone: String
     let dob, joined, approvedAt: Date?
     let gender: String
-    let image: String
+    let image: String?
     let customID, department, profileResponseDescription: String
     let account: Account
 

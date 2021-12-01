@@ -27,10 +27,10 @@ struct DataClass: Decodable {
 
 // MARK: - Pusher
 struct Pusher: Decodable {
-    let appID, cluster: String
+    let apiKey, cluster: String
 
     enum CodingKeys: String, CodingKey {
-        case appID = "app_id"
+        case apiKey = "api_key"
         case cluster
     }
 }

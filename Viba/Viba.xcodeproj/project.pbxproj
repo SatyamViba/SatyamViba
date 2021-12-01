@@ -81,6 +81,7 @@
 		4AC8D28A27568006003C09AD /* ProfileRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D28927568006003C09AD /* ProfileRequests.swift */; };
 		4AC8D28C27569A04003C09AD /* EmptyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D28B27569A04003C09AD /* EmptyRequest.swift */; };
 		4AC8D28E27573DE8003C09AD /* Permissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC8D28D27573DE8003C09AD /* Permissions.storyboard */; };
+		4AC8D29227579FE0003C09AD /* VibaImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D29127579FE0003C09AD /* VibaImageCache.swift */; };
 		4AD78E84274F3EA000A27401 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */; };
 		4AD78ECB274F6C8900A27401 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78ECA274F6C8900A27401 /* TabViewController.swift */; };
 		4AD78ECD274F6C9D00A27401 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD78ECC274F6C9D00A27401 /* TabController.storyboard */; };
@@ -182,6 +183,7 @@
 		4AC8D28927568006003C09AD /* ProfileRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequests.swift; sourceTree = "<group>"; };
 		4AC8D28B27569A04003C09AD /* EmptyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequest.swift; sourceTree = "<group>"; };
 		4AC8D28D27573DE8003C09AD /* Permissions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Permissions.storyboard; sourceTree = "<group>"; };
+		4AC8D29127579FE0003C09AD /* VibaImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaImageCache.swift; sourceTree = "<group>"; };
 		4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		4AD78ECA274F6C8900A27401 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		4AD78ECC274F6C9D00A27401 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
@@ -253,14 +255,14 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		4A3DDA6F274B69F6002FF884 /* CheckInOut */ = {
+		4A3DDA6F274B69F6002FF884 /* ClockInOut */ = {
 			isa = PBXGroup;
 			children = (
 				4A5E47762748E59F00239676 /* ClockInOutViewController.swift */,
 				4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */,
 				4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */,
 			);
-			path = CheckInOut;
+			path = ClockInOut;
 			sourceTree = "<group>";
 		};
 		4A5E47702748DBE900239676 /* Dashboard */ = {
@@ -280,7 +282,7 @@
 			children = (
 				4A5E477C2748E5C600239676 /* DashboardViewController.swift */,
 				4A5E47782748E5AB00239676 /* TimesheetViewController.swift */,
-				4A3DDA6F274B69F6002FF884 /* CheckInOut */,
+				4A3DDA6F274B69F6002FF884 /* ClockInOut */,
 				4A5E477A2748E5B700239676 /* ProfileViewController.swift */,
 				4AD78ED927511CE400A27401 /* Notifications */,
 				4AD78EDE27514C7C00A27401 /* PreInvitation */,
@@ -537,6 +539,7 @@
 				4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */,
 				4AD78ECE2750951000A27401 /* VibaTabButton.swift */,
 				4A68CB6227533F39000BA368 /* VibaSwitch.swift */,
+				4AC8D29127579FE0003C09AD /* VibaImageCache.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */,
 				4AD78EE02751C34300A27401 /* SendPreInvitationViewController.swift in Sources */,
 				4AD78ECB274F6C8900A27401 /* TabViewController.swift in Sources */,
+				4AC8D29227579FE0003C09AD /* VibaImageCache.swift in Sources */,
 				4A72CCBD273EBB2A008AA853 /* RegisterUserStep1.swift in Sources */,
 				4A72CCBF273EE1B6008AA853 /* Company.swift in Sources */,
 				4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */,

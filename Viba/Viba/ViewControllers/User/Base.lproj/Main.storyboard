@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDs-e6-Gv3" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="243" width="335" height="55"/>
+                                <rect key="frame" x="20" y="249.5" width="335" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="LNq-Ar-qlK"/>
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMail or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAw-fx-crL" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="166.5" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="166.5" width="335" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -77,13 +77,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By VIBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoU-Pm-5MZ">
-                                <rect key="frame" x="128.5" y="640" width="118.5" height="20"/>
+                                <rect key="frame" x="132" y="643.5" width="111" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-lW-3wp">
-                                <rect key="frame" x="20" y="322" width="335" height="22"/>
+                                <rect key="frame" x="20" y="328.5" width="335" height="22"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVO-UH-UgO">
                                         <rect key="frame" x="0.0" y="10.5" width="40" height="1"/>
@@ -123,13 +123,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Employee?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-j9-Rkv">
-                                <rect key="frame" x="20" y="367" width="335" height="21"/>
+                                <rect key="frame" x="20" y="373.5" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-1O-yuR" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="401" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="407.5" width="335" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -140,7 +140,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGd-4v-Bc7" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="463.5" width="335" height="49"/>
+                                <rect key="frame" x="20" y="476.5" width="335" height="49"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="h3h-yv-wEy"/>
@@ -263,20 +263,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have sent you 5 digit OTP to your registered email or phone number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEh-XL-Z4D">
-                                <rect key="frame" x="30" y="173.5" width="315" height="36.5"/>
+                                <rect key="frame" x="30" y="173.5" width="315" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rl1-Fb-uLU" customClass="OTPFieldView" customModule="OTPFieldView">
-                                <rect key="frame" x="20" y="232" width="335" height="65"/>
+                                <rect key="frame" x="20" y="226" width="335" height="65"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="AnB-wg-Z9E"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-35-lPB" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="358" width="335" height="55"/>
+                                <rect key="frame" x="20" y="352" width="335" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="dFE-sq-Ui7"/>
@@ -290,20 +290,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't get OTP?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0th-79-OtY" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="127" y="443" width="121" height="21"/>
+                                <rect key="frame" x="127" y="437" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-8m-h3u" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="159.5" y="472" width="56" height="33"/>
+                                <rect key="frame" x="159" y="466" width="57" height="33"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Resend">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter OTP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coc-d9-EFr">
-                                <rect key="frame" x="20" y="312" width="335" height="16"/>
+                                <rect key="frame" x="20" y="306" width="335" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="zgb-ba-FQf"/>
                                 </constraints>
@@ -561,7 +561,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-L1-HnQ" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40.5" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="40.5" width="335" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -572,7 +572,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVo-n1-tJH" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="102" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="108.5" width="335" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -583,7 +583,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-KX-Uhd" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="163.5" width="281" height="45.5"/>
+                                <rect key="frame" x="20" y="176.5" width="281" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -591,7 +591,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8M-Mh-ZFt" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="286.5" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="312.5" width="335" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
                                 <userDefinedRuntimeAttributes>
@@ -602,7 +602,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UFf-6S-CG6" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="225" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="244.5" width="335" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -613,10 +613,10 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-bn-CRq">
-                                <rect key="frame" x="20" y="348" width="200" height="31"/>
+                                <rect key="frame" x="20" y="380.5" width="200" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-Fw-TI6" customClass="VibaRadioButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="31"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Male">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -627,7 +627,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0h-Xd-XWL" customClass="VibaRadioButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="86" y="0.0" width="114" height="31"/>
+                                        <rect key="frame" x="86.5" y="0.0" width="113.5" height="31"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Female">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -643,7 +643,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-UX-wrj">
-                                <rect key="frame" x="309" y="167.5" width="40" height="40"/>
+                                <rect key="frame" x="309" y="180.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Aqo-3I-L9E"/>
                                     <constraint firstAttribute="width" constant="40" id="knl-9n-6En"/>
@@ -654,7 +654,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select gender" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJD-oJ-9BG">
-                                <rect key="frame" x="240" y="348" width="115" height="31"/>
+                                <rect key="frame" x="240" y="380.5" width="115" height="31"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -802,7 +802,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-t0-xqA" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="9.5" width="49" height="31"/>
+                                                <rect key="frame" x="95.5" y="8.5" width="57" height="33"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Resend">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -843,7 +843,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-h2-NsO" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="9.5" width="49" height="31"/>
+                                                <rect key="frame" x="95.5" y="8.5" width="57" height="33"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Resend">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1025,73 +1025,73 @@
             <size key="intrinsicContentSize" width="120.5" height="20.5"/>
         </designable>
         <designable name="1fT-35-lPB">
-            <size key="intrinsicContentSize" width="95" height="33"/>
+            <size key="intrinsicContentSize" width="88" height="30"/>
         </designable>
         <designable name="4yu-o1-dMm">
-            <size key="intrinsicContentSize" width="70" height="33"/>
+            <size key="intrinsicContentSize" width="69" height="33"/>
         </designable>
         <designable name="8JS-KX-Uhd">
-            <size key="intrinsicContentSize" width="114.5" height="45.5"/>
+            <size key="intrinsicContentSize" width="114.5" height="52"/>
         </designable>
         <designable name="8SE-t0-xqA">
-            <size key="intrinsicContentSize" width="49" height="31"/>
+            <size key="intrinsicContentSize" width="57" height="33"/>
         </designable>
         <designable name="8vn-Fw-TI6">
-            <size key="intrinsicContentSize" width="51" height="21"/>
+            <size key="intrinsicContentSize" width="52" height="21"/>
         </designable>
         <designable name="AVU-KY-k3U">
-            <size key="intrinsicContentSize" width="105" height="45.5"/>
+            <size key="intrinsicContentSize" width="105" height="52"/>
         </designable>
         <designable name="BWT-B7-1GP">
             <size key="intrinsicContentSize" width="147" height="20.5"/>
         </designable>
         <designable name="JVL-f4-JZF">
-            <size key="intrinsicContentSize" width="70" height="33"/>
+            <size key="intrinsicContentSize" width="69" height="33"/>
         </designable>
         <designable name="P0h-Xd-XWL">
-            <size key="intrinsicContentSize" width="70" height="21"/>
+            <size key="intrinsicContentSize" width="71" height="21"/>
         </designable>
         <designable name="QVo-n1-tJH">
-            <size key="intrinsicContentSize" width="99" height="45.5"/>
+            <size key="intrinsicContentSize" width="99" height="52"/>
         </designable>
         <designable name="R9X-N3-Jbg">
             <size key="intrinsicContentSize" width="231.5" height="20.5"/>
         </designable>
         <designable name="SDs-e6-Gv3">
-            <size key="intrinsicContentSize" width="166" height="33"/>
+            <size key="intrinsicContentSize" width="154" height="30"/>
         </designable>
         <designable name="U8M-Mh-ZFt">
-            <size key="intrinsicContentSize" width="71" height="45.5"/>
+            <size key="intrinsicContentSize" width="71" height="52"/>
         </designable>
         <designable name="UFf-6S-CG6">
-            <size key="intrinsicContentSize" width="64.5" height="45.5"/>
+            <size key="intrinsicContentSize" width="64.5" height="52"/>
         </designable>
         <designable name="Xpb-1O-yuR">
-            <size key="intrinsicContentSize" width="129.5" height="45.5"/>
+            <size key="intrinsicContentSize" width="129.5" height="52"/>
         </designable>
         <designable name="b9E-8m-h3u">
-            <size key="intrinsicContentSize" width="56" height="33"/>
+            <size key="intrinsicContentSize" width="57" height="33"/>
         </designable>
         <designable name="bGd-4v-Bc7">
             <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
         <designable name="cIV-Zq-INv">
-            <size key="intrinsicContentSize" width="132" height="33"/>
+            <size key="intrinsicContentSize" width="133" height="33"/>
         </designable>
         <designable name="gWD-h2-NsO">
-            <size key="intrinsicContentSize" width="49" height="31"/>
+            <size key="intrinsicContentSize" width="57" height="33"/>
         </designable>
         <designable name="gcw-L1-HnQ">
-            <size key="intrinsicContentSize" width="100" height="45.5"/>
+            <size key="intrinsicContentSize" width="100" height="52"/>
         </designable>
         <designable name="qcw-ba-95k">
-            <size key="intrinsicContentSize" width="96" height="45.5"/>
+            <size key="intrinsicContentSize" width="96" height="52"/>
         </designable>
         <designable name="ryj-WG-Rrd">
             <size key="intrinsicContentSize" width="253" height="20.5"/>
         </designable>
         <designable name="sAw-fx-crL">
-            <size key="intrinsicContentSize" width="184.5" height="45.5"/>
+            <size key="intrinsicContentSize" width="184.5" height="52"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

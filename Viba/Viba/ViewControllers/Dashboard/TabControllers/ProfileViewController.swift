@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, VibaImageCache {
+    @IBOutlet weak var userImage: VibaCircularImage!
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var designation: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -67,6 +68,14 @@ class ProfileViewController: UIViewController {
     private func renderUI() {
         guard let profileToDisplay = profile, let joined = profileToDisplay.joined, let dob = profileToDisplay.dob else {
             return
+        }
+
+        if let img = profileToDisplay.image, let imageUrl = URL(string: img) {
+            localImage(forKey: img.sha256, from: imageUrl) {[self] (image, _) in
+                DispatchQueue.main.async { [self] in
+                    userImage.image = image
+                }
+            }
         }
 
         fullName.text = profileToDisplay.fullName
