@@ -60,7 +60,7 @@ class OTPViewController: UIViewController {
         showLoadingIndicator()
         UserRequests.validateOtp(type: authType, id: id, otp: enteredOtp) { response in
             DispatchQueue.main.async { [self] in
-                self.hideLoadingIndicator()
+                perform(#selector(hideLoadingIndicator), on: .main, with: nil, waitUntilDone: true)
                 switch response {
                 case .success(let authResponse):
                     print(authResponse)

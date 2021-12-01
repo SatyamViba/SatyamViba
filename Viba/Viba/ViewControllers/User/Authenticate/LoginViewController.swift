@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         #if DEBUG
         userId.text = "1111111110"
         companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
+        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.token.value)
         #endif
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
         view.addGestureRecognizer(gestrue)

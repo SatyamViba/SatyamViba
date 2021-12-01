@@ -61,6 +61,12 @@ enum NetworkPath: String {
     case validateRegistrationOtps = "auth/validate-otp-values"
     case resendRegistrationSmsOtp = "auth/resend-sms-otp"
     case resendRegisrtrationEmailOtp = "auth/resend-email-otp"
+    // Dashboard
+    case clockIn = "checkins/clock-in"
+    case clockOut = "checkins/clock-out"
+
+    // Profile
+    case currentUser = "users/me"
 }
 
 enum API: String {

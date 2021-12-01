@@ -58,12 +58,9 @@ public class IGProgress {
 public extension UIViewController {
     
     func IGPStartLoading(config: IGConfig) {
-        
         IGProgress.controller = self
         IGProgress.config = config
-        
         IGProgress.startLoading()
-        
     }
     
     func IGPFinishLoading() {

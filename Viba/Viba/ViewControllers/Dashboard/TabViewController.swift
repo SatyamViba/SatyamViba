@@ -78,7 +78,6 @@ class TabViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(goHome), name: .signOut, object: nil)
 
-//        addChild(to: Tab.dashboard)
         perform(#selector(showInitialTab), with: nil, afterDelay: 0.25)
     }
 

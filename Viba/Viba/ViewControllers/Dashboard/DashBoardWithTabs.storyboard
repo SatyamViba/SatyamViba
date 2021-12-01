@@ -923,7 +923,7 @@
                                     <constraint firstItem="i8c-Ce-pmU" firstAttribute="centerY" secondItem="64w-5Y-ulK" secondAttribute="centerY" id="o21-JZ-uRd"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv2-By-B6H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Company:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv2-By-B6H">
                                 <rect key="frame" x="28" y="448" width="327" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -971,8 +971,10 @@
                         <outlet property="company" destination="8ia-v1-hpP" id="3fr-q7-jKD"/>
                         <outlet property="companyId" destination="vat-OO-LTr" id="Plf-q5-Hfo"/>
                         <outlet property="companyImage" destination="i8c-Ce-pmU" id="i3t-DF-Keh"/>
+                        <outlet property="designation" destination="WFW-jW-GG5" id="vpw-Yy-a5t"/>
                         <outlet property="email" destination="APt-Wf-TGl" id="OpY-wj-pW3"/>
                         <outlet property="emailImage" destination="nmJ-lm-uu4" id="vE8-Dd-lFu"/>
+                        <outlet property="fullName" destination="uHD-jc-uOO" id="LTJ-lT-xQr"/>
                         <outlet property="phoneImage" destination="rtJ-so-ixm" id="OE3-Fc-NZr"/>
                         <outlet property="phoneNumber" destination="6JY-Y1-xEH" id="wZr-ny-PXn"/>
                         <outlet property="profileImage" destination="k6U-S6-6Ms" id="c2H-it-707"/>
@@ -2021,7 +2023,7 @@
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="JXJ-MU-yMX">
-            <size key="intrinsicContentSize" width="71" height="33"/>
+            <size key="intrinsicContentSize" width="83" height="34"/>
         </designable>
         <designable name="Nre-3U-FpN">
             <size key="intrinsicContentSize" width="71" height="45.5"/>

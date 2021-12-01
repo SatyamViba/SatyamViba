@@ -1,5 +1,5 @@
 //
-//  CompanyDetails.swift
+//  CompanyDetailsResponse.swift
 //  Viba
 //
 //  Created by Satyam Sutapalli on 12/11/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CompanyDetails: Codable {
+struct CompanyDetailsResponse: Codable {
     let companyName, id: String
     let brandLogo: String
     let brandTitle: String

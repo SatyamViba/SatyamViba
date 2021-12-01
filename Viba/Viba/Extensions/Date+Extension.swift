@@ -41,15 +41,21 @@ extension Date {
     func isSameDate(_ comparisonDate: Date) -> Bool {
         let order = Calendar.current.compare(self, to: comparisonDate, toGranularity: .day)
         return order == .orderedSame
-      }
+    }
 
-      func isBeforeDate(_ comparisonDate: Date) -> Bool {
+    func isBeforeDate(_ comparisonDate: Date) -> Bool {
         let order = Calendar.current.compare(self, to: comparisonDate, toGranularity: .day)
         return order == .orderedAscending
-      }
+    }
 
-      func isAfterDate(_ comparisonDate: Date) -> Bool {
+    func isAfterDate(_ comparisonDate: Date) -> Bool {
         let order = Calendar.current.compare(self, to: comparisonDate, toGranularity: .day)
         return order == .orderedDescending
-      }
+    }
+
+    var toDisplayFormat: String {
+        let dtFormatter = DateFormatter()
+        dtFormatter.dateFormat = "dd-MMM-yyyy"
+        return dtFormatter.string(from: self)
+    }
 }

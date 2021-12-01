@@ -44,7 +44,7 @@ class UserRequests {
     }
 
     // MARK: - Registration
-    static func validateCompany(code: String, onCompletion handler: @escaping ((Result<CompanyDetails, Error>) -> Void)) {
+    static func validateCompany(code: String, onCompletion handler: @escaping ((Result<CompanyDetailsResponse, Error>) -> Void)) {
         // handler(.failure(NSError(domain: "com.viba.viba", code: 324, userInfo: ["some": "some"])))
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.validateCompanyCode.rawValue, params: Company(code: code), methodType: .post, completion: handler)
     }

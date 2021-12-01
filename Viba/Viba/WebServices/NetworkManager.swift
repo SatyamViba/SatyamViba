@@ -14,7 +14,7 @@ class NetworkManager {
     private let kContentLength = "Content-Length"
     private let kApplicationJson = "application/json"
     private let kAccept = "Accept"
-    private let kToken = "token"
+    private let kToken = "x-auth-token"
 
     private let session: URLSession!
     private var sessionConfiguration: URLSessionConfiguration!
@@ -51,7 +51,7 @@ class NetworkManager {
             }
 
             apiRequest.httpMethod = method.rawValue
-
+            print("### Headers: ", apiRequest.allHTTPHeaderFields as Any)
             if method == .post {
                 apiRequest.setValue(kApplicationJson, forHTTPHeaderField: kContentType)
                 if let requestInfo = params {

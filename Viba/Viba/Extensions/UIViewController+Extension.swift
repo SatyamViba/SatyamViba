@@ -12,11 +12,11 @@ extension UIViewController {
     func showLoadingIndicator(text: String = "Please wait...") {
         IGProgress.config.urlLottieJson = "circles"
         IGProgress.config.message = text
-        self.IGPStartLoading(config: IGProgress.config)
+        IGPStartLoading(config: IGProgress.config)
     }
 
-    func hideLoadingIndicator() {
-        self.IGPFinishLoading()
+    @objc func hideLoadingIndicator() {
+        IGPFinishLoading()
     }
 
     func showWarning(title: String = "Warning!", message: String) {
