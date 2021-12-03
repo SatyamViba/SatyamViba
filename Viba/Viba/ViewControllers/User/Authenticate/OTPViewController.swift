@@ -80,7 +80,8 @@ class OTPViewController: UIViewController {
         }
 
         UserDefaults.standard.set(response.token, forKey: UserDefaultsKeys.token.value)
-        UserDefaults.standard.set(response.data.image, forKey: UserDefaultsKeys.userImage.value)
+        DataManager.shared.usrImage = response.data.image
+       
         DispatchQueue.main.async { [self] in
             performSegue(withIdentifier: "PicView", sender: nil)
         }

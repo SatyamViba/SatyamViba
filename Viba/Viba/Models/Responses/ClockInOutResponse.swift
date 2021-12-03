@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - ClockInOutResponse
-struct ClockInOutResponse: Codable {
+struct ClockInOutResponse: Decodable {
     let clockedOutAt: String?
     let clockedInAt: String?
     let mode: Mode?

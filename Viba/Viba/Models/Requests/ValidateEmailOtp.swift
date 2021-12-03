@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ValidateEmailOtp: Codable {
+struct ValidateEmailOtp: Encodable {
     let email, emailOtp: String
 
     enum CodingKeys: String, CodingKey {

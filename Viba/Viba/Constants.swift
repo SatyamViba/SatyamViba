@@ -100,8 +100,6 @@ extension Notification.Name {
 
 enum UserDefaultsKeys {
     case companyId
-    case userId
-    case userImage
     case selectedMenu
     case token
 
@@ -109,10 +107,6 @@ enum UserDefaultsKeys {
         switch self {
         case .companyId:
             return "CompanyId"
-        case .userId:
-            return "UserId"
-        case .userImage:
-            return "UserImage"
         case .selectedMenu:
             return "SelectedRow"
         case .token:

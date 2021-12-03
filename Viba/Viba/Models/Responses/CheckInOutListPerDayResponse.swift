@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - CheckInOutListPerDayElement
-struct CheckInOutListPerDayElement: Codable {
+struct CheckInOutListPerDayElement: Decodable {
     let clockedOutAt: Date?
     let id: String?
     let temperature: Temperature?
@@ -34,18 +34,18 @@ struct CheckInOutListPerDayElement: Codable {
 }
 
 // MARK: - Mode
-struct Mode: Codable {
+struct Mode: Decodable {
     let clockin, clockout: Clock?
 }
 
-enum Clock: String, Codable {
+enum Clock: String, Decodable {
     case viba = "VIBA"
     case wfh = "WFH"
     case wfo = "WFO"
 }
 
 // MARK: - Temperature
-struct Temperature: Codable {
+struct Temperature: Decodable {
     let value: Double?
     let measure: String?
 

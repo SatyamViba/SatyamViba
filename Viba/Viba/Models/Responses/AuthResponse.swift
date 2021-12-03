@@ -14,7 +14,7 @@ struct AuthResponse: Decodable {
 
 // MARK: - DataClass
 struct DataClass: Decodable {
-    let image: String
+    let image: String?
     let id, role: String
     let pusher: Pusher
 

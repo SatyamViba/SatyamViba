@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ClockInOut: Codable {
+struct ClockInOut: Encodable {
     let geoLocation: GeoLocation
 
     enum CodingKeys: String, CodingKey {
@@ -16,6 +16,6 @@ struct ClockInOut: Codable {
 }
 
 // MARK: - GeoLocation
-struct GeoLocation: Codable {
+struct GeoLocation: Encodable {
     let lat, lng: Double
 }

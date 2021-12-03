@@ -48,7 +48,8 @@ class VerifyViewController: UIViewController {
             return
         }
 
-        guard let usrId = UserDefaults.standard.string(forKey: UserDefaultsKeys.userId.value) else {
+        let usrId = DataManager.shared.userId
+        if usrId.isEmpty {
             showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }
@@ -74,7 +75,8 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func resendEmailOtp(_ sender: Any) {
-        guard let usrId = UserDefaults.standard.string(forKey: UserDefaultsKeys.userId.value) else {
+        let usrId = DataManager.shared.userId
+        if usrId.isEmpty {
             showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }
@@ -96,8 +98,9 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func resendMobileOtp(_ sender: Any) {
-        guard let usrId = UserDefaults.standard.string(forKey: UserDefaultsKeys.userId.value) else {
-            showWarning(message: "User ID is invalid")
+        let usrId = DataManager.shared.userId
+        if usrId.isEmpty {
+            showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }
         

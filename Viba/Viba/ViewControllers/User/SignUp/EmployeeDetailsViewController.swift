@@ -105,7 +105,7 @@ class EmployeeDetailsViewController: UIViewController {
                 switch result {
                 case .success(let user):
                     print("Status of registering: \(user)")
-                    UserDefaults.standard.set(user.id, forKey: UserDefaultsKeys.userId.value)
+                    DataManager.shared.userId = user.id
                     guard let dlgt = self.delegate else {
                         return
                     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CompanyDetailsResponse: Codable {
+struct CompanyDetailsResponse: Decodable {
     let companyName, id: String
     let brandLogo: String
     let brandTitle: String

@@ -13,8 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         #if DEBUG
         UserDefaults.standard.register(defaults: [
-            UserDefaultsKeys.companyId.value: "615c95bffa612356f5f09267",
-            UserDefaultsKeys.userId.value: "6190d96f7f1f181b93eab0da",
             UserDefaultsKeys.selectedMenu.value: -1
         ])
         #endif

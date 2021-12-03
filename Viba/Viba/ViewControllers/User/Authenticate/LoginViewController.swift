@@ -33,6 +33,8 @@ class LoginViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        DataManager.shared.clear()  // Clear all the stored data
+
         if !Location.manager.isLocationServicesEnabled || AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
             performSegue(withIdentifier: "PermissionsView", sender: nil)
         }
