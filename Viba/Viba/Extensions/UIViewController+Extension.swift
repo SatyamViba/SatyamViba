@@ -16,7 +16,9 @@ extension UIViewController {
     }
 
     @objc func hideLoadingIndicator() {
-        IGPFinishLoading()
+        DispatchQueue.main.async { [self] in
+            IGPFinishLoading()
+        }
     }
 
     func showWarning(title: String = "Warning!", message: String) {

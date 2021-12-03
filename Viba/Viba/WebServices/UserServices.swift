@@ -1,5 +1,5 @@
 //
-//  UserRequests.swift
+//  UserServices.swift
 //  Viba
 //
 //  Created by Satyam Sutapalli on 12/11/21.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-class UserRequests {
-    // MARK: - Login
+class UserServices {
+    // MARK: - Sign In
     static func authenticate(type: AuthType, id: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
         switch type {
         case .email:
@@ -17,11 +17,12 @@ class UserRequests {
             authenticateWithSms(id: id, onCompletion: handler)
         }
     }
-    static func authenticateWithEmail(id: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
+
+    private static func authenticateWithEmail(id: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.loginWithEmail.rawValue, params: EmailAuthentication(email: id), methodType: .post, completion: handler)
     }
 
-    static func authenticateWithSms(id: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
+    private static func authenticateWithSms(id: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.loginWithSms.rawValue, params: SmsAuthentication(phone: id), methodType: .post, completion: handler)
     }
 
@@ -43,7 +44,7 @@ class UserRequests {
 
     }
 
-    // MARK: - Registration
+    // MARK: - Sign Up
     static func validateCompany(code: String, onCompletion handler: @escaping ((Result<CompanyDetailsResponse, Error>) -> Void)) {
         // handler(.failure(NSError(domain: "com.viba.viba", code: 324, userInfo: ["some": "some"])))
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.validateCompanyCode.rawValue, params: Company(code: code), methodType: .post, completion: handler)

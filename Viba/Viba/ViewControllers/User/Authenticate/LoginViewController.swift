@@ -77,8 +77,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
-        // performSegue(withIdentifier: "Dashboard", sender: nil)
-        // return
+//        performSegue(withIdentifier: "Dashboard", sender: nil)
+//        return
         guard let text = userId.text, text.count > 0 else {
             userId.showError()
             return
@@ -94,7 +94,7 @@ class LoginViewController: UIViewController {
         }
 
         showLoadingIndicator()
-        UserRequests.authenticate(type: authType, id: authType == .email ? text : "91" + text) { response in
+        UserServices.authenticate(type: authType, id: authType == .email ? text : "91" + text) { response in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch response {
@@ -119,7 +119,7 @@ class LoginViewController: UIViewController {
         }
 
         showLoadingIndicator()
-        UserRequests.validateCompany(code: code) { result in
+        UserServices.validateCompany(code: code) { result in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {

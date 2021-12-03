@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileRequests {
+class ProfileServices {
     static func currentUser(onCompletion handler: @escaping ((Result<ProfileResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.currentUser.rawValue, params: EmptyRequest(), methodType: .get, completion: handler)
     }

@@ -53,9 +53,15 @@ extension Date {
         return order == .orderedDescending
     }
 
-    var toDisplayFormat: String {
+    var toDateDisplayFormat: String {
         let dtFormatter = DateFormatter()
         dtFormatter.dateFormat = "dd-MMM-yyyy"
+        return dtFormatter.string(from: self)
+    }
+
+    var toTimeDisplayFormat: String {
+        let dtFormatter = DateFormatter()
+        dtFormatter.dateFormat = "hh:mm a"
         return dtFormatter.string(from: self)
     }
 }

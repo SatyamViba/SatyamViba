@@ -99,7 +99,7 @@ class EmployeeDetailsViewController: UIViewController {
 
         let correctedPhone = "91" + phn
         showLoadingIndicator()
-        UserRequests.registerUser(params: RegisterUserStep1(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: correctedPhone)) { result in
+        UserServices.registerUser(params: RegisterUserStep1(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: correctedPhone)) { result in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {

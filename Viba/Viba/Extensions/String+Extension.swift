@@ -34,7 +34,7 @@ extension String {
 
     var toDate: Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"   // 2021-12-01T08:44:42.912Z
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"   // 2021-12-01T08:44:42.912Z
         return dateFormatter.date(from: self)
     }
 }

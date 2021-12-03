@@ -54,7 +54,7 @@ class VerifyViewController: UIViewController {
         }
 
         showLoadingIndicator()
-        UserRequests.validateRegistrationOtps(email: eOtp, phone: sOtp, userId: usrId) { result in
+        UserServices.validateRegistrationOtps(email: eOtp, phone: sOtp, userId: usrId) { result in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {
@@ -80,7 +80,7 @@ class VerifyViewController: UIViewController {
         }
 
         showLoadingIndicator()
-        UserRequests.resendEmailOtp(userId: usrId) { result in
+        UserServices.resendEmailOtp(userId: usrId) { result in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {
@@ -102,7 +102,7 @@ class VerifyViewController: UIViewController {
         }
         
         showLoadingIndicator()
-        UserRequests.resendEmailOtp(userId: usrId) { result in
+        UserServices.resendEmailOtp(userId: usrId) { result in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {

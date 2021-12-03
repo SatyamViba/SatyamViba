@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController, VibaImageCache {
 
     private func fetchUserDetails() {
         showLoadingIndicator()
-        ProfileRequests.currentUser {[self] response in
+        ProfileServices.currentUser {[self] response in
             DispatchQueue.main.async { [self] in
                 hideLoadingIndicator()
                 switch response {
@@ -80,8 +80,8 @@ class ProfileViewController: UIViewController, VibaImageCache {
 
         fullName.text = profileToDisplay.fullName
         designation.text = profileToDisplay.profileResponseDescription
-        calDate.text = joined.toDisplayFormat
-        cakeDate.text = dob.toDisplayFormat
+        calDate.text = joined.toDateDisplayFormat
+        cakeDate.text = dob.toDateDisplayFormat
         phoneNumber.text = profileToDisplay.phone
         email.text = profileToDisplay.email
         company.text = profileToDisplay.account.companyName

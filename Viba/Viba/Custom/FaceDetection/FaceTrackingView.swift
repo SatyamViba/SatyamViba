@@ -206,7 +206,6 @@ class FaceTrackingView: UIView {
 //    }
 
 
-    
 //    private func detectRectangle(in image: CVPixelBuffer) {
 //        let request = VNDetectRectanglesRequest(completionHandler: { (request: VNRequest, error: Error?) in
 //            DispatchQueue.main.async {

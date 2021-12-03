@@ -18,9 +18,10 @@ class OTPViewController: UIViewController {
     var authType = AuthType.email
     var userEnteredId: String?
     var enteredOtp = ""
+    var hasEnteredOtp = false
+    var authResponse: AuthResponse?
 
     @IBOutlet weak var errMessage: UILabel!
-    var hasEnteredOtp = false
     @IBOutlet weak var otpField: OTPFieldView!
     @IBOutlet weak var backBtn: UIButton!
 
@@ -58,22 +59,30 @@ class OTPViewController: UIViewController {
         }
 
         showLoadingIndicator()
-        UserRequests.validateOtp(type: authType, id: id, otp: enteredOtp) { response in
+        UserServices.validateOtp(type: authType, id: id, otp: enteredOtp) { response in
             DispatchQueue.main.async { [self] in
-                perform(#selector(hideLoadingIndicator), on: .main, with: nil, waitUntilDone: true)
+                hideLoadingIndicator()
                 switch response {
                 case .success(let authResponse):
-                    print(authResponse)
-                    UserDefaults.standard.set(authResponse.token, forKey: UserDefaultsKeys.token.value)
-                    UserDefaults.standard.set(authResponse.data.image, forKey: UserDefaultsKeys.userImage.value)
-                    DispatchQueue.main.async { [self] in
-                        performSegue(withIdentifier: "PicView", sender: nil)
-                    }
+                    self.authResponse = authResponse
+                    perform(#selector(showNextView), with: nil, afterDelay: 1.0)
                 case .failure(let error):
                     print(error.localizedDescription)
                     showWarning(message: "Failed to validate input")
                 }
             }
+        }
+    }
+
+    @objc private func showNextView() {
+        guard let response = authResponse else {
+            return
+        }
+
+        UserDefaults.standard.set(response.token, forKey: UserDefaultsKeys.token.value)
+        UserDefaults.standard.set(response.data.image, forKey: UserDefaultsKeys.userImage.value)
+        DispatchQueue.main.async { [self] in
+            performSegue(withIdentifier: "PicView", sender: nil)
         }
     }
 }

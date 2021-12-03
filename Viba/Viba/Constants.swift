@@ -64,6 +64,7 @@ enum NetworkPath: String {
     // Dashboard
     case clockIn = "checkins/clock-in"
     case clockOut = "checkins/clock-out"
+    case clockInOutListByDate = "checkins/get-by-date?date=" // 2021-11-26
 
     // Profile
     case currentUser = "users/me"

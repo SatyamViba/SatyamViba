@@ -24,6 +24,7 @@
 		4A3DDA71274B6A1A002FF884 /* ClockInOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */; };
 		4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */; };
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
+		4A4D21AE275896E5001B9964 /* VibaNoRecordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */; };
 		4A5AA7AB274934E800084866 /* VibaCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AA274934E800084866 /* VibaCircularImage.swift */; };
 		4A5AA7AD2749541500084866 /* VibaRoundImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */; };
 		4A5E47772748E59F00239676 /* ClockInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47762748E59F00239676 /* ClockInOutViewController.swift */; };
@@ -44,7 +45,7 @@
 		4A6D64D7274E61D800022CBE /* VibaMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */; };
 		4A6D64DA274E671F00022CBE /* VibaMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D64D9274E671F00022CBE /* VibaMenuButton.xib */; };
 		4A72CCAF273DA481008AA853 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCAE273DA481008AA853 /* Reach.swift */; };
-		4A72CCB1273DAAF4008AA853 /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB0273DAAF4008AA853 /* UserRequests.swift */; };
+		4A72CCB1273DAAF4008AA853 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB0273DAAF4008AA853 /* UserServices.swift */; };
 		4A72CCB4273E3504008AA853 /* SmsAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */; };
 		4A72CCB6273E350E008AA853 /* EmailAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB5273E350E008AA853 /* EmailAuthentication.swift */; };
 		4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCBA273E3786008AA853 /* ErrorResponse.swift */; };
@@ -78,10 +79,12 @@
 		4AC8D2842756405D003C09AD /* ClockInOutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */; };
 		4AC8D2862756414D003C09AD /* ClockInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2852756414D003C09AD /* ClockInOut.swift */; };
 		4AC8D28827567FD3003C09AD /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D28727567FD3003C09AD /* ProfileResponse.swift */; };
-		4AC8D28A27568006003C09AD /* ProfileRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D28927568006003C09AD /* ProfileRequests.swift */; };
+		4AC8D28A27568006003C09AD /* ProfileServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D28927568006003C09AD /* ProfileServices.swift */; };
 		4AC8D28C27569A04003C09AD /* EmptyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D28B27569A04003C09AD /* EmptyRequest.swift */; };
 		4AC8D28E27573DE8003C09AD /* Permissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC8D28D27573DE8003C09AD /* Permissions.storyboard */; };
 		4AC8D29227579FE0003C09AD /* VibaImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D29127579FE0003C09AD /* VibaImageCache.swift */; };
+		4AC8D2942757C3E2003C09AD /* DashboardServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2932757C3E2003C09AD /* DashboardServices.swift */; };
+		4AC8D2962757D048003C09AD /* CheckInOutListPerDayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2952757D048003C09AD /* CheckInOutListPerDayResponse.swift */; };
 		4AD78E84274F3EA000A27401 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */; };
 		4AD78ECB274F6C8900A27401 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78ECA274F6C8900A27401 /* TabViewController.swift */; };
 		4AD78ECD274F6C9D00A27401 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD78ECC274F6C9D00A27401 /* TabController.storyboard */; };
@@ -124,6 +127,7 @@
 		4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutTableViewCell.swift; sourceTree = "<group>"; };
 		4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockInOutTableViewCell.xib; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
+		4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaNoRecordsCell.swift; sourceTree = "<group>"; };
 		4A5AA7AA274934E800084866 /* VibaCircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaCircularImage.swift; sourceTree = "<group>"; };
 		4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRoundImageButton.swift; sourceTree = "<group>"; };
 		4A5E47762748E59F00239676 /* ClockInOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +148,7 @@
 		4A6D64D6274E61D800022CBE /* VibaMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaMenuButton.swift; sourceTree = "<group>"; };
 		4A6D64D9274E671F00022CBE /* VibaMenuButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibaMenuButton.xib; sourceTree = "<group>"; };
 		4A72CCAE273DA481008AA853 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
-		4A72CCB0273DAAF4008AA853 /* UserRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
+		4A72CCB0273DAAF4008AA853 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsAuthentication.swift; sourceTree = "<group>"; };
 		4A72CCB5273E350E008AA853 /* EmailAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthentication.swift; sourceTree = "<group>"; };
 		4A72CCBA273E3786008AA853 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -180,10 +184,12 @@
 		4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutResponse.swift; sourceTree = "<group>"; };
 		4AC8D2852756414D003C09AD /* ClockInOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOut.swift; sourceTree = "<group>"; };
 		4AC8D28727567FD3003C09AD /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
-		4AC8D28927568006003C09AD /* ProfileRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequests.swift; sourceTree = "<group>"; };
+		4AC8D28927568006003C09AD /* ProfileServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServices.swift; sourceTree = "<group>"; };
 		4AC8D28B27569A04003C09AD /* EmptyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequest.swift; sourceTree = "<group>"; };
 		4AC8D28D27573DE8003C09AD /* Permissions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Permissions.storyboard; sourceTree = "<group>"; };
 		4AC8D29127579FE0003C09AD /* VibaImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaImageCache.swift; sourceTree = "<group>"; };
+		4AC8D2932757C3E2003C09AD /* DashboardServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardServices.swift; sourceTree = "<group>"; };
+		4AC8D2952757D048003C09AD /* CheckInOutListPerDayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInOutListPerDayResponse.swift; sourceTree = "<group>"; };
 		4AD78E83274F3EA000A27401 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		4AD78ECA274F6C8900A27401 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		4AD78ECC274F6C9D00A27401 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
@@ -365,13 +371,14 @@
 		4A72CCB9273E362E008AA853 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				4ADB3A58274118E300A0D750 /* GeneralResponse.swift */,
 				4A72CCBA273E3786008AA853 /* ErrorResponse.swift */,
 				4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */,
 				4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */,
-				4ADB3A58274118E300A0D750 /* GeneralResponse.swift */,
 				4A5F7194274179F800D4A29E /* AuthResponse.swift */,
 				4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */,
 				4AC8D28727567FD3003C09AD /* ProfileResponse.swift */,
+				4AC8D2952757D048003C09AD /* CheckInOutListPerDayResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -413,8 +420,9 @@
 			isa = PBXGroup;
 			children = (
 				4A8A6897273D8ABA00491060 /* NetworkManager.swift */,
-				4A72CCB0273DAAF4008AA853 /* UserRequests.swift */,
-				4AC8D28927568006003C09AD /* ProfileRequests.swift */,
+				4A72CCB0273DAAF4008AA853 /* UserServices.swift */,
+				4AC8D2932757C3E2003C09AD /* DashboardServices.swift */,
+				4AC8D28927568006003C09AD /* ProfileServices.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -540,6 +548,7 @@
 				4AD78ECE2750951000A27401 /* VibaTabButton.swift */,
 				4A68CB6227533F39000BA368 /* VibaSwitch.swift */,
 				4AC8D29127579FE0003C09AD /* VibaImageCache.swift */,
+				4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -729,6 +738,7 @@
 				4AFC563A27392FF800E064E9 /* Utility.swift in Sources */,
 				4AC8D2842756405D003C09AD /* ClockInOutResponse.swift in Sources */,
 				4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */,
+				4A4D21AE275896E5001B9964 /* VibaNoRecordsCell.swift in Sources */,
 				4A5E47792748E5AB00239676 /* TimesheetViewController.swift in Sources */,
 				4AC8D28827567FD3003C09AD /* ProfileResponse.swift in Sources */,
 				4AD78ED82751078B00A27401 /* NotificationTableViewCell.swift in Sources */,
@@ -739,6 +749,7 @@
 				4A5AA7AD2749541500084866 /* VibaRoundImageButton.swift in Sources */,
 				4AB5F0122739122E007DB9FF /* LoginViewController.swift in Sources */,
 				4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */,
+				4AC8D2942757C3E2003C09AD /* DashboardServices.swift in Sources */,
 				4A21A195273B67290002D052 /* VibaMediumLabel.swift in Sources */,
 				4AB5F00E2739122E007DB9FF /* AppDelegate.swift in Sources */,
 				4A5AA7AB274934E800084866 /* VibaCircularImage.swift in Sources */,
@@ -754,8 +765,8 @@
 				4AC8D2862756414D003C09AD /* ClockInOut.swift in Sources */,
 				4A68CB65275345A9000BA368 /* PermissionViewController.swift in Sources */,
 				4A21A19C273B913F0002D052 /* VibaRoundCornerView.swift in Sources */,
-				4A72CCB1273DAAF4008AA853 /* UserRequests.swift in Sources */,
-				4AC8D28A27568006003C09AD /* ProfileRequests.swift in Sources */,
+				4A72CCB1273DAAF4008AA853 /* UserServices.swift in Sources */,
+				4AC8D28A27568006003C09AD /* ProfileServices.swift in Sources */,
 				4AB5F0102739122E007DB9FF /* SceneDelegate.swift in Sources */,
 				4A72CCB6273E350E008AA853 /* EmailAuthentication.swift in Sources */,
 				4A21A19E273B9B600002D052 /* SignupPageViewController.swift in Sources */,
@@ -765,6 +776,7 @@
 				4A1617BD273A42CF00640236 /* VibaBorderButton.swift in Sources */,
 				4A21A198273B89E50002D052 /* EmployeeDetailsViewController.swift in Sources */,
 				4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */,
+				4AC8D2962757D048003C09AD /* CheckInOutListPerDayResponse.swift in Sources */,
 				4AD78EE02751C34300A27401 /* SendPreInvitationViewController.swift in Sources */,
 				4AD78ECB274F6C8900A27401 /* TabViewController.swift in Sources */,
 				4AC8D29227579FE0003C09AD /* VibaImageCache.swift in Sources */,
