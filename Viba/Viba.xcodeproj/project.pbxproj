@@ -32,7 +32,7 @@
 		4A5E47792748E5AB00239676 /* TimesheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E47782748E5AB00239676 /* TimesheetViewController.swift */; };
 		4A5E477B2748E5B700239676 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E477A2748E5B700239676 /* ProfileViewController.swift */; };
 		4A5E477D2748E5C600239676 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E477C2748E5C600239676 /* DashboardViewController.swift */; };
-		4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F7194274179F800D4A29E /* AuthResponse.swift */; };
+		4A5F7195274179F800D4A29E /* LoginOTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F7194274179F800D4A29E /* LoginOTPResponse.swift */; };
 		4A68CB6027529B23000BA368 /* FaceTrackingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A68CB5E27529B23000BA368 /* FaceTrackingView.xib */; };
 		4A68CB6127529B23000BA368 /* FaceTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB5F27529B23000BA368 /* FaceTrackingView.swift */; };
 		4A68CB6327533F39000BA368 /* VibaSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68CB6227533F39000BA368 /* VibaSwitch.swift */; };
@@ -50,7 +50,7 @@
 		4A72CCB4273E3504008AA853 /* SmsAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */; };
 		4A72CCB6273E350E008AA853 /* EmailAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCB5273E350E008AA853 /* EmailAuthentication.swift */; };
 		4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCBA273E3786008AA853 /* ErrorResponse.swift */; };
-		4A72CCBD273EBB2A008AA853 /* RegisterUserStep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCBC273EBB2A008AA853 /* RegisterUserStep1.swift */; };
+		4A72CCBD273EBB2A008AA853 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCBC273EBB2A008AA853 /* RegisterUser.swift */; };
 		4A72CCBF273EE1B6008AA853 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCBE273EE1B6008AA853 /* Company.swift */; };
 		4A72CCC1273EE1F6008AA853 /* CompanyDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */; };
 		4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */; };
@@ -136,7 +136,7 @@
 		4A5E47782748E5AB00239676 /* TimesheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetViewController.swift; sourceTree = "<group>"; };
 		4A5E477A2748E5B700239676 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A5E477C2748E5C600239676 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		4A5F7194274179F800D4A29E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		4A5F7194274179F800D4A29E /* LoginOTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOTPResponse.swift; sourceTree = "<group>"; };
 		4A68CB5E27529B23000BA368 /* FaceTrackingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceTrackingView.xib; sourceTree = "<group>"; };
 		4A68CB5F27529B23000BA368 /* FaceTrackingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceTrackingView.swift; sourceTree = "<group>"; };
 		4A68CB6227533F39000BA368 /* VibaSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaSwitch.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsAuthentication.swift; sourceTree = "<group>"; };
 		4A72CCB5273E350E008AA853 /* EmailAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthentication.swift; sourceTree = "<group>"; };
 		4A72CCBA273E3786008AA853 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		4A72CCBC273EBB2A008AA853 /* RegisterUserStep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserStep1.swift; sourceTree = "<group>"; };
+		4A72CCBC273EBB2A008AA853 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		4A72CCBE273EE1B6008AA853 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsResponse.swift; sourceTree = "<group>"; };
 		4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSmsOtp.swift; sourceTree = "<group>"; };
@@ -356,16 +356,9 @@
 		4A72CCB8273E35D8008AA853 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */,
-				4A72CCBC273EBB2A008AA853 /* RegisterUserStep1.swift */,
-				4A72CCB5273E350E008AA853 /* EmailAuthentication.swift */,
-				4A72CCBE273EE1B6008AA853 /* Company.swift */,
-				4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */,
-				4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */,
-				4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */,
-				4ADB3A5A2741198F00A0D750 /* ResendRegistrationOtp.swift */,
-				4A68CB6C2753E7E9000BA368 /* UploadUserImage.swift */,
-				4AC8D2852756414D003C09AD /* ClockInOut.swift */,
+				4AE58252275B3ED00081FAC1 /* Login */,
+				4AE58253275B3EF20081FAC1 /* Registrration */,
+				4AE58254275B3F570081FAC1 /* Dashboard */,
 				4AC8D28B27569A04003C09AD /* EmptyRequest.swift */,
 			);
 			path = Requests;
@@ -376,12 +369,9 @@
 			children = (
 				4ADB3A58274118E300A0D750 /* GeneralResponse.swift */,
 				4A72CCBA273E3786008AA853 /* ErrorResponse.swift */,
-				4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */,
-				4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */,
-				4A5F7194274179F800D4A29E /* AuthResponse.swift */,
-				4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */,
-				4AC8D28727567FD3003C09AD /* ProfileResponse.swift */,
-				4AC8D2952757D048003C09AD /* CheckInOutListPerDayResponse.swift */,
+				4AE58250275B3DA70081FAC1 /* Registrration */,
+				4AE58251275B3E810081FAC1 /* Login */,
+				4AE58257275B3F960081FAC1 /* Dashboard */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -496,6 +486,80 @@
 				4AD78EDF2751C34300A27401 /* SendPreInvitationViewController.swift */,
 			);
 			path = PreInvitation;
+			sourceTree = "<group>";
+		};
+		4AE58250275B3DA70081FAC1 /* Registrration */ = {
+			isa = PBXGroup;
+			children = (
+				4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */,
+				4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */,
+			);
+			path = Registrration;
+			sourceTree = "<group>";
+		};
+		4AE58251275B3E810081FAC1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A5F7194274179F800D4A29E /* LoginOTPResponse.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4AE58252275B3ED00081FAC1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A72CCB5273E350E008AA853 /* EmailAuthentication.swift */,
+				4A72CCB3273E3504008AA853 /* SmsAuthentication.swift */,
+				4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */,
+				4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4AE58253275B3EF20081FAC1 /* Registrration */ = {
+			isa = PBXGroup;
+			children = (
+				4A72CCBC273EBB2A008AA853 /* RegisterUser.swift */,
+				4A72CCBE273EE1B6008AA853 /* Company.swift */,
+				4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */,
+				4ADB3A5A2741198F00A0D750 /* ResendRegistrationOtp.swift */,
+				4A68CB6C2753E7E9000BA368 /* UploadUserImage.swift */,
+			);
+			path = Registrration;
+			sourceTree = "<group>";
+		};
+		4AE58254275B3F570081FAC1 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				4AC8D2852756414D003C09AD /* ClockInOut.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		4AE58255275B3F710081FAC1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4AC8D28727567FD3003C09AD /* ProfileResponse.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4AE58256275B3F860081FAC1 /* ClockInOut */ = {
+			isa = PBXGroup;
+			children = (
+				4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */,
+				4AC8D2952757D048003C09AD /* CheckInOutListPerDayResponse.swift */,
+			);
+			path = ClockInOut;
+			sourceTree = "<group>";
+		};
+		4AE58257275B3F960081FAC1 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				4AE58256275B3F860081FAC1 /* ClockInOut */,
+				4AE58255275B3F710081FAC1 /* Profile */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		4AFC562B27391E1C00E064E9 /* Resources */ = {
@@ -779,12 +843,12 @@
 				4A1617AF2739512C00640236 /* VibaTextField.swift in Sources */,
 				4A1617BD273A42CF00640236 /* VibaBorderButton.swift in Sources */,
 				4A21A198273B89E50002D052 /* EmployeeDetailsViewController.swift in Sources */,
-				4A5F7195274179F800D4A29E /* AuthResponse.swift in Sources */,
+				4A5F7195274179F800D4A29E /* LoginOTPResponse.swift in Sources */,
 				4AC8D2962757D048003C09AD /* CheckInOutListPerDayResponse.swift in Sources */,
 				4AD78EE02751C34300A27401 /* SendPreInvitationViewController.swift in Sources */,
 				4AD78ECB274F6C8900A27401 /* TabViewController.swift in Sources */,
 				4AC8D29227579FE0003C09AD /* VibaImageCache.swift in Sources */,
-				4A72CCBD273EBB2A008AA853 /* RegisterUserStep1.swift in Sources */,
+				4A72CCBD273EBB2A008AA853 /* RegisterUser.swift in Sources */,
 				4A72CCBF273EE1B6008AA853 /* Company.swift in Sources */,
 				4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */,
 				4A21A1A0273B9C010002D052 /* VerifyViewController.swift in Sources */,

@@ -7,9 +7,23 @@
 
 import UIKit
 import FontAwesome_swift
+import CoreLocation
 
-class ClockInOutViewController: UIViewController {
+enum ClockInOutEvent {
+    case clockIn
+    case clockOut
 
+    var url: String {
+        switch self {
+        case .clockIn:
+            return NetworkPath.clockIn.rawValue
+        case .clockOut:
+            return NetworkPath.clockOut.rawValue
+        }
+    }
+}
+
+class ClockInOutViewController: UIViewController, VibaImageCache {
     @IBOutlet weak var eventList: UITableView!
     @IBOutlet weak var leadingSpace: NSLayoutConstraint!
     @IBOutlet weak var trailingSpace: NSLayoutConstraint!
@@ -24,14 +38,34 @@ class ClockInOutViewController: UIViewController {
     @IBOutlet weak var clockInAtOffice: UILabel!
     @IBOutlet weak var clockInOutBtn: VibaButton!
     @IBOutlet weak var confirmationMessage: UILabel!
+    @IBOutlet weak var userImage: VibaCircularImage!
 
     let refreshControl = UIRefreshControl()
     var clockInOutDetails = CheckInOutListPerDayResponse()
 
-    private var isClockIn = true
+    private var clockInOutEvent = ClockInOutEvent.clockIn
+
+    private var workFromHome = true {
+        didSet {
+            if workFromHome {
+                handleHomeSelection(home)
+            } else {
+                handleOfficeSelection(office)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        name.text = DataManager.shared.fullName
+        if let img = DataManager.shared.usrImage, let imageUrl = URL(string: img) {
+            localImage(forKey: img.sha256, from: imageUrl) {[self] (image, _) in
+                DispatchQueue.main.async { [self] in
+                    userImage.image = image
+                }
+            }
+        }
 
         eventList.register(UINib(nibName: "ClockInOutTableViewCell", bundle: nil), forCellReuseIdentifier: ClockInOutTableViewCell.cellID)
         eventList.register(VibaNoRecordsCell.self, forCellReuseIdentifier: VibaNoRecordsCell.cellID)
@@ -96,7 +130,7 @@ class ClockInOutViewController: UIViewController {
         }
     }
 
-    @IBAction func handleOfficeSelection(_ sender: Any) {
+    @IBAction func handleOfficeSelection(_ sender: UIButton) {
         let ofcImg = UIImage.fontAwesomeIcon(name: .building, style: .solid, textColor: .white, size: CGSize(width: 25, height: 25))
         office.setImage(ofcImg, for: .normal)
         office.backgroundColor = Colors.btnSelected.value
@@ -110,7 +144,7 @@ class ClockInOutViewController: UIViewController {
         clockInAtOffice.isHidden = false
     }
 
-    @IBAction func handleHomeSelection(_ sender: Any) {
+    @IBAction func handleHomeSelection(_ sender: UIButton) {
         let ofcImg = UIImage.fontAwesomeIcon(name: .building, style: .solid, textColor: Colors.floatPlaceholderColor.value, size: CGSize(width: 25, height: 25))
         office.setImage(ofcImg, for: .normal)
         office.backgroundColor = Colors.btnUnselected.value
@@ -124,7 +158,7 @@ class ClockInOutViewController: UIViewController {
         clockInAtOffice.isHidden = true
     }
 
-    @IBAction func handleClockInOut(_ sender: Any) {
+    @IBAction func handleClockInOut(_ sender: UIButton) {
         UIView.animate(withDuration: 1.0) { [self] in
             let xpos = view.frame.width - 60
             leadingSpace.constant = -(xpos)
@@ -134,7 +168,32 @@ class ClockInOutViewController: UIViewController {
     }
 
     @IBAction func handleConfirmation(_ sender: Any) {
-        bringBackSelectionView()
+        Location.manager.fetchLocation { result in
+            switch result {
+            case .success(let location):
+                showLoadingIndicator()
+                let usrLocation = GeoLocation(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
+                DashboardServices.sendClockInClockOut(eventType: clockInOutEvent, data: ClockInOut(geoLocation: usrLocation)) { response in
+                    DispatchQueue.main.async { [self] in
+                        hideLoadingIndicator()
+                        switch response {
+                        case .success(let dataReceived):
+                            print(dataReceived)
+                            bringBackSelectionView()
+                        case .failure(let err):
+                            print("### Failed to post event: ", err.localizedDescription)
+                            showWarning(message: "Failed to post data")
+                        }
+                    }
+
+                }
+            case .failure(let err):
+                print("### Failed to get location: ", err.localizedDescription)
+                DispatchQueue.main.async { [self] in
+                    showWarning(message: "Failed to fetch location")
+                }
+            }
+        }
     }
 
     @IBAction func handleCancellation(_ sender: Any) {

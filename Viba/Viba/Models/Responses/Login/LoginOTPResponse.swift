@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthResponse: Decodable {
+struct LoginOTPResponse: Decodable {
     let msg, token: String
     let data: DataClass
 }
@@ -17,11 +17,18 @@ struct DataClass: Decodable {
     let image: String?
     let id, role: String
     let pusher: Pusher
+    let firstName, lastName: String
+
+    var fullName: String {
+        return firstName + " " + lastName
+    }
 
     enum CodingKeys: String, CodingKey {
         case image
         case id = "_id"
         case role, pusher
+        case firstName = "first_name"
+        case lastName = "last_name"
     }
 }
 

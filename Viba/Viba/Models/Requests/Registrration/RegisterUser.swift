@@ -1,5 +1,5 @@
 //
-//  RegisterUserStep1.swift
+//  RegisterUser.swift
 //  Viba
 //
 //  Created by Satyam Sutapalli on 12/11/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RegisterUserStep1: Encodable {
+struct RegisterUser: Encodable {
     let dob, gender, email, accountID: String
     let firstName, lastName, phone: String
 

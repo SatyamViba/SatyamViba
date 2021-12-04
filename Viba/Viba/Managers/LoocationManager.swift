@@ -10,6 +10,7 @@ import CoreLocation
 
 class Location: NSObject {
     private let locationManager = CLLocationManager()
+    private var completionHandler: ((Result<CLLocation, Error>) -> Void)?
 
     static let manager = Location()
     private override init() {
@@ -28,6 +29,10 @@ class Location: NSObject {
     func showPermissionForLocation() {
         locationManager.requestAlwaysAuthorization()
     }
+
+    func fetchLocation(onCompletion handler: ((Result<CLLocation, Error>) -> Void)) {
+        locationManager.requestLocation()
+    }
 }
 
 extension Location: CLLocationManagerDelegate {
@@ -35,25 +40,19 @@ extension Location: CLLocationManagerDelegate {
         NotificationCenter.default.post(name: .locationPermissionStatus, object: nil)
     }
 
-//    func locationManager(_ manager: CLLocationManager,
-//                         didChangeAuthorization status: CLAuthorizationStatus) {   switch status {
-//          case .restricted, .denied:
-//             // Disable your app's location features
-//
-//
-//
-//          case .authorizedWhenInUse:
-//             // Enable your app's location features.
-//             enableMyLocationFeatures()
-//             break
-//
-//          case .authorizedAlways:
-//             // Enable or prepare your app's location features that can run any time.
-//             enableMyAlwaysFeatures()
-//             break
-//
-//          case .notDetermined:
-//             break
-//       }
-//    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let handler = completionHandler, let firstLocation = locations.first else {
+            return
+        }
+
+        handler(.success(firstLocation))
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        guard let handler = completionHandler else {
+            return
+        }
+
+        handler(.failure(error))
+    }
 }

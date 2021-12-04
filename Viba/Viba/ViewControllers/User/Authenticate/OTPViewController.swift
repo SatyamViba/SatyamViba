@@ -19,7 +19,7 @@ class OTPViewController: UIViewController {
     var userEnteredId: String?
     var enteredOtp = ""
     var hasEnteredOtp = false
-    var authResponse: AuthResponse?
+    var authResponse: LoginOTPResponse?
 
     @IBOutlet weak var errMessage: UILabel!
     @IBOutlet weak var otpField: OTPFieldView!
@@ -81,7 +81,8 @@ class OTPViewController: UIViewController {
 
         UserDefaults.standard.set(response.token, forKey: UserDefaultsKeys.token.value)
         DataManager.shared.usrImage = response.data.image
-       
+        DataManager.shared.fullName = response.data.fullName
+        
         DispatchQueue.main.async { [self] in
             performSegue(withIdentifier: "PicView", sender: nil)
         }

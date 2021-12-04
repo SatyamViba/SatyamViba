@@ -98,11 +98,11 @@ class LoginViewController: UIViewController {
         showLoadingIndicator()
         UserServices.authenticate(type: authType, id: authType == .email ? text : "91" + text) { response in
             DispatchQueue.main.async { [self] in
-                self.hideLoadingIndicator()
+                hideLoadingIndicator()
                 switch response {
                 case .success(let status):
                     print(status)
-                    self.performSegue(withIdentifier: "OTPView", sender: nil)
+                    performSegue(withIdentifier: "OTPView", sender: nil)
                 case .failure(let error):
                     print(error.localizedDescription)
                     showWarning(message: "Failed to validate input")

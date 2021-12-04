@@ -31,12 +31,12 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
-        guard let dlgt = delegate else {
-            return
-        }
-
-        dlgt.didFinish(screen: .verify)
-        return
+//        guard let dlgt = delegate else {
+//            return
+//        }
+//
+//        dlgt.didFinish(screen: .verify)
+//        return
 
         guard let eOtp = emailOtp.text, eOtp.count == charLimit else {
             emailOtp.showError()
@@ -48,9 +48,8 @@ class VerifyViewController: UIViewController {
             return
         }
 
-        let usrId = DataManager.shared.userId
-        if usrId.isEmpty {
-            showWarning(title: "Warning!", message: "User ID is invalid")
+        guard let usrId = DataManager.shared.userId, usrId.isEmpty else {
+            showWarning(message: "User Id invalid")
             return
         }
 
@@ -75,8 +74,7 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func resendEmailOtp(_ sender: Any) {
-        let usrId = DataManager.shared.userId
-        if usrId.isEmpty {
+        guard let usrId = DataManager.shared.userId, usrId.isEmpty else {
             showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }
@@ -98,8 +96,7 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func resendMobileOtp(_ sender: Any) {
-        let usrId = DataManager.shared.userId
-        if usrId.isEmpty {
+        guard let usrId = DataManager.shared.userId, usrId.isEmpty else {
             showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }

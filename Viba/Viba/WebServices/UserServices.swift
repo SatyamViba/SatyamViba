@@ -26,7 +26,7 @@ class UserServices {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.loginWithSms.rawValue, params: SmsAuthentication(phone: id), methodType: .post, completion: handler)
     }
 
-    static func validateOtp(type: AuthType, id: String, otp: String, onCompletion handler: @escaping ((Result<AuthResponse, Error>) -> Void)) {
+    static func validateOtp(type: AuthType, id: String, otp: String, onCompletion handler: @escaping ((Result<LoginOTPResponse, Error>) -> Void)) {
         switch type {
         case .email:
             validateEmailOTP(otp: otp, email: id, onCompletion: handler)
@@ -35,11 +35,11 @@ class UserServices {
         }
     }
 
-    static func validateSmsOTP(otp: String, phone: String, onCompletion handler: @escaping ((Result<AuthResponse, Error>) -> Void)) {
+    private static func validateSmsOTP(otp: String, phone: String, onCompletion handler: @escaping ((Result<LoginOTPResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.validateSmsOtp.rawValue, params: ValidateSMSOtp(phone: phone, smsOtp: otp), methodType: .post, completion: handler)
     }
 
-    static func validateEmailOTP(otp: String, email: String, onCompletion handler: @escaping ((Result<AuthResponse, Error>) -> Void)) {
+    private static func validateEmailOTP(otp: String, email: String, onCompletion handler: @escaping ((Result<LoginOTPResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.validateEmailOtp.rawValue, params: ValidateEmailOtp(email: email, emailOtp: otp), methodType: .post, completion: handler)
 
     }
@@ -50,7 +50,7 @@ class UserServices {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.validateCompanyCode.rawValue, params: Company(code: code), methodType: .post, completion: handler)
     }
 
-    static func registerUser(params: RegisterUserStep1, onCompletion handler: @escaping ((Result<UserRegistrrationDetails, Error>) -> Void)) {
+    static func registerUser(params: RegisterUser, onCompletion handler: @escaping ((Result<UserRegistrrationDetails, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.registerStep1.rawValue, params: params, methodType: .post, completion: handler)
     }
 
