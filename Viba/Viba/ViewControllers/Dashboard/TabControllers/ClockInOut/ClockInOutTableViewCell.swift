@@ -60,8 +60,8 @@ class ClockInOutTableViewCell: UITableViewCell {
         clockInTime.text = clockedIn.toTimeDisplayFormat
         clockInWorkLocationName.text = cinMode.rawValue
 
-        clockOutTime.text = data.clockedOutAt?.toTimeDisplayFormat
-        clockOutWorkLocationName.text = mode.clockout?.rawValue
+        clockOutTime.text = data.clockedOutAt?.toTimeDisplayFormat ?? "--"
+        clockOutWorkLocationName.text = mode.clockout?.rawValue ?? "--"
 
         temperature.text = data.temperature?.displayValue ?? "--"
     }

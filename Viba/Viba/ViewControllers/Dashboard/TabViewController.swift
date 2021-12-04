@@ -84,6 +84,7 @@ class TabViewController: UIViewController {
     @objc
     private func showInitialTab() {
         addChild(to: Tab.clockInOut)
+        clockInOutBtn.isSelected = true
     }
 
     @IBAction func handleTapOnTab(_ sender: UIButton) {

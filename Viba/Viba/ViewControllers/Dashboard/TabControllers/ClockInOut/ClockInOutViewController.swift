@@ -123,10 +123,11 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
     }
 
     private func bringBackSelectionView() {
-        UIView.animate(withDuration: 1.0) { [self] in
+        UIView.animate(withDuration: 0.5) { [self] in
             leadingSpace.constant = 60
             trailingSpace.constant = 40
             selectionView.isUserInteractionEnabled = true
+            view.layoutIfNeeded()
         }
     }
 
@@ -159,16 +160,17 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
     }
 
     @IBAction func handleClockInOut(_ sender: UIButton) {
-        UIView.animate(withDuration: 1.0) { [self] in
+        UIView.animate(withDuration: 0.5) { [self] in
             let xpos = view.frame.width - 60
             leadingSpace.constant = -(xpos)
             trailingSpace.constant = xpos
             selectionView.isUserInteractionEnabled = false
+            view.layoutIfNeeded()
         }
     }
 
     @IBAction func handleConfirmation(_ sender: Any) {
-        Location.manager.fetchLocation { result in
+        Location.manager.fetchLocation { [self] result in
             switch result {
             case .success(let location):
                 showLoadingIndicator()
@@ -180,6 +182,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                         case .success(let dataReceived):
                             print(dataReceived)
                             bringBackSelectionView()
+                            fetchClockInOutList()
                         case .failure(let err):
                             print("### Failed to post event: ", err.localizedDescription)
                             showWarning(message: "Failed to post data")

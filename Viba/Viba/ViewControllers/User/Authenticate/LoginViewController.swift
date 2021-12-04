@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
         #if DEBUG
         userId.text = "1111111110"
         companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
-        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.token.value)
+//        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.token.value)
         #endif
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
         view.addGestureRecognizer(gestrue)
@@ -79,8 +79,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
-//        performSegue(withIdentifier: "Dashboard", sender: nil)
-//        return
+        if let _ = UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) {
+            performSegue(withIdentifier: "Dashboard", sender: nil)
+            return
+        }
+
         guard let text = userId.text, text.count > 0 else {
             userId.showError()
             return

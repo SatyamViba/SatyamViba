@@ -30,7 +30,8 @@ class Location: NSObject {
         locationManager.requestAlwaysAuthorization()
     }
 
-    func fetchLocation(onCompletion handler: ((Result<CLLocation, Error>) -> Void)) {
+    func fetchLocation(onCompletion handler: @escaping ((Result<CLLocation, Error>) -> Void)) {
+        self.completionHandler = handler
         locationManager.requestLocation()
     }
 }
