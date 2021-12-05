@@ -68,6 +68,6 @@ extension Date {
     var toApiFormat: String {
         let dtFormatter = DateFormatter()
         dtFormatter.dateFormat = "yyyy-MM-dd"
-        return dtFormatter.string(from: date)
+        return dtFormatter.string(from: self)
     }
 }

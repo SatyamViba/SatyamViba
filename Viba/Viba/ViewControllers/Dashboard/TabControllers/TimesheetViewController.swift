@@ -28,14 +28,21 @@ class TimesheetViewController: UIViewController {
     @IBOutlet weak var durationImg: VibaCircularImage!
     @IBOutlet weak var duration: UILabel!
 
-    var selectedDate = Date()
+    var clockInOutDetails = CheckInOutListPerDayResponse()
+    var selectedDate = Date() {
+        didSet {
+            formatAndShowDate()
+            fetchClockInOutList()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        eventList.register(UINib(nibName: "ClockInOutTableViewCell", bundle: nil), forCellReuseIdentifier: "ClockInOut")
-
+        eventList.register(UINib(nibName: "ClockInOutTableViewCell", bundle: nil), forCellReuseIdentifier: ClockInOutTableViewCell.cellID)
+        eventList.register(VibaNoRecordsCell.self, forCellReuseIdentifier: VibaNoRecordsCell.cellID)
+        
         let leftImg = UIImage.fontAwesomeIcon(name: .angleLeft, style: .solid, textColor: .black, size: CGSize(width: 26, height: 26))
         left.setImage(leftImg, for: .normal)
         let leftDiabledImg = UIImage.fontAwesomeIcon(name: .angleLeft, style: .solid, textColor: .lightGray, size: CGSize(width: 26, height: 26))
@@ -55,6 +62,24 @@ class TimesheetViewController: UIViewController {
         durationImg.image = UIImage.fontAwesomeIcon(name: .clock, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
 
         formatAndShowDate()
+        fetchClockInOutList()
+    }
+
+    private func fetchClockInOutList() {
+        showLoadingIndicator()
+        DashboardServices.getCheckInOutDetailsByDate(date: selectedDate) { [self] response in
+            DispatchQueue.main.async { [self] in
+                hideLoadingIndicator()
+                switch response {
+                case .success(let list):
+                    self.clockInOutDetails = list
+                    eventList.reloadData()
+                case .failure(let err):
+                    print(err.localizedDescription)
+                    showWarning(message: err.localizedDescription)
+                }
+            }
+        }
     }
 
     @IBAction func showPreviousDay(_ sender: Any) {
@@ -75,7 +100,6 @@ class TimesheetViewController: UIViewController {
         datePicker.setup(beginWith: Date(), min: minDate, max: Date()) { [self] (selected, date) in
             if selected, let seldDate = date {
                 selectedDate = seldDate
-                formatAndShowDate()
                 updatePrevNextOptions()
             }
         }
@@ -106,14 +130,20 @@ class TimesheetViewController: UIViewController {
 
 extension TimesheetViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return clockInOutDetails.count > 0 ? clockInOutDetails.count : 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClockInOut", for: indexPath) as? ClockInOutTableViewCell else {
+        if clockInOutDetails.count == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
+            return cell
+        }
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ClockInOutTableViewCell.cellID, for: indexPath) as? ClockInOutTableViewCell else {
             return UITableViewCell()
         }
 
+        cell.render(data: clockInOutDetails[indexPath.row])
         return cell
     }
 }

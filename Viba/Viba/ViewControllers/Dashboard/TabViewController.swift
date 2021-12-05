@@ -64,7 +64,7 @@ class TabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        
+
         // Do any additional setup after loading the view.
         dashboardBtn.tabImage = .table
         timesheetBtn.tabImage = .userClock
