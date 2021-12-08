@@ -62,10 +62,15 @@ enum NetworkPath: String {
     case resendRegistrationSmsOtp = "auth/resend-sms-otp"
     case resendRegisrtrationEmailOtp = "auth/resend-email-otp"
     // Dashboard
+    // ClockInOut
+    case isOutsideOrg = "users/is-outside-organization"
     case clockIn = "checkins/clock-in"
     case clockOut = "checkins/clock-out"
     case clockInOutListByDate = "checkins/get-by-date?date=" // 2021-11-26
 
+    // Invitations
+    case createInvitation = "invitations"
+    case invitationsByDate = "invitations/get-by-date?date=" // 2021-12-08
     // Profile
     case currentUser = "users/me"
 }

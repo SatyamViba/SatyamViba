@@ -104,7 +104,7 @@ class EmployeeDetailsViewController: UIViewController {
                 self.hideLoadingIndicator()
                 switch result {
                 case .success(let user):
-                    print("Status of registering: \(user)")
+                    print("### Status of registering: \(user)")
                     DataManager.shared.userId = user.id
                     guard let dlgt = self.delegate else {
                         return
@@ -112,7 +112,7 @@ class EmployeeDetailsViewController: UIViewController {
 
                     dlgt.didFinish(screen: .employeeDetails)
                 case .failure(let error):
-                    print("Error in Registering User: \(error.localizedDescription)")
+                    print("### Error in Registering User: \(error.localizedDescription)")
                     showWarning(message: error.localizedDescription)
                 }
             }

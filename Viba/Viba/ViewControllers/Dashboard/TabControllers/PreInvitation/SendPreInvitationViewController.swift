@@ -18,13 +18,12 @@ class SendPreInvitationViewController: UIViewController {
     @IBOutlet weak var phoneNumber: VibaTextField!
     @IBOutlet weak var invitationType: UISegmentedControl!
     @IBOutlet weak var appointmentDate: VibaTextField!
-    @IBOutlet weak var startTime: VibaTextField!
-    @IBOutlet weak var endTime: VibaTextField!
     @IBOutlet weak var calendar: UIButton!
 
+    @IBOutlet weak var endTime: UIDatePicker!
+    @IBOutlet weak var startTime: UIDatePicker!
     var activeTextField: UITextField?
     var selectedDate = Date()
-    var timePicker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +40,18 @@ class SendPreInvitationViewController: UIViewController {
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
         view.addGestureRecognizer(gestrue)
 
+        startTime.addTarget(self, action: #selector(changedStartTime), for: .valueChanged)
+        startTime.minimumDate = Date()
+        endTime.minimumDate = Date()
+
         if view.frame.size.height <= 667 {
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         }
+    }
+
+    @objc func changedStartTime() {
+        endTime.minimumDate = startTime.date
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -103,19 +110,46 @@ class SendPreInvitationViewController: UIViewController {
             return
         }
 
-        guard let strTime = startTime.text, strTime.count > 0 else {
-            startTime.showError()
+        var stTime = ""
+        var eTime = ""
+
+        if  endTime.date > startTime.date /*, endTime.date.minutes(from: startTime.date) > 15*/ {
+            stTime = selectedDate.setTimeAndFormat(from: startTime.date)
+            eTime = selectedDate.setTimeAndFormat(from: endTime.date)
+        } else {
+            showWarning(message: "End time must be greater than start time")
             return
         }
 
-        guard let eTime = endTime.text, eTime.count > 0 else {
-            endTime.showError()
-            return
+        var purpose = ""
+        switch invitationType.selectedSegmentIndex {
+        case 0:
+            purpose = "official"
+        case 1:
+            purpose = "interview"
+        case 2:
+            purpose = "meeting"
+        default:
+            purpose = "official"
         }
 
         let correctedPhone = "91" + phn
-        if let navController = navigationController {
-            navController.popViewController(animated: true)
+        showLoadingIndicator()
+        let createEvent =  CreateInvitation(name: fName, email: eml, phone: correctedPhone, purpose: purpose, start: stTime, end: eTime)
+        DashboardServices.createInvitation(event: createEvent) { response in
+            DispatchQueue.main.async { [self] in
+                hideLoadingIndicator()
+                switch response {
+                case .success(let resp):
+                    print(resp)
+                    if let navController = navigationController {
+                        navController.popViewController(animated: true)
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    showWarning(message: "Failed to create event")
+                }
+            }
         }
     }
 

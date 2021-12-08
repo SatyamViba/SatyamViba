@@ -104,6 +104,7 @@ class TimesheetViewController: UIViewController {
             }
         }
         // Display
+        
         datePicker.show(in: self, on: nil)
     }
 

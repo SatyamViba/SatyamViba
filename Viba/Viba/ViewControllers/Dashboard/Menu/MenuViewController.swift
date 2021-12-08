@@ -89,7 +89,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             case 1:
                 dlgt.showView(view: .preInvitations)
             default:
-                print("Handle it!!")
+                print("### Handle it!!")
             }
         }
     }

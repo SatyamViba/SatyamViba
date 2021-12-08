@@ -9,6 +9,10 @@ import Foundation
 
 class DashboardServices {
     // MARK: - Clock In
+    static func checkOutsideOrg(data: ClockInOut, onCompletion handler: @escaping((Result<CheckInOrgResponse, Error>) -> Void)) {
+        NetworkManager.shared.fetchResponse(urlString: NetworkPath.isOutsideOrg.rawValue, params: data, methodType: .post, completion: handler)
+    }
+
     static func getCheckInOutDetailsByDate(date: Date, onCompletion handler: @escaping ((Result<CheckInOutListPerDayResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.clockInOutListByDate.rawValue + date.toApiFormat, params: EmptyRequest(), methodType: .get, completion: handler)
     }
@@ -18,4 +22,11 @@ class DashboardServices {
     }
 
     // MARK: - Pre Invitations
+    static func createInvitation(event: CreateInvitation, onCompletion handler: @escaping((Result<CreateInvitationResponse, Error>) -> Void)) {
+        NetworkManager.shared.fetchResponse(urlString: NetworkPath.createInvitation.rawValue, params: event, methodType: .post, completion: handler)
+    }
+
+    static func getInvitationsList(date: Date, completion handler: @escaping ((Result<InvitationListResponse, Error>) -> Void)) {
+        NetworkManager.shared.fetchResponse(urlString: NetworkPath.invitationsByDate.rawValue + date.toApiFormat, params: EmptyRequest(), methodType: .get, completion: handler)
+    }
 }

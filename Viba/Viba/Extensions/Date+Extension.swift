@@ -70,4 +70,25 @@ extension Date {
         dtFormatter.dateFormat = "yyyy-MM-dd"
         return dtFormatter.string(from: self)
     }
+
+    func minutes(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
+    }
+
+    func setTimeAndFormat(from date: Date) -> String {
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self)
+        components.hour = hour
+        components.minute = minute
+        components.second = 0
+
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions.insert(.withFractionalSeconds)
+
+        let tempDate = calendar.date(from: components)!
+        return formatter.string(from: tempDate)
+    }
 }

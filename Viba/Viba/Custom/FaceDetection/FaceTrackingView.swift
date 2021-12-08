@@ -61,7 +61,7 @@ class FaceTrackingView: UIView {
             let cameraInput = try AVCaptureDeviceInput(device: device)
             captureSession.addInput(cameraInput)
         } catch {
-            print("Failed to initialize camera input: \(error.localizedDescription)")
+            print("### Failed to initialize camera input: \(error.localizedDescription)")
         }
     }
 

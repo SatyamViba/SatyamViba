@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
         #if DEBUG
         userId.text = "1111111110"
         companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
-//        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.token.value)
+        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.selectedMenu.value)
         #endif
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
         view.addGestureRecognizer(gestrue)
@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
-        if let _ = UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) {
+        if UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) != nil {
             performSegue(withIdentifier: "Dashboard", sender: nil)
             return
         }
@@ -129,9 +129,7 @@ class LoginViewController: UIViewController {
                 self.hideLoadingIndicator()
                 switch result {
                 case .success(let companyDetails):
-                    print("company details: \(companyDetails)")
                     UserDefaults.standard.set(companyDetails.id, forKey: UserDefaultsKeys.companyId.value)
-
                     self.performSegue(withIdentifier: "SignupView", sender: nil)
                 case .failure(let err):
                     print(err.localizedDescription)

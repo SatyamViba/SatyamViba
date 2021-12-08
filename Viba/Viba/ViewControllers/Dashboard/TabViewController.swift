@@ -83,6 +83,7 @@ class TabViewController: UIViewController {
 
     @objc
     private func showInitialTab() {
+        selectedTab = 2
         addChild(to: Tab.clockInOut)
         clockInOutBtn.isSelected = true
     }
@@ -94,7 +95,9 @@ class TabViewController: UIViewController {
         clockInOutBtn.isSelected = (clockInOutBtn.tag == selectedTab)
         profileBtn.isSelected = (profileBtn.tag == selectedTab)
         moreBtn.isSelected = (moreBtn.tag == selectedTab)
-        UserDefaults.standard.set(sender.tag, forKey: UserDefaultsKeys.selectedMenu.value)
+        if moreBtn.tag != selectedTab {
+            UserDefaults.standard.set(sender.tag, forKey: UserDefaultsKeys.selectedMenu.value)
+        }
         
         guard let tab = Tab(rawValue: sender.tag) else {
             return

@@ -41,9 +41,33 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
     @IBOutlet weak var userImage: VibaCircularImage!
 
     let refreshControl = UIRefreshControl()
-    var clockInOutDetails = CheckInOutListPerDayResponse()
+    var clockInOutDetails = CheckInOutListPerDayResponse() {
+        didSet {
+            if clockInOutDetails.count > 0 {
+                if let lastObj = clockInOutDetails.last, lastObj.clockedOutAt != nil {
+                    clockInOutEvent = .clockIn
+                } else {
+                    clockInOutEvent = .clockOut
+                }
+            } else {
+                clockInOutEvent = .clockIn
+            }
+        }
+    }
 
-    private var clockInOutEvent = ClockInOutEvent.clockIn
+    let dispatchGroup = DispatchGroup()
+
+    private var clockInOutEvent = ClockInOutEvent.clockIn {
+        didSet {
+            if clockInOutEvent == .clockIn {
+                clockInOutBtn.setTitle("Clock In", for: .normal)
+                confirmationMessage.text = "Are you ready to Clockin?"
+            } else {
+                clockInOutBtn.setTitle("Clock Out", for: .normal)
+                confirmationMessage.text = "Are you ready to Clock out?"
+            }
+        }
+    }
 
     private var workFromHome = true {
         didSet {
@@ -97,7 +121,36 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
         clockInOutBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: spacing)
         clockInOutBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: 0)
 
+        checkIfUserIsInOffice()
         fetchClockInOutList()
+    }
+
+    private func checkIfUserIsInOffice() {
+//        showLoadingIndicator()
+        Location.manager.fetchLocation { [self] result in
+            switch result {
+            case .success(let location):
+//                showLoadingIndicator()
+                let usrLocation = GeoLocation(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
+                DashboardServices.checkOutsideOrg(data: ClockInOut(geoLocation: usrLocation)) { response in
+                    DispatchQueue.main.async { [self] in
+                        hideLoadingIndicator()
+                        switch response {
+                        case .success(let dataReceived):
+                            workFromHome = dataReceived.outsideOrg
+                        case .failure(let err):
+                            print("### ", err.localizedDescription)
+                            showWarning(message: "Failed to check user location")
+                        }
+                    }
+                }
+            case .failure(let err):
+                print("### Failed to get location: ", err.localizedDescription)
+                DispatchQueue.main.async { [self] in
+                    showWarning(message: "Failed to fetch location")
+                }
+            }
+        }
     }
 
     @objc func refresh(_ sender: AnyObject) {

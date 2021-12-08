@@ -59,7 +59,7 @@ class VerifyViewController: UIViewController {
                 self.hideLoadingIndicator()
                 switch result {
                 case .success(let status):
-                    print("\(status.msg)")
+                    print("### \(status.msg)")
                     guard let dlgt = delegate else {
                         return
                     }
