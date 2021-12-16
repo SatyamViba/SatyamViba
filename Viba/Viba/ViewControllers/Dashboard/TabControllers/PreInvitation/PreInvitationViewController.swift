@@ -11,14 +11,14 @@ import DatePicker
 class PreInvitationViewController: UIViewController {
     private let minDate = DatePickerHelper.shared.dateFrom(day: 01, month: 01, year: 2000)!
 
-    @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var invitationsList: UITableView!
-    @IBOutlet weak var invitationImage: UIImageView!
+    @IBOutlet var addBtn: UIButton!
+    @IBOutlet var invitationsList: UITableView!
+    @IBOutlet var invitationImage: UIImageView!
 
-    @IBOutlet weak var left: UIButton!
-    @IBOutlet weak var selectedDateLabel: UILabel!
-    @IBOutlet weak var calendar: UIButton!
-    @IBOutlet weak var right: UIButton!
+    @IBOutlet var left: UIButton!
+    @IBOutlet var selectedDateLabel: UILabel!
+    @IBOutlet var calendar: UIButton!
+    @IBOutlet var right: UIButton!
 
     var invitations = InvitationListResponse()
     var selectedDate = Date() {
@@ -64,7 +64,8 @@ class PreInvitationViewController: UIViewController {
         fetchInvitations()
     }
 
-    @objc func refresh(_ sender: AnyObject) {
+    @objc
+    func refresh(_ sender: AnyObject) {
        fetchInvitations()
     }
 
@@ -101,7 +102,7 @@ class PreInvitationViewController: UIViewController {
     @IBAction func selectDate(_ sender: Any) {
         // Create picker object
         let datePicker = DatePicker()
-        datePicker.setup(beginWith: Date(), min: minDate, max: Date()) { [self] (selected, date) in
+        datePicker.setup(beginWith: Date(), min: minDate, max: Date()) { [self] selected, date in
             if selected, let seldDate = date {
                 selectedDate = seldDate
                 updatePrevNextOptions()
@@ -135,11 +136,11 @@ class PreInvitationViewController: UIViewController {
 
 extension PreInvitationViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return invitations.count > 0 ? invitations.count : 1
+        return invitations.isEmpty ? invitations.count : 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if invitations.count == 0 {
+        if invitations.isEmpty {
             let cell = tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
             return cell
         }
@@ -161,7 +162,7 @@ extension PreInvitationViewController: UITableViewDataSource, UITableViewDelegat
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if invitations.count == 0 {
+        if invitations.isEmpty {
             return 100
         }
         

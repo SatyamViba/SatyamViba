@@ -11,24 +11,28 @@ import DatePicker
 
 class TimesheetViewController: UIViewController {
     private let minDate = DatePickerHelper.shared.dateFrom(day: 01, month: 01, year: 2000)!
-    @IBOutlet weak var eventList: UITableView!
-    @IBOutlet weak var timesheetImage: UIImageView!
+    @IBOutlet var eventList: UITableView!
+    @IBOutlet var timesheetImage: UIImageView!
 
-    @IBOutlet weak var left: UIButton!
-    @IBOutlet weak var selectedDateLabel: UILabel!
-    @IBOutlet weak var calendar: UIButton!
-    @IBOutlet weak var right: UIButton!
+    @IBOutlet var cinStatus: UILabel!
+    @IBOutlet var coutStatus: UILabel!
+    @IBOutlet var durationStatus: UILabel!
 
-    @IBOutlet weak var wfoImg: VibaCircularImage!
-    @IBOutlet weak var wfoTime: UILabel!
+    @IBOutlet var left: UIButton!
+    @IBOutlet var selectedDateLabel: UILabel!
+    @IBOutlet var calendar: UIButton!
+    @IBOutlet var right: UIButton!
 
-    @IBOutlet weak var wfhImg: VibaCircularImage!
-    @IBOutlet weak var wfhTime: UILabel!
+    @IBOutlet var inImage: VibaCircularImage!
+    @IBOutlet var inTime: UILabel!
 
-    @IBOutlet weak var durationImg: VibaCircularImage!
-    @IBOutlet weak var duration: UILabel!
+    @IBOutlet var outImage: VibaCircularImage!
+    @IBOutlet var outTime: UILabel!
 
-    var clockInOutDetails = CheckInOutListPerDayResponse()
+    @IBOutlet var durationImg: VibaCircularImage!
+    @IBOutlet var duration: UILabel!
+
+    var clockInOutDetails: CheckInOutListPerDayResponse?
     var selectedDate = Date() {
         didSet {
             formatAndShowDate()
@@ -57,8 +61,8 @@ class TimesheetViewController: UIViewController {
         calendar.setImage(calImg, for: .normal)
 
         timesheetImage.image = UIImage.fontAwesomeIcon(name: .userClock, style: .solid, textColor: .white, size: CGSize(width: 16, height: 16))
-        wfoImg.image = UIImage.fontAwesomeIcon(name: .arrowUp, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
-        wfhImg.image = UIImage.fontAwesomeIcon(name: .arrowUp, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
+        inImage.image = UIImage.fontAwesomeIcon(name: .arrowUp, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
+        outImage.image = UIImage.fontAwesomeIcon(name: .arrowDown, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
         durationImg.image = UIImage.fontAwesomeIcon(name: .clock, style: .solid, textColor: .black, size: CGSize(width: 16, height: 16))
 
         formatAndShowDate()
@@ -74,12 +78,28 @@ class TimesheetViewController: UIViewController {
                 case .success(let list):
                     self.clockInOutDetails = list
                     eventList.reloadData()
+                    uploadTodaysStatus()
                 case .failure(let err):
                     print(err.localizedDescription)
                     showWarning(message: err.localizedDescription)
                 }
             }
         }
+    }
+
+    private func uploadTodaysStatus() {
+        guard let status = clockInOutDetails?.checkin else {
+            cinStatus.text = "--"
+            coutStatus.text = "--"
+            durationStatus.text = "0.0"
+            return
+        }
+
+        cinStatus.text = status.mode?.clockin?.rawValue ?? "--"
+        coutStatus.text = status.mode?.clockout?.rawValue ?? "--"
+        inTime.text = status.clockedInAt?.toTimeDisplayFormat ?? "--"
+        outTime.text = status.clockedOutAt?.toTimeDisplayFormat ?? "--"
+        durationStatus.text = status.hours ?? "0.0"
     }
 
     @IBAction func showPreviousDay(_ sender: Any) {
@@ -97,7 +117,7 @@ class TimesheetViewController: UIViewController {
     @IBAction func selectDate(_ sender: Any) {
         // Create picker object
         let datePicker = DatePicker()
-        datePicker.setup(beginWith: Date(), min: minDate, max: Date()) { [self] (selected, date) in
+        datePicker.setup(beginWith: Date(), min: minDate, max: Date()) { [self] selected, date in
             if selected, let seldDate = date {
                 selectedDate = seldDate
                 updatePrevNextOptions()
@@ -131,20 +151,23 @@ class TimesheetViewController: UIViewController {
 
 extension TimesheetViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clockInOutDetails.count > 0 ? clockInOutDetails.count : 1
+        if let cinDetails = clockInOutDetails, !cinDetails.activities.isEmpty {
+            return cinDetails.activities.count
+        }
+
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if clockInOutDetails.count == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
-            return cell
+        guard let cinDetails = clockInOutDetails, !cinDetails.activities.isEmpty else {
+            return tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
         }
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ClockInOutTableViewCell.cellID, for: indexPath) as? ClockInOutTableViewCell else {
             return UITableViewCell()
         }
 
-        cell.render(data: clockInOutDetails[indexPath.row])
+        cell.render(data: cinDetails.activities[indexPath.row])
         return cell
     }
 }

@@ -12,8 +12,8 @@ import Vision
 import VideoToolbox
 
 class FaceTrackingView: UIView {
-    @IBOutlet weak var capturedImageView: UIImageView!
-    @IBOutlet weak var faceCapturingView: UIView!
+    @IBOutlet var capturedImageView: UIImageView!
+    @IBOutlet var faceCapturingView: UIView!
     @IBOutlet var contentView: UIView!
 
     private var sequenceHandler = VNSequenceRequestHandler()
@@ -81,8 +81,8 @@ class FaceTrackingView: UIView {
         connection.videoOrientation = .portrait
     }
 
-    @objc private func detectFace(in image: CVPixelBuffer) {
-
+    @objc
+    private func detectFace(in image: CVPixelBuffer) {
 //        let faceDetectionRequest = VNDetectFaceLandmarksRequest { [self] (request, error) in
 //            if let err = error {
 //                print("Failed to detect face landmark request: \(err.localizedDescription)")
@@ -108,7 +108,7 @@ class FaceTrackingView: UIView {
 //            }
 //        }
 
-        let faceDetectionRequest = VNDetectFaceRectanglesRequest {[self] (request, error) in
+        let faceDetectionRequest = VNDetectFaceRectanglesRequest {[self] request, error in
             if let err = error {
                 print("Failed to detect face rectangles: ", err.localizedDescription)
                 return

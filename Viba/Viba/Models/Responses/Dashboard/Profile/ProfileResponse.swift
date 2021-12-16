@@ -42,11 +42,11 @@ struct ProfileResponse: Decodable {
         self.lastName = try container.decode(String.self, forKey: .lastName)
         self.email = try container.decode(String.self, forKey: .email)
         self.phone = try container.decode(String.self, forKey: .phone)
-        self.dob = try container.decode(String.self, forKey: .dob).toDate
-        self.joined = try container.decode(String.self, forKey: .joined).toDate
-        self.approvedAt = try container.decode(String.self, forKey: .approvedAt).toDate
+        self.dob = try container.decodeIfPresent(String.self, forKey: .dob)?.toDate
+        self.joined = try container.decodeIfPresent(String.self, forKey: .joined)?.toDate
+        self.approvedAt = try container.decodeIfPresent(String.self, forKey: .approvedAt)?.toDate
         self.gender = try container.decode(String.self, forKey: .gender)
-        self.image = try container.decode(String.self, forKey: .image)
+        self.image = try container.decodeIfPresent(String.self, forKey: .image)
         self.customID = try container.decode(String.self, forKey: .customID)
         self.department = try container.decode(String.self, forKey: .department)
         self.profileResponseDescription = try container.decode(String.self, forKey: .profileResponseDescription)

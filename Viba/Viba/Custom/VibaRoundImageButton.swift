@@ -8,16 +8,13 @@
 import UIKit
 
 class VibaRoundImageButton: UIButton {
-
-    @IBInspectable
-    var borderWidth: CGFloat = 0.0 {
+    @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
 
-    @IBInspectable
-    var borderColor: UIColor = .lightGray {
+    @IBInspectable var borderColor: UIColor = .lightGray {
         didSet {
             layer.borderColor = borderColor.cgColor
         }

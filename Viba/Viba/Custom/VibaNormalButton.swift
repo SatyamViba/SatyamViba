@@ -9,8 +9,7 @@ import UIKit
 
 @IBDesignable
 class VibaNormalButton: UIButton {
-    @IBInspectable
-    var fontSize: CGFloat = 15 {
+    @IBInspectable var fontSize: CGFloat = 15 {
         didSet {
             titleLabel?.font = UIFont(name: "Poppins Medium", size: fontSize)
         }

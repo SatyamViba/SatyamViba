@@ -14,13 +14,13 @@ protocol SignupPageViewProtocol: AnyObject {
 }
 
 class SignupViewController: UIViewController {
-    @IBOutlet weak var firstIndicatorWidth: NSLayoutConstraint!
-    @IBOutlet weak var secondIndicatorWidth: NSLayoutConstraint!
-    @IBOutlet weak var thirdIndicatorWidth: NSLayoutConstraint!
+    @IBOutlet var firstIndicatorWidth: NSLayoutConstraint!
+    @IBOutlet var secondIndicatorWidth: NSLayoutConstraint!
+    @IBOutlet var thirdIndicatorWidth: NSLayoutConstraint!
 
-    @IBOutlet weak var firstView: UIView!
-    @IBOutlet weak var secondView: UIView!
-    @IBOutlet weak var thirdView: UIView!
+    @IBOutlet var firstView: UIView!
+    @IBOutlet var secondView: UIView!
+    @IBOutlet var thirdView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,8 @@ class SignupViewController: UIViewController {
         view.addGestureRecognizer(gestrue)
     }
 
-    @objc private func stopEditing() {
+    @objc
+    private func stopEditing() {
         view.endEditing(true)
     }
 
@@ -50,7 +51,7 @@ extension SignupViewController: SignupPageViewProtocol {
         // Create picker object
         let datePicker = DatePicker()
         // Setup
-        datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
+        datePicker.setup(beginWith: today, min: minDate, max: maxDate) { selected, date in
             if selected, let selectedDate = date {
                 handler(selectedDate)
             }

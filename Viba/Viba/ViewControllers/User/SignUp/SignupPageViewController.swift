@@ -8,7 +8,7 @@
 import UIKit
 
 class SignupPageViewController: UIPageViewController {
-    weak var signupDelegate: SignupPageViewProtocol?
+    var signupDelegate: SignupPageViewProtocol?
 
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [
@@ -77,7 +77,6 @@ extension SignupPageViewController: UIPageViewControllerDataSource {
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }

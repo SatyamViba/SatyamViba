@@ -11,14 +11,14 @@ import AVFoundation
 class LoginViewController: UIViewController {
     var authType = AuthType.email
 
-    @IBOutlet weak var userId: VibaTextField!
-    @IBOutlet weak var companyCode: VibaTextField!
+    @IBOutlet var userId: VibaTextField!
+    @IBOutlet var companyCode: VibaTextField!
     var activeTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-        userId.text = "1111111110"
+        userId.text = "9886555469" // "1111111110"
         companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
         UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.selectedMenu.value)
         #endif
@@ -40,7 +40,8 @@ class LoginViewController: UIViewController {
         }
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc
+    func keyboardWillShow(notification: NSNotification) {
         //         self.view.frame.origin.y = -150 // Move view 150 points upward
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             // if keyboard size is not available for some reason, dont do anything
@@ -59,11 +60,13 @@ class LoginViewController: UIViewController {
         }
     }
 
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc
+    func keyboardWillHide(notification: NSNotification) {
          self.view.frame.origin.y = 0 // Move view to original position
     }
 
-    @objc private func stopEditing() {
+    @objc
+    private func stopEditing() {
         view.endEditing(true)
     }
 
@@ -84,7 +87,7 @@ class LoginViewController: UIViewController {
             return
         }
 
-        guard let text = userId.text, text.count > 0 else {
+        guard let text = userId.text, !text.isEmpty else {
             userId.showError()
             return
         }
@@ -118,7 +121,7 @@ class LoginViewController: UIViewController {
 //        self.performSegue(withIdentifier: "SignupView", sender: nil)
 //        return
         
-        guard let code = companyCode.text, code.count > 0 else {
+        guard let code = companyCode.text, !code.isEmptyStr else {
             companyCode.showError()
             return
         }

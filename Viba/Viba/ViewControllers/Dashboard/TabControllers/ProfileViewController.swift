@@ -8,25 +8,25 @@
 import UIKit
 
 class ProfileViewController: UIViewController, VibaImageCache {
-    @IBOutlet weak var userImage: VibaCircularImage!
-    @IBOutlet weak var fullName: UILabel!
-    @IBOutlet weak var designation: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var calImage: VibaCircularImage!
-    @IBOutlet weak var calDate: VibaLabel!
+    @IBOutlet var userImage: VibaCircularImage!
+    @IBOutlet var fullName: UILabel!
+    @IBOutlet var designation: UILabel!
+    @IBOutlet var profileImage: UIImageView!
+    @IBOutlet var calImage: VibaCircularImage!
+    @IBOutlet var calDate: VibaLabel!
 
-    @IBOutlet weak var cakeDate: VibaLabel!
-    @IBOutlet weak var cakeImage: VibaCircularImage!
+    @IBOutlet var cakeDate: VibaLabel!
+    @IBOutlet var cakeImage: VibaCircularImage!
 
-    @IBOutlet weak var phoneNumber: VibaLabel!
-    @IBOutlet weak var phoneImage: VibaCircularImage!
+    @IBOutlet var phoneNumber: VibaLabel!
+    @IBOutlet var phoneImage: VibaCircularImage!
 
-    @IBOutlet weak var email: VibaLabel!
-    @IBOutlet weak var emailImage: VibaCircularImage!
+    @IBOutlet var email: VibaLabel!
+    @IBOutlet var emailImage: VibaCircularImage!
 
-    @IBOutlet weak var companyImage: VibaCircularImage!
-    @IBOutlet weak var company: VibaLabel!
-    @IBOutlet weak var companyId: UILabel!
+    @IBOutlet var companyImage: VibaCircularImage!
+    @IBOutlet var company: VibaLabel!
+    @IBOutlet var companyId: UILabel!
 
     var profile: ProfileResponse?
 
@@ -70,12 +70,19 @@ class ProfileViewController: UIViewController, VibaImageCache {
             return
         }
 
-        if let img = profileToDisplay.image, let imageUrl = URL(string: img) {
-            localImage(forKey: img.sha256, from: imageUrl) {[self] (image, _) in
-                DispatchQueue.main.async { [self] in
-                    userImage.image = image
+        if let img = profileToDisplay.image {
+            Cache.manager.get(from: img) { [self] imageData in
+                if let imageReceived = imageData {
+                    DispatchQueue.main.async {
+                        userImage.image = UIImage(data: imageReceived)
+                    }
                 }
             }
+//            localImage(forKey: img.sha256, from: imageUrl) {[self] (image, _) in
+//                DispatchQueue.main.async { [self] in
+//                    userImage.image = image
+//                }
+//            }
         }
 
         fullName.text = profileToDisplay.fullName

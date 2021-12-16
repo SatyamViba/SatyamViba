@@ -8,10 +8,9 @@
 import UIKit
 
 class NotificationTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var title: VibaLabel!
-    @IBOutlet weak var cellImage: VibaCircularImage!
-    @IBOutlet weak var status: UILabel!
+    @IBOutlet var title: VibaLabel!
+    @IBOutlet var cellImage: VibaCircularImage!
+    @IBOutlet var status: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

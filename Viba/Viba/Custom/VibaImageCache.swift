@@ -22,17 +22,16 @@ protocol VibaImageCache {
     /**
      Folder name. Defaults to "ImageCacheable" unless dedicated cache object declares new name
      */
-    var imageFolderName: String? {get}
+    var imageFolderName: String? { get }
 
     /**
      Cache object, only initialized by the conforming object if calling
      inMemoryImage(forKey:from:completion:)
      */
-    var inMemoryImageCache: NSCache<AnyObject, UIImage>? {get}
+    var inMemoryImageCache: NSCache<AnyObject, UIImage>? { get }
 }
 
 extension VibaImageCache {
-
     // both properties have default values initialized on get
     var imageFolderName: String? { return "ImageCacheable" }
     var inMemoryImageCache: NSCache<AnyObject, UIImage>? { return NSCache<AnyObject, UIImage>() }
@@ -63,7 +62,7 @@ extension VibaImageCache {
         if let cachedImage = inMemoryImageCache.object(forKey: key as AnyObject) {
             completion(cachedImage, key)
         } else {
-            fetchImage(from: url, saveTo: nil, completion: { (image) in
+            fetchImage(from: url, saveTo: nil, completion: { image in
                 if let image = image {
                     inMemoryImageCache.setObject(image, forKey: key as AnyObject)
                 }
@@ -79,27 +78,25 @@ extension VibaImageCache {
                             saveTo localURL: URL?,
                             session: URLSession = URLSession.shared,
                             completion:@escaping ((UIImage?) -> Void)) {
-
-        session.dataTask(with: url) { (imageData, _, error) in
+        session.dataTask(with: url) { imageData, _, error in
             do {
                 guard
                     let imageData = imageData,
                     let image = UIImage(data: imageData)
-                    else {
-                        completion(nil)
-                        return
+                else {
+                    completion(nil)
+                    return
                 }
 
                 if let localURL = localURL {
                     try imageData.write(to: localURL, options: .atomic)
                 }
                 completion(image)
-
             } catch {
                 debugPrint(error.localizedDescription)
                 completion(nil)
             }
-            }.resume()
+        }.resume()
     }
 
     // MARK: - Cache Management
@@ -108,7 +105,6 @@ extension VibaImageCache {
      Deletes the image files on disk
      */
     internal func clearLocalCache(success: (Bool) -> Void) {
-
         let fileManager = FileManager.default
         let imageDirectory = imageDirectoryURL()
 
@@ -129,7 +125,6 @@ extension VibaImageCache {
      Clears the in memory image cache
      */
     internal func clearInMemoryCache(success: (Bool) -> Void) {
-
         guard let inMemoryImageCache = inMemoryImageCache else {
             success(false)
             return
@@ -142,7 +137,6 @@ extension VibaImageCache {
     // MARK: - File Management
 
     internal func fileExtension(for url: URL) -> String? {
-
         let components = URLComponents(url: url, resolvingAgainstBaseURL: true)
         guard let fileExtension = components?.url?.pathComponents.last?.components(separatedBy: ".").last else {
             return nil
@@ -159,7 +153,6 @@ extension VibaImageCache {
      Returns the image folder directory
      */
     internal func imageDirectoryURL() -> URL {
-
         guard let imageFolderName = imageFolderName else {
             fatalError("ERROR: Image Folder Name must be set in order to use local file storage image cache")
         }
@@ -177,7 +170,6 @@ extension VibaImageCache {
             do {
                 try FileManager.default.createDirectory(atPath: imageFolderPath.path, withIntermediateDirectories: true, attributes: nil)
             } catch {
-
                 debugPrint(error.localizedDescription)
             }
         }

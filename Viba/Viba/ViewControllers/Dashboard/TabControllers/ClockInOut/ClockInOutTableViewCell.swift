@@ -10,21 +10,21 @@ import UIKit
 class ClockInOutTableViewCell: UITableViewCell {
     static let cellID = "ClockInOutCell"
 
-    @IBOutlet weak var clockInSymbol: VibaCircularImage!
-    @IBOutlet weak var clockOutSymbol: VibaCircularImage!
+    @IBOutlet var clockInSymbol: VibaCircularImage!
+    @IBOutlet var clockOutSymbol: VibaCircularImage!
 
-    @IBOutlet weak var clockInTimeImg: UIImageView!
-    @IBOutlet weak var clockInTime: UILabel!
-    @IBOutlet weak var clockOutTimeImg: UIImageView!
-    @IBOutlet weak var clockOutTime: UILabel!
+    @IBOutlet var clockInTimeImg: UIImageView!
+    @IBOutlet var clockInTime: UILabel!
+    @IBOutlet var clockOutTimeImg: UIImageView!
+    @IBOutlet var clockOutTime: UILabel!
 
-    @IBOutlet weak var tempImg: UIImageView!
-    @IBOutlet weak var temperature: UILabel!
+    @IBOutlet var tempImg: UIImageView!
+    @IBOutlet var temperature: UILabel!
 
-    @IBOutlet weak var clockInWorkLocationImg: UIImageView!
-    @IBOutlet weak var clockInWorkLocationName: UILabel!
-    @IBOutlet weak var clockOutWorkLocationImg: UIImageView!
-    @IBOutlet weak var clockOutWorkLocationName: UILabel!
+    @IBOutlet var clockInWorkLocationImg: UIImageView!
+    @IBOutlet var clockInWorkLocationName: UILabel!
+    @IBOutlet var clockOutWorkLocationImg: UIImageView!
+    @IBOutlet var clockOutWorkLocationName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,7 +51,7 @@ class ClockInOutTableViewCell: UITableViewCell {
         clockOutWorkLocationName.text = "-"
     }
 
-    func render(data: CheckInOutListPerDayElement) {
+    func render(data: Activity) {
         print(data)
         guard let clockedIn = data.clockedInAt, let mode = data.mode, let cinMode = mode.clockin else {
             return

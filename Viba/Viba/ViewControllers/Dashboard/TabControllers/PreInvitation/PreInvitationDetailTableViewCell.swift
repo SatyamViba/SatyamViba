@@ -10,15 +10,16 @@ import UIKit
 class PreInvitationDetailTableViewCell: UITableViewCell {
     static let cellId = "PreInvitationDetailTableViewCell"
 
-    @IBOutlet weak var picture: VibaCircularImage!
-    @IBOutlet weak var name: VibaLabel!
-    @IBOutlet weak var details: UILabel!
+    @IBOutlet var picture: VibaCircularImage!
+    @IBOutlet var name: VibaLabel!
+    @IBOutlet var details: UILabel!
 
-    @IBOutlet weak var clockOutTime: UILabel!
-    @IBOutlet weak var clockInTime: UILabel!
-    @IBOutlet weak var temperature: UILabel!
+    @IBOutlet var clockOutTime: UILabel!
+    @IBOutlet var clockInTime: UILabel!
+    @IBOutlet var temperature: UILabel!
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         picture.image = UIImage(named: "pic_holder")
         name.text = "-"
         details.text = "-"

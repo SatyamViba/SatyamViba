@@ -9,22 +9,19 @@ import UIKit
 
 @IBDesignable
 class VibaRoundCornerView: UIView {
-    @IBInspectable
-    var cornerRadius: CGFloat = 3.0 {
+    @IBInspectable var cornerRadius: CGFloat = 3.0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
 
-    @IBInspectable
-    var borderWidth: CGFloat = 0.0 {
+    @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
 
-    @IBInspectable
-    var borderColor: UIColor = Colors.lightLabelColor.value {
+    @IBInspectable var borderColor: UIColor = Colors.lightLabelColor.value {
         didSet {
             layer.borderColor = borderColor.cgColor
         }

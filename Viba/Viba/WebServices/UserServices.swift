@@ -41,7 +41,6 @@ class UserServices {
 
     private static func validateEmailOTP(otp: String, email: String, onCompletion handler: @escaping ((Result<LoginOTPResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.validateEmailOtp.rawValue, params: ValidateEmailOtp(email: email, emailOtp: otp), methodType: .post, completion: handler)
-
     }
 
     // MARK: - Sign Up

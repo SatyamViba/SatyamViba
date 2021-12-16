@@ -10,11 +10,12 @@ import UIKit
 class PreInvitationTableViewCell: UITableViewCell, VibaImageCache {
     static let cellId = "PreInvitationTableViewCell"
 
-    @IBOutlet weak var picture: VibaCircularImage!
-    @IBOutlet weak var name: VibaLabel!
-    @IBOutlet weak var details: UILabel!
+    @IBOutlet var picture: VibaCircularImage!
+    @IBOutlet var name: VibaLabel!
+    @IBOutlet var details: UILabel!
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         picture.image = UIImage(named: "pic_holder")
         name.text = "-"
         details.text = "-"

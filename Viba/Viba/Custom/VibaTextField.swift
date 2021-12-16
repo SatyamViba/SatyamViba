@@ -86,13 +86,12 @@ public class VibaTextField: UITextField {
         }
     }
 
-    @IBInspectable
-    public var errorMessage: String = "" {
+    @IBInspectable public var errorMessage: String = "" {
         didSet { lblError.text = errorMessage }
     }
 
     public var animateFloatPlaceholder: Bool = true
-    public var hideErrorWhenEditing: Bool   = true
+    public var hideErrorWhenEditing: Bool = true
 
     public var errorFont = UIFont(name: "Poppins Medium", size: 10) {
         didSet {
@@ -140,7 +139,9 @@ public class VibaTextField: UITextField {
 
     public var placeholderColor: UIColor? {
         didSet {
-            guard let color = placeholderColor else { return }
+            guard let color = placeholderColor else {
+                return
+            }
             attributedPlaceholder = NSAttributedString(string: placeholderFinal,
                                                        attributes: [NSAttributedString.Key.foregroundColor: color])
         }
@@ -177,7 +178,9 @@ public class VibaTextField: UITextField {
     }
 
     fileprivate var placeholderFinal: String {
-        if let attributed = attributedPlaceholder { return attributed.string }
+        if let attributed = attributedPlaceholder {
+            return attributed.string
+        }
         return placeholder ?? " "
     }
 
@@ -185,20 +188,26 @@ public class VibaTextField: UITextField {
 
     fileprivate var showErrorLabel: Bool = false {
         didSet {
-            guard showErrorLabel != oldValue else { return }
+            guard showErrorLabel != oldValue else {
+                return
+            }
             guard showErrorLabel else {
                 hideErrorMessage()
                 return
             }
 
-            guard !errorMessage.isEmptyStr else { return }
+            guard !errorMessage.isEmptyStr else {
+                return
+            }
             showErrorMessage()
         }
     }
 
     override public var borderStyle: UITextField.BorderStyle {
         didSet {
-            guard borderStyle != oldValue else { return }
+            guard borderStyle != oldValue else {
+                return
+            }
             borderStyle = .none
         }
     }
@@ -246,21 +255,21 @@ public class VibaTextField: UITextField {
     }
 
     fileprivate func commonInit() {
-        dtborderStyle               = .rounded
-        dtLayer.backgroundColor     = UIColor.white.cgColor
-        floatPlaceholderColor       = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
+        dtborderStyle = .rounded
+        dtLayer.backgroundColor = UIColor.white.cgColor
+        floatPlaceholderColor = UIColor(red: 204.0 / 255.0, green: 204.0 / 255.0, blue: 204.0 / 255.0, alpha: 1.0)
         floatPlaceholderActiveColor = tintColor
-        lblFloatPlaceholder.frame   = CGRect.zero
-        lblFloatPlaceholder.alpha   = 0.0
-        lblFloatPlaceholder.font    = floatPlaceholderFont
-        lblFloatPlaceholder.text    = placeholderFinal
+        lblFloatPlaceholder.frame = CGRect.zero
+        lblFloatPlaceholder.alpha = 0.0
+        lblFloatPlaceholder.font = floatPlaceholderFont
+        lblFloatPlaceholder.text = placeholderFinal
         addSubview(lblFloatPlaceholder)
 
-        lblError.frame              = CGRect.zero
-        lblError.font               = errorFont
-        lblError.textColor          = UIColor.red
-        lblError.numberOfLines      = 0
-        lblError.isHidden           = true
+        lblError.frame = CGRect.zero
+        lblError.font = errorFont
+        lblError.textColor = UIColor.red
+        lblError.numberOfLines = 0
+        lblError.isHidden = true
         addTarget(self, action: #selector(textFieldTextChanged), for: .editingChanged)
         addSubview(lblError)
 
@@ -288,7 +297,6 @@ public class VibaTextField: UITextField {
         } else if textAlignment == .center {
             newFrame.origin.x = (bounds.width / 2.0) - (newFrame.size.width / 2.0)
         } else if textAlignment == .natural {
-
             if UIView.userInterfaceLayoutDirection(for: semanticContentAttribute) == .rightToLeft {
                 newFrame.origin.x = bounds.width - paddingX - newFrame.size.width
             }
@@ -370,7 +378,9 @@ public class VibaTextField: UITextField {
 
     fileprivate func insetRectForEmptyBounds(rect: CGRect) -> CGRect {
         let newX = xVal
-        guard showErrorLabel else { return CGRect(x: newX, y: 0, width: rect.width - newX - paddingX, height: rect.height) }
+        guard showErrorLabel else {
+            return CGRect(x: newX, y: 0, width: rect.width - newX - paddingX, height: rect.height)
+        }
 
         let topInset = (rect.size.height - lblError.bounds.size.height - paddingYErrorLabel - fontHeight) / 2.0
         let textY = topInset - ((rect.height - fontHeight) / 2.0)
@@ -385,7 +395,6 @@ public class VibaTextField: UITextField {
         if floatingDisplayStatus == .never {
             return insetRectForEmptyBounds(rect: rect)
         } else {
-
             if let text = text, text.isEmptyStr && floatingDisplayStatus == .defaults {
                 return insetRectForEmptyBounds(rect: rect)
             } else {
@@ -400,8 +409,11 @@ public class VibaTextField: UITextField {
         }
     }
 
-    @objc fileprivate func textFieldTextChanged() {
-        guard hideErrorWhenEditing && showErrorLabel else { return }
+    @objc
+    fileprivate func textFieldTextChanged() {
+        guard hideErrorWhenEditing && showErrorLabel else {
+            return
+        }
         showErrorLabel = false
     }
 

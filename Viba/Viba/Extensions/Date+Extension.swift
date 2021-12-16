@@ -9,7 +9,7 @@ import Foundation
 
 extension Date {
     func subtract(years: Int) -> Date {
-        guard let result =  Calendar.current.date(byAdding: .year, value: -(years), to: self) else {
+        guard let result = Calendar.current.date(byAdding: .year, value: -(years), to: self) else {
             return self
         }
         
@@ -17,7 +17,7 @@ extension Date {
     }
 
     func add(days: Int) -> Date {
-        guard let result =  Calendar.current.date(byAdding: .day, value: days, to: self) else {
+        guard let result = Calendar.current.date(byAdding: .day, value: days, to: self) else {
             return self
         }
 
@@ -25,7 +25,7 @@ extension Date {
     }
 
     func subtract(days: Int) -> Date {
-        guard let result =  Calendar.current.date(byAdding: .day, value: -(days), to: self) else {
+        guard let result = Calendar.current.date(byAdding: .day, value: -(days), to: self) else {
             return self
         }
 

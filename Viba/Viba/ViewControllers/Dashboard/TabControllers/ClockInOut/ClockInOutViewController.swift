@@ -24,27 +24,27 @@ enum ClockInOutEvent {
 }
 
 class ClockInOutViewController: UIViewController, VibaImageCache {
-    @IBOutlet weak var eventList: UITableView!
-    @IBOutlet weak var leadingSpace: NSLayoutConstraint!
-    @IBOutlet weak var trailingSpace: NSLayoutConstraint!
-    @IBOutlet weak var wishes: UILabel!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var dateAndTime: UILabel!
-    @IBOutlet weak var message: UILabel!
-    @IBOutlet weak var office: VibaRoundImageButton!
-    @IBOutlet weak var home: VibaRoundImageButton!
-    @IBOutlet weak var confirmationView: VibaRoundCornerView!
-    @IBOutlet weak var selectionView: VibaRoundCornerView!
-    @IBOutlet weak var clockInAtOffice: UILabel!
-    @IBOutlet weak var clockInOutBtn: VibaButton!
-    @IBOutlet weak var confirmationMessage: UILabel!
-    @IBOutlet weak var userImage: VibaCircularImage!
+    @IBOutlet var eventList: UITableView!
+    @IBOutlet var leadingSpace: NSLayoutConstraint!
+    @IBOutlet var trailingSpace: NSLayoutConstraint!
+    @IBOutlet var wishes: UILabel!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var dateAndTime: UILabel!
+    @IBOutlet var message: UILabel!
+    @IBOutlet var office: VibaRoundImageButton!
+    @IBOutlet var home: VibaRoundImageButton!
+    @IBOutlet var confirmationView: VibaRoundCornerView!
+    @IBOutlet var selectionView: VibaRoundCornerView!
+    @IBOutlet var clockInAtOffice: UILabel!
+    @IBOutlet var clockInOutBtn: VibaButton!
+    @IBOutlet var confirmationMessage: UILabel!
+    @IBOutlet var userImage: VibaCircularImage!
 
     let refreshControl = UIRefreshControl()
-    var clockInOutDetails = CheckInOutListPerDayResponse() {
+    var clockInOutDetails: CheckInOutListPerDayResponse? {
         didSet {
-            if clockInOutDetails.count > 0 {
-                if let lastObj = clockInOutDetails.last, lastObj.clockedOutAt != nil {
+            if let cinDetails = clockInOutDetails, !cinDetails.activities.isEmpty {
+                if let lastObj = cinDetails.activities.last, lastObj.clockedOutAt != nil {
                     clockInOutEvent = .clockIn
                 } else {
                     clockInOutEvent = .clockOut
@@ -84,7 +84,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
 
         name.text = DataManager.shared.fullName
         if let img = DataManager.shared.usrImage, let imageUrl = URL(string: img) {
-            localImage(forKey: img.sha256, from: imageUrl) {[self] (image, _) in
+            localImage(forKey: img.sha256, from: imageUrl) {[self] image, _ in
                 DispatchQueue.main.async { [self] in
                     userImage.image = image
                 }
@@ -153,7 +153,8 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
         }
     }
 
-    @objc func refresh(_ sender: AnyObject) {
+    @objc
+    func refresh(_ sender: AnyObject) {
        fetchClockInOutList()
     }
 
@@ -241,7 +242,6 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                             showWarning(message: "Failed to post data")
                         }
                     }
-
                 }
             case .failure(let err):
                 print("### Failed to get location: ", err.localizedDescription)
@@ -259,19 +259,22 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
 
 extension ClockInOutViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clockInOutDetails.count > 0 ? clockInOutDetails.count : 1
+        if let cinDetails = clockInOutDetails, !cinDetails.activities.isEmpty {
+            return cinDetails.activities.count
+        }
+
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if clockInOutDetails.count == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
-            return cell
+        guard let cinDetails = clockInOutDetails, !cinDetails.activities.isEmpty else {
+            return tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
         }
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ClockInOutTableViewCell.cellID, for: indexPath) as? ClockInOutTableViewCell else {
             return UITableViewCell()
         }
-        cell.render(data: clockInOutDetails[indexPath.row])
+        cell.render(data: cinDetails.activities[indexPath.row])
         return cell
     }
 }

@@ -15,7 +15,8 @@ extension UIViewController {
         IGPStartLoading(config: IGProgress.config)
     }
 
-    @objc func hideLoadingIndicator() {
+    @objc
+    func hideLoadingIndicator() {
         DispatchQueue.main.async { [self] in
             IGPFinishLoading()
         }

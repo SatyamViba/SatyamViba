@@ -18,7 +18,6 @@ enum Tab: Int {
 
     var viewId: String {
         switch self {
-
         case .dashboard:
             return "DashboardView"
         case .timesheet:
@@ -53,13 +52,13 @@ class TabViewController: UIViewController {
     var dismissTransition: UIViewControllerAnimatedTransitioning?
     var menuViewController: MenuViewController?
 
-    @IBOutlet weak var container: UIView!
+    @IBOutlet var container: UIView!
 
-    @IBOutlet weak var moreBtn: VibaTabButton!
-    @IBOutlet weak var profileBtn: VibaTabButton!
-    @IBOutlet weak var clockInOutBtn: VibaTabButton!
-    @IBOutlet weak var timesheetBtn: VibaTabButton!
-    @IBOutlet weak var dashboardBtn: VibaTabButton!
+    @IBOutlet var moreBtn: VibaTabButton!
+    @IBOutlet var profileBtn: VibaTabButton!
+    @IBOutlet var clockInOutBtn: VibaTabButton!
+    @IBOutlet var timesheetBtn: VibaTabButton!
+    @IBOutlet var dashboardBtn: VibaTabButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

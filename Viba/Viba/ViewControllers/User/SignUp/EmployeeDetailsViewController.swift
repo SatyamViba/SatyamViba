@@ -8,15 +8,15 @@
 import UIKit
 
 class EmployeeDetailsViewController: UIViewController {
-    weak var delegate: SignupProtocol?
+    var delegate: SignupProtocol?
     
-    @IBOutlet weak var firstName: VibaTextField!
-    @IBOutlet weak var lastName: VibaTextField!
-    @IBOutlet weak var dob: VibaTextField!
-    @IBOutlet weak var email: VibaTextField!
-    @IBOutlet weak var phone: VibaTextField!
-    @IBOutlet weak var calendar: UIButton!
-    @IBOutlet weak var genderError: UILabel!
+    @IBOutlet var firstName: VibaTextField!
+    @IBOutlet var lastName: VibaTextField!
+    @IBOutlet var dob: VibaTextField!
+    @IBOutlet var email: VibaTextField!
+    @IBOutlet var phone: VibaTextField!
+    @IBOutlet var calendar: UIButton!
+    @IBOutlet var genderError: UILabel!
 
     var selectedDate = Date()
     var activeTextField: UITextField?
@@ -32,7 +32,8 @@ class EmployeeDetailsViewController: UIViewController {
         calendar.setImage(img, for: .normal)
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc
+    func keyboardWillShow(notification: NSNotification) {
         //         self.view.frame.origin.y = -150 // Move view 150 points upward
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             // if keyboard size is not available for some reason, dont do anything
@@ -51,7 +52,8 @@ class EmployeeDetailsViewController: UIViewController {
         }
     }
 
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc
+    func keyboardWillHide(notification: NSNotification) {
          self.view.frame.origin.y = 0 // Move view to original position
     }
 
@@ -63,17 +65,17 @@ class EmployeeDetailsViewController: UIViewController {
 //        dlgt.didFinish(screen: .employeeDetails)
 //        return
 
-        guard let fName = firstName.text, fName.count > 0 else {
+        guard let fName = firstName.text, !fName.isEmptyStr else {
             firstName.showError()
             return
         }
 
-        guard let lName = lastName.text, lName.count > 0 else {
+        guard let lName = lastName.text, !lName.isEmptyStr else {
             lastName.showError()
             return
         }
 
-        guard let birthDay = dob.text, birthDay.count > 0 else {
+        guard let birthDay = dob.text, !birthDay.isEmpty else {
             dob.showError()
             return
         }
@@ -88,7 +90,7 @@ class EmployeeDetailsViewController: UIViewController {
             return
         }
 
-        if gender.count == 0 {
+        if gender.isEmpty {
             genderError.isHidden = false
             return
         }

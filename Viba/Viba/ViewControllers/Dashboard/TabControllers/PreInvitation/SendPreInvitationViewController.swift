@@ -9,19 +9,18 @@ import UIKit
 import DatePicker
 
 class SendPreInvitationViewController: UIViewController {
+    @IBOutlet var backBtn: UIButton!
+    @IBOutlet var invitationImage: UIImageView!
 
-    @IBOutlet weak var backBtn: UIButton!
-    @IBOutlet weak var invitationImage: UIImageView!
+    @IBOutlet var fullName: VibaTextField!
+    @IBOutlet var email: VibaTextField!
+    @IBOutlet var phoneNumber: VibaTextField!
+    @IBOutlet var invitationType: UISegmentedControl!
+    @IBOutlet var appointmentDate: VibaTextField!
+    @IBOutlet var calendar: UIButton!
 
-    @IBOutlet weak var fullName: VibaTextField!
-    @IBOutlet weak var email: VibaTextField!
-    @IBOutlet weak var phoneNumber: VibaTextField!
-    @IBOutlet weak var invitationType: UISegmentedControl!
-    @IBOutlet weak var appointmentDate: VibaTextField!
-    @IBOutlet weak var calendar: UIButton!
-
-    @IBOutlet weak var endTime: UIDatePicker!
-    @IBOutlet weak var startTime: UIDatePicker!
+    @IBOutlet var endTime: UIDatePicker!
+    @IBOutlet var startTime: UIDatePicker!
     var activeTextField: UITextField?
     var selectedDate = Date()
 
@@ -50,11 +49,13 @@ class SendPreInvitationViewController: UIViewController {
         }
     }
 
-    @objc func changedStartTime() {
+    @objc
+    func changedStartTime() {
         endTime.minimumDate = startTime.date
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc
+    func keyboardWillShow(notification: NSNotification) {
         //         self.view.frame.origin.y = -150 // Move view 150 points upward
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             // if keyboard size is not available for some reason, dont do anything
@@ -73,11 +74,13 @@ class SendPreInvitationViewController: UIViewController {
         }
     }
 
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc
+    func keyboardWillHide(notification: NSNotification) {
          self.view.frame.origin.y = 0 // Move view to original position
     }
 
-    @objc private func stopEditing() {
+    @objc
+    private func stopEditing() {
         view.endEditing(true)
     }
     
@@ -90,7 +93,7 @@ class SendPreInvitationViewController: UIViewController {
     @IBAction func submitInvitatioon(_ sender: Any) {
         view.endEditing(true)
 
-        guard let fName = fullName.text, fName.count > 0 else {
+        guard let fName = fullName.text, !fName.isEmptyStr else {
             fullName.showError()
             return
         }
@@ -105,7 +108,7 @@ class SendPreInvitationViewController: UIViewController {
             return
         }
 
-        guard let appntDate = appointmentDate.text, appntDate.count > 0 else {
+        guard let appntDate = appointmentDate.text, !appntDate.isEmpty else {
             appointmentDate.showError()
             return
         }
@@ -135,7 +138,7 @@ class SendPreInvitationViewController: UIViewController {
 
         let correctedPhone = "91" + phn
         showLoadingIndicator()
-        let createEvent =  CreateInvitation(name: fName, email: eml, phone: correctedPhone, purpose: purpose, start: stTime, end: eTime)
+        let createEvent = CreateInvitation(name: fName, email: eml, phone: correctedPhone, purpose: purpose, start: stTime, end: eTime)
         DashboardServices.createInvitation(event: createEvent) { response in
             DispatchQueue.main.async { [self] in
                 hideLoadingIndicator()
@@ -160,7 +163,7 @@ class SendPreInvitationViewController: UIViewController {
         // Create picker object
         let datePicker = DatePicker()
         // Setup
-        datePicker.setup(beginWith: today, min: today, max: maxDate) { (selected, date) in
+        datePicker.setup(beginWith: today, min: today, max: maxDate) { selected, date in
             if selected, let selectedDate = date {
                 self.selectedDate = selectedDate
                 let formatter = DateFormatter()

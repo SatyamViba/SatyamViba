@@ -9,9 +9,8 @@ import UIKit
 import AVFoundation
 
 class PermissionViewController: UIViewController {
-
-    @IBOutlet weak var locationPermissionStatus: VibaSwitch!
-    @IBOutlet weak var cameraPermissionStatus: VibaSwitch!
+    @IBOutlet var locationPermissionStatus: VibaSwitch!
+    @IBOutlet var cameraPermissionStatus: VibaSwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()

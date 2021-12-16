@@ -23,12 +23,12 @@ struct InvitationListResponseElement: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        self.id = try container.decode(String.self, forKey: .id)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.phone = try container.decode(String.self, forKey: .phone)
-        self.purpose = try container.decode(String.self, forKey: .purpose)
-        self.start = try container.decode(String.self, forKey: .start).toDate
-        self.end = try container.decode(String.self, forKey: .end).toDate
+        self.id = try container.decodeIfPresent(String.self, forKey: .id)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        self.phone = try container.decodeIfPresent(String.self, forKey: .phone)
+        self.purpose = try container.decodeIfPresent(String.self, forKey: .purpose)
+        self.start = try container.decodeIfPresent(String.self, forKey: .start)?.toDate
+        self.end = try container.decodeIfPresent(String.self, forKey: .end)?.toDate
         self.image = try container.decodeIfPresent(String.self, forKey: .image)
         self.clockin = try container.decodeIfPresent(ClockinObj.self, forKey: .clockin)
     }
@@ -50,9 +50,9 @@ struct ClockinObj: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        self.id = try container.decode(String.self, forKey: .id)
-        self.clockedInAt = try container.decode(String.self, forKey: .clockedInAt).toDate
-        self.clockedOutAt = try container.decode(String.self, forKey: .clockedOutAt).toDate
+        self.id = try container.decodeIfPresent(String.self, forKey: .id)
+        self.clockedInAt = try container.decodeIfPresent(String.self, forKey: .clockedInAt)?.toDate
+        self.clockedOutAt = try container.decodeIfPresent(String.self, forKey: .clockedOutAt)?.toDate
         self.temperature = try container.decodeIfPresent(Temperature.self, forKey: .temperature)
     }
 }

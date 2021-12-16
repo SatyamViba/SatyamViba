@@ -70,7 +70,7 @@ class NetworkManager {
 
             print("### Placing request with url: \(String(describing: apiRequest.url?.absoluteString))")
 
-            session.dataTask(with: apiRequest as URLRequest, completionHandler: {(data, response, error) -> Void in
+            session.dataTask(with: apiRequest as URLRequest, completionHandler: { data, response, error in
                 guard let httpResponse = response as? HTTPURLResponse, let rcvdData = data else {
                     let userInfo: [String: Any] = self.createUserInfo("Connectivity issue", failureReason: "No Network")
                     let err = NSError(domain: self.kDomain, code: ErrorCode.noNetwork.rawValue, userInfo: userInfo)
@@ -93,7 +93,6 @@ class NetworkManager {
                     connectionCompletion(.failure(self.handleError(statusCode: httpResponse.statusCode, errorData: rcvdData)))
                 }
             }).resume()
-
         } else {
             let userInfo: [String: Any] = self.createUserInfo("No Network availale", failureReason: "No Network")
             let error = NSError(domain: self.kDomain, code: ErrorCode.noNetwork.rawValue, userInfo: userInfo)
@@ -137,7 +136,6 @@ class NetworkManager {
     }
 
     private func createUserInfo(_ descriptionKey: String!, failureReason: String!) -> [String: Any] {
-
         return  [
             NSLocalizedDescriptionKey: NSLocalizedString(descriptionKey, comment: failureReason) ,
             NSLocalizedFailureReasonErrorKey: NSLocalizedString(descriptionKey, comment: failureReason)
@@ -152,8 +150,7 @@ class NetworkManager {
                 apiRequest.setValue(token, forHTTPHeaderField: kToken)
             }
 
-            let downloadTask = session.downloadTask(with: apiRequest, completionHandler: {[urlString] (location, response, err) in
-
+            let downloadTask = session.downloadTask(with: apiRequest, completionHandler: {[urlString] location, response, err in
                 if let httpResponse: HTTPURLResponse = response as? HTTPURLResponse {
                     print(httpResponse.statusCode)
                     if httpResponse.statusCode == 200 {
@@ -211,7 +208,7 @@ class NetworkManager {
 
             let session = URLSession.shared
 
-            let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+            let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
                 if let httpResponse: HTTPURLResponse = response as? HTTPURLResponse {
                     switch httpResponse.statusCode {
                     case 201:

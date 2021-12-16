@@ -31,8 +31,10 @@ enum ReachabilityType: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .wwan: return "WWAN"
-        case .wiFi: return "WiFi"
+        case .wwan:
+            return "WWAN"
+        case .wiFi:
+            return "WiFi"
         }
     }
 }
@@ -44,15 +46,17 @@ enum ReachabilityStatus: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .offline: return "Offline"
-        case .online(let type): return "Online (\(type))"
-        case .unknown: return "Unknown"
+        case .offline:
+            return "Offline"
+        case .online(let type):
+            return "Online (\(type))"
+        case .unknown:
+            return "Unknown"
         }
     }
 }
 
 open class Reach {
-    
     func connectionStatus() -> ReachabilityStatus {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
@@ -79,20 +83,18 @@ open class Reach {
         var context = SCNetworkReachabilityContext(version: 0, info: nil, retain: nil, release: nil, copyDescription: nil)
         let reachability = SCNetworkReachabilityCreateWithName(nil, host)!
         
-        SCNetworkReachabilitySetCallback(reachability, { (_, flags, _) in
+        SCNetworkReachabilitySetCallback(reachability, { _, flags, _ in
             let status = ReachabilityStatus(reachabilityFlags: flags)
             
             NotificationCenter.default.post(name: Notification.Name(rawValue: reachabilityStatusChangedNotification),
-                object: nil,
-                userInfo: ["Status": status.description])
-            
-            }, &context)
+                                            object: nil,
+                                            userInfo: ["Status": status.description])
+        }, &context)
         
         SCNetworkReachabilityScheduleWithRunLoop(reachability, CFRunLoopGetMain(), CFRunLoopMode.commonModes.rawValue)
     }
     
     func isNetworkReachable() -> Bool {
-        
         let status = connectionStatus()
         
         switch status {

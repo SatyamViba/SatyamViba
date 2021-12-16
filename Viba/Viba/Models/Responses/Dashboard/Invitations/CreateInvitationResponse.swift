@@ -29,17 +29,17 @@ struct CreateInvitationResponse: Decodable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.cancelled = try container.decode(Bool.self, forKey: .cancelled)
+        self.cancelled = try container.decodeIfPresent(Bool.self, forKey: .cancelled)
         self.visitorID = try container.decodeIfPresent(String.self, forKey: .visitorID)
-        self.id = try container.decode(String.self, forKey: .id)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.email = try container.decode(String.self, forKey: .email)
-        self.phone = try container.decode(String.self, forKey: .phone)
-        self.purpose = try container.decode(String.self, forKey: .purpose)
-        self.createdBy = try container.decode(String.self, forKey: .createdBy)
-        self.versionID = try container.decode(String.self, forKey: .versionID)
-        self.qrCode = try container.decode(String.self, forKey: .qrCode)
-        self.start = try container.decode(String.self, forKey: .start).toDate
-        self.end = try container.decode(String.self, forKey: .end).toDate
+        self.id = try container.decodeIfPresent(String.self, forKey: .id)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        self.email = try container.decodeIfPresent(String.self, forKey: .email)
+        self.phone = try container.decodeIfPresent(String.self, forKey: .phone)
+        self.purpose = try container.decodeIfPresent(String.self, forKey: .purpose)
+        self.createdBy = try container.decodeIfPresent(String.self, forKey: .createdBy)
+        self.versionID = try container.decodeIfPresent(String.self, forKey: .versionID)
+        self.qrCode = try container.decodeIfPresent(String.self, forKey: .qrCode)
+        self.start = try container.decodeIfPresent(String.self, forKey: .start)?.toDate
+        self.end = try container.decodeIfPresent(String.self, forKey: .end)?.toDate
     }
 }

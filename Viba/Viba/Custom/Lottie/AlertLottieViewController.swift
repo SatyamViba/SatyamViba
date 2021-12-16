@@ -13,8 +13,8 @@ class AlertLottieViewController: UIViewController {
     private var animationView: AnimationView?
     public var config: IGConfig?
     
-    @IBOutlet weak var content: UIView!
-    @IBOutlet weak var sms: UILabel!
+    @IBOutlet var content: UIView!
+    @IBOutlet var sms: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

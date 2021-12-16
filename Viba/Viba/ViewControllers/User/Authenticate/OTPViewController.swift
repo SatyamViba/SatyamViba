@@ -21,9 +21,9 @@ class OTPViewController: UIViewController {
     var hasEnteredOtp = false
     var authResponse: LoginOTPResponse?
 
-    @IBOutlet weak var errMessage: UILabel!
-    @IBOutlet weak var otpField: OTPFieldView!
-    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet var errMessage: UILabel!
+    @IBOutlet var otpField: OTPFieldView!
+    @IBOutlet var backBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +74,8 @@ class OTPViewController: UIViewController {
         }
     }
 
-    @objc private func showNextView() {
+    @objc
+    private func showNextView() {
         guard let response = authResponse else {
             return
         }

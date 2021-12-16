@@ -27,9 +27,9 @@ class VibaTabButton: UIButton {
         let rect = super.imageRect(forContentRect: contentRect)
         let titleRect = self.titleRect(forContentRect: contentRect)
 
-        return CGRect(x: contentRect.width/2.0 - rect.width/2.0,
-                             y: (contentRect.height - titleRect.height)/2.0 - rect.height/2.0,
-                             width: rect.width, height: rect.height)
+        return CGRect(x: contentRect.width / 2.0 - rect.width / 2.0,
+                      y: (contentRect.height - titleRect.height) / 2.0 - rect.height / 2.0,
+                      width: rect.width, height: rect.height)
     }
 
     override var intrinsicContentSize: CGSize {

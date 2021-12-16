@@ -9,9 +9,9 @@ import UIKit
 import AVFoundation
 
 class FaceCaptureViewController: UIViewController {
-    weak var delegate: SignupProtocol?
-    @IBOutlet weak var mlView: FaceTrackingView!
-    @IBOutlet weak var submitBtn: VibaButton!
+    var delegate: SignupProtocol?
+    @IBOutlet var mlView: FaceTrackingView!
+    @IBOutlet var submitBtn: VibaButton!
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

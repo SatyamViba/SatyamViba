@@ -44,7 +44,6 @@ extension Colors {
         case .btnUnselected:
             return UIColor("#F2F2F2")
         }
-
     }
 }
 

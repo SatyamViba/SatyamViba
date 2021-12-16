@@ -8,7 +8,7 @@
 import UIKit
 
 class NotificationsViewController: UIViewController {
-    @IBOutlet weak var notificationsImage: UIImageView!
+    @IBOutlet var notificationsImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

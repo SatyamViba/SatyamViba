@@ -8,7 +8,6 @@
 import UIKit
 
 class PicCaptureViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -23,7 +23,7 @@ class Location: NSObject {
     }
 
     var askLocationPermission: Bool {
-        return CLLocationManager.locationServicesEnabled() &&  locationManager.authorizationStatus == .notDetermined
+        return CLLocationManager.locationServicesEnabled() && locationManager.authorizationStatus == .notDetermined
     }
 
     func showPermissionForLocation() {

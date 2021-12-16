@@ -8,13 +8,13 @@
 import UIKit
 
 class VerifyViewController: UIViewController {
-    weak var delegate: SignupProtocol?
+    var delegate: SignupProtocol?
     
-    @IBOutlet weak var infoBtn: UILabel!
-    @IBOutlet weak var boxView: VibaRoundCornerView!
+    @IBOutlet var infoBtn: UILabel!
+    @IBOutlet var boxView: VibaRoundCornerView!
 
-    @IBOutlet weak var smsOtp: VibaTextField!
-    @IBOutlet weak var emailOtp: VibaTextField!
+    @IBOutlet var smsOtp: VibaTextField!
+    @IBOutlet var emailOtp: VibaTextField!
     let charLimit = 5
     
     override func viewDidLoad() {
@@ -27,7 +27,6 @@ class VerifyViewController: UIViewController {
         infoBtn.font = UIFont.fontAwesome(ofSize: 20, style: .solid)
         infoBtn.text = String.fontAwesomeIcon(name: .infoCircle)
         infoBtn.textColor = .lightGray
-        
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
@@ -115,8 +114,7 @@ class VerifyViewController: UIViewController {
                 }
             }
         }
-    }
-    
+    }    
 }
 
 extension VerifyViewController: UITextFieldDelegate {

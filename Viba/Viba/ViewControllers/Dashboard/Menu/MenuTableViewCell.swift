@@ -9,8 +9,7 @@ import UIKit
 import FontAwesome_swift
 
 class MenuTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var menuItem: VibaMenuButton!
+    @IBOutlet var menuItem: VibaMenuButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -14,7 +14,7 @@ protocol MenuViewDelegate: AnyObject {
 
 class MenuViewController: UIViewController {
     var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
-    weak var delegate: MenuViewDelegate?
+    var delegate: MenuViewDelegate?
 
     var menuItems = [
         ["image": FontAwesome.bell, "title": "Notifications"],
@@ -22,8 +22,8 @@ class MenuViewController: UIViewController {
         ["image": FontAwesome.signOutAlt, "title": "Signout"]
     ]
 
-    @IBOutlet weak var version: UILabel!
-    @IBOutlet weak var menuItemsList: UITableView!
+    @IBOutlet var version: UILabel!
+    @IBOutlet var menuItemsList: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

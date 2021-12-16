@@ -7,6 +7,5 @@
 
 import Foundation
 
-struct EmptyRequest: Encodable {
-    
+struct EmptyRequest: Encodable {    
 }
