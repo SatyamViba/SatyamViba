@@ -55,11 +55,6 @@
 		4A72CCC1273EE1F6008AA853 /* CompanyDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */; };
 		4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */; };
 		4A72CCC5273FCFBA008AA853 /* ValidateEmailOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */; };
-		4A72CCCC274024DB008AA853 /* everyting.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCC7274024DB008AA853 /* everyting.json */; };
-		4A72CCCD274024DB008AA853 /* meditation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCC8274024DB008AA853 /* meditation.json */; };
-		4A72CCCE274024DB008AA853 /* cerebro.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCC9274024DB008AA853 /* cerebro.json */; };
-		4A72CCCF274024DB008AA853 /* planter.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCCA274024DB008AA853 /* planter.json */; };
-		4A72CCD0274024DB008AA853 /* ball-spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCCB274024DB008AA853 /* ball-spinner.json */; };
 		4A72CCD227402594008AA853 /* circles.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCD127402594008AA853 /* circles.json */; };
 		4A72CCD4274025CC008AA853 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCD3274025CC008AA853 /* UIViewController+Extension.swift */; };
 		4A72CCDB2740284C008AA853 /* AlertLottie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCD82740284C008AA853 /* AlertLottie.storyboard */; };
@@ -103,6 +98,9 @@
 		4AD78EDB27514C5B00A27401 /* PreInvitationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78EDA27514C5B00A27401 /* PreInvitationTableViewCell.swift */; };
 		4AD78EDD27514C7400A27401 /* PreInvitationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78EDC27514C7400A27401 /* PreInvitationDetailTableViewCell.swift */; };
 		4AD78EE02751C34300A27401 /* SendPreInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78EDF2751C34300A27401 /* SendPreInvitationViewController.swift */; };
+		4AD998952789B85D006F7FC4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD998942789B85D006F7FC4 /* LoadingViewController.swift */; };
+		4AD998982789B8AD006F7FC4 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4AD998972789B8AD006F7FC4 /* splash.gif */; };
+		4AD9989A2789BFA1006F7FC4 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AD998992789BFA0006F7FC4 /* loading.json */; };
 		4ADB3A552740F3F900A0D750 /* UserRegistrrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */; };
 		4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */; };
 		4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A58274118E300A0D750 /* GeneralResponse.swift */; };
@@ -166,11 +164,6 @@
 		4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsResponse.swift; sourceTree = "<group>"; };
 		4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSmsOtp.swift; sourceTree = "<group>"; };
 		4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateEmailOtp.swift; sourceTree = "<group>"; };
-		4A72CCC7274024DB008AA853 /* everyting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = everyting.json; sourceTree = "<group>"; };
-		4A72CCC8274024DB008AA853 /* meditation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meditation.json; sourceTree = "<group>"; };
-		4A72CCC9274024DB008AA853 /* cerebro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cerebro.json; sourceTree = "<group>"; };
-		4A72CCCA274024DB008AA853 /* planter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = planter.json; sourceTree = "<group>"; };
-		4A72CCCB274024DB008AA853 /* ball-spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ball-spinner.json"; sourceTree = "<group>"; };
 		4A72CCD127402594008AA853 /* circles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = circles.json; sourceTree = "<group>"; };
 		4A72CCD3274025CC008AA853 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4A72CCD82740284C008AA853 /* AlertLottie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertLottie.storyboard; sourceTree = "<group>"; };
@@ -216,6 +209,9 @@
 		4AD78EDA27514C5B00A27401 /* PreInvitationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreInvitationTableViewCell.swift; sourceTree = "<group>"; };
 		4AD78EDC27514C7400A27401 /* PreInvitationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreInvitationDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4AD78EDF2751C34300A27401 /* SendPreInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPreInvitationViewController.swift; sourceTree = "<group>"; };
+		4AD998942789B85D006F7FC4 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		4AD998972789B8AD006F7FC4 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
+		4AD998992789BFA0006F7FC4 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		4ADB3A542740F3F900A0D750 /* UserRegistrrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrrationDetails.swift; sourceTree = "<group>"; };
 		4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateRegistraionOTP.swift; sourceTree = "<group>"; };
 		4ADB3A58274118E300A0D750 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
@@ -257,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				4AB5F0132739122E007DB9FF /* Main.storyboard */,
+				4AD998942789B85D006F7FC4 /* LoadingViewController.swift */,
 				4AD61BAD2771AB3D00CBF5D6 /* FV */,
 				4A21A196273B87E90002D052 /* SignUp */,
 				4A78FB5227417F0B000BFCFF /* Authenticate */,
@@ -418,12 +415,8 @@
 		4A72CCC6274024DB008AA853 /* LottieJson */ = {
 			isa = PBXGroup;
 			children = (
+				4AD998992789BFA0006F7FC4 /* loading.json */,
 				4A72CCD127402594008AA853 /* circles.json */,
-				4A72CCC7274024DB008AA853 /* everyting.json */,
-				4A72CCC8274024DB008AA853 /* meditation.json */,
-				4A72CCC9274024DB008AA853 /* cerebro.json */,
-				4A72CCCA274024DB008AA853 /* planter.json */,
-				4A72CCCB274024DB008AA853 /* ball-spinner.json */,
 			);
 			path = LottieJson;
 			sourceTree = "<group>";
@@ -539,6 +532,14 @@
 			path = PreInvitation;
 			sourceTree = "<group>";
 		};
+		4AD998962789B89A006F7FC4 /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				4AD998972789B8AD006F7FC4 /* splash.gif */,
+			);
+			path = GIFs;
+			sourceTree = "<group>";
+		};
 		4AE58250275B3DA70081FAC1 /* Registrration */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +620,7 @@
 		4AFC562B27391E1C00E064E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4AD998962789B89A006F7FC4 /* GIFs */,
 				4A72CCC6274024DB008AA853 /* LottieJson */,
 				4AFC562C27391E2400E064E9 /* Fonts */,
 			);
@@ -755,21 +757,18 @@
 				4AC8D28E27573DE8003C09AD /* Permissions.storyboard in Resources */,
 				4A72CCD227402594008AA853 /* circles.json in Resources */,
 				4AD61BB22771ABA200CBF5D6 /* FaceView.storyboard in Resources */,
-				4A72CCCE274024DB008AA853 /* cerebro.json in Resources */,
-				4A72CCCF274024DB008AA853 /* planter.json in Resources */,
+				4AD9989A2789BFA1006F7FC4 /* loading.json in Resources */,
 				4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */,
 				4A6D64DA274E671F00022CBE /* VibaMenuButton.xib in Resources */,
 				4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */,
 				4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */,
-				4A72CCCC274024DB008AA853 /* everyting.json in Resources */,
 				4A1617BF273A45C300640236 /* Poppins-Medium.ttf in Resources */,
 				4A72CCDB2740284C008AA853 /* AlertLottie.storyboard in Resources */,
 				4A109DF8274D4991009D2002 /* Poppins-Italic.ttf in Resources */,
-				4A72CCCD274024DB008AA853 /* meditation.json in Resources */,
 				4AB5F0152739122E007DB9FF /* Main.storyboard in Resources */,
 				4AD78ECD274F6C9D00A27401 /* TabController.storyboard in Resources */,
 				4A8482E527492B62002463D5 /* DashBoardWithTabs.storyboard in Resources */,
-				4A72CCD0274024DB008AA853 /* ball-spinner.json in Resources */,
+				4AD998982789B8AD006F7FC4 /* splash.gif in Resources */,
 				4A1617B9273A40B700640236 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -859,6 +858,7 @@
 				4AFC563A27392FF800E064E9 /* Utility.swift in Sources */,
 				4AC8D2842756405D003C09AD /* ClockInOutResponse.swift in Sources */,
 				4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */,
+				4AD998952789B85D006F7FC4 /* LoadingViewController.swift in Sources */,
 				4A4D21AE275896E5001B9964 /* VibaNoRecordsCell.swift in Sources */,
 				4A5E47792748E5AB00239676 /* TimesheetViewController.swift in Sources */,
 				4A6C21F8275F8C2800234133 /* CreateInvitation.swift in Sources */,
@@ -1075,7 +1075,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HLF4GH8WCJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1083,6 +1083,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Viba/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "VIBA Pass";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the app to capture your picture to recognize you";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow the app to track your location";
@@ -1116,7 +1117,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HLF4GH8WCJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1124,6 +1125,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Viba/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "VIBA Pass";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the app to capture your picture to recognize you";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow the app to track your location";

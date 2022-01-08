@@ -58,12 +58,12 @@ class EmployeeDetailsViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
-        guard let dlgt = self.delegate else {
-            return
-        }
-
-        dlgt.didFinish(screen: .employeeDetails)
-        return
+//        guard let dlgt = self.delegate else {
+//            return
+//        }
+//
+//        dlgt.didFinish(screen: .employeeDetails)
+//        return
 
         guard let fName = firstName.text, !fName.isEmptyStr else {
             firstName.showError()
@@ -99,9 +99,8 @@ class EmployeeDetailsViewController: UIViewController {
             return
         }
 
-        let correctedPhone = "91" + phn
         showLoadingIndicator()
-        UserServices.registerUser(params: RegisterUser(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: correctedPhone)) { result in
+        UserServices.registerUser(params: RegisterUser(dob: formatDate(), gender: gender, email: eml, accountID: companyID, firstName: fName, lastName: lName, phone: "91" + phn)) { result in
             DispatchQueue.main.async { [self] in
                 self.hideLoadingIndicator()
                 switch result {

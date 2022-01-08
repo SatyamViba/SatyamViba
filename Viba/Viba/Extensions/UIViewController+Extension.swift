@@ -10,7 +10,7 @@ import SCLAlertView
 
 extension UIViewController {
     func showLoadingIndicator(text: String = "Please wait...") {
-        IGProgress.config.urlLottieJson = "circles"
+        IGProgress.config.urlLottieJson = "loading"
         IGProgress.config.message = text
         IGPStartLoading(config: IGProgress.config)
     }

@@ -36,7 +36,7 @@ class OTPViewController: UIViewController {
         self.otpField.cursorColor = UIColor.red
         self.otpField.displayType = .roundedCorner
         self.otpField.fieldSize = 50
-        self.otpField.separatorSpace = 14
+        self.otpField.separatorSpace = 8
         self.otpField.shouldAllowIntermediateEditing = false
         self.otpField.delegate = self
         self.otpField.initializeUI()
@@ -46,8 +46,16 @@ class OTPViewController: UIViewController {
 
         let img = UIImage.fontAwesomeIcon(name: .angleLeft, style: .solid, textColor: .black, size: CGSize(width: 20, height: 20))
         backBtn.setImage(img, for: .normal)
+
+        let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
+        view.addGestureRecognizer(gestrue)
     }
 
+    @objc
+    private func stopEditing() {
+        view.endEditing(true)
+    }
+    
     @IBAction func goBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

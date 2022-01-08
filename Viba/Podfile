@@ -13,6 +13,7 @@ target 'Viba' do
   pod 'SCLAlertView'
   pod 'lottie-ios'
   pod 'MASegmentedControl'
+  pod 'SwiftyGif'
 end
 
 post_install do |installer|

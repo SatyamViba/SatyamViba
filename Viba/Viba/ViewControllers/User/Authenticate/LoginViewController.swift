@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, let bld = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            ver.text = "Powered By VIBA - v\(version) (\(bld)"
+            ver.text = "Powered By VIBA - v \(version) (\(bld))"
         }
 
         #if DEBUG

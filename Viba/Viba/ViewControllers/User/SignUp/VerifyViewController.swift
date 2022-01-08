@@ -30,12 +30,12 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
-        guard let dlgt = delegate else {
-            return
-        }
-
-        dlgt.didFinish(screen: .verify)
-        return
+//        guard let dlgt = delegate else {
+//            return
+//        }
+//
+//        dlgt.didFinish(screen: .verify)
+//        return
 
         guard let eOtp = emailOtp.text, eOtp.count == charLimit else {
             emailOtp.showError()
@@ -47,7 +47,7 @@ class VerifyViewController: UIViewController {
             return
         }
 
-        guard let usrId = DataManager.shared.userId, usrId.isEmpty else {
+        guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
             showWarning(message: "User Id invalid")
             return
         }
