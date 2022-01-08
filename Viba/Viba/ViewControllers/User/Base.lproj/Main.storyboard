@@ -191,6 +191,7 @@
                     <connections>
                         <outlet property="companyCode" destination="Xpb-1O-yuR" id="Xjn-Tt-aEt"/>
                         <outlet property="userId" destination="sAw-fx-crL" id="aiq-oI-lYb"/>
+                        <outlet property="ver" destination="DoU-Pm-5MZ" id="azI-Dq-VV4"/>
                         <segue destination="gnC-5A-FnD" kind="show" identifier="OTPView" id="NtG-wV-IY3"/>
                         <segue destination="Ld3-gy-R3m" kind="show" identifier="SignupView" id="uC7-EP-I1N"/>
                         <segue destination="0Sz-8o-sTg" kind="show" identifier="Dashboard" id="QUb-wv-x0k"/>
@@ -299,6 +300,9 @@
                                 <state key="normal" title="Resend">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resendOtp:" destination="gnC-5A-FnD" eventType="touchUpInside" id="Xek-PF-8mp"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter OTP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coc-d9-EFr">
                                 <rect key="frame" x="20" y="310" width="335" height="16"/>
@@ -414,16 +418,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IdeeoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="v2N-bu-nLp">
-                                <rect key="frame" x="138.5" y="40" width="98" height="26"/>
+                                <rect key="frame" x="138.5" y="33" width="98" height="26"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDEEO Tech Solutions Pvt. Ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9X-N3-Jbg" customClass="VibaMediumLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="72" y="82" width="231.5" height="20.5"/>
+                                <rect key="frame" x="72" y="78" width="231.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9y-o8-iBt">
-                                <rect key="frame" x="20" y="122.5" width="335" height="4"/>
+                                <rect key="frame" x="20" y="124.5" width="335" height="4"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCK-RZ-cXo" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="4"/>
@@ -477,7 +481,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbv-SE-dTs">
-                                <rect key="frame" x="0.0" y="146.5" width="375" height="520.5"/>
+                                <rect key="frame" x="0.0" y="148.5" width="375" height="518.5"/>
                                 <connections>
                                     <segue destination="eZa-8I-4Dq" kind="embed" identifier="PageContrroller" id="u8f-oD-x55"/>
                                 </connections>
@@ -494,9 +498,9 @@
                             <constraint firstItem="sXw-Gt-PYi" firstAttribute="bottom" secondItem="rbv-SE-dTs" secondAttribute="bottom" id="Iwy-4f-3gc"/>
                             <constraint firstItem="rbv-SE-dTs" firstAttribute="top" secondItem="j9y-o8-iBt" secondAttribute="bottom" constant="20" id="RVe-OH-wA2"/>
                             <constraint firstItem="sXw-Gt-PYi" firstAttribute="trailing" secondItem="rbv-SE-dTs" secondAttribute="trailing" id="S77-oB-uW9"/>
-                            <constraint firstItem="j9y-o8-iBt" firstAttribute="top" secondItem="R9X-N3-Jbg" secondAttribute="bottom" constant="20" id="ejG-u0-gyM"/>
-                            <constraint firstItem="v2N-bu-nLp" firstAttribute="top" secondItem="sXw-Gt-PYi" secondAttribute="top" constant="40" id="ncx-fh-1nu"/>
-                            <constraint firstItem="R9X-N3-Jbg" firstAttribute="top" secondItem="v2N-bu-nLp" secondAttribute="bottom" constant="16" id="pQU-Dq-cpk"/>
+                            <constraint firstItem="j9y-o8-iBt" firstAttribute="top" secondItem="R9X-N3-Jbg" secondAttribute="bottom" constant="26" id="ejG-u0-gyM"/>
+                            <constraint firstItem="v2N-bu-nLp" firstAttribute="top" secondItem="sXw-Gt-PYi" secondAttribute="top" constant="33" id="ncx-fh-1nu"/>
+                            <constraint firstItem="R9X-N3-Jbg" firstAttribute="top" secondItem="v2N-bu-nLp" secondAttribute="bottom" constant="19" id="pQU-Dq-cpk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fWi-P7-f3M"/>
@@ -507,8 +511,8 @@
                         <outlet property="secondView" destination="Ikw-Rj-YQh" id="8pl-CR-fnS"/>
                         <outlet property="thirdIndicatorWidth" destination="MeD-r4-sxL" id="Fnp-5Y-wF5"/>
                         <outlet property="thirdView" destination="uep-KV-Nld" id="v8T-Mw-ALA"/>
-                        <segue destination="0Sz-8o-sTg" kind="show" identifier="Dashboard" id="xyg-Wk-3y2"/>
                         <segue destination="2tQ-CA-9JJ" kind="show" identifier="FaceView" id="dPN-5h-xgN"/>
+                        <segue destination="Zya-YD-YRm" kind="show" identifier="Review" id="x0y-ub-GU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOf-Km-lgW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,6 +536,142 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOp-Pq-Az7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2470" y="1630"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="ZTA-mZ-AwE">
+            <objects>
+                <viewController id="Zya-YD-YRm" customClass="ReviewViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bEH-wU-b1c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IdeeoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NJv-jW-Mwd">
+                                <rect key="frame" x="138.5" y="35" width="98" height="26"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDEEO Tech Solutions Pvt. Ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbI-Rs-Ate" customClass="VibaMediumLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="72" y="80" width="231.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPW-d7-TGz" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="23" y="601" width="329" height="55"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="1tY-71-2Pz"/>
+                                    <constraint firstAttribute="height" constant="55" id="nRX-1K-DIj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Back to home"/>
+                                <connections>
+                                    <action selector="goBack:" destination="Zya-YD-YRm" eventType="touchUpInside" id="K7u-yY-fio"/>
+                                    <action selector="requestOTP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A1f-GZ-NR7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s41-3u-nXs">
+                                <rect key="frame" x="0.0" y="592" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="PWA-Pt-Czs"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FL-0x-AXk">
+                                <rect key="frame" x="20" y="218.5" width="335" height="230"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="V5U-3p-fmP" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="134" y="0.0" width="67" height="67"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="67" id="PuB-Md-e7X"/>
+                                            <constraint firstAttribute="height" constant="67" id="QIc-L2-Qdg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In-Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9T-8I-kUi" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="129.5" y="84" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.50196078431372548" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request has been sent it to your HR team for review." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifd-WC-XRh" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="335" height="36.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will receive a notification when HR approves your request." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDu-aK-e9Y" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180.5" width="335" height="36.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-Mc-3ZO">
+                                        <rect key="frame" x="176" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="10Q-3m-CSC"/>
+                                            <constraint firstAttribute="width" constant="25" id="oQX-ud-KQl"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ifd-WC-XRh" firstAttribute="top" secondItem="h9T-8I-kUi" secondAttribute="bottom" constant="19" id="10O-r0-d5I"/>
+                                    <constraint firstAttribute="trailing" secondItem="pDu-aK-e9Y" secondAttribute="trailing" id="13I-e4-mnE"/>
+                                    <constraint firstItem="h9T-8I-kUi" firstAttribute="centerX" secondItem="2FL-0x-AXk" secondAttribute="centerX" id="6Ty-7A-nqQ"/>
+                                    <constraint firstItem="ifd-WC-XRh" firstAttribute="leading" secondItem="2FL-0x-AXk" secondAttribute="leading" id="EFo-b1-fdx"/>
+                                    <constraint firstItem="V5U-3p-fmP" firstAttribute="centerX" secondItem="2FL-0x-AXk" secondAttribute="centerX" id="Lle-RS-4AM"/>
+                                    <constraint firstItem="Vbd-Mc-3ZO" firstAttribute="top" secondItem="2FL-0x-AXk" secondAttribute="top" id="acM-Ee-hCZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ifd-WC-XRh" secondAttribute="trailing" id="bHi-WU-a8X"/>
+                                    <constraint firstItem="V5U-3p-fmP" firstAttribute="top" secondItem="2FL-0x-AXk" secondAttribute="top" id="k5k-ef-ioe"/>
+                                    <constraint firstItem="Vbd-Mc-3ZO" firstAttribute="trailing" secondItem="V5U-3p-fmP" secondAttribute="trailing" id="klN-K2-vUc"/>
+                                    <constraint firstItem="pDu-aK-e9Y" firstAttribute="top" secondItem="ifd-WC-XRh" secondAttribute="bottom" constant="20" id="kpu-3j-XcD"/>
+                                    <constraint firstItem="pDu-aK-e9Y" firstAttribute="leading" secondItem="2FL-0x-AXk" secondAttribute="leading" id="mei-I7-OEy"/>
+                                    <constraint firstItem="h9T-8I-kUi" firstAttribute="top" secondItem="V5U-3p-fmP" secondAttribute="bottom" constant="17" id="rs2-Ga-aTy"/>
+                                    <constraint firstAttribute="height" constant="230" id="wMH-Xn-5b0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GLM-Np-7mA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s41-3u-nXs" firstAttribute="leading" secondItem="GLM-Np-7mA" secondAttribute="leading" id="9A4-r4-rIz"/>
+                            <constraint firstItem="vPW-d7-TGz" firstAttribute="leading" secondItem="GLM-Np-7mA" secondAttribute="leading" constant="23" id="CB3-A5-G3q"/>
+                            <constraint firstItem="2FL-0x-AXk" firstAttribute="leading" secondItem="GLM-Np-7mA" secondAttribute="leading" constant="20" id="CpA-Da-oTT"/>
+                            <constraint firstItem="2FL-0x-AXk" firstAttribute="centerY" secondItem="bEH-wU-b1c" secondAttribute="centerY" id="H1z-NF-ITj"/>
+                            <constraint firstItem="qbI-Rs-Ate" firstAttribute="centerX" secondItem="bEH-wU-b1c" secondAttribute="centerX" id="Nte-6D-sfP"/>
+                            <constraint firstItem="s41-3u-nXs" firstAttribute="trailing" secondItem="GLM-Np-7mA" secondAttribute="trailing" id="OW3-Rt-EdY"/>
+                            <constraint firstItem="GLM-Np-7mA" firstAttribute="trailing" secondItem="vPW-d7-TGz" secondAttribute="trailing" constant="23" id="VYu-3f-vbh"/>
+                            <constraint firstItem="vPW-d7-TGz" firstAttribute="top" secondItem="s41-3u-nXs" secondAttribute="bottom" constant="8" symbolic="YES" id="Yr5-Xk-B45"/>
+                            <constraint firstItem="GLM-Np-7mA" firstAttribute="trailing" secondItem="2FL-0x-AXk" secondAttribute="trailing" constant="20" id="Yuo-w4-dWc"/>
+                            <constraint firstItem="GLM-Np-7mA" firstAttribute="bottom" secondItem="vPW-d7-TGz" secondAttribute="bottom" constant="11" id="abe-GP-cMo"/>
+                            <constraint firstItem="NJv-jW-Mwd" firstAttribute="top" secondItem="GLM-Np-7mA" secondAttribute="top" constant="35" id="gqB-3x-Np0"/>
+                            <constraint firstItem="qbI-Rs-Ate" firstAttribute="top" secondItem="NJv-jW-Mwd" secondAttribute="bottom" constant="19" id="sVL-Dc-l2M"/>
+                            <constraint firstItem="NJv-jW-Mwd" firstAttribute="centerX" secondItem="bEH-wU-b1c" secondAttribute="centerX" id="tqM-7O-Vdt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rXb-3P-uxg"/>
+                    <connections>
+                        <outlet property="tick" destination="Vbd-Mc-3ZO" id="IZc-r5-kDI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmz-ag-3Fx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.8" y="2076.6116941529235"/>
         </scene>
         <!--Employee Details View Controller-->
         <scene sceneID="hM0-7N-0Gd">
@@ -793,114 +933,92 @@
                                     <constraint firstAttribute="bottom" secondItem="c0w-Hn-epa" secondAttribute="bottom" id="yZR-AZ-oew"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c6v-kT-PSc">
-                                <rect key="frame" x="20" y="150.5" width="335" height="50"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Olo-D5-Oyn">
-                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcw-ba-95k" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide Email OTP"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="n2l-Gg-4bQ" id="fKb-sw-M5v"/>
-                                                </connections>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-t0-xqA" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="9.5" width="49" height="31"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Resend">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="resendEmailOtp:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="GNa-73-e9o"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="qcw-ba-95k" firstAttribute="top" secondItem="Olo-D5-Oyn" secondAttribute="top" id="01x-vC-n8l"/>
-                                            <constraint firstAttribute="trailing" secondItem="8SE-t0-xqA" secondAttribute="trailing" constant="5" id="76S-Fl-YUR"/>
-                                            <constraint firstItem="8SE-t0-xqA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Olo-D5-Oyn" secondAttribute="leading" constant="20" symbolic="YES" id="Bj7-7O-myF"/>
-                                            <constraint firstItem="qcw-ba-95k" firstAttribute="leading" secondItem="Olo-D5-Oyn" secondAttribute="leading" id="YZN-81-9Oe"/>
-                                            <constraint firstAttribute="bottom" secondItem="qcw-ba-95k" secondAttribute="bottom" id="ifO-fA-UyQ"/>
-                                            <constraint firstItem="8SE-t0-xqA" firstAttribute="centerY" secondItem="Olo-D5-Oyn" secondAttribute="centerY" id="kto-NL-c5u"/>
-                                            <constraint firstAttribute="trailing" secondItem="qcw-ba-95k" secondAttribute="trailing" id="kww-BK-hl6"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-Fp-IFp">
-                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-KY-k3U" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide Mobile OTP"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="n2l-Gg-4bQ" id="KoA-dU-YPX"/>
-                                                </connections>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-h2-NsO" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="9.5" width="49" height="31"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Resend">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="resendMobileOtp:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="k54-Cc-6vD"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="AVU-KY-k3U" firstAttribute="top" secondItem="9Fv-Fp-IFp" secondAttribute="top" id="2Zk-eL-71c"/>
-                                            <constraint firstAttribute="bottom" secondItem="AVU-KY-k3U" secondAttribute="bottom" id="6Z2-cf-nr7"/>
-                                            <constraint firstItem="AVU-KY-k3U" firstAttribute="leading" secondItem="9Fv-Fp-IFp" secondAttribute="leading" id="I7I-Sv-kkv"/>
-                                            <constraint firstItem="gWD-h2-NsO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Fv-Fp-IFp" secondAttribute="leading" constant="20" symbolic="YES" id="XHz-H7-yWo"/>
-                                            <constraint firstItem="gWD-h2-NsO" firstAttribute="centerY" secondItem="9Fv-Fp-IFp" secondAttribute="centerY" id="cZm-VF-Pg3"/>
-                                            <constraint firstAttribute="trailing" secondItem="gWD-h2-NsO" secondAttribute="trailing" constant="5" id="qOh-hS-Ict"/>
-                                            <constraint firstAttribute="trailing" secondItem="AVU-KY-k3U" secondAttribute="trailing" id="ul0-sw-3Jt"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcw-ba-95k" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="136.5" width="278" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide Email OTP"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="n2l-Gg-4bQ" id="fKb-sw-M5v"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-t0-xqA" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="306" y="144" width="49" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="nnR-6w-XTw"/>
+                                    <constraint firstAttribute="height" constant="31" id="6Dg-RP-k1I"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="l4n-RO-a7I"/>
                                 </constraints>
-                            </stackView>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Resend">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resendEmailOtp:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="GNa-73-e9o"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-KY-k3U" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="198" width="278" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Provide Mobile OTP"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="n2l-Gg-4bQ" id="KoA-dU-YPX"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-h2-NsO" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="306" y="205.5" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="0xd-4Q-Kj3"/>
+                                    <constraint firstAttribute="height" constant="31" id="1bG-VN-vmF"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Resend">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resendMobileOtp:" destination="n2l-Gg-4bQ" eventType="touchUpInside" id="k54-Cc-6vD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2t2-wM-Afy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="8SE-t0-xqA" firstAttribute="leading" secondItem="qcw-ba-95k" secondAttribute="trailing" constant="8" symbolic="YES" id="1nv-NE-xer"/>
                             <constraint firstItem="ryj-WG-Rrd" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="44t-vt-QqA"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="geq-29-o6z" secondAttribute="trailing" constant="20" id="5jG-gr-Drs"/>
                             <constraint firstItem="geq-29-o6z" firstAttribute="top" secondItem="ryj-WG-Rrd" secondAttribute="bottom" constant="30" id="7vz-z6-lRu"/>
                             <constraint firstItem="geq-29-o6z" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="9e7-yN-Gyb"/>
-                            <constraint firstItem="c6v-kT-PSc" firstAttribute="top" secondItem="geq-29-o6z" secondAttribute="bottom" constant="30" id="BKi-Mo-gHB"/>
-                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="c6v-kT-PSc" secondAttribute="trailing" constant="20" id="CAR-nJ-Nv2"/>
+                            <constraint firstItem="AVU-KY-k3U" firstAttribute="top" secondItem="qcw-ba-95k" secondAttribute="bottom" constant="16" id="CVb-Rp-qv0"/>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="gWD-h2-NsO" secondAttribute="trailing" constant="20" id="DBE-tD-wdW"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="cIV-Zq-INv" secondAttribute="trailing" constant="20" id="DdR-3E-ISW"/>
                             <constraint firstItem="cIV-Zq-INv" firstAttribute="top" secondItem="Mpp-kv-jAJ" secondAttribute="bottom" constant="12" id="FfZ-Wf-9NT"/>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="8SE-t0-xqA" secondAttribute="trailing" constant="20" id="HqU-xy-iTd"/>
                             <constraint firstItem="ryj-WG-Rrd" firstAttribute="trailing" secondItem="2t2-wM-Afy" secondAttribute="trailing" constant="20" id="Hyi-mG-1L6"/>
+                            <constraint firstItem="gWD-h2-NsO" firstAttribute="top" secondItem="qcw-ba-95k" secondAttribute="bottom" constant="23.5" id="Iy5-dS-0Td"/>
                             <constraint firstItem="cIV-Zq-INv" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="JKX-Fv-7wx"/>
+                            <constraint firstItem="AVU-KY-k3U" firstAttribute="top" secondItem="qcw-ba-95k" secondAttribute="bottom" constant="16" id="JPs-Rw-ivU"/>
+                            <constraint firstItem="qcw-ba-95k" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="OPF-Hn-gBi"/>
+                            <constraint firstItem="8SE-t0-xqA" firstAttribute="top" secondItem="geq-29-o6z" secondAttribute="bottom" constant="23.5" id="Tke-ke-Sdz"/>
+                            <constraint firstItem="gWD-h2-NsO" firstAttribute="leading" secondItem="AVU-KY-k3U" secondAttribute="trailing" constant="8" symbolic="YES" id="WpV-Ql-es8"/>
+                            <constraint firstItem="AVU-KY-k3U" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="ZE0-Pl-hoc"/>
                             <constraint firstItem="Mpp-kv-jAJ" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="g30-HG-txx"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="Mpp-kv-jAJ" secondAttribute="trailing" constant="20" id="s3y-Yp-cL7"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="bottom" secondItem="cIV-Zq-INv" secondAttribute="bottom" constant="10" id="uDa-DL-18L"/>
-                            <constraint firstItem="c6v-kT-PSc" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="vf2-24-Ivh"/>
+                            <constraint firstItem="qcw-ba-95k" firstAttribute="top" secondItem="geq-29-o6z" secondAttribute="bottom" constant="16" id="x47-cw-Arr"/>
                             <constraint firstItem="ryj-WG-Rrd" firstAttribute="top" secondItem="2t2-wM-Afy" secondAttribute="top" id="xmU-nX-AAU"/>
                         </constraints>
                     </view>
@@ -915,7 +1033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6i-Fy-GgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4714" y="1117"/>
+            <point key="canvasLocation" x="4712.8000000000002" y="1116.3418290854574"/>
         </scene>
         <!--Face Capture View Controller-->
         <scene sceneID="Ohs-D1-0Is">
@@ -1088,6 +1206,9 @@
         <designable name="UFf-6S-CG6">
             <size key="intrinsicContentSize" width="64.5" height="45.5"/>
         </designable>
+        <designable name="V5U-3p-fmP">
+            <size key="intrinsicContentSize" width="40" height="40"/>
+        </designable>
         <designable name="Xpb-1O-yuR">
             <size key="intrinsicContentSize" width="129.5" height="45.5"/>
         </designable>
@@ -1106,6 +1227,18 @@
         <designable name="gcw-L1-HnQ">
             <size key="intrinsicContentSize" width="100" height="45.5"/>
         </designable>
+        <designable name="h9T-8I-kUi">
+            <size key="intrinsicContentSize" width="75.5" height="20.5"/>
+        </designable>
+        <designable name="ifd-WC-XRh">
+            <size key="intrinsicContentSize" width="337.5" height="18.5"/>
+        </designable>
+        <designable name="pDu-aK-e9Y">
+            <size key="intrinsicContentSize" width="400" height="18.5"/>
+        </designable>
+        <designable name="qbI-Rs-Ate">
+            <size key="intrinsicContentSize" width="231.5" height="20.5"/>
+        </designable>
         <designable name="qcw-ba-95k">
             <size key="intrinsicContentSize" width="96" height="45.5"/>
         </designable>
@@ -1115,13 +1248,17 @@
         <designable name="sAw-fx-crL">
             <size key="intrinsicContentSize" width="184.5" height="45.5"/>
         </designable>
+        <designable name="vPW-d7-TGz">
+            <size key="intrinsicContentSize" width="106" height="33"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="QUb-wv-x0k"/>
+        <segue reference="U2u-pJ-2DQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="IdeeoLogo" width="98" height="26"/>
         <image name="TopLogo" width="55" height="55"/>
+        <image name="pic_holder" width="40" height="40"/>
         <image name="repeat.1.hi" catalog="system" width="128" height="101"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

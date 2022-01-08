@@ -30,6 +30,10 @@ class MenuViewController: UIViewController {
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(gotoTabView))
         tapGestureRecognizer.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGestureRecognizer)
+
+        if let ver = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, let bld = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            version.text = "Powered By VIBA - v\(ver) (\(bld)"
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

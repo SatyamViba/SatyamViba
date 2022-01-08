@@ -11,17 +11,22 @@ import AVFoundation
 class LoginViewController: UIViewController {
     var authType = AuthType.email
 
+    @IBOutlet var ver: UILabel!
     @IBOutlet var userId: VibaTextField!
     @IBOutlet var companyCode: VibaTextField!
     var activeTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, let bld = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            ver.text = "Powered By VIBA - v\(version) (\(bld)"
+        }
+
         #if DEBUG
         userId.text = "9886555469" // "1111111110"
         companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
         #endif
-        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.selectedMenu.value)
+
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
         view.addGestureRecognizer(gestrue)
 
@@ -31,11 +36,19 @@ class LoginViewController: UIViewController {
         }
     }
 
+    private func clear() {
+        // Reset all the details
+        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.selectedMenu.value)
+        DataManager.shared.clear()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DataManager.shared.clear()  // Clear all the stored data
+        clear()
 
-        if !Location.manager.isLocationServicesEnabled || AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
+//        if !Location.manager.isLocationServicesEnabled || AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
+        if UserDefaults.standard.bool(forKey: UserDefaultsKeys.firstTime.value) == true {
+            UserDefaults.standard.set(false, forKey: UserDefaultsKeys.firstTime.value)
             performSegue(withIdentifier: "PermissionsView", sender: nil)
         }
     }
@@ -77,7 +90,11 @@ class LoginViewController: UIViewController {
             }
 
             destVc.authType = self.authType
-            destVc.userEnteredId = "91" + text
+            if authType == .email {
+                destVc.userEnteredId = text
+            } else {
+                destVc.userEnteredId = "91" + text
+            }
         }
     }
 

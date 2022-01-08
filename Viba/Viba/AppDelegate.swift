@@ -11,11 +11,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        #if DEBUG
+
         UserDefaults.standard.register(defaults: [
-            UserDefaultsKeys.selectedMenu.value: -1
+            UserDefaultsKeys.selectedMenu.value: -1,
+            UserDefaultsKeys.firstTime.value: true
         ])
-        #endif
+
         return true
     }
 

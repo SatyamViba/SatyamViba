@@ -70,6 +70,7 @@
 		4A78FB5427417F36000BFCFF /* PicCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78FB5327417F36000BFCFF /* PicCaptureViewController.swift */; };
 		4A8482E527492B62002463D5 /* DashBoardWithTabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8482E427492B62002463D5 /* DashBoardWithTabs.storyboard */; };
 		4A8A6898273D8ABA00491060 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A6897273D8ABA00491060 /* NetworkManager.swift */; };
+		4A8E3D2C2789922B003E32A9 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E3D2B2789922A003E32A9 /* ReviewViewController.swift */; };
 		4A93D238276067B50000759C /* InvitationListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93D237276067B50000759C /* InvitationListResponse.swift */; };
 		4A93D23A2760DAF30000759C /* CheckInOrgResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93D2392760DAF30000759C /* CheckInOrgResponse.swift */; };
 		4AB5F00E2739122E007DB9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5F00D2739122E007DB9FF /* AppDelegate.swift */; };
@@ -180,6 +181,7 @@
 		4A78FB5327417F36000BFCFF /* PicCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCaptureViewController.swift; sourceTree = "<group>"; };
 		4A8482E427492B62002463D5 /* DashBoardWithTabs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashBoardWithTabs.storyboard; sourceTree = "<group>"; };
 		4A8A6897273D8ABA00491060 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4A8E3D2B2789922A003E32A9 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		4A93D237276067B50000759C /* InvitationListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationListResponse.swift; sourceTree = "<group>"; };
 		4A93D2392760DAF30000759C /* CheckInOrgResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInOrgResponse.swift; sourceTree = "<group>"; };
 		4AB5F00A2739122D007DB9FF /* VIBA-EMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIBA-EMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +274,7 @@
 				4A21A199273B89F30002D052 /* SignupViewController.swift */,
 				4A21A19D273B9B600002D052 /* SignupPageViewController.swift */,
 				4A4A8683273BF1E000811EBC /* SignupProtocol.swift */,
+				4A8E3D2B2789922A003E32A9 /* ReviewViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -923,6 +926,7 @@
 				4A72CCDF27402E78008AA853 /* String+Extension.swift in Sources */,
 				4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */,
 				4A72CCDC2740284C008AA853 /* AlertLottieViewController.swift in Sources */,
+				4A8E3D2C2789922B003E32A9 /* ReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

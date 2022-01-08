@@ -28,7 +28,7 @@ class OTPViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.otpField.fieldsCount = 5
-        self.otpField.secureEntry = true
+        self.otpField.secureEntry = false
         self.otpField.otpInputType = .numeric
         self.otpField.fieldBorderWidth = 2
         self.otpField.defaultBorderColor = .black
@@ -88,6 +88,33 @@ class OTPViewController: UIViewController {
             performSegue(withIdentifier: "PicView", sender: nil)
         }
     }
+
+    private func clear() {
+        hasEnteredOtp = false
+        enteredOtp = ""
+        otpField.clear()
+    }
+
+    @IBAction func resendOtp(_ sender: Any) {
+        guard let uid = userEnteredId else {
+            return
+        }
+        clear()
+        showLoadingIndicator()
+        UserServices.authenticate(type: authType, id: authType == .email ? uid : uid) { response in
+            DispatchQueue.main.async { [self] in
+                hideLoadingIndicator()
+                switch response {
+                case .success(let status):
+                    print(status)
+//                    performSegue(withIdentifier: "OTPView", sender: nil)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    showWarning(message: "Failed to validate input")
+                }
+            }
+        }
+    }
 }
 
 extension OTPViewController: OTPFieldViewDelegate {
@@ -103,5 +130,17 @@ extension OTPViewController: OTPFieldViewDelegate {
         print("### Has entered all OTP? \(hasEnteredAll)")
         hasEnteredOtp = hasEnteredAll
         return true
+    }
+}
+
+extension OTPFieldView {
+    func clear() {
+        for index in stride(from: 0, to: fieldsCount, by: 1) {
+            let oldOtpField = viewWithTag(index + 1) as? UITextField
+            oldOtpField?.text = ""
+            oldOtpField?.backgroundColor = defaultBackgroundColor
+            oldOtpField?.layer.borderColor = defaultBorderColor.cgColor
+            oldOtpField?.resignFirstResponder()
+        }
     }
 }

@@ -103,12 +103,15 @@ extension Notification.Name {
 }
 
 enum UserDefaultsKeys {
+    case firstTime
     case companyId
     case selectedMenu
     case token
 
     var value: String {
         switch self {
+        case .firstTime:
+            return "FirstTime"
         case .companyId:
             return "CompanyId"
         case .selectedMenu:

@@ -9,6 +9,11 @@ import UIKit
 
 @IBDesignable
 class VibaLabel: UILabel {
+    @IBInspectable var fontSize: CGFloat = 15 {
+        didSet {
+            font = UIFont(name: "Poppins", size: fontSize)
+        }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -20,6 +25,6 @@ class VibaLabel: UILabel {
     }
 
     private func commonInit() {
-        font = UIFont(name: "Poppins", size: 15)
+        font = UIFont(name: "Poppins", size: fontSize)
     }
 }
