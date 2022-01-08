@@ -10,21 +10,33 @@ import AVFoundation
 
 class FaceCaptureViewController: UIViewController {
     var delegate: SignupProtocol?
-    @IBOutlet var mlView: FaceTrackingView!
+    var userImage: UIImage?
     @IBOutlet var submitBtn: VibaButton!
+    @IBOutlet var picture: UIImageView!
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
-            showWarning(message: "You have to enable camera permission")
-        }
-        mlView.initializeFaceTracking()
-        view.setNeedsLayout()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        showFaceCapture()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        mlView.updateFrames()
+    private func showFaceCapture() {
+        delegate?.showFaceView(onCompletion: { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let image):
+                    self.userImage = UIImage(cgImage: image).withHorizontallyFlippedOrientation()
+                    self.picture.image = self.userImage
+                case .notFound:
+                    self.showWarning(message: "Failed to detect face")
+                case .failure(let err):
+                    self.showWarning(message: err.localizedDescription)
+                }
+            }
+        })
+    }
+
+    @IBAction func reCapture(_ sender: Any) {
+        showFaceCapture()
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {

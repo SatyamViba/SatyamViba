@@ -5,7 +5,7 @@
 //  Created by Satyam Sutapalli on 10/11/21.
 //
 
-import Foundation
+import UIKit
 
 enum SignupScreens {
     case employeeDetails
@@ -16,4 +16,5 @@ enum SignupScreens {
 protocol SignupProtocol: AnyObject {
     func didFinish(screen: SignupScreens)
     func selectDate(onCompletion: @escaping ((Date) -> Void))
+    func showFaceView(onCompletion: @escaping ((FaceCropResult) -> Void))
 }

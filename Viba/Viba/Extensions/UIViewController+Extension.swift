@@ -16,9 +16,9 @@ extension UIViewController {
     }
 
     @objc
-    func hideLoadingIndicator() {
+    func hideLoadingIndicator(completion: (() -> Void)? = nil) {
         DispatchQueue.main.async { [self] in
-            IGPFinishLoading()
+            IGPFinishLoading(completion: completion)
         }
     }
 

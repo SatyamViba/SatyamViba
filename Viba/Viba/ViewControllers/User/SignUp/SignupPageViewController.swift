@@ -97,6 +97,15 @@ extension SignupPageViewController: UIPageViewControllerDataSource {
 }
 
 extension SignupPageViewController: SignupProtocol {
+    func showFaceView(onCompletion handler: @escaping ((FaceCropResult) -> Void)) {
+//        guard let dlgt = signupDelegate else {
+//            handler(.notFound)
+//            return
+//        }
+//
+//        dlgt.showFaceView(onCompletion: handler)
+    }
+
     func selectDate(onCompletion handler: @escaping ((Date) -> Void)) {
         guard let dlgt = signupDelegate else {
             return

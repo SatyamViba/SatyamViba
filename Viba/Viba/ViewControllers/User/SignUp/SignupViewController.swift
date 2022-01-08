@@ -11,6 +11,7 @@ import DatePicker
 protocol SignupPageViewProtocol: AnyObject {
     func updatePageIndicator(screen: SignupScreens)
     func selectDate(onCompletion: @escaping ((Date) -> Void))
+    func showFaceView(onCompletion: @escaping ((FaceCropResult) -> Void))
 }
 
 class SignupViewController: UIViewController {
@@ -21,6 +22,8 @@ class SignupViewController: UIViewController {
     @IBOutlet var firstView: UIView!
     @IBOutlet var secondView: UIView!
     @IBOutlet var thirdView: UIView!
+
+    var faceHandler: ((FaceCropResult) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +42,18 @@ class SignupViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PageContrroller", let dest = segue.destination as? SignupPageViewController {
             dest.signupDelegate = self
+        } else if segue.identifier == "FaceView", let dest = segue.destination as? FaceDetectionViewController {
+            dest.faceHandler = faceHandler
         }
     }
 }
 
 extension SignupViewController: SignupPageViewProtocol {
+    func showFaceView(onCompletion handler: @escaping ((FaceCropResult) -> Void)) {
+        self.faceHandler = handler
+        performSegue(withIdentifier: "FaceView", sender: nil)
+    }
+
     func selectDate(onCompletion handler: @escaping ((Date) -> Void)) {
         let minDate = DatePickerHelper.shared.dateFrom(day: 01, month: 01, year: 1950)!
         let maxDate = Date().subtract(years: 18)
@@ -74,7 +84,7 @@ extension SignupViewController: SignupPageViewProtocol {
             thirdView.backgroundColor = Colors.vibaRed.value
         case .faceCapture:
             print("Time to show dashbaord")
-            // performSegue(withIdentifier: "Dashboard", sender: nil)
+             performSegue(withIdentifier: "Dashboard", sender: nil)
         }
     }
 }

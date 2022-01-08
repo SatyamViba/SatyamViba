@@ -20,8 +20,8 @@ class LoginViewController: UIViewController {
         #if DEBUG
         userId.text = "9886555469" // "1111111110"
         companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
-        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.selectedMenu.value)
         #endif
+        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.selectedMenu.value)
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
         view.addGestureRecognizer(gestrue)
 
@@ -82,10 +82,12 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
-        if UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) != nil {
-            performSegue(withIdentifier: "Dashboard", sender: nil)
-            return
-        }
+//        #if DEBUG
+//        if UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) != nil {
+//            performSegue(withIdentifier: "Dashboard", sender: nil)
+//            return
+//        }
+//        #endif
 
         guard let text = userId.text, !text.isEmpty else {
             userId.showError()
@@ -129,14 +131,15 @@ class LoginViewController: UIViewController {
         showLoadingIndicator()
         UserServices.validateCompany(code: code) { result in
             DispatchQueue.main.async { [self] in
-                self.hideLoadingIndicator()
-                switch result {
-                case .success(let companyDetails):
-                    UserDefaults.standard.set(companyDetails.id, forKey: UserDefaultsKeys.companyId.value)
-                    self.performSegue(withIdentifier: "SignupView", sender: nil)
-                case .failure(let err):
-                    print(err.localizedDescription)
-                    showWarning(message: err.localizedDescription)
+                self.hideLoadingIndicator {
+                    switch result {
+                    case .success(let companyDetails):
+                        UserDefaults.standard.set(companyDetails.id, forKey: UserDefaultsKeys.companyId.value)
+                        self.performSegue(withIdentifier: "SignupView", sender: nil)
+                    case .failure(let err):
+                        print(err.localizedDescription)
+                        showWarning(message: err.localizedDescription)
+                    }
                 }
             }
         }

@@ -46,9 +46,9 @@ public class IGProgress {
         }
     }
 
-    public static  func finishLoading() {
+    public static  func finishLoading(completion: (() -> Void)? = nil) {
         if IGProgress.alertLottie != nil {
-            IGProgress.alertLottie?.dismiss(animated: true, completion: nil)
+            IGProgress.alertLottie?.dismiss(animated: true, completion: completion)
             IGProgress.control = false
             IGProgress.config = IGConfig()
         }
@@ -63,8 +63,8 @@ public extension UIViewController {
         IGProgress.startLoading()
     }
     
-    func IGPFinishLoading() {
-        IGProgress.finishLoading()
+    func IGPFinishLoading(completion: (() -> Void)? = nil) {
+        IGProgress.finishLoading(completion: completion)
     }
 }
 
