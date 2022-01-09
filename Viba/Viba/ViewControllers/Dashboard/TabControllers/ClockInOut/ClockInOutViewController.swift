@@ -29,15 +29,16 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
     @IBOutlet var trailingSpace: NSLayoutConstraint!
     @IBOutlet var wishes: UILabel!
     @IBOutlet var name: UILabel!
-    @IBOutlet var dateAndTime: UILabel!
+    @IBOutlet var dateAndTime: VibaLabel!
     @IBOutlet var message: UILabel!
     @IBOutlet var office: VibaRoundImageButton!
     @IBOutlet var home: VibaRoundImageButton!
-    @IBOutlet var confirmationView: VibaRoundCornerView!
+    @IBOutlet var confirmationView: UIView!
+    @IBOutlet var confirmationBgView: VibaRoundCornerView!
     @IBOutlet var selectionView: VibaRoundCornerView!
     @IBOutlet var clockInAtOffice: UILabel!
     @IBOutlet var clockInOutBtn: VibaButton!
-    @IBOutlet var confirmationMessage: UILabel!
+    @IBOutlet var confirmationMessage: VibaLabel!
     @IBOutlet var userImage: VibaCircularImage!
 
     let refreshControl = UIRefreshControl()
@@ -81,6 +82,10 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let degrees: CGFloat = -4.0
+        let radians: CGFloat = degrees * (.pi / 180)
+        confirmationBgView.transform = CGAffineTransform(rotationAngle: radians)
 
         name.text = DataManager.shared.fullName
         if let img = DataManager.shared.usrImage, let imageUrl = URL(string: img) {
@@ -178,8 +183,8 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
 
     private func bringBackSelectionView() {
         UIView.animate(withDuration: 0.5) { [self] in
-            leadingSpace.constant = 60
-            trailingSpace.constant = 40
+            leadingSpace.constant = 35
+            trailingSpace.constant = 20
             selectionView.isUserInteractionEnabled = true
             view.layoutIfNeeded()
         }
@@ -215,7 +220,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
 
     @IBAction func handleClockInOut(_ sender: UIButton) {
         UIView.animate(withDuration: 0.5) { [self] in
-            let xpos = view.frame.width - 60
+            let xpos = view.frame.width - 35
             leadingSpace.constant = -(xpos)
             trailingSpace.constant = xpos
             selectionView.isUserInteractionEnabled = false

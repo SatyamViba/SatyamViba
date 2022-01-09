@@ -99,12 +99,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func requestOTP(_ sender: Any) {
-//        #if DEBUG
-//        if UserDefaults.standard.string(forKey: UserDefaultsKeys.token.value) != nil {
-//            performSegue(withIdentifier: "Dashboard", sender: nil)
-//            return
-//        }
-//        #endif
+//        performSegue(withIdentifier: "Dashboard", sender: nil)
+//        return
 
         guard let text = userId.text, !text.isEmpty else {
             userId.showError()
