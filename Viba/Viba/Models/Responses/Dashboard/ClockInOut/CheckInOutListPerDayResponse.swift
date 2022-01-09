@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - CheckInOutListPerDayResponse
 struct CheckInOutListPerDayResponse: Decodable {
-    let activities: [Activity]
+    var activities: [Activity]
     let checkin: CheckinObj?
 }
 
@@ -72,12 +72,12 @@ struct CheckinObj: Decodable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.userID = try container.decode(String.self, forKey: .userID)
-        self.id = try container.decode(String.self, forKey: .id)
-        self.accountID = try container.decode(String.self, forKey: .accountID)
+        self.userID = try container.decodeIfPresent(String.self, forKey: .userID)
+        self.id = try container.decodeIfPresent(String.self, forKey: .id)
+        self.accountID = try container.decodeIfPresent(String.self, forKey: .accountID)
         self.clockedInAt = try container.decodeIfPresent(String.self, forKey: .clockedInAt)?.toDate
         self.clockedOutAt = try container.decodeIfPresent(String.self, forKey: .clockedOutAt)?.toDate
-        self.clockedInStatus = try container.decode(String.self, forKey: .clockedInStatus)
+        self.clockedInStatus = try container.decodeIfPresent(String.self, forKey: .clockedInStatus)
         self.mode = try container.decodeIfPresent(Mode.self, forKey: .mode)
         self.geoLocation = try container.decodeIfPresent(GeoLocationObj.self, forKey: .geoLocation)
         self.hours = try container.decodeIfPresent(String.self, forKey: .hours)

@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1928.8" y="75.112443778110944"/>
         </scene>
         <!--TabController-->
         <scene sceneID="6zR-Px-lB4">
@@ -355,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cib-BK-efR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2066.4000000000001" y="-75.112443778110944"/>
+            <point key="canvasLocation" x="3005.5999999999999" y="-75.112443778110944"/>
         </scene>
         <!--Pic Capture View Controller-->
         <scene sceneID="1sx-Y1-Yik">
@@ -407,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UfF-9e-INP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2933.5999999999999" y="-75.112443778110944"/>
+            <point key="canvasLocation" x="3872.8000000000002" y="-75.112443778110944"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="iZ2-9c-rJb">
@@ -1138,7 +1138,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIM-2z-fiP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="-516"/>
+            <point key="canvasLocation" x="2602" y="-593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zea-GQ-9CF">
@@ -1181,12 +1181,29 @@
                     <navigationItem key="navigationItem" id="Bbg-dP-DV1"/>
                     <connections>
                         <outlet property="splashimage" destination="Zj5-iP-aBu" id="NwK-re-pMV"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="Main" animates="NO" id="GUF-to-zzh"/>
+                        <segue destination="WC0-bM-2aD" kind="presentation" identifier="Main" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="GUF-to-zzh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QF5-EQ-vzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rrs-3S-2T7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="WC0-bM-2aD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vyZ-AF-Eer">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aZd-2d-F58"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nds-Gn-XEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.60000000000002" y="75.112443778110944"/>
         </scene>
     </scenes>
     <designables>

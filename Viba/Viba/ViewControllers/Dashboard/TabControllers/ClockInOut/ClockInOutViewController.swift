@@ -45,7 +45,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
     var clockInOutDetails: CheckInOutListPerDayResponse? {
         didSet {
             if let cinDetails = clockInOutDetails, !cinDetails.activities.isEmpty {
-                if let lastObj = cinDetails.activities.last, lastObj.clockedOutAt != nil {
+                if let lastObj = cinDetails.activities.first, lastObj.clockedOutAt != nil {
                     clockInOutEvent = .clockIn
                 } else {
                     clockInOutEvent = .clockOut
