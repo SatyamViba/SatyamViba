@@ -135,7 +135,6 @@ extension OTPViewController: OTPFieldViewDelegate {
     }
 
     func hasEnteredAllOTP(hasEnteredAll: Bool) -> Bool {
-        print("### Has entered all OTP? \(hasEnteredAll)")
         hasEnteredOtp = hasEnteredAll
         return true
     }

@@ -69,7 +69,7 @@ enum NetworkPath: String {
 
     // Invitations
     case createInvitation = "invitations"
-    case invitationsByDate = "invitations/get-by-date?date=" // 2021-12-08
+    case invitationsByDate = "invitations/get-by-date?page_index=1&page_size=100&date=" // 2021-12-08
     // Profile
     case currentUser = "users/me"
 }

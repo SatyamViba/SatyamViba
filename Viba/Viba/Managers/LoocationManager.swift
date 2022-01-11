@@ -15,6 +15,7 @@ class Location: NSObject {
     static let manager = Location()
     private override init() {
         super.init()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
     }
 
@@ -32,7 +33,8 @@ class Location: NSObject {
 
     func fetchLocation(onCompletion handler: @escaping ((Result<CLLocation, Error>) -> Void)) {
         self.completionHandler = handler
-        locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
+        //locationManager.requestLocation()
     }
 }
 
@@ -42,11 +44,13 @@ extension Location: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.stopUpdatingLocation()
         guard let handler = completionHandler, let firstLocation = locations.first else {
             return
         }
 
         handler(.success(firstLocation))
+        completionHandler = nil
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

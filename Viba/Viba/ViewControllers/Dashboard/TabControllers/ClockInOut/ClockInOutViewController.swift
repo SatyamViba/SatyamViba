@@ -126,16 +126,71 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
         clockInOutBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: spacing)
         clockInOutBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: 0)
 
-        checkIfUserIsInOffice()
-        fetchClockInOutList()
+        updateUI()
     }
 
-    private func checkIfUserIsInOffice() {
-//        showLoadingIndicator()
+    private func updateUI() {
+        let callsGroup = DispatchGroup()
+        showLoadingIndicator()
+
+        callsGroup.enter()
         Location.manager.fetchLocation { [self] result in
             switch result {
             case .success(let location):
-//                showLoadingIndicator()
+                //                showLoadingIndicator()
+                let usrLocation = GeoLocation(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
+                DashboardServices.checkOutsideOrg(data: ClockInOut(geoLocation: usrLocation)) { response in
+                    DispatchQueue.main.async { [self] in
+                        hideLoadingIndicator()
+                        callsGroup.leave()
+                        switch response {
+                        case .success(let dataReceived):
+                            workFromHome = dataReceived.outsideOrg
+                        case .failure(let err):
+                            print("### ", err.localizedDescription)
+                            showWarning(message: "Failed to check user location")
+                        }
+                    }
+                }
+            case .failure(let err):
+                callsGroup.leave()
+                print("### Failed to get location: ", err.localizedDescription)
+                DispatchQueue.main.async { [self] in
+                    showWarning(message: "Failed to fetch location")
+                }
+            }
+        }
+
+        callsGroup.enter()
+        //        showLoadingIndicator()
+        DashboardServices.getCheckInOutDetailsByDate(date: Date()) { [self] response in
+            callsGroup.leave()
+            DispatchQueue.main.async { [self] in
+                //                hideLoadingIndicator()
+                //                refreshControl.endRefreshing()
+                switch response {
+                case .success(let list):
+                    self.clockInOutDetails = list
+                    eventList.reloadData()
+                case .failure(let err):
+                    print(err.localizedDescription)
+                    showWarning(message: err.localizedDescription)
+                }
+            }
+        }
+        //checkIfUserIsInOffice()
+        //fetchClockInOutList()
+
+        callsGroup.notify(queue: DispatchQueue.main) {
+            self.hideLoadingIndicator()
+        }
+    }
+
+    private func checkIfUserIsInOffice() {
+        Location.manager.fetchLocation { [self] result in
+            switch result {
+            case .success(let location):
+                showLoadingIndicator()
                 let usrLocation = GeoLocation(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
                 DashboardServices.checkOutsideOrg(data: ClockInOut(geoLocation: usrLocation)) { response in
                     DispatchQueue.main.async { [self] in

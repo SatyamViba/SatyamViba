@@ -26,7 +26,6 @@ class LoadingViewController: UIViewController {
 
 extension LoadingViewController: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
-        print("gifDidStop")
         performSegue(withIdentifier: "Main", sender: nil)
     }
 }
