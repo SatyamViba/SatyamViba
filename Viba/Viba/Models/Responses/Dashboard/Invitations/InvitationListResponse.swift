@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct  InvitationListResponse: Decodable {
+    let data: InvitationListResponseData
+    let hasNext: Bool
+    let total: Int
+}
+
 // MARK: - InvitationListResponseElement
 struct InvitationListResponseElement: Decodable {
     let id, name, phone, purpose: String?
@@ -57,4 +63,4 @@ struct ClockinObj: Decodable {
     }
 }
 
-typealias InvitationListResponse = [InvitationListResponseElement]
+typealias InvitationListResponseData = [InvitationListResponseElement]

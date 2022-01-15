@@ -20,7 +20,8 @@ class PreInvitationViewController: UIViewController {
     @IBOutlet var calendar: UIButton!
     @IBOutlet var right: UIButton!
 
-    var invitations = InvitationListResponse()
+    var currentPage = 0
+    var invitations: InvitationListResponse?
     var selectedDate = Date() {
         didSet {
             formatAndShowDate()
@@ -71,7 +72,7 @@ class PreInvitationViewController: UIViewController {
 
     private func fetchInvitations() {
         showLoadingIndicator()
-        DashboardServices.getInvitationsList(date: selectedDate) { result in
+        DashboardServices.getInvitationsList(date: selectedDate, pgIndex: currentPage) { result in
             DispatchQueue.main.async { [self] in
                 hideLoadingIndicator()
                 refreshControl.endRefreshing()
@@ -136,16 +137,19 @@ class PreInvitationViewController: UIViewController {
 
 extension PreInvitationViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return invitations.isEmpty ? invitations.count : 1
+        if let invtns = invitations {
+            return invtns.data.isEmpty ? invtns.data.count : 1
+        }
+
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if invitations.isEmpty {
-            let cell = tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
-            return cell
+        guard let invtns = invitations, !invtns.data.isEmpty else {
+            return tableView.dequeueReusableCell(withIdentifier: VibaNoRecordsCell.cellID, for: indexPath)
         }
 
-        let event = invitations[indexPath.row]
+        let event = invtns.data[indexPath.row]
         if event.clockin == nil {
             if let cell = tableView.dequeueReusableCell(withIdentifier: PreInvitationTableViewCell.cellId, for: indexPath) as? PreInvitationTableViewCell {
                 cell.configure(data: event)
@@ -162,11 +166,11 @@ extension PreInvitationViewController: UITableViewDataSource, UITableViewDelegat
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if invitations.isEmpty {
+        guard let invtns = invitations, !invtns.data.isEmpty else {
             return 100
         }
-        
-        let event = invitations[indexPath.row]
+
+        let event = invtns.data[indexPath.row]
         if event.clockin == nil {
             return 90
         } else {

@@ -26,7 +26,9 @@ class DashboardServices {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.createInvitation.rawValue, params: event, methodType: .post, completion: handler)
     }
 
-    static func getInvitationsList(date: Date, completion handler: @escaping ((Result<InvitationListResponse, Error>) -> Void)) {
-        NetworkManager.shared.fetchResponse(urlString: NetworkPath.invitationsByDate.rawValue + date.toApiFormat, params: EmptyRequest(), methodType: .get, completion: handler)
+    static func getInvitationsList(date: Date, pgIndex: Int, completion handler: @escaping ((Result<InvitationListResponse, Error>) -> Void)) {
+        let url = NetworkPath.invitationsByDate.rawValue + date.toApiFormat
+        let updatedUrl = url.replacingLastOccurrenceOfString("#", with: String(pgIndex))
+        NetworkManager.shared.fetchResponse(urlString: updatedUrl, params: EmptyRequest(), methodType: .get, completion: handler)
     }
 }
