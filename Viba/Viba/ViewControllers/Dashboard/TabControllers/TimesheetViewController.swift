@@ -55,7 +55,7 @@ class TimesheetViewController: UIViewController {
         let rightImg = UIImage.fontAwesomeIcon(name: .angleRight, style: .solid, textColor: .black, size: CGSize(width: 26, height: 26))
         right.setImage(rightImg, for: .normal)
         let rightDisabledImg = UIImage.fontAwesomeIcon(name: .angleRight, style: .solid, textColor: .lightGray, size: CGSize(width: 26, height: 26))
-        right.setImage(rightDisabledImg, for: .normal)
+        right.setImage(rightDisabledImg, for: .disabled)
 
         let calImg = UIImage.fontAwesomeIcon(name: .calendarAlt, style: .regular, textColor: .black, size: CGSize(width: 26, height: 26))
         calendar.setImage(calImg, for: .normal)

@@ -80,6 +80,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cdN-Pn-e4k"/>
                                 </constraints>
@@ -113,19 +114,19 @@
     </scenes>
     <designables>
         <designable name="GtX-yA-izg">
-            <size key="intrinsicContentSize" width="79" height="40"/>
+            <size key="intrinsicContentSize" width="79" height="57"/>
         </designable>
         <designable name="Imj-Jf-PN2">
-            <size key="intrinsicContentSize" width="93" height="40"/>
+            <size key="intrinsicContentSize" width="93" height="57"/>
         </designable>
         <designable name="LMv-ic-vtF">
-            <size key="intrinsicContentSize" width="65" height="40"/>
+            <size key="intrinsicContentSize" width="65" height="57"/>
         </designable>
         <designable name="i0p-Kk-cy5">
-            <size key="intrinsicContentSize" width="72" height="40"/>
+            <size key="intrinsicContentSize" width="72" height="57"/>
         </designable>
         <designable name="jaD-Q7-czY">
-            <size key="intrinsicContentSize" width="91" height="40"/>
+            <size key="intrinsicContentSize" width="91" height="57"/>
         </designable>
     </designables>
     <resources>
