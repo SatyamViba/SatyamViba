@@ -11,7 +11,9 @@ class ProfileViewController: UIViewController, VibaImageCache {
     @IBOutlet var userImage: VibaCircularImage!
     @IBOutlet var fullName: UILabel!
     @IBOutlet var designation: UILabel!
+
     @IBOutlet var profileImage: UIImageView!
+
     @IBOutlet var calImage: VibaCircularImage!
     @IBOutlet var calDate: VibaLabel!
 

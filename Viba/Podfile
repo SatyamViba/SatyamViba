@@ -14,6 +14,7 @@ target 'Viba' do
   pod 'lottie-ios'
   pod 'MASegmentedControl'
   pod 'SwiftyGif'
+  pod 'ActionSheetPicker-3.0', '~> 2.3.0'
 end
 
 post_install do |installer|

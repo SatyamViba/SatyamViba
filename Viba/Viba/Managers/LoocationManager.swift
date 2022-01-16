@@ -34,7 +34,6 @@ class Location: NSObject {
     func fetchLocation(onCompletion handler: @escaping ((Result<CLLocation, Error>) -> Void)) {
         self.completionHandler = handler
         locationManager.startUpdatingLocation()
-        //locationManager.requestLocation()
     }
 }
 

@@ -178,8 +178,6 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                 }
             }
         }
-        //checkIfUserIsInOffice()
-        //fetchClockInOutList()
 
         callsGroup.notify(queue: DispatchQueue.main) {
             self.hideLoadingIndicator()

@@ -75,6 +75,7 @@
 		4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0162739122F007DB9FF /* Assets.xcassets */; };
 		4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0182739122F007DB9FF /* LaunchScreen.storyboard */; };
 		4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */; };
+		4AC6C03C2794217E007CB675 /* VibaRightImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */; };
 		4AC8D2842756405D003C09AD /* ClockInOutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */; };
 		4AC8D2862756414D003C09AD /* ClockInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2852756414D003C09AD /* ClockInOut.swift */; };
 		4AC8D28827567FD3003C09AD /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D28727567FD3003C09AD /* ProfileResponse.swift */; };
@@ -186,6 +187,7 @@
 		4AB5F0192739122F007DB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB5F01B2739122F007DB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRightImageButton.swift; sourceTree = "<group>"; };
 		4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutResponse.swift; sourceTree = "<group>"; };
 		4AC8D2852756414D003C09AD /* ClockInOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOut.swift; sourceTree = "<group>"; };
 		4AC8D28727567FD3003C09AD /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 				4A72CCD72740284C008AA853 /* Lottie */,
 				4A6D64D8274E670F00022CBE /* VibaMenuButton */,
 				4AFC563D2739483100E064E9 /* VibaButton.swift */,
+				4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */,
 				4A5AA7AA274934E800084866 /* VibaCircularImage.swift */,
 				4A7784DC273CEE0600E9E168 /* VibaRadioButton.swift */,
 				4A1617BC273A42CF00640236 /* VibaBorderButton.swift */,
@@ -927,6 +930,7 @@
 				4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */,
 				4A72CCDC2740284C008AA853 /* AlertLottieViewController.swift in Sources */,
 				4A8E3D2C2789922B003E32A9 /* ReviewViewController.swift in Sources */,
+				4AC6C03C2794217E007CB675 /* VibaRightImageButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
