@@ -13,7 +13,6 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         do {
             splashimage.delegate = self
             let gif = try UIImage(gifName: "splash.gif")

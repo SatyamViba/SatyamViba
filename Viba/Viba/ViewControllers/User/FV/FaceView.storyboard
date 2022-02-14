@@ -33,7 +33,7 @@
                                             <imageReference key="image" image="multiply.square" catalog="system" symbolScale="large"/>
                                         </state>
                                         <connections>
-                                            <action selector="close:" destination="YNm-Qz-Qs9" eventType="touchUpInside" id="pcb-Gt-kpO"/>
+                                            <action selector="closeFaceCapture:" destination="Aar-lP-KaY" eventType="touchUpInside" id="biL-Fa-XfG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -59,7 +59,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhd-pc-gnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="YNm-Qz-Qs9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-234.40000000000001" y="160.56971514242881"/>
         </scene>

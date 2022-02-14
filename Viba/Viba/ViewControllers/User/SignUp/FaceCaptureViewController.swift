@@ -36,12 +36,6 @@ class FaceCaptureViewController: UIViewController {
         })
     }
 
-    @IBAction func close(_ sender: Any) {
-        if let navController = navigationController {
-            navController.popViewController(animated: true)
-        }
-    }
-
     @IBAction func reCapture(_ sender: Any) {
         showFaceCapture()
     }

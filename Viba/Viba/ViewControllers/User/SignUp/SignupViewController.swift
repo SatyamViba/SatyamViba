@@ -84,7 +84,6 @@ extension SignupViewController: SignupPageViewProtocol {
             thirdIndicatorWidth.constant = 50
             thirdView.backgroundColor = Colors.vibaRed.value
         case .faceCapture:
-            print("Time to show dashbaord")
             performSegue(withIdentifier: "Review", sender: nil)
         }
     }

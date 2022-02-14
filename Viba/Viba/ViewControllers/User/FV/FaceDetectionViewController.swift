@@ -13,7 +13,7 @@ class FaceDetectionViewController: UIViewController {
     var sequenceHandler = VNSequenceRequestHandler()
     @IBOutlet var faceView: FaceView!
     var faceHandler: ((FaceCropResult) -> Void)?
-
+    var isProcessing = false
     let session = AVCaptureSession()
     var previewLayer: AVCaptureVideoPreviewLayer!
 
@@ -27,6 +27,12 @@ class FaceDetectionViewController: UIViewController {
         super.viewDidLoad()
         configureCaptureSession()
         session.startRunning()
+    }
+
+    @IBAction func closeFaceCapture(_ sender: Any) {
+        if let navController = navigationController {
+            navController.popViewController(animated: true)
+        }
     }
 }
 
@@ -97,19 +103,16 @@ extension FaceDetectionViewController: AVCaptureVideoDataOutputSampleBufferDeleg
 //                    // Fallback on earlier versions
 //                    print(results.count, result.yaw ?? "no_yaw", result.roll ?? "no_roll")
 //                }
-
-                print(result.landmarks?.confidence)
-                if let landmarks = result.landmarks, landmarks.confidence > 0.8, let yaw = result.yaw, yaw.doubleValue < 0.2 && yaw.doubleValue > -0.2, let roll = result.roll, roll.doubleValue > 1.0 && roll.doubleValue < 2.0 {
+                if !self.isProcessing, let landmarks = result.landmarks, landmarks.confidence > 0.8, let yaw = result.yaw, yaw.doubleValue < 0.2 && yaw.doubleValue > -0.2, let roll = result.roll, roll.doubleValue > 1.0 && roll.doubleValue < 2.0 {
                     self.session.stopRunning()
-                    if let fHandler = self.faceHandler {
+                    self.isProcessing = true
+                    if let fHandler = self.faceHandler, let navController = self.navigationController {
                         CGImage.create(pixelBuffer: image)?.faceCrop(margin: 10, completion: fHandler)
-                        self.navigationController?.popViewController(animated: true)
+                        print(navController.viewControllers)
+                        navController.popViewController(animated: true)
                     }
                 }
             }
-//            else {
-//                self.faceView.clear()
-//            }
         }
 
         do {
