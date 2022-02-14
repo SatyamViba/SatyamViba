@@ -16,9 +16,10 @@ class FaceCaptureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        showFaceCapture()
+        perform(#selector(showFaceCapture), with: nil, afterDelay: 0.5)
     }
-
+    
+    @objc
     private func showFaceCapture() {
         delegate?.showFaceView(onCompletion: { result in
             DispatchQueue.main.async {
@@ -35,6 +36,12 @@ class FaceCaptureViewController: UIViewController {
         })
     }
 
+    @IBAction func close(_ sender: Any) {
+        if let navController = navigationController {
+            navController.popViewController(animated: true)
+        }
+    }
+
     @IBAction func reCapture(_ sender: Any) {
         showFaceCapture()
     }
@@ -45,10 +52,11 @@ class FaceCaptureViewController: UIViewController {
             return
         }
 
-        guard let dlgt = delegate else {
+        guard let dlgt = delegate, let base64Image = userImage?.toBase64()  else {
+            showWarning(message: "Image not captured")
             return
         }
 
-        dlgt.didFinish(screen: .faceCapture)
+        dlgt.didFinish(screen: .faceCapture(base64Image))
     }
 }

@@ -127,16 +127,19 @@ class EmployeeDetailsViewController: UIViewController {
     }
 
     @IBAction func handleTapOnMale(_ sender: Any) {
+        view.endEditing(true)
         gender = "m"
         genderError.isHidden = true
     }
 
     @IBAction func handleTapOnFemale(_ sender: Any) {
+        view.endEditing(true)
         gender = "f"
         genderError.isHidden = true
     }
 
     @IBAction func selectDateofBirth(_ sender: Any) {
+        view.endEditing(true)
         guard let dlgt = delegate else {
             return
         }

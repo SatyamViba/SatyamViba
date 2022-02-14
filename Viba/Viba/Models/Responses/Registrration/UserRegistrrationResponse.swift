@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserRegistrrationDetails: Decodable {
+struct UserRegistrrationResponse: Decodable {
     let id: String
 
     enum CodingKeys: String, CodingKey {

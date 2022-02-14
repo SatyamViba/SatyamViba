@@ -52,7 +52,7 @@ class NetworkManager {
 
             apiRequest.httpMethod = method.rawValue
             print("### Headers: ", apiRequest.allHTTPHeaderFields as Any)
-            if method == .post {
+            if method == .post || method == .put {
                 apiRequest.setValue(kApplicationJson, forHTTPHeaderField: kContentType)
                 if let requestInfo = params {
                     do {

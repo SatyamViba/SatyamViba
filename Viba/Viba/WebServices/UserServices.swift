@@ -49,7 +49,7 @@ class UserServices {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.validateCompanyCode.rawValue, params: Company(code: code), methodType: .post, completion: handler)
     }
 
-    static func registerUser(params: RegisterUser, onCompletion handler: @escaping ((Result<UserRegistrrationDetails, Error>) -> Void)) {
+    static func registerUser(params: RegisterUser, onCompletion handler: @escaping ((Result<UserRegistrrationResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.registerStep1.rawValue, params: params, methodType: .post, completion: handler)
     }
 
@@ -66,7 +66,7 @@ class UserServices {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.resendRegisrtrationEmailOtp.rawValue, params: ResendRegistrationOtp(userID: userId), methodType: .post, completion: handler)
     }
 
-    static func uploadPic(userId: String, image: String, onCompletion handler: @escaping ((Result<GeneralResponse, Error>) -> Void)) {
+    static func uploadSignUpPic(userId: String, image: String, onCompletion handler: @escaping ((Result<UploadPicResponse, Error>) -> Void)) {
         NetworkManager.shared.fetchResponse(urlString: NetworkPath.uploadUserImage.rawValue + userId, params: UploadUserImage(image: image), methodType: .put, completion: handler)
     }
 }

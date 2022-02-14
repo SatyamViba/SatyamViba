@@ -189,16 +189,10 @@ extension PreInvitationViewController: UITableViewDataSource, UITableViewDelegat
         }
 
         let event = invtns.data[indexPath.row]
-        if event.clockin == nil {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: PreInvitationTableViewCell.cellId, for: indexPath) as? PreInvitationTableViewCell {
-                cell.configure(data: event)
-                return cell
-            }
-        } else {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: PreInvitationDetailTableViewCell.cellId, for: indexPath) as? PreInvitationDetailTableViewCell {
-                cell.configure(data: event)
-                return cell
-            }
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: PreInvitationTableViewCell.cellId, for: indexPath) as? PreInvitationTableViewCell {
+            cell.configure(data: event)
+            return cell
         }
 
         return UITableViewCell()
@@ -209,11 +203,6 @@ extension PreInvitationViewController: UITableViewDataSource, UITableViewDelegat
             return 100
         }
 
-        let event = invtns.data[indexPath.row]
-        if event.clockin == nil {
-            return 90
-        } else {
-            return 120
-        }
+        return 110
     }
 }

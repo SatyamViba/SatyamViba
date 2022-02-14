@@ -73,7 +73,7 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func resendEmailOtp(_ sender: Any) {
-        guard let usrId = DataManager.shared.userId, usrId.isEmpty else {
+        guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
             showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }
@@ -95,7 +95,7 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func resendMobileOtp(_ sender: Any) {
-        guard let usrId = DataManager.shared.userId, usrId.isEmpty else {
+        guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
             showWarning(title: "Warning!", message: "User ID is invalid")
             return
         }

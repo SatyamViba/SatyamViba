@@ -56,7 +56,8 @@ extension SignupViewController: SignupPageViewProtocol {
 
     func selectDate(onCompletion handler: @escaping ((Date) -> Void)) {
         let minDate = DatePickerHelper.shared.dateFrom(day: 01, month: 01, year: 1950)!
-        let maxDate = Date().subtract(years: 18)
+//        let maxDate = Date().subtract(years: 18)
+        let maxDate = Date()
         let today = Date()
         // Create picker object
         let datePicker = DatePicker()
@@ -84,7 +85,7 @@ extension SignupViewController: SignupPageViewProtocol {
             thirdView.backgroundColor = Colors.vibaRed.value
         case .faceCapture:
             print("Time to show dashbaord")
-             performSegue(withIdentifier: "Review", sender: nil)
+            performSegue(withIdentifier: "Review", sender: nil)
         }
     }
 }

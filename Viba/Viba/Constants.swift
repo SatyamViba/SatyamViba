@@ -75,7 +75,7 @@ enum NetworkPath: String {
 }
 
 enum API: String {
-    case baseUrl = "http://3.144.103.250:3000/api/v1/"
+    case baseUrl = "https://dev-backend.viba.ai:3000/api/v1/"
 }
 
 enum RequestMethod: String {

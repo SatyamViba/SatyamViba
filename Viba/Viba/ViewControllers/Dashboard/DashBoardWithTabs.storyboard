@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -930,13 +931,13 @@
                                             <constraint firstAttribute="height" constant="36" id="rgh-uJ-wnu"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-v1-hpP" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-v1-hpP" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
                                         <rect key="frame" x="52" y="0.0" width="263" height="20.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vat-OO-LTr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vat-OO-LTr">
                                         <rect key="frame" x="52" y="23" width="263" height="17"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                         <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
@@ -1530,29 +1531,47 @@
                                 <rect key="frame" x="16" y="170" width="343" height="588"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreInvitationTableViewCell" id="hfg-f4-qbx" customClass="PreInvitationTableViewCell" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="343" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreInvitationTableViewCell" rowHeight="110" id="hfg-f4-qbx" customClass="PreInvitationTableViewCell" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="343" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hfg-f4-qbx" id="fFy-Fk-8aM">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWI-yi-DIH" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QZC-AZ-Nux">
-                                                            <rect key="frame" x="90" y="22" width="233" height="36"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvw-NG-vEO">
+                                                            <rect key="frame" x="267" y="0.0" width="60" height="18"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-eh-z0C" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="233" height="20.333333333333332"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdj-We-lTJ">
+                                                                    <rect key="frame" x="20.333333333333314" y="1.333333333333333" width="19.666666666666671" height="15.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.28627450980392155" green="0.90196078431372551" blue="0.45098039215686275" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="Cdj-We-lTJ" firstAttribute="centerX" secondItem="dvw-NG-vEO" secondAttribute="centerX" id="Lx4-NY-CjO"/>
+                                                                <constraint firstItem="Cdj-We-lTJ" firstAttribute="centerY" secondItem="dvw-NG-vEO" secondAttribute="centerY" id="TbW-wN-Pt0"/>
+                                                                <constraint firstAttribute="height" constant="18" id="c1H-XS-DCw"/>
+                                                                <constraint firstAttribute="width" constant="60" id="raN-M5-a4q"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QZC-AZ-Nux">
+                                                            <rect key="frame" x="90" y="19.999999999999996" width="233" height="36.666666666666657"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-eh-z0C">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="233" height="21"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbz-Bp-iAQ">
-                                                                    <rect key="frame" x="0.0" y="20.333333333333336" width="233" height="15.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="21" width="233" height="15.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                    <color key="textColor" red="1" green="0.0" blue="0.38431372549999998" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -1568,20 +1587,72 @@
                                                             </constraints>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="tw8-Qu-nNk" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="15" width="50" height="50"/>
+                                                            <rect key="frame" x="20" y="25" width="50" height="50"/>
                                                             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="36Y-xB-iCO"/>
                                                                 <constraint firstAttribute="height" constant="50" id="r1h-Vx-vte"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVf-2H-nC8" customClass="VibaRoundImageButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                            <rect key="frame" x="90" y="64.666666666666671" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="CLp-JI-joM"/>
+                                                                <constraint firstAttribute="height" constant="25" id="QY6-3D-jZe"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="callMember:" destination="hfg-f4-qbx" eventType="touchUpInside" id="neP-kM-C6L"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqB-VF-KVK" customClass="VibaRoundImageButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                                            <rect key="frame" x="125" y="64.666666666666671" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="CMr-FG-oWs"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="J5V-Cd-fYV"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="Qk3-Kj-UN3"/>
+                                                                <constraint firstAttribute="height" constant="25" id="SqG-kf-GVe"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal">
+                                                                <imageReference key="image" image="note.text" catalog="system" symbolScale="small"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="messageMember:" destination="hfg-f4-qbx" eventType="touchUpInside" id="G19-Vp-jWJ"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="tw8-Qu-nNk" firstAttribute="leading" secondItem="WWI-yi-DIH" secondAttribute="leading" constant="20" id="6ib-Bc-yBD"/>
+                                                        <constraint firstItem="QZC-AZ-Nux" firstAttribute="top" secondItem="WWI-yi-DIH" secondAttribute="top" constant="20" id="CTq-mP-y3Z"/>
                                                         <constraint firstItem="tw8-Qu-nNk" firstAttribute="centerY" secondItem="WWI-yi-DIH" secondAttribute="centerY" id="H55-Zf-lMF"/>
-                                                        <constraint firstItem="QZC-AZ-Nux" firstAttribute="centerY" secondItem="WWI-yi-DIH" secondAttribute="centerY" id="IgB-i7-nvM"/>
+                                                        <constraint firstItem="dvw-NG-vEO" firstAttribute="top" secondItem="WWI-yi-DIH" secondAttribute="top" id="MTx-Cu-puO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dvw-NG-vEO" secondAttribute="trailing" constant="16" id="Sse-u6-Uih"/>
+                                                        <constraint firstItem="zVf-2H-nC8" firstAttribute="top" secondItem="QZC-AZ-Nux" secondAttribute="bottom" constant="8" id="cLI-jt-Ucv"/>
+                                                        <constraint firstItem="zVf-2H-nC8" firstAttribute="leading" secondItem="QZC-AZ-Nux" secondAttribute="leading" id="cjG-xC-6K2"/>
+                                                        <constraint firstItem="hqB-VF-KVK" firstAttribute="top" secondItem="zVf-2H-nC8" secondAttribute="top" id="glj-ii-cqn"/>
                                                         <constraint firstAttribute="trailing" secondItem="QZC-AZ-Nux" secondAttribute="trailing" constant="20" id="pXj-o8-B11"/>
+                                                        <constraint firstItem="hqB-VF-KVK" firstAttribute="leading" secondItem="zVf-2H-nC8" secondAttribute="trailing" constant="10" id="qFC-mz-2E0"/>
                                                         <constraint firstItem="QZC-AZ-Nux" firstAttribute="leading" secondItem="tw8-Qu-nNk" secondAttribute="trailing" constant="20" id="wYg-bQ-Cr4"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -1605,151 +1676,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="callBtn" destination="zVf-2H-nC8" id="ocd-PM-728"/>
                                             <outlet property="details" destination="bbz-Bp-iAQ" id="OOV-wS-oUr"/>
+                                            <outlet property="msgBtn" destination="hqB-VF-KVK" id="Qev-3L-xbp"/>
                                             <outlet property="name" destination="cRn-eh-z0C" id="NJx-g7-z25"/>
                                             <outlet property="picture" destination="tw8-Qu-nNk" id="zke-HM-lxU"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreInvitationDetailTableViewCell" rowHeight="130" id="ObD-J9-zfZ" customClass="PreInvitationDetailTableViewCell" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="134.66666603088379" width="343" height="130"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ObD-J9-zfZ" id="9ox-s4-9ng">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-5S-Txq" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_holder" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-qI-hNz" customClass="VibaCircularImage" customModule="VIBA_EMS" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="10" width="50" height="50"/>
-                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="YF4-Ub-eco"/>
-                                                                <constraint firstAttribute="height" constant="50" id="rTW-E6-U4k"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Tu-n4-hpg">
-                                                            <rect key="frame" x="20" y="74" width="303" height="36"/>
-                                                            <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-TT-58b">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="36"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLY-Wh-mVW">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                            <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPF-Xu-QYy">
-                                                                            <rect key="frame" x="0.0" y="19" width="94.333333333333329" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-Tj-vGk">
-                                                                    <rect key="frame" x="104.33333333333334" y="0.0" width="94.333333333333343" height="36"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checked In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-Dc-xi6">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWb-rS-cnw">
-                                                                            <rect key="frame" x="0.0" y="19" width="94.333333333333329" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="55a-Z2-VOL">
-                                                                    <rect key="frame" x="208.66666666666666" y="0.0" width="94.333333333333343" height="36"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checked Out" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-eO-hxv">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESt-eD-M0m">
-                                                                            <rect key="frame" x="0.0" y="19" width="94.333333333333329" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4XZ-Gj-G7D">
-                                                            <rect key="frame" x="90" y="17" width="233" height="36"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61l-8S-bJU" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="233" height="20.333333333333332"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqX-M4-mXt">
-                                                                    <rect key="frame" x="0.0" y="20.333333333333336" width="233" height="15.666666666666664"/>
-                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                    <color key="textColor" red="1" green="0.0" blue="0.38431372549999998" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="UqX-M4-mXt" secondAttribute="trailing" id="7wL-ko-4ZJ"/>
-                                                                <constraint firstItem="UqX-M4-mXt" firstAttribute="leading" secondItem="4XZ-Gj-G7D" secondAttribute="leading" id="8iU-su-VIF"/>
-                                                                <constraint firstItem="61l-8S-bJU" firstAttribute="leading" secondItem="4XZ-Gj-G7D" secondAttribute="leading" id="IUW-io-0Xm"/>
-                                                                <constraint firstAttribute="bottom" secondItem="UqX-M4-mXt" secondAttribute="bottom" id="XVg-SQ-5qy"/>
-                                                                <constraint firstItem="UqX-M4-mXt" firstAttribute="top" secondItem="61l-8S-bJU" secondAttribute="bottom" id="eZf-fH-bKU"/>
-                                                                <constraint firstItem="61l-8S-bJU" firstAttribute="top" secondItem="4XZ-Gj-G7D" secondAttribute="top" id="fc3-cd-bQb"/>
-                                                                <constraint firstAttribute="trailing" secondItem="61l-8S-bJU" secondAttribute="trailing" id="xTO-Jg-J7i"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstItem="cTR-qI-hNz" firstAttribute="top" secondItem="LsR-5S-Txq" secondAttribute="top" constant="10" id="0rN-eW-C4x"/>
-                                                        <constraint firstItem="8Tu-n4-hpg" firstAttribute="top" secondItem="cTR-qI-hNz" secondAttribute="bottom" constant="14" id="20d-bh-es4"/>
-                                                        <constraint firstAttribute="trailing" secondItem="8Tu-n4-hpg" secondAttribute="trailing" constant="20" id="DuI-wI-eEO"/>
-                                                        <constraint firstAttribute="trailing" secondItem="4XZ-Gj-G7D" secondAttribute="trailing" constant="20" id="J05-sb-9Fa"/>
-                                                        <constraint firstItem="4XZ-Gj-G7D" firstAttribute="leading" secondItem="cTR-qI-hNz" secondAttribute="trailing" constant="20" id="KtF-Ij-zQy"/>
-                                                        <constraint firstItem="cTR-qI-hNz" firstAttribute="leading" secondItem="LsR-5S-Txq" secondAttribute="leading" constant="20" id="No9-Hy-1JD"/>
-                                                        <constraint firstAttribute="bottom" secondItem="8Tu-n4-hpg" secondAttribute="bottom" constant="10" id="Syc-hv-Csv"/>
-                                                        <constraint firstItem="4XZ-Gj-G7D" firstAttribute="centerY" secondItem="cTR-qI-hNz" secondAttribute="centerY" id="ZAG-8Q-Zc0"/>
-                                                        <constraint firstItem="8Tu-n4-hpg" firstAttribute="leading" secondItem="LsR-5S-Txq" secondAttribute="leading" constant="20" id="eUM-5O-0nA"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="LsR-5S-Txq" secondAttribute="trailing" id="F24-BU-PKz"/>
-                                                <constraint firstItem="LsR-5S-Txq" firstAttribute="leading" secondItem="9ox-s4-9ng" secondAttribute="leading" id="ZJ5-yC-oMm"/>
-                                                <constraint firstAttribute="bottom" secondItem="LsR-5S-Txq" secondAttribute="bottom" constant="10" id="j5P-uX-ayW"/>
-                                                <constraint firstItem="LsR-5S-Txq" firstAttribute="top" secondItem="9ox-s4-9ng" secondAttribute="top" id="zHa-ua-goc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="clockInTime" destination="UWb-rS-cnw" id="Rh0-zJ-qSL"/>
-                                            <outlet property="clockOutTime" destination="ESt-eD-M0m" id="uqw-v2-zRM"/>
-                                            <outlet property="details" destination="UqX-M4-mXt" id="UjW-q5-BOV"/>
-                                            <outlet property="name" destination="61l-8S-bJU" id="ahF-ae-FGo"/>
-                                            <outlet property="picture" destination="cTR-qI-hNz" id="IWs-zF-36b"/>
-                                            <outlet property="temperature" destination="zPF-Xu-QYy" id="vvD-ox-jL6"/>
+                                            <outlet property="statusText" destination="Cdj-We-lTJ" id="hLh-1l-bo3"/>
+                                            <outlet property="statusView" destination="dvw-NG-vEO" id="lCa-Pj-be4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1802,7 +1735,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bai-b2-UDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1488.8" y="2196.2518740629689"/>
+            <point key="canvasLocation" x="1488.8" y="2196.0591133004928"/>
         </scene>
         <!--Send Pre Invitation View Controller-->
         <scene sceneID="4i7-GC-ikw">
@@ -2090,9 +2023,6 @@
         <designable name="343-Gq-KUU">
             <size key="intrinsicContentSize" width="41.333333333333336" height="20.333333333333332"/>
         </designable>
-        <designable name="61l-8S-bJU">
-            <size key="intrinsicContentSize" width="7.666666666666667" height="20.333333333333332"/>
-        </designable>
         <designable name="6JY-Y1-xEH">
             <size key="intrinsicContentSize" width="41.333333333333336" height="20.333333333333332"/>
         </designable>
@@ -2139,10 +2069,7 @@
             <size key="intrinsicContentSize" width="40" height="40"/>
         </designable>
         <designable name="cRn-eh-z0C">
-            <size key="intrinsicContentSize" width="7.666666666666667" height="20.333333333333332"/>
-        </designable>
-        <designable name="cTR-qI-hNz">
-            <size key="intrinsicContentSize" width="40" height="40"/>
+            <size key="intrinsicContentSize" width="9" height="21"/>
         </designable>
         <designable name="cmR-ji-LGT">
             <size key="intrinsicContentSize" width="30" height="33"/>
@@ -2162,6 +2089,7 @@
     </designables>
     <resources>
         <image name="TopLogo" width="55" height="55"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="pic_holder" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

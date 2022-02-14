@@ -10,7 +10,7 @@ import UIKit
 enum SignupScreens {
     case employeeDetails
     case verify
-    case faceCapture
+    case faceCapture(String)
 }
 
 protocol SignupProtocol: AnyObject {

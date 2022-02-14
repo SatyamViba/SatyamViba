@@ -98,12 +98,12 @@ extension SignupPageViewController: UIPageViewControllerDataSource {
 
 extension SignupPageViewController: SignupProtocol {
     func showFaceView(onCompletion handler: @escaping ((FaceCropResult) -> Void)) {
-//        guard let dlgt = signupDelegate else {
-//            handler(.notFound)
-//            return
-//        }
-//
-//        dlgt.showFaceView(onCompletion: handler)
+        guard let dlgt = signupDelegate else {
+            handler(.notFound)
+            return
+        }
+
+        dlgt.showFaceView(onCompletion: handler)
     }
 
     func selectDate(onCompletion handler: @escaping ((Date) -> Void)) {
@@ -114,24 +114,44 @@ extension SignupPageViewController: SignupProtocol {
     }
 
     func didFinish(screen: SignupScreens) {
+        guard let dlgt = signupDelegate else {
+            return
+        }
+
         switch screen {
         case .employeeDetails:
             setViewControllers([orderedViewControllers[1]],
                                direction: .forward,
                                animated: true,
                                completion: nil)
+            dlgt.updatePageIndicator(screen: screen)
         case .verify:
             setViewControllers([orderedViewControllers[2]],
                                direction: .forward,
                                animated: true,
                                completion: nil)
-        case .faceCapture:
+            dlgt.updatePageIndicator(screen: screen)
+        case .faceCapture(let base64Image):
             print("show dashboard")
+            guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
+                showWarning(title: "Warning!", message: "User ID is invalid")
+                return
+            }
+            
+            showLoadingIndicator()
+            UserServices.uploadSignUpPic(userId: usrId, image: base64Image) {[self] result in
+                DispatchQueue.main.async {[self] in
+                    self.hideLoadingIndicator()
+                    switch result {
+                    case .success(let response):
+                        print(response)
+                        dlgt.updatePageIndicator(screen: screen)
+                    case .failure(let error):
+                        print("Uploading image faileld;: ", error.localizedDescription)
+                        showWarning(message: "Failed to upload image")
+                    }
+                }
+            }
         }
-
-        guard let dlgt = signupDelegate else {
-            return
-        }
-        dlgt.updatePageIndicator(screen: screen)
     }
 }

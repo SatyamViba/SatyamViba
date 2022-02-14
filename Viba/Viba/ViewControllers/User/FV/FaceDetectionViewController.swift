@@ -102,7 +102,7 @@ extension FaceDetectionViewController: AVCaptureVideoDataOutputSampleBufferDeleg
                 if let landmarks = result.landmarks, landmarks.confidence > 0.8, let yaw = result.yaw, yaw.doubleValue < 0.2 && yaw.doubleValue > -0.2, let roll = result.roll, roll.doubleValue > 1.0 && roll.doubleValue < 2.0 {
                     self.session.stopRunning()
                     if let fHandler = self.faceHandler {
-                        CGImage.create(pixelBuffer: image)?.faceCrop(completion: fHandler)
+                        CGImage.create(pixelBuffer: image)?.faceCrop(margin: 10, completion: fHandler)
                         self.navigationController?.popViewController(animated: true)
                     }
                 }
