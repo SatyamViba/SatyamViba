@@ -93,7 +93,8 @@ class OTPViewController: UIViewController {
         DataManager.shared.fullName = response.data.fullName
         
         DispatchQueue.main.async { [self] in
-            performSegue(withIdentifier: "PicView", sender: nil)
+            // performSegue(withIdentifier: "PicView", sender: nil)x 
+            performSegue(withIdentifier: "Dashboard", sender: nil)
         }
     }
 
