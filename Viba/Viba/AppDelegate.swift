@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaultsKeys.selectedMenu.value: -1,
             UserDefaultsKeys.firstTime.value: true
         ])
+
+        FirebaseApp.configure()
 
         return true
     }

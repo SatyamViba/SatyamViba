@@ -10,15 +10,17 @@ import SCLAlertView
 
 extension UIViewController {
     func showLoadingIndicator(text: String = "Please wait...") {
-        IGProgress.config.urlLottieJson = "loading"
-        IGProgress.config.message = text
-        IGPStartLoading(config: IGProgress.config)
+//        IGProgress.config.urlLottieJson = "loading_new"
+//        IGProgress.config.message = ""
+//        IGPStartLoading(config: IGProgress.config)
+        LoadingStartLoading()
     }
 
     @objc
     func hideLoadingIndicator(completion: (() -> Void)? = nil) {
         DispatchQueue.main.async { [self] in
-            IGPFinishLoading(completion: completion)
+//            IGPFinishLoading(completion: completion)
+            LoadingFinishLoading(completion: completion)
         }
     }
 

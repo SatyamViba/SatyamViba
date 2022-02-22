@@ -15,6 +15,10 @@ target 'Viba' do
   pod 'MASegmentedControl'
   pod 'SwiftyGif'
   pod 'ActionSheetPicker-3.0', '~> 2.3.0'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
 end
 
 post_install do |installer|

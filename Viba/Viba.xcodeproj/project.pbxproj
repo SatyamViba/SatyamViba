@@ -23,6 +23,7 @@
 		4A21A1A2273B9D100002D052 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */; };
 		4A3DDA71274B6A1A002FF884 /* ClockInOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */; };
 		4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */; };
+		4A3DED7A27C2264000B5273E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DED7927C2264000B5273E /* GoogleService-Info.plist */; };
 		4A468A71275A2B9100211FD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A468A70275A2B9100211FD4 /* DataManager.swift */; };
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
 		4A4D21AE275896E5001B9964 /* VibaNoRecordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */; };
@@ -75,6 +76,11 @@
 		4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0162739122F007DB9FF /* Assets.xcassets */; };
 		4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0182739122F007DB9FF /* LaunchScreen.storyboard */; };
 		4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */; };
+		4ABC7A2C27C3DCD600551846 /* loading_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC7A2B27C3DCD600551846 /* loading_new.json */; };
+		4ABC7A2F27C4984700551846 /* LoadingIndicator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC7A2E27C4984700551846 /* LoadingIndicator.storyboard */; };
+		4ABC7A3127C4988000551846 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3027C4988000551846 /* LoadingIndicatorViewController.swift */; };
+		4ABC7A3327C4995700551846 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3227C4995700551846 /* loading.gif */; };
+		4ABC7A3527C4BC9600551846 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3427C4BC9600551846 /* LoadingIndicator.swift */; };
 		4AC6C03C2794217E007CB675 /* VibaRightImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */; };
 		4AC8D2842756405D003C09AD /* ClockInOutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */; };
 		4AC8D2862756414D003C09AD /* ClockInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2852756414D003C09AD /* ClockInOut.swift */; };
@@ -133,6 +139,7 @@
 		4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
 		4A3DDA70274B6A1A002FF884 /* ClockInOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutTableViewCell.swift; sourceTree = "<group>"; };
 		4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockInOutTableViewCell.xib; sourceTree = "<group>"; };
+		4A3DED7927C2264000B5273E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A468A70275A2B9100211FD4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
 		4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaNoRecordsCell.swift; sourceTree = "<group>"; };
@@ -187,6 +194,11 @@
 		4AB5F0192739122F007DB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB5F01B2739122F007DB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4ABC7A2B27C3DCD600551846 /* loading_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_new.json; sourceTree = "<group>"; };
+		4ABC7A2E27C4984700551846 /* LoadingIndicator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingIndicator.storyboard; sourceTree = "<group>"; };
+		4ABC7A3027C4988000551846 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
+		4ABC7A3227C4995700551846 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		4ABC7A3427C4BC9600551846 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRightImageButton.swift; sourceTree = "<group>"; };
 		4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutResponse.swift; sourceTree = "<group>"; };
 		4AC8D2852756414D003C09AD /* ClockInOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOut.swift; sourceTree = "<group>"; };
@@ -417,6 +429,7 @@
 		4A72CCC6274024DB008AA853 /* LottieJson */ = {
 			isa = PBXGroup;
 			children = (
+				4ABC7A2B27C3DCD600551846 /* loading_new.json */,
 				4AD998992789BFA0006F7FC4 /* loading.json */,
 				4A72CCD127402594008AA853 /* circles.json */,
 			);
@@ -494,6 +507,16 @@
 			path = Viba;
 			sourceTree = "<group>";
 		};
+		4ABC7A2D27C4982D00551846 /* LoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC7A2E27C4984700551846 /* LoadingIndicator.storyboard */,
+				4ABC7A3027C4988000551846 /* LoadingIndicatorViewController.swift */,
+				4ABC7A3427C4BC9600551846 /* LoadingIndicator.swift */,
+			);
+			path = LoadingIndicator;
+			sourceTree = "<group>";
+		};
 		4AD61BAD2771AB3D00CBF5D6 /* FV */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +559,7 @@
 		4AD998962789B89A006F7FC4 /* GIFs */ = {
 			isa = PBXGroup;
 			children = (
+				4ABC7A3227C4995700551846 /* loading.gif */,
 				4AD998972789B8AD006F7FC4 /* splash.gif */,
 			);
 			path = GIFs;
@@ -622,6 +646,7 @@
 		4AFC562B27391E1C00E064E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4A3DED7927C2264000B5273E /* GoogleService-Info.plist */,
 				4AD998962789B89A006F7FC4 /* GIFs */,
 				4A72CCC6274024DB008AA853 /* LottieJson */,
 				4AFC562C27391E2400E064E9 /* Fonts */,
@@ -657,6 +682,7 @@
 		4AFC56322739268400E064E9 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				4ABC7A2D27C4982D00551846 /* LoadingIndicator */,
 				4A72CCD72740284C008AA853 /* Lottie */,
 				4A6D64D8274E670F00022CBE /* VibaMenuButton */,
 				4AFC563D2739483100E064E9 /* VibaButton.swift */,
@@ -708,6 +734,7 @@
 				4AB5F0082739122D007DB9FF /* Resources */,
 				4AB5F021273913D7007DB9FF /* ShellScript */,
 				141201BC6D1249B2A4EFD347 /* [CP] Embed Pods Frameworks */,
+				4A3DED7B27C2282200B5273E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -767,12 +794,16 @@
 				4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */,
 				4A1617BF273A45C300640236 /* Poppins-Medium.ttf in Resources */,
 				4A72CCDB2740284C008AA853 /* AlertLottie.storyboard in Resources */,
+				4A3DED7A27C2264000B5273E /* GoogleService-Info.plist in Resources */,
 				4A109DF8274D4991009D2002 /* Poppins-Italic.ttf in Resources */,
+				4ABC7A2F27C4984700551846 /* LoadingIndicator.storyboard in Resources */,
 				4AB5F0152739122E007DB9FF /* Main.storyboard in Resources */,
 				4AD78ECD274F6C9D00A27401 /* TabController.storyboard in Resources */,
 				4A8482E527492B62002463D5 /* DashBoardWithTabs.storyboard in Resources */,
 				4AD998982789B8AD006F7FC4 /* splash.gif in Resources */,
+				4ABC7A3327C4995700551846 /* loading.gif in Resources */,
 				4A1617B9273A40B700640236 /* Poppins-Regular.ttf in Resources */,
+				4ABC7A2C27C3DCD600551846 /* loading_new.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,6 +848,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4A3DED7B27C2282200B5273E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		4AB5F021273913D7007DB9FF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -873,6 +921,7 @@
 				4A5AA7AD2749541500084866 /* VibaRoundImageButton.swift in Sources */,
 				4AB5F0122739122E007DB9FF /* LoginViewController.swift in Sources */,
 				4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */,
+				4ABC7A3527C4BC9600551846 /* LoadingIndicator.swift in Sources */,
 				4AC8D2942757C3E2003C09AD /* DashboardServices.swift in Sources */,
 				4A21A195273B67290002D052 /* VibaMediumLabel.swift in Sources */,
 				4AB5F00E2739122E007DB9FF /* AppDelegate.swift in Sources */,
@@ -919,6 +968,7 @@
 				4A93D23A2760DAF30000759C /* CheckInOrgResponse.swift in Sources */,
 				4AFC563C2739305E00E064E9 /* UIColor+Extension.swift in Sources */,
 				4A68CB6D2753E7E9000BA368 /* UploadUserImage.swift in Sources */,
+				4ABC7A3127C4988000551846 /* LoadingIndicatorViewController.swift in Sources */,
 				4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */,
 				4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */,
 				4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */,

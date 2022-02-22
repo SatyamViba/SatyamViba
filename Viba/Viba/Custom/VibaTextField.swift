@@ -257,7 +257,7 @@ public class VibaTextField: UITextField {
     fileprivate func commonInit() {
         dtborderStyle = .rounded
         dtLayer.backgroundColor = UIColor.white.cgColor
-        floatPlaceholderColor = UIColor(red: 204.0 / 255.0, green: 204.0 / 255.0, blue: 204.0 / 255.0, alpha: 1.0)
+        floatPlaceholderColor = UIColor.darkGray
         floatPlaceholderActiveColor = tintColor
         lblFloatPlaceholder.frame = CGRect.zero
         lblFloatPlaceholder.alpha = 0.0
