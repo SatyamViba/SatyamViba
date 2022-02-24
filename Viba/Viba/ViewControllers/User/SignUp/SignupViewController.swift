@@ -18,10 +18,12 @@ class SignupViewController: UIViewController {
     @IBOutlet var firstIndicatorWidth: NSLayoutConstraint!
     @IBOutlet var secondIndicatorWidth: NSLayoutConstraint!
     @IBOutlet var thirdIndicatorWidth: NSLayoutConstraint!
-
+    @IBOutlet var fourthIndicatorWidth: NSLayoutConstraint!
+    
     @IBOutlet var firstView: UIView!
     @IBOutlet var secondView: UIView!
     @IBOutlet var thirdView: UIView!
+    @IBOutlet var fourthView: VibaRoundCornerView!
 
     var faceHandler: ((FaceCropResult) -> Void)?
 
@@ -73,16 +75,21 @@ extension SignupViewController: SignupPageViewProtocol {
 
     func updatePageIndicator(screen: SignupScreens) {
         switch screen {
-        case .employeeDetails:
+        case .companyDetails:
             firstIndicatorWidth.constant = 30
             firstView.backgroundColor = Colors.vibaGreen.value
             secondIndicatorWidth.constant = 50
             secondView.backgroundColor = Colors.vibaRed.value
-        case .verify:
+        case .employeeDetails:
             secondIndicatorWidth.constant = 30
             secondView.backgroundColor = Colors.vibaGreen.value
             thirdIndicatorWidth.constant = 50
             thirdView.backgroundColor = Colors.vibaRed.value
+        case .verify:
+            thirdIndicatorWidth.constant = 30
+            thirdView.backgroundColor = Colors.vibaGreen.value
+            fourthIndicatorWidth.constant = 50
+            fourthView.backgroundColor = Colors.vibaRed.value
         case .faceCapture:
             performSegue(withIdentifier: "Review", sender: nil)
         }

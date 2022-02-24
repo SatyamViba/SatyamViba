@@ -8,6 +8,7 @@
 import UIKit
 
 enum SignupScreens {
+    case companyDetails
     case employeeDetails
     case verify
     case faceCapture(String)

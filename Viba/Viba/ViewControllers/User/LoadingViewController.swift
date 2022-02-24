@@ -10,9 +10,15 @@ import SwiftyGif
 
 class LoadingViewController: UIViewController {
     @IBOutlet var splashimage: UIImageView!
-    
+    @IBOutlet var ver: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, let bld = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            ver.text = "v \(version) (\(bld))"
+        }
+        
         do {
             splashimage.delegate = self
             let gif = try UIImage(gifName: "splash.gif")

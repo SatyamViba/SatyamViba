@@ -11,20 +11,14 @@ import AVFoundation
 class LoginViewController: UIViewController {
     var authType = AuthType.email
 
-    @IBOutlet var ver: UILabel!
     @IBOutlet var userId: VibaTextField!
-    @IBOutlet var companyCode: VibaTextField!
     var activeTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, let bld = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            ver.text = "Powered By VIBA - v \(version) (\(bld))"
-        }
-
+        
         #if DEBUG
         userId.text = "9886555469" // "1111111110"
-        companyCode.text = "VIBA-IDEEOTECHS-6PFJ"
         #endif
 
         let gestrue = UITapGestureRecognizer(target: self, action: #selector(stopEditing))
@@ -55,7 +49,6 @@ class LoginViewController: UIViewController {
 
     @objc
     func keyboardWillShow(notification: NSNotification) {
-        //         self.view.frame.origin.y = -150 // Move view 150 points upward
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             // if keyboard size is not available for some reason, dont do anything
             return
@@ -107,9 +100,7 @@ class LoginViewController: UIViewController {
             return
         }
 
-        if text.isValidEmail {
-            authType = .email
-        } else if text.isValidPhone {
+       if text.isValidPhone {
             authType = .mobile
         } else {
             userId.showError()
@@ -126,33 +117,7 @@ class LoginViewController: UIViewController {
                     performSegue(withIdentifier: "OTPView", sender: nil)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(message: "Failed to validate input")
-                }
-            }
-        }
-    }
-
-    @IBAction func signupUser(_ sender: Any) {
-//        self.performSegue(withIdentifier: "SignupView", sender: nil)
-//        return
-        
-        guard let code = companyCode.text, !code.isEmptyStr else {
-            companyCode.showError()
-            return
-        }
-
-        showLoadingIndicator()
-        UserServices.validateCompany(code: code) { result in
-            DispatchQueue.main.async { [self] in
-                self.hideLoadingIndicator {
-                    switch result {
-                    case .success(let companyDetails):
-                        UserDefaults.standard.set(companyDetails.id, forKey: UserDefaultsKeys.companyId.value)
-                        self.performSegue(withIdentifier: "SignupView", sender: nil)
-                    case .failure(let err):
-                        print(err.localizedDescription)
-                        showWarning(message: err.localizedDescription)
-                    }
+                    showWarning(message: error.localizedDescription)
                 }
             }
         }

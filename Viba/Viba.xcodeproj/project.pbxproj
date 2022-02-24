@@ -81,6 +81,7 @@
 		4ABC7A3127C4988000551846 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3027C4988000551846 /* LoadingIndicatorViewController.swift */; };
 		4ABC7A3327C4995700551846 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3227C4995700551846 /* loading.gif */; };
 		4ABC7A3527C4BC9600551846 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3427C4BC9600551846 /* LoadingIndicator.swift */; };
+		4AC1557327C65B4E00E1BC3C /* CompanyVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC1557227C65B4E00E1BC3C /* CompanyVerificationViewController.swift */; };
 		4AC6C03C2794217E007CB675 /* VibaRightImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */; };
 		4AC8D2842756405D003C09AD /* ClockInOutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */; };
 		4AC8D2862756414D003C09AD /* ClockInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8D2852756414D003C09AD /* ClockInOut.swift */; };
@@ -199,6 +200,7 @@
 		4ABC7A3027C4988000551846 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		4ABC7A3227C4995700551846 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		4ABC7A3427C4BC9600551846 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		4AC1557227C65B4E00E1BC3C /* CompanyVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVerificationViewController.swift; sourceTree = "<group>"; };
 		4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRightImageButton.swift; sourceTree = "<group>"; };
 		4AC8D2832756405D003C09AD /* ClockInOutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutResponse.swift; sourceTree = "<group>"; };
 		4AC8D2852756414D003C09AD /* ClockInOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOut.swift; sourceTree = "<group>"; };
@@ -279,9 +281,7 @@
 		4A21A196273B87E90002D052 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				4A21A197273B89E50002D052 /* EmployeeDetailsViewController.swift */,
-				4A21A19F273B9C010002D052 /* VerifyViewController.swift */,
-				4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */,
+				4AC1557427C65B8A00E1BC3C /* SubViews */,
 				4A21A199273B89F30002D052 /* SignupViewController.swift */,
 				4A21A19D273B9B600002D052 /* SignupPageViewController.swift */,
 				4A4A8683273BF1E000811EBC /* SignupProtocol.swift */,
@@ -515,6 +515,17 @@
 				4ABC7A3427C4BC9600551846 /* LoadingIndicator.swift */,
 			);
 			path = LoadingIndicator;
+			sourceTree = "<group>";
+		};
+		4AC1557427C65B8A00E1BC3C /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				4AC1557227C65B4E00E1BC3C /* CompanyVerificationViewController.swift */,
+				4A21A197273B89E50002D052 /* EmployeeDetailsViewController.swift */,
+				4A21A19F273B9C010002D052 /* VerifyViewController.swift */,
+				4A21A1A1273B9D100002D052 /* FaceCaptureViewController.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		4AD61BAD2771AB3D00CBF5D6 /* FV */ = {
@@ -909,6 +920,7 @@
 				4AFC563A27392FF800E064E9 /* Utility.swift in Sources */,
 				4AC8D2842756405D003C09AD /* ClockInOutResponse.swift in Sources */,
 				4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */,
+				4AC1557327C65B4E00E1BC3C /* CompanyVerificationViewController.swift in Sources */,
 				4AD998952789B85D006F7FC4 /* LoadingViewController.swift in Sources */,
 				4A4D21AE275896E5001B9964 /* VibaNoRecordsCell.swift in Sources */,
 				4A5E47792748E5AB00239676 /* TimesheetViewController.swift in Sources */,

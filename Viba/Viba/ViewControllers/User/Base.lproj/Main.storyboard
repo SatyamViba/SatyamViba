@@ -53,10 +53,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDs-e6-Gv3" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="248" width="335" height="55"/>
+                                <rect key="frame" x="20" y="311" width="335" height="65"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="LNq-Ar-qlK"/>
+                                    <constraint firstAttribute="height" constant="65" id="LNq-Ar-qlK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -65,135 +65,71 @@
                                     <action selector="requestOTP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPN-U2-mvC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMail or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAw-fx-crL" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="171.5" width="335" height="45.5"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sAw-fx-crL" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="234.5" width="335" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide valid Email or 10 digit phone number"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide 10 digit phone number"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zGN-EZ-MIO"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By VIBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoU-Pm-5MZ">
-                                <rect key="frame" x="128.5" y="640" width="118.5" height="20"/>
-                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNs-EA-V9g">
+                                <rect key="frame" x="159.5" y="188.5" width="56" height="26"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-lW-3wp">
-                                <rect key="frame" x="20" y="327" width="335" height="22"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVO-UH-UgO">
-                                        <rect key="frame" x="0.0" y="10.5" width="40" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="R9t-VA-Byt"/>
-                                            <constraint firstAttribute="width" constant="40" id="bqW-TT-f1Q"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vny-bi-ax1">
-                                        <rect key="frame" x="92" y="10.5" width="243" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="6WD-ha-rr9"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[ Or ]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL2-EB-Cln">
-                                        <rect key="frame" x="50" y="3" width="32" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="g7B-Vs-oQx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="bL2-EB-Cln" firstAttribute="leading" secondItem="EVO-UH-UgO" secondAttribute="trailing" constant="10" id="7tg-Ic-rM6"/>
-                                    <constraint firstItem="vny-bi-ax1" firstAttribute="leading" secondItem="bL2-EB-Cln" secondAttribute="trailing" constant="10" id="EkO-JD-M8u"/>
-                                    <constraint firstItem="EVO-UH-UgO" firstAttribute="centerY" secondItem="JYp-lW-3wp" secondAttribute="centerY" id="IgO-cX-Fct"/>
-                                    <constraint firstAttribute="trailing" secondItem="vny-bi-ax1" secondAttribute="trailing" id="LnM-46-5IU"/>
-                                    <constraint firstItem="vny-bi-ax1" firstAttribute="centerY" secondItem="JYp-lW-3wp" secondAttribute="centerY" id="Lo7-zB-ihe"/>
-                                    <constraint firstItem="bL2-EB-Cln" firstAttribute="centerY" secondItem="JYp-lW-3wp" secondAttribute="centerY" id="Mur-lG-cFM"/>
-                                    <constraint firstItem="EVO-UH-UgO" firstAttribute="leading" secondItem="JYp-lW-3wp" secondAttribute="leading" id="UCu-1B-JpV"/>
-                                    <constraint firstAttribute="height" constant="22" id="iss-hp-gru"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Employee?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-j9-Rkv">
-                                <rect key="frame" x="20" y="372" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yli-Hw-00n">
+                                <rect key="frame" x="112.5" y="421" width="150" height="26"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-1O-yuR" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="406" width="335" height="45.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yej-6Z-zGR" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="149" y="457" width="77" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Signup"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide company code"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Pdc-Zl-GDj"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGd-4v-Bc7" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="468.5" width="335" height="49"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="h3h-yv-wEy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Signup">
-                                    <color key="titleColor" systemColor="systemYellowColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="signupUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVn-LA-KnC"/>
+                                    <segue destination="Ld3-gy-R3m" kind="show" id="fgi-Yl-BgB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JYp-lW-3wp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2f2-I8-Skg"/>
                             <constraint firstItem="k2c-qD-YlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8jo-gi-pXy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xpb-1O-yuR" secondAttribute="trailing" constant="20" id="AKf-Py-Wii"/>
                             <constraint firstItem="xtE-ob-zfv" firstAttribute="top" secondItem="k2c-qD-YlF" secondAttribute="bottom" constant="11" id="BmK-o4-NLE"/>
-                            <constraint firstItem="Xpb-1O-yuR" firstAttribute="top" secondItem="sQn-j9-Rkv" secondAttribute="bottom" constant="13" id="BqE-BW-1NW"/>
                             <constraint firstItem="xtE-ob-zfv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GbN-SU-oTJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SDs-e6-Gv3" secondAttribute="trailing" constant="20" id="Gsq-iL-5dT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bGd-4v-Bc7" secondAttribute="trailing" constant="20" id="IGH-Em-9LV"/>
                             <constraint firstItem="Ee1-iB-gFA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M2I-IK-PnV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sQn-j9-Rkv" secondAttribute="trailing" constant="20" id="M7i-Og-9bp"/>
-                            <constraint firstItem="Xpb-1O-yuR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MQR-SC-yHn"/>
                             <constraint firstItem="sAw-fx-crL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WXt-ZM-1xS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sAw-fx-crL" secondAttribute="trailing" constant="20" id="YKN-9B-TtE"/>
                             <constraint firstItem="SDs-e6-Gv3" firstAttribute="top" secondItem="sAw-fx-crL" secondAttribute="bottom" constant="31" id="YQU-lq-m8U"/>
                             <constraint firstItem="xtE-ob-zfv" firstAttribute="centerY" secondItem="Ee1-iB-gFA" secondAttribute="centerY" id="aTm-5P-AEN"/>
-                            <constraint firstItem="bGd-4v-Bc7" firstAttribute="top" secondItem="Xpb-1O-yuR" secondAttribute="bottom" constant="17" id="bOr-nb-fVe"/>
-                            <constraint firstItem="DoU-Pm-5MZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dMc-pn-YVU"/>
-                            <constraint firstItem="sQn-j9-Rkv" firstAttribute="top" secondItem="JYp-lW-3wp" secondAttribute="bottom" constant="23" id="fN2-h0-XNT"/>
-                            <constraint firstItem="JYp-lW-3wp" firstAttribute="top" secondItem="SDs-e6-Gv3" secondAttribute="bottom" constant="24" id="gN8-CD-jJ3"/>
+                            <constraint firstItem="Yli-Hw-00n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geQ-gZ-Irp"/>
+                            <constraint firstItem="sNs-EA-V9g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hkS-Dz-gBi"/>
                             <constraint firstItem="xtE-ob-zfv" firstAttribute="leading" secondItem="Ee1-iB-gFA" secondAttribute="trailing" constant="15" id="iRO-2o-9Qg"/>
-                            <constraint firstItem="sQn-j9-Rkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iXS-qS-CJ4"/>
                             <constraint firstItem="SDs-e6-Gv3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lgk-cO-0g9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DoU-Pm-5MZ" secondAttribute="bottom" constant="7" id="qwI-Vf-LUh"/>
-                            <constraint firstItem="bGd-4v-Bc7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vHL-ur-Pd8"/>
+                            <constraint firstItem="sNs-EA-V9g" firstAttribute="top" secondItem="xtE-ob-zfv" secondAttribute="bottom" constant="40" id="n00-Tt-9in"/>
+                            <constraint firstItem="sAw-fx-crL" firstAttribute="top" secondItem="sNs-EA-V9g" secondAttribute="bottom" constant="20" id="nVf-Oe-n0L"/>
+                            <constraint firstItem="yej-6Z-zGR" firstAttribute="top" secondItem="Yli-Hw-00n" secondAttribute="bottom" constant="10" id="p03-ur-4Sk"/>
+                            <constraint firstItem="yej-6Z-zGR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWo-39-g3c"/>
                             <constraint firstItem="k2c-qD-YlF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="xXd-Za-gcw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JYp-lW-3wp" secondAttribute="trailing" constant="20" id="xsR-Ha-A0H"/>
-                            <constraint firstItem="sAw-fx-crL" firstAttribute="top" secondItem="xtE-ob-zfv" secondAttribute="bottom" constant="23" id="zPg-gP-iSL"/>
+                            <constraint firstItem="Yli-Hw-00n" firstAttribute="top" secondItem="SDs-e6-Gv3" secondAttribute="bottom" constant="45" id="yZj-7F-ySe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UJu-kj-djz"/>
                     <connections>
-                        <outlet property="companyCode" destination="Xpb-1O-yuR" id="Xjn-Tt-aEt"/>
                         <outlet property="userId" destination="sAw-fx-crL" id="aiq-oI-lYb"/>
-                        <outlet property="ver" destination="DoU-Pm-5MZ" id="azI-Dq-VV4"/>
                         <segue destination="gnC-5A-FnD" kind="show" identifier="OTPView" id="NtG-wV-IY3"/>
-                        <segue destination="Ld3-gy-R3m" kind="show" identifier="SignupView" id="uC7-EP-I1N"/>
                         <segue destination="0Sz-8o-sTg" kind="show" identifier="Dashboard" id="QUb-wv-x0k"/>
                         <segue destination="IvJ-Sq-VpI" kind="show" identifier="PermissionsView" id="109-5T-NRT"/>
                     </connections>
@@ -295,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-8m-h3u" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="159.5" y="434" width="56" height="33"/>
+                                <rect key="frame" x="157" y="434" width="61" height="34"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Resend">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -461,6 +397,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiD-CN-Jlc" customClass="VibaRoundCornerView" customModule="VIBA_EMS" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="4"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="3ES-OC-AS2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -473,7 +421,10 @@
                                     <constraint firstItem="uep-KV-Nld" firstAttribute="leading" secondItem="Ikw-Rj-YQh" secondAttribute="trailing" constant="20" id="Y5T-gb-gq0"/>
                                     <constraint firstItem="PCK-RZ-cXo" firstAttribute="top" secondItem="j9y-o8-iBt" secondAttribute="top" id="a9T-Km-zo4"/>
                                     <constraint firstAttribute="height" constant="4" id="bEi-9N-XEl"/>
+                                    <constraint firstItem="hiD-CN-Jlc" firstAttribute="top" secondItem="j9y-o8-iBt" secondAttribute="top" id="eBS-dJ-qJt"/>
+                                    <constraint firstItem="hiD-CN-Jlc" firstAttribute="leading" secondItem="uep-KV-Nld" secondAttribute="trailing" constant="20" id="kqQ-tE-nFl"/>
                                     <constraint firstItem="Ikw-Rj-YQh" firstAttribute="leading" secondItem="PCK-RZ-cXo" secondAttribute="trailing" constant="20" id="m0H-Z7-LGt"/>
+                                    <constraint firstAttribute="bottom" secondItem="hiD-CN-Jlc" secondAttribute="bottom" id="oUT-Cg-JG9"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbv-SE-dTs">
@@ -501,6 +452,8 @@
                     <connections>
                         <outlet property="firstIndicatorWidth" destination="vpR-Yc-SJw" id="nAD-S2-rC1"/>
                         <outlet property="firstView" destination="PCK-RZ-cXo" id="T3f-yl-1Je"/>
+                        <outlet property="fourthIndicatorWidth" destination="3ES-OC-AS2" id="hs3-7c-eIc"/>
+                        <outlet property="fourthView" destination="hiD-CN-Jlc" id="7tl-Y2-6XW"/>
                         <outlet property="secondIndicatorWidth" destination="KqJ-5Z-c1t" id="oi0-9t-7X5"/>
                         <outlet property="secondView" destination="Ikw-Rj-YQh" id="8pl-CR-fnS"/>
                         <outlet property="thirdIndicatorWidth" destination="MeD-r4-sxL" id="Fnp-5Y-wF5"/>
@@ -593,7 +546,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request has been sent it to your HR team for review." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifd-WC-XRh" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124" width="335" height="36.5"/>
+                                        <rect key="frame" x="0.0" y="124" width="335" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -604,7 +557,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will receive a notification when HR approves your request." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDu-aK-e9Y" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="180.5" width="335" height="36.5"/>
+                                        <rect key="frame" x="0.0" y="185" width="335" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -668,6 +621,78 @@
             </objects>
             <point key="canvasLocation" x="1944.8" y="2076.6116941529235"/>
         </scene>
+        <!--Company Verification View Controller-->
+        <scene sceneID="GEJ-Nm-KuU">
+            <objects>
+                <viewController storyboardIdentifier="CompanyDetailsView" id="vTt-d5-nCf" customClass="CompanyVerificationViewController" customModule="VIBA_EMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4lA-Kf-rHs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Company Verification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaO-1O-jQd" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kQ-qs-jgL" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="39" width="335" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Please provide company code"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="vTt-d5-nCf" id="faR-zW-kWS"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7X-Ax-kgp" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="486" width="335" height="55"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Q4B-ZA-uDM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="signupUser:" destination="vTt-d5-nCf" eventType="touchUpInside" id="AWo-Qu-kIm"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp4-xC-RZ4">
+                                <rect key="frame" x="20" y="473" width="335" height="1"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cMf-L6-FHv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hYV-Ah-jKy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I7X-Ax-kgp" firstAttribute="leading" secondItem="hYV-Ah-jKy" secondAttribute="leading" constant="20" id="0ED-fd-fdw"/>
+                            <constraint firstItem="hYV-Ah-jKy" firstAttribute="trailing" secondItem="I7X-Ax-kgp" secondAttribute="trailing" constant="20" id="1HO-SB-GJm"/>
+                            <constraint firstItem="hYV-Ah-jKy" firstAttribute="trailing" secondItem="6kQ-qs-jgL" secondAttribute="trailing" constant="20" id="5O4-Zn-6pW"/>
+                            <constraint firstItem="6kQ-qs-jgL" firstAttribute="leading" secondItem="hYV-Ah-jKy" secondAttribute="leading" constant="20" id="BiO-Zc-JV5"/>
+                            <constraint firstItem="bp4-xC-RZ4" firstAttribute="leading" secondItem="4lA-Kf-rHs" secondAttribute="leading" constant="20" id="J6l-em-Hd9"/>
+                            <constraint firstAttribute="trailing" secondItem="bp4-xC-RZ4" secondAttribute="trailing" constant="20" id="PJI-2e-4Jh"/>
+                            <constraint firstItem="gaO-1O-jQd" firstAttribute="leading" secondItem="hYV-Ah-jKy" secondAttribute="leading" constant="20" id="QRL-8q-aI0"/>
+                            <constraint firstAttribute="trailing" secondItem="gaO-1O-jQd" secondAttribute="trailing" constant="20" id="V79-u7-U38"/>
+                            <constraint firstItem="gaO-1O-jQd" firstAttribute="top" secondItem="hYV-Ah-jKy" secondAttribute="top" id="aEn-oh-bJD"/>
+                            <constraint firstItem="I7X-Ax-kgp" firstAttribute="top" secondItem="bp4-xC-RZ4" secondAttribute="bottom" constant="12" id="bNe-rn-F2O"/>
+                            <constraint firstItem="hYV-Ah-jKy" firstAttribute="bottom" secondItem="I7X-Ax-kgp" secondAttribute="bottom" constant="10" id="fDn-1M-Dyf"/>
+                            <constraint firstItem="6kQ-qs-jgL" firstAttribute="top" secondItem="gaO-1O-jQd" secondAttribute="bottom" constant="18" id="i6J-KX-4HK"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="375" height="551"/>
+                    <connections>
+                        <outlet property="companyCode" destination="6kQ-qs-jgL" id="pt3-3Q-fCv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHk-kt-aWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3882" y="1264"/>
+        </scene>
         <!--Employee Details View Controller-->
         <scene sceneID="hM0-7N-0Gd">
             <objects>
@@ -695,8 +720,8 @@
                                     <constraint firstAttribute="height" constant="1" id="sEB-Wn-60c"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Employee Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWT-B7-1GP" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="0.0" width="375" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Employee Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWT-B7-1GP" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="335" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="ZI4-mS-yqa"/>
                                 </constraints>
@@ -705,7 +730,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-L1-HnQ" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40.5" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="40.5" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -716,7 +741,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVo-n1-tJH" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="102" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="90.5" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -727,7 +752,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-KX-Uhd" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="163.5" width="281" height="45.5"/>
+                                <rect key="frame" x="20" y="140.5" width="281" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -735,7 +760,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8M-Mh-ZFt" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="286.5" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="240.5" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
                                 <userDefinedRuntimeAttributes>
@@ -746,7 +771,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UFf-6S-CG6" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="225" width="335" height="45.5"/>
+                                <rect key="frame" x="20" y="190.5" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -757,10 +782,10 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-bn-CRq">
-                                <rect key="frame" x="20" y="348" width="200" height="31"/>
+                                <rect key="frame" x="20" y="290.5" width="200" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-Fw-TI6" customClass="VibaRadioButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="31"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Male">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -771,7 +796,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0h-Xd-XWL" customClass="VibaRadioButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="86" y="0.0" width="114" height="31"/>
+                                        <rect key="frame" x="80.5" y="0.0" width="119.5" height="31"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Female">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -787,7 +812,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-UX-wrj">
-                                <rect key="frame" x="309" y="167.5" width="40" height="40"/>
+                                <rect key="frame" x="309" y="144.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Aqo-3I-L9E"/>
                                     <constraint firstAttribute="width" constant="40" id="knl-9n-6En"/>
@@ -798,7 +823,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select gender" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJD-oJ-9BG">
-                                <rect key="frame" x="240" y="348" width="115" height="31"/>
+                                <rect key="frame" x="240" y="290.5" width="115" height="31"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -822,12 +847,12 @@
                             <constraint firstItem="gcw-L1-HnQ" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="GyS-bW-lYH"/>
                             <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="U8M-Mh-ZFt" secondAttribute="trailing" constant="20" id="HVD-sH-cOq"/>
                             <constraint firstItem="UFf-6S-CG6" firstAttribute="top" secondItem="8JS-KX-Uhd" secondAttribute="bottom" constant="16" id="JbM-GY-7PE"/>
+                            <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="BWT-B7-1GP" secondAttribute="trailing" constant="20" id="KLF-d0-VnM"/>
                             <constraint firstItem="BWT-B7-1GP" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="MDS-mU-Fg9"/>
                             <constraint firstItem="gpT-bn-CRq" firstAttribute="top" secondItem="U8M-Mh-ZFt" secondAttribute="bottom" constant="16" id="PFY-Jx-9VX"/>
                             <constraint firstItem="U8M-Mh-ZFt" firstAttribute="leading" secondItem="3uh-ik-kOQ" secondAttribute="leading" constant="20" id="QHJ-ua-taP"/>
                             <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="sij-g0-iev" secondAttribute="trailing" constant="20" id="WdM-rz-qAI"/>
                             <constraint firstItem="4yu-o1-dMm" firstAttribute="top" secondItem="sij-g0-iev" secondAttribute="bottom" constant="12" id="Y83-mr-3Em"/>
-                            <constraint firstItem="BWT-B7-1GP" firstAttribute="trailing" secondItem="3uh-ik-kOQ" secondAttribute="trailing" constant="20" id="ZPF-Oh-RRh"/>
                             <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="gcw-L1-HnQ" secondAttribute="trailing" constant="20" id="Zug-X4-hH8"/>
                             <constraint firstItem="3uh-ik-kOQ" firstAttribute="trailing" secondItem="QVo-n1-tJH" secondAttribute="trailing" constant="20" id="cXn-to-o7e"/>
                             <constraint firstItem="QVo-n1-tJH" firstAttribute="top" secondItem="gcw-L1-HnQ" secondAttribute="bottom" constant="16" id="eSR-VV-Sib"/>
@@ -857,7 +882,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKQ-AY-05x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3780" y="1166"/>
+            <point key="canvasLocation" x="4837.6000000000004" y="1181.5592203898052"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="cBN-ra-v4j">
@@ -887,8 +912,8 @@
                                     <constraint firstAttribute="height" constant="1" id="lPK-Oz-Li1"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Verify Company Email &amp; Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-WG-Rrd" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="0.0" width="375" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Verify Company Email &amp; Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-WG-Rrd" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="335" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="FOR-xm-f5e"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="O2v-yR-Yce"/>
@@ -929,7 +954,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcw-ba-95k" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="136.5" width="278" height="45.5"/>
+                                <rect key="frame" x="20" y="136.5" width="266" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
@@ -940,7 +965,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-t0-xqA" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="306" y="144" width="49" height="31"/>
+                                <rect key="frame" x="294" y="144" width="61" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="6Dg-RP-k1I"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="l4n-RO-a7I"/>
@@ -959,7 +984,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-KY-k3U" customClass="VibaTextField" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="198" width="278" height="45.5"/>
+                                <rect key="frame" x="20" y="186.5" width="266" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
@@ -970,7 +995,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-h2-NsO" customClass="VibaNormalButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                <rect key="frame" x="306" y="205.5" width="49" height="31"/>
+                                <rect key="frame" x="294" y="194" width="61" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="0xd-4Q-Kj3"/>
                                     <constraint firstAttribute="height" constant="31" id="1bG-VN-vmF"/>
@@ -1002,7 +1027,7 @@
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="cIV-Zq-INv" secondAttribute="trailing" constant="20" id="DdR-3E-ISW"/>
                             <constraint firstItem="cIV-Zq-INv" firstAttribute="top" secondItem="Mpp-kv-jAJ" secondAttribute="bottom" constant="12" id="FfZ-Wf-9NT"/>
                             <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="8SE-t0-xqA" secondAttribute="trailing" constant="20" id="HqU-xy-iTd"/>
-                            <constraint firstItem="ryj-WG-Rrd" firstAttribute="trailing" secondItem="2t2-wM-Afy" secondAttribute="trailing" constant="20" id="Hyi-mG-1L6"/>
+                            <constraint firstItem="2t2-wM-Afy" firstAttribute="trailing" secondItem="ryj-WG-Rrd" secondAttribute="trailing" constant="20" id="I8X-zj-bdi"/>
                             <constraint firstItem="gWD-h2-NsO" firstAttribute="top" secondItem="qcw-ba-95k" secondAttribute="bottom" constant="23.5" id="Iy5-dS-0Td"/>
                             <constraint firstItem="cIV-Zq-INv" firstAttribute="leading" secondItem="2t2-wM-Afy" secondAttribute="leading" constant="20" id="JKX-Fv-7wx"/>
                             <constraint firstItem="AVU-KY-k3U" firstAttribute="top" secondItem="qcw-ba-95k" secondAttribute="bottom" constant="16" id="JPs-Rw-ivU"/>
@@ -1028,7 +1053,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6i-Fy-GgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4642" y="1166"/>
+            <point key="canvasLocation" x="5698" y="1182"/>
         </scene>
         <!--Face Capture View Controller-->
         <scene sceneID="Ohs-D1-0Is">
@@ -1045,7 +1070,7 @@
                                     <constraint firstAttribute="height" constant="1" id="iag-hv-R1B"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Capture my face" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hL-Fz-YFf" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. Capture my face" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hL-Fz-YFf" customClass="VibaLabel" customModule="VIBA_EMS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="8" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1072,7 +1097,7 @@
                                 <rect key="frame" x="20" y="481" width="335" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXc-I1-JJJ" customClass="VibaBorderButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="60"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Retake"/>
                                         <connections>
@@ -1080,7 +1105,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVL-f4-JZF" customClass="VibaButton" customModule="VIBA_EMS" customModuleProvider="target">
-                                        <rect key="frame" x="158.5" y="0.0" width="176.5" height="60"/>
+                                        <rect key="frame" x="159.5" y="0.0" width="175.5" height="60"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
@@ -1120,7 +1145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-LQ-cFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5583" y="1166"/>
+            <point key="canvasLocation" x="6639" y="1182"/>
         </scene>
         <!--Permissions-->
         <scene sceneID="Qh2-Td-Zj3">
@@ -1160,6 +1185,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zj5-iP-aBu">
                                 <rect key="frame" x="20" y="0.0" width="335" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGu-So-h9Z">
+                                <rect key="frame" x="183" y="635" width="9" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="das-bk-Cl1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1167,12 +1198,15 @@
                             <constraint firstAttribute="trailing" secondItem="Zj5-iP-aBu" secondAttribute="trailing" constant="20" id="C9p-zm-x0E"/>
                             <constraint firstItem="Zj5-iP-aBu" firstAttribute="top" secondItem="das-bk-Cl1" secondAttribute="top" id="SQO-Lv-Y7T"/>
                             <constraint firstItem="Zj5-iP-aBu" firstAttribute="leading" secondItem="das-bk-Cl1" secondAttribute="leading" constant="20" id="T2F-bE-c29"/>
+                            <constraint firstItem="WGu-So-h9Z" firstAttribute="centerX" secondItem="5YB-UP-7p7" secondAttribute="centerX" id="sr0-s4-VYD"/>
                             <constraint firstItem="Zj5-iP-aBu" firstAttribute="bottom" secondItem="das-bk-Cl1" secondAttribute="bottom" id="stB-KG-hon"/>
+                            <constraint firstItem="das-bk-Cl1" firstAttribute="bottom" secondItem="WGu-So-h9Z" secondAttribute="bottom" constant="12" id="t7U-pP-oDB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bbg-dP-DV1"/>
                     <connections>
                         <outlet property="splashimage" destination="Zj5-iP-aBu" id="NwK-re-pMV"/>
+                        <outlet property="ver" destination="WGu-So-h9Z" id="dq0-6f-VPS"/>
                         <segue destination="WC0-bM-2aD" kind="presentation" identifier="Main" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="GUF-to-zzh"/>
                     </connections>
                 </viewController>
@@ -1200,7 +1234,7 @@
     </scenes>
     <designables>
         <designable name="0hL-Fz-YFf">
-            <size key="intrinsicContentSize" width="144" height="20.5"/>
+            <size key="intrinsicContentSize" width="144.5" height="20.5"/>
         </designable>
         <designable name="0th-79-OtY">
             <size key="intrinsicContentSize" width="120.5" height="20.5"/>
@@ -1210,6 +1244,9 @@
         </designable>
         <designable name="4yu-o1-dMm">
             <size key="intrinsicContentSize" width="70" height="33"/>
+        </designable>
+        <designable name="6kQ-qs-jgL">
+            <size key="intrinsicContentSize" width="129.5" height="45.5"/>
         </designable>
         <designable name="8JS-KX-Uhd">
             <size key="intrinsicContentSize" width="114.5" height="45.5"/>
@@ -1224,7 +1261,10 @@
             <size key="intrinsicContentSize" width="105" height="45.5"/>
         </designable>
         <designable name="BWT-B7-1GP">
-            <size key="intrinsicContentSize" width="147" height="20.5"/>
+            <size key="intrinsicContentSize" width="149.5" height="20.5"/>
+        </designable>
+        <designable name="I7X-Ax-kgp">
+            <size key="intrinsicContentSize" width="67" height="30"/>
         </designable>
         <designable name="JVL-f4-JZF">
             <size key="intrinsicContentSize" width="55" height="33"/>
@@ -1247,20 +1287,17 @@
         <designable name="V5U-3p-fmP">
             <size key="intrinsicContentSize" width="40" height="40"/>
         </designable>
-        <designable name="Xpb-1O-yuR">
-            <size key="intrinsicContentSize" width="129.5" height="45.5"/>
-        </designable>
         <designable name="b9E-8m-h3u">
             <size key="intrinsicContentSize" width="56" height="33"/>
-        </designable>
-        <designable name="bGd-4v-Bc7">
-            <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
         <designable name="cIV-Zq-INv">
             <size key="intrinsicContentSize" width="132" height="33"/>
         </designable>
         <designable name="gWD-h2-NsO">
             <size key="intrinsicContentSize" width="49" height="31"/>
+        </designable>
+        <designable name="gaO-1O-jQd">
+            <size key="intrinsicContentSize" width="178.5" height="20.5"/>
         </designable>
         <designable name="gcw-L1-HnQ">
             <size key="intrinsicContentSize" width="100" height="45.5"/>
@@ -1284,7 +1321,7 @@
             <size key="intrinsicContentSize" width="253" height="20.5"/>
         </designable>
         <designable name="sAw-fx-crL">
-            <size key="intrinsicContentSize" width="184.5" height="45.5"/>
+            <size key="intrinsicContentSize" width="129" height="45.5"/>
         </designable>
         <designable name="vPW-d7-TGz">
             <size key="intrinsicContentSize" width="106" height="33"/>
@@ -1292,9 +1329,12 @@
         <designable name="wXc-I1-JJJ">
             <size key="intrinsicContentSize" width="53" height="33"/>
         </designable>
+        <designable name="yej-6Z-zGR">
+            <size key="intrinsicContentSize" width="77" height="35"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="qrT-Nn-eX2"/>
+        <segue reference="QUb-wv-x0k"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="IdeeoLogo" width="98" height="26"/>
@@ -1308,9 +1348,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

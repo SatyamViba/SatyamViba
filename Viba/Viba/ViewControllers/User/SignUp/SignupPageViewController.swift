@@ -12,6 +12,7 @@ class SignupPageViewController: UIPageViewController {
 
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [
+            createCompanyDetailsViewController(),
             createEmployeeDetailsViewController(),
             createVerifyViewController(),
             createFaceCaptureViewController()
@@ -28,6 +29,15 @@ class SignupPageViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
+    }
+
+    private func createCompanyDetailsViewController() -> UIViewController {
+        guard let companyVC = storyboard?.instantiateViewController(withIdentifier: "CompanyDetailsView") as? CompanyVerificationViewController else {
+            return UIViewController()
+        }
+
+        companyVC.delegate = self
+        return companyVC
     }
 
     private func createEmployeeDetailsViewController() -> UIViewController {
@@ -119,14 +129,20 @@ extension SignupPageViewController: SignupProtocol {
         }
 
         switch screen {
-        case .employeeDetails:
+        case .companyDetails:
             setViewControllers([orderedViewControllers[1]],
                                direction: .forward,
                                animated: true,
                                completion: nil)
             dlgt.updatePageIndicator(screen: screen)
-        case .verify:
+        case .employeeDetails:
             setViewControllers([orderedViewControllers[2]],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+            dlgt.updatePageIndicator(screen: screen)
+        case .verify:
+            setViewControllers([orderedViewControllers[3]],
                                direction: .forward,
                                animated: true,
                                completion: nil)
