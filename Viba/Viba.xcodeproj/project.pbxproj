@@ -25,6 +25,10 @@
 		4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */; };
 		4A3DED7A27C2264000B5273E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DED7927C2264000B5273E /* GoogleService-Info.plist */; };
 		4A468A71275A2B9100211FD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A468A70275A2B9100211FD4 /* DataManager.swift */; };
+		4A4A290627C8EB970060C285 /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A290427C8EB970060C285 /* extentions.swift */; };
+		4A4A290727C8EB970060C285 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A290527C8EB970060C285 /* UIViewController+Toast.swift */; };
+		4A4A290927C8EE330060C285 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A290827C8EE330060C285 /* Toast.swift */; };
+		4A4A290D27C8F5360060C285 /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A290C27C8F5360060C285 /* Toast.xib */; };
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
 		4A4D21AE275896E5001B9964 /* VibaNoRecordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */; };
 		4A5AA7AB274934E800084866 /* VibaCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AA7AA274934E800084866 /* VibaCircularImage.swift */; };
@@ -56,11 +60,7 @@
 		4A72CCC1273EE1F6008AA853 /* CompanyDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */; };
 		4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */; };
 		4A72CCC5273FCFBA008AA853 /* ValidateEmailOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */; };
-		4A72CCD227402594008AA853 /* circles.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCD127402594008AA853 /* circles.json */; };
 		4A72CCD4274025CC008AA853 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCD3274025CC008AA853 /* UIViewController+Extension.swift */; };
-		4A72CCDB2740284C008AA853 /* AlertLottie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A72CCD82740284C008AA853 /* AlertLottie.storyboard */; };
-		4A72CCDC2740284C008AA853 /* AlertLottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCD92740284C008AA853 /* AlertLottieViewController.swift */; };
-		4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCDA2740284C008AA853 /* IGProgress.swift */; };
 		4A72CCDF27402E78008AA853 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A72CCDE27402E78008AA853 /* String+Extension.swift */; };
 		4A7784DD273CEE0600E9E168 /* VibaRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7784DC273CEE0600E9E168 /* VibaRadioButton.swift */; };
 		4A78FB5427417F36000BFCFF /* PicCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78FB5327417F36000BFCFF /* PicCaptureViewController.swift */; };
@@ -76,7 +76,6 @@
 		4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0162739122F007DB9FF /* Assets.xcassets */; };
 		4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5F0182739122F007DB9FF /* LaunchScreen.storyboard */; };
 		4ABAC1D5273AAC65008DB1BD /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */; };
-		4ABC7A2C27C3DCD600551846 /* loading_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC7A2B27C3DCD600551846 /* loading_new.json */; };
 		4ABC7A2F27C4984700551846 /* LoadingIndicator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC7A2E27C4984700551846 /* LoadingIndicator.storyboard */; };
 		4ABC7A3127C4988000551846 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3027C4988000551846 /* LoadingIndicatorViewController.swift */; };
 		4ABC7A3327C4995700551846 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC7A3227C4995700551846 /* loading.gif */; };
@@ -107,7 +106,6 @@
 		4AD78EE02751C34300A27401 /* SendPreInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD78EDF2751C34300A27401 /* SendPreInvitationViewController.swift */; };
 		4AD998952789B85D006F7FC4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD998942789B85D006F7FC4 /* LoadingViewController.swift */; };
 		4AD998982789B8AD006F7FC4 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4AD998972789B8AD006F7FC4 /* splash.gif */; };
-		4AD9989A2789BFA1006F7FC4 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AD998992789BFA0006F7FC4 /* loading.json */; };
 		4ADB3A552740F3F900A0D750 /* UserRegistrrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A542740F3F900A0D750 /* UserRegistrrationResponse.swift */; };
 		4ADB3A572741080400A0D750 /* ValidateRegistraionOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */; };
 		4ADB3A59274118E300A0D750 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB3A58274118E300A0D750 /* GeneralResponse.swift */; };
@@ -142,6 +140,10 @@
 		4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockInOutTableViewCell.xib; sourceTree = "<group>"; };
 		4A3DED7927C2264000B5273E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A468A70275A2B9100211FD4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4A4A290427C8EB970060C285 /* extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
+		4A4A290527C8EB970060C285 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
+		4A4A290827C8EE330060C285 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		4A4A290C27C8F5360060C285 /* Toast.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
 		4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaNoRecordsCell.swift; sourceTree = "<group>"; };
 		4A5AA7AA274934E800084866 /* VibaCircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaCircularImage.swift; sourceTree = "<group>"; };
@@ -173,11 +175,7 @@
 		4A72CCC0273EE1F6008AA853 /* CompanyDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsResponse.swift; sourceTree = "<group>"; };
 		4A72CCC2273FCE02008AA853 /* ValidateSmsOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateSmsOtp.swift; sourceTree = "<group>"; };
 		4A72CCC4273FCFBA008AA853 /* ValidateEmailOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateEmailOtp.swift; sourceTree = "<group>"; };
-		4A72CCD127402594008AA853 /* circles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = circles.json; sourceTree = "<group>"; };
 		4A72CCD3274025CC008AA853 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		4A72CCD82740284C008AA853 /* AlertLottie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertLottie.storyboard; sourceTree = "<group>"; };
-		4A72CCD92740284C008AA853 /* AlertLottieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertLottieViewController.swift; sourceTree = "<group>"; };
-		4A72CCDA2740284C008AA853 /* IGProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGProgress.swift; sourceTree = "<group>"; };
 		4A72CCDE27402E78008AA853 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4A7784DC273CEE0600E9E168 /* VibaRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRadioButton.swift; sourceTree = "<group>"; };
 		4A78FB5327417F36000BFCFF /* PicCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCaptureViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 		4AB5F0192739122F007DB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB5F01B2739122F007DB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAC1D4273AAC65008DB1BD /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
-		4ABC7A2B27C3DCD600551846 /* loading_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_new.json; sourceTree = "<group>"; };
 		4ABC7A2E27C4984700551846 /* LoadingIndicator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingIndicator.storyboard; sourceTree = "<group>"; };
 		4ABC7A3027C4988000551846 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		4ABC7A3227C4995700551846 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
@@ -226,7 +223,6 @@
 		4AD78EDF2751C34300A27401 /* SendPreInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPreInvitationViewController.swift; sourceTree = "<group>"; };
 		4AD998942789B85D006F7FC4 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4AD998972789B8AD006F7FC4 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
-		4AD998992789BFA0006F7FC4 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		4ADB3A542740F3F900A0D750 /* UserRegistrrationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrrationResponse.swift; sourceTree = "<group>"; };
 		4ADB3A562741080400A0D750 /* ValidateRegistraionOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateRegistraionOTP.swift; sourceTree = "<group>"; };
 		4ADB3A58274118E300A0D750 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
@@ -298,6 +294,17 @@
 				4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */,
 			);
 			path = ClockInOut;
+			sourceTree = "<group>";
+		};
+		4A4A290327C8EB870060C285 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				4A4A290427C8EB970060C285 /* extentions.swift */,
+				4A4A290527C8EB970060C285 /* UIViewController+Toast.swift */,
+				4A4A290827C8EE330060C285 /* Toast.swift */,
+				4A4A290C27C8F5360060C285 /* Toast.xib */,
+			);
+			path = CustomAlert;
 			sourceTree = "<group>";
 		};
 		4A5E31BF2768ADEE002907C3 /* Cache */ = {
@@ -424,26 +431,6 @@
 				4AE58257275B3F960081FAC1 /* Dashboard */,
 			);
 			path = Responses;
-			sourceTree = "<group>";
-		};
-		4A72CCC6274024DB008AA853 /* LottieJson */ = {
-			isa = PBXGroup;
-			children = (
-				4ABC7A2B27C3DCD600551846 /* loading_new.json */,
-				4AD998992789BFA0006F7FC4 /* loading.json */,
-				4A72CCD127402594008AA853 /* circles.json */,
-			);
-			path = LottieJson;
-			sourceTree = "<group>";
-		};
-		4A72CCD72740284C008AA853 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				4A72CCD82740284C008AA853 /* AlertLottie.storyboard */,
-				4A72CCD92740284C008AA853 /* AlertLottieViewController.swift */,
-				4A72CCDA2740284C008AA853 /* IGProgress.swift */,
-			);
-			path = Lottie;
 			sourceTree = "<group>";
 		};
 		4A78FB5227417F0B000BFCFF /* Authenticate */ = {
@@ -659,7 +646,6 @@
 			children = (
 				4A3DED7927C2264000B5273E /* GoogleService-Info.plist */,
 				4AD998962789B89A006F7FC4 /* GIFs */,
-				4A72CCC6274024DB008AA853 /* LottieJson */,
 				4AFC562C27391E2400E064E9 /* Fonts */,
 			);
 			path = Resources;
@@ -693,8 +679,8 @@
 		4AFC56322739268400E064E9 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				4A4A290327C8EB870060C285 /* CustomAlert */,
 				4ABC7A2D27C4982D00551846 /* LoadingIndicator */,
-				4A72CCD72740284C008AA853 /* Lottie */,
 				4A6D64D8274E670F00022CBE /* VibaMenuButton */,
 				4AFC563D2739483100E064E9 /* VibaButton.swift */,
 				4AC6C03B2794217E007CB675 /* VibaRightImageButton.swift */,
@@ -796,25 +782,22 @@
 			files = (
 				4AFC562E27391E7100E064E9 /* Android.ttf in Resources */,
 				4AC8D28E27573DE8003C09AD /* Permissions.storyboard in Resources */,
-				4A72CCD227402594008AA853 /* circles.json in Resources */,
 				4AD61BB22771ABA200CBF5D6 /* FaceView.storyboard in Resources */,
-				4AD9989A2789BFA1006F7FC4 /* loading.json in Resources */,
 				4AB5F01A2739122F007DB9FF /* LaunchScreen.storyboard in Resources */,
 				4A6D64DA274E671F00022CBE /* VibaMenuButton.xib in Resources */,
 				4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */,
 				4AB5F0172739122F007DB9FF /* Assets.xcassets in Resources */,
 				4A1617BF273A45C300640236 /* Poppins-Medium.ttf in Resources */,
-				4A72CCDB2740284C008AA853 /* AlertLottie.storyboard in Resources */,
 				4A3DED7A27C2264000B5273E /* GoogleService-Info.plist in Resources */,
 				4A109DF8274D4991009D2002 /* Poppins-Italic.ttf in Resources */,
 				4ABC7A2F27C4984700551846 /* LoadingIndicator.storyboard in Resources */,
 				4AB5F0152739122E007DB9FF /* Main.storyboard in Resources */,
 				4AD78ECD274F6C9D00A27401 /* TabController.storyboard in Resources */,
 				4A8482E527492B62002463D5 /* DashBoardWithTabs.storyboard in Resources */,
+				4A4A290D27C8F5360060C285 /* Toast.xib in Resources */,
 				4AD998982789B8AD006F7FC4 /* splash.gif in Resources */,
 				4ABC7A3327C4995700551846 /* loading.gif in Resources */,
 				4A1617B9273A40B700640236 /* Poppins-Regular.ttf in Resources */,
-				4ABC7A2C27C3DCD600551846 /* loading_new.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,6 +906,7 @@
 				4AC1557327C65B4E00E1BC3C /* CompanyVerificationViewController.swift in Sources */,
 				4AD998952789B85D006F7FC4 /* LoadingViewController.swift in Sources */,
 				4A4D21AE275896E5001B9964 /* VibaNoRecordsCell.swift in Sources */,
+				4A4A290927C8EE330060C285 /* Toast.swift in Sources */,
 				4A5E47792748E5AB00239676 /* TimesheetViewController.swift in Sources */,
 				4A6C21F8275F8C2800234133 /* CreateInvitation.swift in Sources */,
 				4AC8D28827567FD3003C09AD /* ProfileResponse.swift in Sources */,
@@ -960,6 +944,8 @@
 				4A21A19E273B9B600002D052 /* SignupPageViewController.swift in Sources */,
 				4A21A19A273B89F30002D052 /* SignupViewController.swift in Sources */,
 				4ADB3A5B2741198F00A0D750 /* ResendRegistrationOtp.swift in Sources */,
+				4A4A290727C8EB970060C285 /* UIViewController+Toast.swift in Sources */,
+				4A4A290627C8EB970060C285 /* extentions.swift in Sources */,
 				4A1617AF2739512C00640236 /* VibaTextField.swift in Sources */,
 				4A1617BD273A42CF00640236 /* VibaBorderButton.swift in Sources */,
 				4A21A198273B89E50002D052 /* EmployeeDetailsViewController.swift in Sources */,
@@ -981,7 +967,6 @@
 				4AFC563C2739305E00E064E9 /* UIColor+Extension.swift in Sources */,
 				4A68CB6D2753E7E9000BA368 /* UploadUserImage.swift in Sources */,
 				4ABC7A3127C4988000551846 /* LoadingIndicatorViewController.swift in Sources */,
-				4A72CCDD2740284C008AA853 /* IGProgress.swift in Sources */,
 				4A72CCBB273E3786008AA853 /* ErrorResponse.swift in Sources */,
 				4A6D64D5274E386000022CBE /* MenuViewController.swift in Sources */,
 				4A3DDA71274B6A1A002FF884 /* ClockInOutTableViewCell.swift in Sources */,
@@ -990,7 +975,6 @@
 				4AD78EDB27514C5B00A27401 /* PreInvitationTableViewCell.swift in Sources */,
 				4A72CCDF27402E78008AA853 /* String+Extension.swift in Sources */,
 				4A72CCC3273FCE02008AA853 /* ValidateSmsOtp.swift in Sources */,
-				4A72CCDC2740284C008AA853 /* AlertLottieViewController.swift in Sources */,
 				4A8E3D2C2789922B003E32A9 /* ReviewViewController.swift in Sources */,
 				4AC6C03C2794217E007CB675 /* VibaRightImageButton.swift in Sources */,
 			);

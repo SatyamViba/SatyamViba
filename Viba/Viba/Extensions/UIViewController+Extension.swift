@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SCLAlertView
 
 extension UIViewController {
     func showLoadingIndicator(text: String = "Please wait...") {
@@ -24,11 +23,15 @@ extension UIViewController {
         }
     }
 
-    func showWarning(title: String = "Warning!", message: String) {
-        SCLAlertView().showWarning(title, subTitle: message)
+    func showInfo(message: String) {
+        showAlert(message: message, type: .info)
     }
 
-    func showSuccessAlert(title: String = "Successful", message: String) {
-        SCLAlertView().showSuccess(title, subTitle: message)
+    func showSuccessAlert(message: String) {
+        showAlert(message: message, type: .success)
+    }
+
+    func showError(message: String) {
+        showAlert(message: message, type: .error)
     }
 }

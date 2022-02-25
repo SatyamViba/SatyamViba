@@ -103,12 +103,11 @@ extension FaceDetectionViewController: AVCaptureVideoDataOutputSampleBufferDeleg
 //                    // Fallback on earlier versions
 //                    print(results.count, result.yaw ?? "no_yaw", result.roll ?? "no_roll")
 //                }
-                if !self.isProcessing, let landmarks = result.landmarks, landmarks.confidence > 0.8, let yaw = result.yaw, yaw.doubleValue < 0.2 && yaw.doubleValue > -0.2, let roll = result.roll, roll.doubleValue > 1.0 && roll.doubleValue < 2.0 {
+                if !self.isProcessing, let landmarks = result.landmarks, landmarks.confidence > 0.8, result.isProperFaceVisible && landmarks.areAllLandmarksVisible {
                     self.session.stopRunning()
                     self.isProcessing = true
                     if let fHandler = self.faceHandler, let navController = self.navigationController {
                         CGImage.create(pixelBuffer: image)?.faceCrop(margin: 10, completion: fHandler)
-                        print(navController.viewControllers)
                         navController.popViewController(animated: true)
                     }
                 }
@@ -150,5 +149,38 @@ extension FaceDetectionViewController {
         }
 
         updateFaceView(for: result)
+    }
+}
+
+extension VNFaceObservation {
+    var isProperFaceVisible: Bool {
+        if let yaw = yaw, yaw.doubleValue < 0.2 && yaw.doubleValue > -0.2, let roll = roll, roll.doubleValue > 1.0 && roll.doubleValue < 2.0 {
+            print("Face visible")
+            return true
+        }
+
+        print("Face not visiblel")
+        return false
+    }
+}
+
+extension VNFaceLandmarks2D {
+    var areAllLandmarksVisible: Bool {
+//        print( leftEyebrow, rightEyebrow,
+//               leftEye, rightEye,
+//               leftPupil, rightPupil,
+//               nose, noseCrest,
+//               outerLips, innerLips)
+//        print("Landmarks: ", leftEyebrow != nil && rightEyebrow != nil &&
+//              leftEye != nil && rightEye != nil &&
+//              leftPupil != nil && rightPupil != nil &&
+//              nose != nil && noseCrest != nil &&
+//              outerLips != nil && innerLips != nil)
+
+        return leftEyebrow != nil && rightEyebrow != nil &&
+        leftEye != nil && rightEye != nil &&
+        leftPupil != nil && rightPupil != nil &&
+        nose != nil && noseCrest != nil &&
+        outerLips != nil && innerLips != nil
     }
 }

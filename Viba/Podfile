@@ -10,8 +10,6 @@ target 'Viba' do
   pod 'OTPFieldView'
   pod 'DLRadioButton', '~> 1.4'
   pod 'DatePicker', '~> 1.3.0'
-  pod 'SCLAlertView'
-  pod 'lottie-ios'
   pod 'MASegmentedControl'
   pod 'SwiftyGif'
   pod 'ActionSheetPicker-3.0', '~> 2.3.0'

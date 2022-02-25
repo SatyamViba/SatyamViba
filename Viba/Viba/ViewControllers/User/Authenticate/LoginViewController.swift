@@ -94,7 +94,7 @@ class LoginViewController: UIViewController {
     @IBAction func requestOTP(_ sender: Any) {
 //        performSegue(withIdentifier: "Dashboard", sender: nil)
 //        return
-
+        
         guard let text = userId.text, !text.isEmpty else {
             userId.showError()
             return
@@ -117,7 +117,7 @@ class LoginViewController: UIViewController {
                     performSegue(withIdentifier: "OTPView", sender: nil)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(message: error.localizedDescription)
+                    showInfo(message: error.localizedDescription)
                 }
             }
         }

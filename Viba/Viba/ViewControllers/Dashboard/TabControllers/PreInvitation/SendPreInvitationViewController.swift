@@ -120,7 +120,7 @@ class SendPreInvitationViewController: UIViewController {
             stTime = selectedDate.setTimeAndFormat(from: startTime.date)
             eTime = selectedDate.setTimeAndFormat(from: endTime.date)
         } else {
-            showWarning(message: "End time must be greater than start time")
+            showInfo(message: "End time must be greater than start time")
             return
         }
 
@@ -150,7 +150,7 @@ class SendPreInvitationViewController: UIViewController {
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(message: "Failed to create event")
+                    showInfo(message: "Failed to create event")
                 }
             }
         }

@@ -28,9 +28,9 @@ class FaceCaptureViewController: UIViewController {
                     self.userImage = UIImage(cgImage: image).withHorizontallyFlippedOrientation()
                     self.picture.image = self.userImage
                 case .notFound:
-                    self.showWarning(message: "Failed to detect face")
+                    self.showInfo(message: "Failed to detect face")
                 case .failure(let err):
-                    self.showWarning(message: err.localizedDescription)
+                    self.showInfo(message: err.localizedDescription)
                 }
             }
         })
@@ -42,12 +42,12 @@ class FaceCaptureViewController: UIViewController {
 
     @IBAction func validateAndSendData(_ sender: Any) {
         if AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
-            showWarning(message: "You have to enable camera permission")
+            showInfo(message: "You have to enable camera permission")
             return
         }
 
         guard let dlgt = delegate, let base64Image = userImage?.toBase64()  else {
-            showWarning(message: "Image not captured")
+            showInfo(message: "Image not captured")
             return
         }
 

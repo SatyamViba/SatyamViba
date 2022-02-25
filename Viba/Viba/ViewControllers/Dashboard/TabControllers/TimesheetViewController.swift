@@ -81,7 +81,7 @@ class TimesheetViewController: UIViewController {
                     uploadTodaysStatus()
                 case .failure(let err):
                     print(err.localizedDescription)
-                    showWarning(message: err.localizedDescription)
+                    showInfo(message: err.localizedDescription)
                 }
             }
         }

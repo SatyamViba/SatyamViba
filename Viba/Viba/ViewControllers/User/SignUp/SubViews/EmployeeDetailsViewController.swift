@@ -58,12 +58,12 @@ class EmployeeDetailsViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
-//        guard let dlgt = self.delegate else {
-//            return
-//        }
-//
-//        dlgt.didFinish(screen: .employeeDetails)
-//        return
+        guard let dlgt = self.delegate else {
+            return
+        }
+
+        dlgt.didFinish(screen: .employeeDetails)
+        return
 
         guard let fName = firstName.text, !fName.isEmptyStr else {
             firstName.showError()
@@ -114,7 +114,7 @@ class EmployeeDetailsViewController: UIViewController {
                     dlgt.didFinish(screen: .employeeDetails)
                 case .failure(let error):
                     print("### Error in Registering User: \(error.localizedDescription)")
-                    showWarning(message: error.localizedDescription)
+                    showInfo(message: error.localizedDescription)
                 }
             }
         }

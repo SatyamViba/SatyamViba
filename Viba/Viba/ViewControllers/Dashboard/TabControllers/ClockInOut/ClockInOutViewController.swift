@@ -148,7 +148,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                             workFromHome = dataReceived.outsideOrg
                         case .failure(let err):
                             print("### ", err.localizedDescription)
-                            showWarning(message: "Failed to check user location")
+                            showInfo(message: "Failed to check user location")
                         }
                     }
                 }
@@ -156,7 +156,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                 callsGroup.leave()
                 print("### Failed to get location: ", err.localizedDescription)
                 DispatchQueue.main.async { [self] in
-                    showWarning(message: "Failed to fetch location")
+                    showInfo(message: "Failed to fetch location")
                 }
             }
         }
@@ -174,7 +174,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                     eventList.reloadData()
                 case .failure(let err):
                     print(err.localizedDescription)
-                    showWarning(message: err.localizedDescription)
+                    showInfo(message: err.localizedDescription)
                 }
             }
         }
@@ -198,14 +198,14 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                             workFromHome = dataReceived.outsideOrg
                         case .failure(let err):
                             print("### ", err.localizedDescription)
-                            showWarning(message: "Failed to check user location")
+                            showInfo(message: "Failed to check user location")
                         }
                     }
                 }
             case .failure(let err):
                 print("### Failed to get location: ", err.localizedDescription)
                 DispatchQueue.main.async { [self] in
-                    showWarning(message: "Failed to fetch location")
+                    showInfo(message: "Failed to fetch location")
                 }
             }
         }
@@ -228,7 +228,7 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                     eventList.reloadData()
                 case .failure(let err):
                     print(err.localizedDescription)
-                    showWarning(message: err.localizedDescription)
+                    showInfo(message: err.localizedDescription)
                 }
             }
         }
@@ -297,14 +297,14 @@ class ClockInOutViewController: UIViewController, VibaImageCache {
                             fetchClockInOutList()
                         case .failure(let err):
                             print("### Failed to post event: ", err.localizedDescription)
-                            showWarning(message: "Failed to post data")
+                            showInfo(message: "Failed to post data")
                         }
                     }
                 }
             case .failure(let err):
                 print("### Failed to get location: ", err.localizedDescription)
                 DispatchQueue.main.async { [self] in
-                    showWarning(message: "Failed to fetch location")
+                    showInfo(message: "Failed to fetch location")
                 }
             }
         }

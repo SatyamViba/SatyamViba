@@ -62,7 +62,7 @@ class OTPViewController: UIViewController {
 
     @IBAction func validedOtp(_ sender: Any) {
         guard hasEnteredOtp == true, let id = userEnteredId else {
-            showWarning(message: "Please enter valid OTP")
+            showInfo(message: "Please enter valid OTP")
             return
         }
 
@@ -76,7 +76,7 @@ class OTPViewController: UIViewController {
                     perform(#selector(showNextView), with: nil, afterDelay: 1.0)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(message: "Failed to validate input")
+                    showInfo(message: "Failed to validate input")
                 }
             }
         }
@@ -119,7 +119,7 @@ class OTPViewController: UIViewController {
 //                    performSegue(withIdentifier: "OTPView", sender: nil)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(message: "Failed to validate input")
+                    showInfo(message: "Failed to validate input")
                 }
             }
         }

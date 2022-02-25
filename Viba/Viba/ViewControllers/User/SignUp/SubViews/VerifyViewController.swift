@@ -30,12 +30,12 @@ class VerifyViewController: UIViewController {
     }
 
     @IBAction func validateAndSendData(_ sender: Any) {
-//        guard let dlgt = delegate else {
-//            return
-//        }
-//
-//        dlgt.didFinish(screen: .verify)
-//        return
+        guard let dlgt = delegate else {
+            return
+        }
+
+        dlgt.didFinish(screen: .verify)
+        return
 
         guard let eOtp = emailOtp.text, eOtp.count == charLimit else {
             emailOtp.showError()
@@ -48,7 +48,7 @@ class VerifyViewController: UIViewController {
         }
 
         guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
-            showWarning(message: "User Id invalid")
+            showInfo(message: "User Id invalid")
             return
         }
 
@@ -66,7 +66,7 @@ class VerifyViewController: UIViewController {
                     dlgt.didFinish(screen: .verify)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(title: "Warning!", message: error.localizedDescription)
+                    showInfo(message: error.localizedDescription)
                 }
             }
         }
@@ -74,7 +74,7 @@ class VerifyViewController: UIViewController {
 
     @IBAction func resendEmailOtp(_ sender: Any) {
         guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
-            showWarning(title: "Warning!", message: "User ID is invalid")
+            showInfo(message: "User ID is invalid")
             return
         }
 
@@ -85,10 +85,10 @@ class VerifyViewController: UIViewController {
                 switch result {
                 case .success(let response):
                     print("### Resend Email OTP Status: \(response.msg)")
-                    showWarning(title: "Successful", message: "You will receive an email")
+                    showInfo(message: "You will receive an email")
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(message: error.localizedDescription)
+                    showInfo(message: error.localizedDescription)
                 }
             }
         }
@@ -96,7 +96,7 @@ class VerifyViewController: UIViewController {
 
     @IBAction func resendMobileOtp(_ sender: Any) {
         guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
-            showWarning(title: "Warning!", message: "User ID is invalid")
+            showInfo(message: "User ID is invalid")
             return
         }
         
@@ -110,7 +110,7 @@ class VerifyViewController: UIViewController {
                     showSuccessAlert(message: "You will receive a message")
                 case .failure(let error):
                     print(error.localizedDescription)
-                    showWarning(message: error.localizedDescription)
+                    showInfo(message: error.localizedDescription)
                 }
             }
         }

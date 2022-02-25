@@ -492,7 +492,6 @@ PODS:
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.7.0)
   - leveldb-library (1.22.1)
-  - lottie-ios (3.3.0)
   - MASegmentedControl (0.0.5)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -501,7 +500,6 @@ PODS:
   - nanopb/encode (2.30908.0)
   - OTPFieldView (1.0.1)
   - PromisesObjC (2.0.0)
-  - SCLAlertView (0.8)
   - SwiftLint (0.46.2)
   - SwiftyGif (5.4.3)
 
@@ -514,10 +512,8 @@ DEPENDENCIES:
   - Firebase/Crashlytics
   - Firebase/Firestore
   - FontAwesome.swift
-  - lottie-ios
   - MASegmentedControl
   - OTPFieldView
-  - SCLAlertView
   - SwiftLint
   - SwiftyGif
 
@@ -545,12 +541,10 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
-    - lottie-ios
     - MASegmentedControl
     - nanopb
     - OTPFieldView
     - PromisesObjC
-    - SCLAlertView
     - SwiftLint
     - SwiftyGif
 
@@ -577,15 +571,13 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
-  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   MASegmentedControl: 9b58f9ba3a562a739b63b29e4ca2b9dc4d9c62cb
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SwiftLint: 6bc52a21f0fd44cab9aa2dc8e534fb9f5e3ec507
   SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
 
-PODFILE CHECKSUM: 693aa2a55813d67f4f7d7858370332610d9c2c75
+PODFILE CHECKSUM: 5975e1dd875e5185ac93eaa6b6856d515639842e
 
 COCOAPODS: 1.11.2

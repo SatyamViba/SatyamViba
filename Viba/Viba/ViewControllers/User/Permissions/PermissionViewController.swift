@@ -49,11 +49,11 @@ class PermissionViewController: UIViewController {
                     }
                 }
             } else {
-                showWarning(message: "You disabled camera, please enable it from iPhone settings")
+                showInfo(message: "You disabled camera, please enable it from iPhone settings")
                 cameraPermissionStatus.isOn = (AVCaptureDevice.authorizationStatus(for: .video) ==  .authorized)
             }
         } else {
-            showWarning(message: "You can disable the camera permission from device settings")
+            showInfo(message: "You can disable the camera permission from device settings")
             cameraPermissionStatus.isOn = (AVCaptureDevice.authorizationStatus(for: .video) ==  .authorized)
         }
     }
@@ -63,12 +63,12 @@ class PermissionViewController: UIViewController {
             if Location.manager.askLocationPermission {
                 Location.manager.showPermissionForLocation()
             } else {
-                showWarning(message: "You can now enable the location permission from device settings only")
+                showInfo(message: "You can now enable the location permission from device settings only")
                 locationPermissionStatus.isOn = Location.manager.isLocationServicesEnabled
             }
         } else {
             // Turning Off
-            showWarning(message: "You can disable the location permission from device settings")
+            showInfo(message: "You can disable the location permission from device settings")
             locationPermissionStatus.isOn = Location.manager.isLocationServicesEnabled
         }
     }
@@ -79,7 +79,7 @@ class PermissionViewController: UIViewController {
                 navController.popViewController(animated: true)
             }
         } else {
-            showWarning(message: "You have to accept both location & camera permissions")
+            showInfo(message: "You have to accept both location & camera permissions")
         }
     }
 }

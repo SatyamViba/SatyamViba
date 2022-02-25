@@ -150,7 +150,7 @@ extension SignupPageViewController: SignupProtocol {
         case .faceCapture(let base64Image):
             print("show dashboard")
             guard let usrId = DataManager.shared.userId, !usrId.isEmpty else {
-                showWarning(title: "Warning!", message: "User ID is invalid")
+                showInfo(message: "User ID is invalid")
                 return
             }
             
@@ -164,7 +164,7 @@ extension SignupPageViewController: SignupProtocol {
                         dlgt.updatePageIndicator(screen: screen)
                     case .failure(let error):
                         print("Uploading image faileld;: ", error.localizedDescription)
-                        showWarning(message: "Failed to upload image")
+                        showInfo(message: "Failed to upload image")
                     }
                 }
             }

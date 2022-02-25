@@ -29,8 +29,8 @@ class CompanyVerificationViewController: UIViewController {
     }
 
     @IBAction func signupUser(_ sender: Any) {
-//        self.performSegue(withIdentifier: "SignupView", sender: nil)
-//        return
+        delegate?.didFinish(screen: .companyDetails)
+        return
 
         guard let code = companyCode.text, !code.isEmptyStr else {
             companyCode.showError()
@@ -47,7 +47,7 @@ class CompanyVerificationViewController: UIViewController {
                         delegate?.didFinish(screen: .companyDetails)
                     case .failure(let err):
                         print(err.localizedDescription)
-                        showWarning(message: err.localizedDescription)
+                        showInfo(message: err.localizedDescription)
                     }
                 }
             }

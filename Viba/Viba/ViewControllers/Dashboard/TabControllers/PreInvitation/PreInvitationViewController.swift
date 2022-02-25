@@ -110,7 +110,7 @@ class PreInvitationViewController: UIViewController {
                     invitationsList.reloadData()
                 case .failure(let err):
                     print(err.localizedDescription)
-                    showWarning(message: err.localizedDescription)
+                    showInfo(message: err.localizedDescription)
                 }
             }
         }
