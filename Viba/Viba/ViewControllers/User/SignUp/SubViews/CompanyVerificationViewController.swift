@@ -29,9 +29,8 @@ class CompanyVerificationViewController: UIViewController {
     }
 
     @IBAction func signupUser(_ sender: Any) {
-        delegate?.didFinish(screen: .companyDetails)
-        return
-
+//        delegate?.didFinish(screen: .companyDetails)
+//        return
         guard let code = companyCode.text, !code.isEmptyStr else {
             companyCode.showError()
             return
