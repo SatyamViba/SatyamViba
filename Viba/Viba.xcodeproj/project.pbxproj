@@ -25,8 +25,7 @@
 		4A3DDA76274B9405002FF884 /* ClockInOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */; };
 		4A3DED7A27C2264000B5273E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A3DED7927C2264000B5273E /* GoogleService-Info.plist */; };
 		4A468A71275A2B9100211FD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A468A70275A2B9100211FD4 /* DataManager.swift */; };
-		4A4A290627C8EB970060C285 /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A290427C8EB970060C285 /* extentions.swift */; };
-		4A4A290727C8EB970060C285 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A290527C8EB970060C285 /* UIViewController+Toast.swift */; };
+		4A4A290627C8EB970060C285 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A290427C8EB970060C285 /* UIDevice+Extension.swift */; };
 		4A4A290927C8EE330060C285 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A290827C8EE330060C285 /* Toast.swift */; };
 		4A4A290D27C8F5360060C285 /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A290C27C8F5360060C285 /* Toast.xib */; };
 		4A4A8684273BF1E000811EBC /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A8683273BF1E000811EBC /* SignupProtocol.swift */; };
@@ -140,8 +139,7 @@
 		4A3DDA75274B9405002FF884 /* ClockInOutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockInOutTableViewCell.xib; sourceTree = "<group>"; };
 		4A3DED7927C2264000B5273E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A468A70275A2B9100211FD4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		4A4A290427C8EB970060C285 /* extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
-		4A4A290527C8EB970060C285 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
+		4A4A290427C8EB970060C285 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		4A4A290827C8EE330060C285 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		4A4A290C27C8F5360060C285 /* Toast.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
@@ -299,8 +297,6 @@
 		4A4A290327C8EB870060C285 /* CustomAlert */ = {
 			isa = PBXGroup;
 			children = (
-				4A4A290427C8EB970060C285 /* extentions.swift */,
-				4A4A290527C8EB970060C285 /* UIViewController+Toast.swift */,
 				4A4A290827C8EE330060C285 /* Toast.swift */,
 				4A4A290C27C8F5360060C285 /* Toast.xib */,
 			);
@@ -665,6 +661,7 @@
 		4AFC56312739267C00E064E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4A4A290427C8EB970060C285 /* UIDevice+Extension.swift */,
 				4A68CB702754F93F000BA368 /* CoreGraphicsExtensions.swift */,
 				4AFC5633273926AD00E064E9 /* UIView+Extension.swift */,
 				4AFC563B2739305E00E064E9 /* UIColor+Extension.swift */,
@@ -944,8 +941,7 @@
 				4A21A19E273B9B600002D052 /* SignupPageViewController.swift in Sources */,
 				4A21A19A273B89F30002D052 /* SignupViewController.swift in Sources */,
 				4ADB3A5B2741198F00A0D750 /* ResendRegistrationOtp.swift in Sources */,
-				4A4A290727C8EB970060C285 /* UIViewController+Toast.swift in Sources */,
-				4A4A290627C8EB970060C285 /* extentions.swift in Sources */,
+				4A4A290627C8EB970060C285 /* UIDevice+Extension.swift in Sources */,
 				4A1617AF2739512C00640236 /* VibaTextField.swift in Sources */,
 				4A1617BD273A42CF00640236 /* VibaBorderButton.swift in Sources */,
 				4A21A198273B89E50002D052 /* EmployeeDetailsViewController.swift in Sources */,
