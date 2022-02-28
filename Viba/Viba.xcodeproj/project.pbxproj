@@ -143,6 +143,7 @@
 		4A4A290827C8EE330060C285 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		4A4A290C27C8F5360060C285 /* Toast.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 		4A4A8683273BF1E000811EBC /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
+		4A4B201927CBD9700040C94A /* Viba.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Viba.entitlements; sourceTree = "<group>"; };
 		4A4D21AD275896E5001B9964 /* VibaNoRecordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaNoRecordsCell.swift; sourceTree = "<group>"; };
 		4A5AA7AA274934E800084866 /* VibaCircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaCircularImage.swift; sourceTree = "<group>"; };
 		4A5AA7AC2749541500084866 /* VibaRoundImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibaRoundImageButton.swift; sourceTree = "<group>"; };
@@ -471,6 +472,7 @@
 		4AB5F00C2739122D007DB9FF /* Viba */ = {
 			isa = PBXGroup;
 			children = (
+				4A4B201927CBD9700040C94A /* Viba.entitlements */,
 				4AFC56372739285500E064E9 /* Constants.swift */,
 				4A68CB6627534788000BA368 /* Managers */,
 				4A72CCB2273E34E4008AA853 /* Models */,
@@ -1120,6 +1122,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Viba/Viba.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = HLF4GH8WCJ;
@@ -1162,6 +1165,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Viba/Viba.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = HLF4GH8WCJ;
